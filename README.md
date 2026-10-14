@@ -144,12 +144,20 @@ pnpm bench
 
 ## Roadmap
 
-1. ✅ Core engine, contracts, English pack, tests, benchmarks
-2. DOM integration: MutationObserver, native inputs, caret preservation, IME, paste/undo
-3. React, Angular, and Vue packages
-4. Tiptap-based editor and third-party editor adapters
-5. More language packs, `@safetype/ai` providers
-6. Docs site, playground, Playwright suites, release automation
+| Version | Scope |
+| ------- | ----- |
+| **1.0.0** | Core engine, English pack, server validation ✅ |
+| 1.1.0 | `@safetype/dom`: auto-attach to inputs, caret preservation, IME, live playground |
+| 1.2.0 | `@safetype/react` |
+| 1.3.0 | `@safetype/vue` |
+| 1.4.0 | `@safetype/angular` |
+| 1.5.0 | `@safetype/editor`: built-in Tiptap rich-text editor |
+| 1.6.0 | `@safetype/adapters`: Quill, Lexical, CodeMirror, Monaco, ProseMirror |
+| 1.7.0 | `@safetype/ai`: contextual providers and server middleware |
+| 1.8.0 | Language packs: es, hi, fr, de, pt |
+| 1.9.0 | Docs site, accessibility, and security hardening |
+
+Full details and the per-release checklist are in [ROADMAP.md](ROADMAP.md).
 
 ## Limitations
 
