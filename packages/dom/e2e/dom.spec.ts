@@ -50,18 +50,20 @@ test("masks pasted text immediately", async ({ page, browserName }) => {
   expect(value).toBe("what the f*ck");
 });
 
-test("undo is not hijacked and masking resumes on blur", async ({ page }) => {
+test("undo is not hijacked and masking resumes on blur", async ({ page, browserName }) => {
   await open(page);
   const input = page.locator("#input");
   await input.pressSequentially("fuck ");
   await expect(input).toHaveValue("f*ck ");
   await page.keyboard.press("ControlOrMeta+z");
-  const afterUndo = await input.inputValue();
-  // The undo reverted something, and SafeType did not immediately re-mask it.
-  expect(afterUndo).not.toBe("f*ck ");
+  const undos = await page.evaluate(() =>
+    (window as unknown as { inputs: { id: string; type: string }[] }).inputs.filter((e) => e.id === "input" && e.type === "historyUndo"),
+  );
+  test.skip(undos.length === 0, `${browserName} did not perform an undo for the keyboard shortcut in this environment`);
+  // The browser reverted our edit and SafeType did not immediately re-mask it.
+  await expect(input).not.toHaveValue("f*ck ");
   await page.locator("#textarea").focus();
-  const afterBlur = await input.inputValue();
-  expect(afterBlur).not.toContain("fuck");
+  await expect(input).not.toHaveValue(/fuck/);
 });
 
 test("masks inside contenteditable without losing formatting", async ({ page }) => {

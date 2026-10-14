@@ -17,6 +17,9 @@
     const mode = new URLSearchParams(location.search).get("mode") || "mask";
     window.events = [];
     window.submitted = 0;
+    // Records every input event (capture phase, so before SafeType reacts) for assertions.
+    window.inputs = [];
+    document.addEventListener("input", (e) => window.inputs.push({ id: e.target.id, type: e.inputType, value: e.target.value }), true);
     document.getElementById("form").addEventListener("submit", (e) => { e.preventDefault(); window.submitted++; });
     document.getElementById("add").addEventListener("click", () => {
       const input = document.createElement("input");
