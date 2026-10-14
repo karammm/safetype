@@ -1,6 +1,6 @@
 {
   "name": "@safetype/editor",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Rich-text editor with built-in SafeType.js moderation (Tiptap / ProseMirror)",
   "license": "MIT",
   "type": "module",

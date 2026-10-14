@@ -2,6 +2,12 @@
 
 All `@safetype/*` packages share one version number.
 
+## 1.5.1
+
+- First release published from GitHub Actions through npm and PyPI trusted publishing. npm packages now
+  carry provenance attestations that link each version to the commit and workflow that built it.
+- No code changes from 1.5.0.
+
 ## 1.5.0
 
 ### New: `@safetype/editor`

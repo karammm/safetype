@@ -88,4 +88,4 @@ def test_idempotent():
 
 
 def test_version_matches_package():
-    assert safetype.__version__ == "1.5.0"
+    assert safetype.__version__ == "1.5.1"
