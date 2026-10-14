@@ -23,8 +23,10 @@ jobs:
         with:
           node-version: 24
           cache: pnpm
-          registry-url: https://registry.npmjs.org
+          # No `registry-url` here: it makes setup-node inject a placeholder NODE_AUTH_TOKEN, which npm
+          # would use instead of trusted publishing (OIDC) and fail with "401 token is invalid".
       - run: npm install -g npm@11
+      - run: npm --version
       - run: pnpm install --frozen-lockfile
       - run: pnpm turbo run build typecheck test --filter="./packages/*"
       - run: pnpm check:dist
