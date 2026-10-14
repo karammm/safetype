@@ -1,4 +1,5 @@
 export { createModerationEngine, type ModerationEngine } from "./create-engine";
+export { ENGINE_CONFIG_KEYS, pickEngineConfig, type EngineConfigKey } from "./engine-config";
 export { normalize, normalizeChar, normalizeTerm, applyLeet, type NormalizedText } from "./engine/normalizer";
 export { tokenize, mergeSpacedLetters, type Token } from "./engine/tokenizer";
 export { parsePattern, PatternError, type PatternElement, type PatternAlternative } from "./engine/pattern";

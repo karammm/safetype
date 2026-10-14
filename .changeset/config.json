@@ -13,7 +13,8 @@
   "updateInternalDependencies": "patch",
   "ignore": [
     "@safetype/example-node-server",
-    "@safetype/playground",
-    "@safetype/example-react-app"
+    "@safetype/example-react-app",
+    "@safetype/example-vue-app",
+    "@safetype/playground"
   ]
 }

@@ -2,6 +2,22 @@
 
 All `@safetype/*` packages share one version number.
 
+## 1.3.0
+
+### New: `@safetype/vue`
+
+- `SafeTypePlugin`: app-wide engine, global `v-safe-type`, `<SafeTypeInput>`, `<SafeTypeTextarea>`
+- `v-safe-type` directive for inputs, textareas and contenteditable, `v-model`-compatible, with a mode shorthand (`v-safe-type:block`)
+- Components with `v-model`, attribute/listener pass-through, accessible messages and emitted events
+- `useSafeType()`, `useModeration()`, `provideSafeType()`, `useSafeTypeEngine()`
+- Live `mode` / `policy` updates. Verified with Vue 3.3 and 3.5
+- Safe with `v-if`/`v-else`: message cleanup waits until Vue finishes patching
+- Vite example app and real-browser tests with a Vue app
+
+### `@safetype/core`
+
+- New exports: `ENGINE_CONFIG_KEYS` and `pickEngineConfig()`, shared by the framework packages
+
 ## 1.2.0
 
 ### New: `@safetype/react`

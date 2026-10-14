@@ -6,4 +6,5 @@ coverage/
 .DS_Store
 test-results/
 playwright-report/
-e2e/dist/
+packages/*/e2e/dist/
+packages/vue/e2e/dist/

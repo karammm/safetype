@@ -57,7 +57,7 @@ New package: `@safetype/react`
 - Works with controlled inputs without fighting React's state
 - Example app (Vite) + React Testing Library and Playwright tests
 
-## v1.3.0: Vue
+## v1.3.0: Vue ✅ built · ⏳ awaiting npm publish
 
 New package: `@safetype/vue`
 

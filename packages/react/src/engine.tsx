@@ -1,37 +1,11 @@
-import { createModerationEngine, type EngineConfig, type ModerationEngine } from "@safetype/core";
+import { createModerationEngine, pickEngineConfig, type EngineConfig, type EngineConfigKey, type ModerationEngine } from "@safetype/core";
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 
 /** Engine options a component may pass. Read once on mount, except `mode` and `policy`, which update live. */
-export type EngineOptions = Pick<
-  EngineConfig,
-  | "mode"
-  | "language"
-  | "categories"
-  | "policy"
-  | "packs"
-  | "customWords"
-  | "allowList"
-  | "rules"
-  | "maskChar"
-  | "maskStyle"
-  | "detectSpacedLetters"
-  | "classifiers"
-  | "classifierTimeoutMs"
-> & {
+export type EngineOptions = Pick<EngineConfig, EngineConfigKey> & {
   /** Use this engine instead of the provider's or a new one. */
   engine?: ModerationEngine;
 };
-
-const ENGINE_KEYS = [
-  "mode", "language", "categories", "policy", "packs", "customWords", "allowList", "rules",
-  "maskChar", "maskStyle", "detectSpacedLetters", "classifiers", "classifierTimeoutMs",
-] as const;
-
-export function pickEngineConfig(options: Record<string, unknown>): EngineConfig {
-  const config: Record<string, unknown> = {};
-  for (const key of ENGINE_KEYS) if (options[key] !== undefined) config[key] = options[key];
-  return config as EngineConfig;
-}
 
 interface ContextValue {
   engine: ModerationEngine;
@@ -77,7 +51,7 @@ export function SafeTypeProvider({ children, engine: providedEngine, ...options 
  */
 export function useEngine(options: EngineOptions): ModerationEngine {
   const context = useContext(SafeTypeContext);
-  const own = pickEngineConfig(options as Record<string, unknown>);
+  const own = pickEngineConfig(options);
   const hasOwn = Object.keys(own).length > 0;
   const [created] = useState(() =>
     options.engine || (!hasOwn && context) ? null : createModerationEngine({ ...context?.config, ...own }),

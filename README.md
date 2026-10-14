@@ -49,6 +49,14 @@ import { SafeTypeInput } from "@safetype/react";
 Masked text flows through `onChange`, so your state always matches the field. See the
 [`@safetype/react` docs](packages/react/README.md).
 
+### Vue
+
+```vue
+<textarea v-safe-type v-model="text" />   <!-- or <SafeTypeTextarea v-model="text" /> -->
+```
+
+`v-model` receives the masked text. See the [`@safetype/vue` docs](packages/vue/README.md).
+
 ## Packages
 
 | Package                  | Status | Description                                                   |
@@ -58,7 +66,8 @@ Masked text flows through `onChange`, so your state always matches the field. Se
 | `@safetype/shared`       | ✅     | Public TypeScript contracts                                   |
 | `@safetype/dom`          | ✅     | Auto-attach to inputs, textareas, contenteditable             |
 | `@safetype/react`        | ✅     | Components and hooks                                          |
-| `@safetype/vue` / `angular` | v1.3–1.4 | Framework bindings                                      |
+| `@safetype/vue`          | ✅     | Directive, components and composables                         |
+| `@safetype/angular`      | v1.4   | Framework bindings                                            |
 | `@safetype/editor` / `adapters`       | v1.5–1.6 | Tiptap-based editor, third-party editor adapters |
 | `@safetype/ai`           | v1.7    | Contextual classifier providers                            |
 
@@ -173,7 +182,7 @@ pnpm bench
 | **1.0.0** | Core engine, English pack, server validation ✅ |
 | **1.1.0** | `@safetype/dom`: auto-attach to inputs, caret preservation, IME, live playground ✅ |
 | **1.2.0** | `@safetype/react` ✅ |
-| 1.3.0 | `@safetype/vue` |
+| **1.3.0** | `@safetype/vue` ✅ |
 | 1.4.0 | `@safetype/angular` |
 | 1.5.0 | `@safetype/editor`: built-in Tiptap rich-text editor |
 | 1.6.0 | `@safetype/adapters`: Quill, Lexical, CodeMirror, Monaco, ProseMirror |
