@@ -19,7 +19,9 @@ const run = (cmd, cmdArgs, cwd) => execFileSync(cmd, cmdArgs, { cwd, stdio: ["ig
 
 function published(name, version) {
   try {
-    return run("npm", ["view", `${name}@${version}`, "version"]).trim() === version;
+    // A 404 here just means "not published yet"; keep npm's error output quiet.
+    const out = execFileSync("npm", ["view", `${name}@${version}`, "version"], { stdio: ["ignore", "pipe", "ignore"], encoding: "utf8" });
+    return out.trim() === version;
   } catch {
     return false;
   }
@@ -44,3 +46,5 @@ for (const dir of ORDER) {
   execFileSync("npm", publishArgs, { stdio: "inherit" });
 }
 console.log(dryRun ? "Dry run complete." : "All packages published.");
+// Brand-new packages can take a few minutes to appear publicly: npm's CDN may cache the "not found"
+// answer from the check above. `npm access list packages @safetype` shows them immediately.

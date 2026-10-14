@@ -2,6 +2,11 @@
 
 **Write freely. Communicate respectfully.**
 
+[![npm](https://img.shields.io/npm/v/@safetype/core?label=npm%20%40safetype%2Fcore)](https://www.npmjs.com/package/@safetype/core)
+[![PyPI](https://img.shields.io/pypi/v/safetype?label=pypi%20safetype)](https://pypi.org/project/safetype/)
+[![CI](https://github.com/karammm/safetype/actions/workflows/ci.yml/badge.svg)](https://github.com/karammm/safetype/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 <p align="center">
   <a href="docs/assets/safetype-intro.mp4">
     <img src="docs/assets/safetype-intro.gif" width="860"

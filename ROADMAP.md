@@ -22,7 +22,7 @@ Each release is built, tested, tagged, and published on its own before work on t
 
 ---
 
-## v1.0.0: Core engine ✅ built · ⏳ awaiting npm publish
+## v1.0.0: Core engine ✅ (first published as part of 1.5.0)
 
 `@safetype/core`, `@safetype/dictionaries` (English), `@safetype/shared`
 
@@ -32,9 +32,8 @@ Each release is built, tested, tagged, and published on its own before work on t
 - Offset mapping for caret restoration, idempotent masking
 - Node server-side enforcement example, 104 tests, benchmarks
 
-**Still to do:** npm org + login, a release workflow (publish from CI on tag with npm provenance), tag `v1.0.0`.
 
-## v1.1.0: Universal DOM integration ✅ built · ⏳ awaiting npm publish
+## v1.1.0: Universal DOM integration ✅ (first published as part of 1.5.0)
 
 New package: `@safetype/dom`
 
@@ -49,7 +48,7 @@ New package: `@safetype/dom`
 - Tests: Vitest (DOM unit) + Playwright on Chromium, Firefox, and WebKit
 - Vanilla JS example + a **live playground on GitHub Pages**
 
-## v1.2.0: React ✅ built · ⏳ awaiting npm publish
+## v1.2.0: React ✅ (first published as part of 1.5.0)
 
 New package: `@safetype/react`
 
@@ -57,21 +56,21 @@ New package: `@safetype/react`
 - Works with controlled inputs without fighting React's state
 - Example app (Vite) + React Testing Library and Playwright tests
 
-## v1.3.0: Vue ✅ built · ⏳ awaiting npm publish
+## v1.3.0: Vue ✅ (first published as part of 1.5.0)
 
 New package: `@safetype/vue`
 
 - `v-safe-type` directive, `useSafeType()` composable, `<SafeTypeInput>` component
 - Correct `v-model` behaviour + example app and tests
 
-## v1.4.0: Angular ✅ built · ⏳ awaiting npm publish
+## v1.4.0: Angular ✅ (first published as part of 1.5.0)
 
 New package: `@safetype/angular`
 
 - Standalone `safeType` directive, `SafeTypeService`, compatibility with reactive and template forms
 - Built with ng-packagr, plus an example app and tests
 
-## v1.5.0: Built-in rich-text editor ✅ built · ⏳ awaiting npm publish
+## v1.5.0: Built-in rich-text editor ✅ published (npm + PyPI)
 
 New package: `@safetype/editor` (Tiptap / ProseMirror)
 
