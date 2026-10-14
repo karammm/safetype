@@ -1,6 +1,6 @@
 {
   "name": "@safetype/shared",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Shared TypeScript contracts for SafeType.js",
   "license": "MIT",
   "type": "module",
@@ -15,11 +15,28 @@
       "require": "./dist/index.cjs"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts --clean",
     "typecheck": "tsc --noEmit",
     "clean": "rm -rf dist .turbo"
   },
-  "publishConfig": { "access": "public" }
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karammm/safetype.git",
+    "directory": "packages/shared"
+  },
+  "homepage": "https://github.com/karammm/safetype#readme",
+  "bugs": {
+    "url": "https://github.com/karammm/safetype/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  }
 }

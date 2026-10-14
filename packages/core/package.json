@@ -1,6 +1,6 @@
 {
   "name": "@safetype/core",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Framework-independent content moderation engine for SafeType.js",
   "license": "MIT",
   "type": "module",
@@ -15,8 +15,17 @@
       "require": "./dist/index.cjs"
     }
   },
-  "files": ["dist"],
-  "keywords": ["moderation", "profanity", "filter", "content-safety", "hate-speech"],
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "moderation",
+    "profanity",
+    "filter",
+    "content-safety",
+    "hate-speech"
+  ],
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts --clean",
     "typecheck": "tsc --noEmit",
@@ -28,5 +37,19 @@
     "@safetype/dictionaries": "workspace:*",
     "@safetype/shared": "workspace:*"
   },
-  "publishConfig": { "access": "public" }
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karammm/safetype.git",
+    "directory": "packages/core"
+  },
+  "homepage": "https://github.com/karammm/safetype#readme",
+  "bugs": {
+    "url": "https://github.com/karammm/safetype/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  }
 }
