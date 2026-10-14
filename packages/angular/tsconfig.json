@@ -2,10 +2,19 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "noEmit": true,
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "experimentalDecorators": true,
     "useDefineForClassFields": false,
     "noPropertyAccessFromIndexSignature": false
   },
-  "include": ["src", "test", "*.config.ts"]
+  "include": [
+    "src",
+    "editor/src",
+    "test",
+    "*.config.ts"
+  ]
 }

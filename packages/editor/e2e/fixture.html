@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>SafeType editor e2e</title></head>
+<body>
+  <form id="form" action="#"><div id="mount"></div><button id="submit">Send</button></form>
+  <script src="../dist/safetype-editor.global.js"></script>
+  <script>
+    const params = new URLSearchParams(location.search);
+    window.submitted = 0;
+    window.violations = 0;
+    document.getElementById("form").addEventListener("submit", (e) => { e.preventDefault(); window.submitted++; });
+    window.st = SafeTypeEditor.createSafeTypeEditor({
+      element: document.getElementById("mount"),
+      mode: params.get("mode") || "mask",
+      content: params.get("content") || "",
+      placeholder: "Write something...",
+      maxLength: 200,
+      name: "body",
+      requestLink: () => "example.com",
+      onViolation: () => window.violations++,
+    });
+  </script>
+</body>
+</html>

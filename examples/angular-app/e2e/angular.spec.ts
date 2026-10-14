@@ -56,3 +56,13 @@ test("@if removal of a field showing a message works", async ({ page }) => {
   await page.getByText("Toggle extra field").click();
   await expect(page.getByLabel("extra")).toBeVisible();
 });
+
+test("<safe-type-editor> as a form control (zoneless): typing, bold, masked value", async ({ page }) => {
+  const editor = page.getByRole("textbox", { name: "Article" });
+  await editor.click();
+  await page.keyboard.type("This is ");
+  await page.getByRole("button", { name: "Bold" }).click();
+  await page.keyboard.type("shit ok");
+  await expect(page.getByTestId("article-state")).toHaveText("<p>This is <strong>sh*t ok</strong></p>");
+  await expect(page.locator(".safetype-editor-count")).toHaveText("15 / 500");
+});

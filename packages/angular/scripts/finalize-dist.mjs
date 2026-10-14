@@ -10,7 +10,8 @@ for (const field of ["dependencies", "peerDependencies"]) {
   for (const [name, range] of Object.entries(dist[field] ?? {})) {
     if (!String(range).startsWith("workspace:")) continue;
     const pkg = read(`../../${name.replace("@safetype/", "")}/package.json`);
-    dist[field][name] = pkg.version;
+    // Lockstep: exact versions for dependencies, a caret range for peers ("workspace:^").
+    dist[field][name] = range === "workspace:^" ? `^${pkg.version}` : pkg.version;
   }
 }
 delete dist.scripts;

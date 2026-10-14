@@ -18,6 +18,9 @@
       ],
       "@angular/*": [
         "./node_modules/@angular/*"
+      ],
+      "@safetype/angular/editor": [
+        "../../packages/angular/dist/editor"
       ]
     }
   },

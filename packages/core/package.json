@@ -1,6 +1,6 @@
 {
   "name": "@safetype/core",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Framework-independent content moderation engine for SafeType.js",
   "license": "MIT",
   "type": "module",

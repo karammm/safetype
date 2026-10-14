@@ -1,6 +1,6 @@
 {
   "name": "@safetype/vue",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Vue 3 directive, components and composables for SafeType.js content moderation",
   "license": "MIT",
   "type": "module",
@@ -13,6 +13,11 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
+    },
+    "./editor": {
+      "types": "./dist/editor.d.ts",
+      "import": "./dist/editor.js",
+      "require": "./dist/editor.cjs"
     },
     "./package.json": "./package.json"
   },
@@ -40,7 +45,8 @@
     "@safetype/dom": "workspace:*"
   },
   "peerDependencies": {
-    "vue": ">=3.3.0"
+    "vue": ">=3.3.0",
+    "@safetype/editor": "workspace:^"
   },
   "repository": {
     "type": "git",
@@ -64,6 +70,12 @@
     "@vue/test-utils": "2.4.6",
     "esbuild": "0.24.2",
     "jsdom": "25.0.1",
-    "vue": "3.5.13"
+    "vue": "3.5.13",
+    "@safetype/editor": "workspace:*"
+  },
+  "peerDependenciesMeta": {
+    "@safetype/editor": {
+      "optional": true
+    }
   }
 }

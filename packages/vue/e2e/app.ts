@@ -1,5 +1,6 @@
 import { createApp, ref } from "vue";
 import { SafeTypePlugin } from "../src";
+import { SafeTypeEditor } from "../src/editor";
 
 const mode = new URLSearchParams(location.search).get("mode") ?? "mask";
 const w = window as unknown as { submitted: number };
@@ -10,7 +11,8 @@ createApp({
     const text = ref("");
     const body = ref("");
     const show = ref(true);
-    return { text, body, show, mode, submit: () => w.submitted++ };
+    const html = ref("<p></p>");
+    return { text, body, show, html, mode, submit: () => w.submitted++ };
   },
   template: `
     <form @submit.prevent="submit">
@@ -20,8 +22,11 @@ createApp({
       <div data-testid="body-state">{{ body }}</div>
       <input v-if="show" aria-label="toggle" v-safe-type:warn><p v-else>hidden</p>
       <button type="button" @click="show = !show">toggle</button>
+      <SafeTypeEditor v-model="html" label="rich" :toolbar="['bold']" />
+      <div data-testid="html-state">{{ html }}</div>
       <button type="submit">Send</button>
     </form>`,
+  components: { SafeTypeEditor },
 })
   .use(SafeTypePlugin)
   .mount("#app");

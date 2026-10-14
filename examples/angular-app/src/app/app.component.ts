@@ -1,6 +1,7 @@
 import { Component, signal } from "@angular/core";
 import { FormControl, FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { SafeTypeDirective, SafeTypePipe, safeTypeValidator } from "@safetype/angular";
+import { SafeTypeEditorComponent } from "@safetype/angular/editor";
 
 interface Comment {
   name: string;
@@ -10,7 +11,7 @@ interface Comment {
 @Component({
   selector: "app-root",
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, SafeTypeDirective, SafeTypePipe],
+  imports: [FormsModule, ReactiveFormsModule, SafeTypeDirective, SafeTypePipe, SafeTypeEditorComponent],
   template: `
     <main>
       <h1>Comments</h1>
@@ -27,6 +28,11 @@ interface Comment {
 
         <button type="submit">Post</button>
       </form>
+
+      <h2>Rich text</h2>
+      <!-- Built-in editor as a form control -->
+      <safe-type-editor [formControl]="article" label="Article" placeholder="Write an article..." [maxLength]="500" />
+      <p class="state" data-testid="article-state">{{ article.value }}</p>
 
       <button type="button" (click)="showExtra.set(!showExtra())">Toggle extra field</button>
       @if (showExtra()) {
@@ -56,6 +62,7 @@ export class AppComponent {
     { name: "Seeded from the API", body: "This old comment says shit and is masked by the pipe" },
   ]);
   readonly showExtra = signal(true);
+  readonly article = new FormControl("<p></p>", { nonNullable: true });
 
   post(): void {
     // Only runs when no field is blocked: SafeType stops blocked submissions first.

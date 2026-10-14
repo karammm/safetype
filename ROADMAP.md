@@ -71,7 +71,7 @@ New package: `@safetype/angular`
 - Standalone `safeType` directive, `SafeTypeService`, compatibility with reactive and template forms
 - Built with ng-packagr, plus an example app and tests
 
-## v1.5.0: Built-in rich-text editor
+## v1.5.0: Built-in rich-text editor ✅ built · ⏳ awaiting npm publish
 
 New package: `@safetype/editor` (Tiptap / ProseMirror)
 

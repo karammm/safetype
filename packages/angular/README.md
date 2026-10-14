@@ -64,4 +64,17 @@ const safeType = inject(SafeTypeService);
 safeType.moderate(text); safeType.validate(text); safeType.mask(text); safeType.engine;
 ```
 
+## Rich-text editor
+
+```ts
+import { SafeTypeEditorComponent } from "@safetype/angular/editor"; // npm install @safetype/editor
+```
+
+```html
+<safe-type-editor [formControl]="body" mode="mask" placeholder="Write something..." [maxLength]="2000" />
+```
+
+It's a form control (`formControl`, `formControlName`, `ngModel`, `disabled`), or use `[(value)]`.
+Outputs: `moderated`, `violation`, `warning`, `blocked`, `editorChange`. See [`@safetype/editor`](../editor/README.md).
+
 Client-side moderation can be bypassed, so re-check on your server with `@safetype/core`.

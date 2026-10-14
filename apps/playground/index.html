@@ -32,14 +32,12 @@ h1 span { color: var(--accent); }
 .panel h2 { margin: 0 0 12px; font-size: 15px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
 label { display: block; font-weight: 600; font-size: 14px; margin: 16px 0 6px; }
 label:first-of-type { margin-top: 0; }
-input, textarea, [contenteditable] {
+input, textarea {
   width: 100%; font: inherit; color: var(--text); background: var(--field);
   border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; outline: none;
 }
 textarea { min-height: 96px; resize: vertical; }
-[contenteditable] { min-height: 80px; }
-[contenteditable] p { margin: 0 0 6px; }
-input:focus, textarea:focus, [contenteditable]:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+input:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
 .modes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
 .modes button, .samples button {
   font: inherit; font-size: 14px; border: 1px solid var(--line); background: var(--field); color: var(--text);
@@ -90,8 +88,8 @@ footer { color: var(--muted); font-size: 13px; margin-top: 24px; }
         <label for="textarea">Textarea</label>
         <textarea id="textarea" placeholder="Write a longer comment…"></textarea>
 
-        <label id="editor-label">Rich text (contenteditable)</label>
-        <div id="editor" contenteditable="true" role="textbox" aria-multiline="true" aria-labelledby="editor-label"><p>Formatting like <b>bold</b> and <i>italic</i> is preserved.</p></div>
+        <label id="rich-label">Built-in editor (@safetype/editor)</label>
+        <div id="rich" aria-labelledby="rich-label"></div>
 
         <div class="samples" aria-label="Sample text">
           <button type="button" data-sample="What the fuck are you doing?">Profanity</button>
@@ -118,6 +116,7 @@ footer { color: var(--muted); font-size: 13px; margin-top: 24px; }
 </div>
 
 <script src="./safetype.global.js"></script>
+<script src="./safetype-editor.global.js"></script>
 <script>
   const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
   const LABEL = { mask: "Masked", suggest: "Suggestion", warn: "Warning", block: "Blocked", allow: "Needs review" };
@@ -150,10 +149,22 @@ footer { color: var(--muted); font-size: 13px; margin-top: 24px; }
       </div>`).join("");
   }
 
+  let richEditor;
   function startSafeType() {
     instance?.destroy();
     instance = SafeType.createSafeType({ mode, onModerated });
     instance.start();
+    const content = richEditor ? richEditor.getHTML() : "<p>Formatting like <strong>bold</strong> and <em>italic</em> is kept when words are masked.</p>";
+    richEditor?.destroy();
+    richEditor = SafeTypeEditor.createSafeTypeEditor({
+      element: document.getElementById("rich"),
+      mode,
+      content,
+      label: "Built-in editor",
+      placeholder: "Write something...",
+      maxLength: 1000,
+      onModerated,
+    });
   }
 
   document.querySelectorAll("[data-mode]").forEach((button) => {

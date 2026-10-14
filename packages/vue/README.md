@@ -56,6 +56,19 @@ provideSafeType({ mode: "warn" });                         // scope an engine to
 const engine = useSafeTypeEngine();
 ```
 
+## Rich-text editor
+
+```vue
+<script setup lang="ts">
+import { SafeTypeEditor } from "@safetype/vue/editor"; // npm install @safetype/editor
+</script>
+<template>
+  <SafeTypeEditor v-model="html" mode="mask" placeholder="Write something..." @violation="track" />
+</template>
+```
+
+See [`@safetype/editor`](../editor/README.md).
+
 ## Notes
 
 - Block mode stops `@submit` (including `.prevent` handlers) until the text is fixed.

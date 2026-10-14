@@ -7,6 +7,7 @@
     "preview": "node build.mjs && python3 -m http.server 4180 --directory dist"
   },
   "dependencies": {
-    "@safetype/dom": "workspace:*"
+    "@safetype/dom": "workspace:*",
+    "@safetype/editor": "workspace:*"
   }
 }

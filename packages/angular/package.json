@@ -1,6 +1,6 @@
 {
   "name": "@safetype/angular",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Angular directive, pipe, validator and service for SafeType.js content moderation",
   "license": "MIT",
   "sideEffects": false,
@@ -26,10 +26,14 @@
   },
   "peerDependencies": {
     "@angular/core": ">=19.0.0",
-    "@angular/forms": ">=19.0.0"
+    "@angular/forms": ">=19.0.0",
+    "@safetype/editor": "workspace:^"
   },
   "peerDependenciesMeta": {
     "@angular/forms": {
+      "optional": true
+    },
+    "@safetype/editor": {
       "optional": true
     }
   },
@@ -60,6 +64,7 @@
     "ng-packagr": "19.2.2",
     "rxjs": "7.8.2",
     "typescript": "5.8.3",
-    "zone.js": "0.15.1"
+    "zone.js": "0.15.1",
+    "@safetype/editor": "workspace:*"
   }
 }

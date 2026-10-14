@@ -6,11 +6,14 @@ import { fileURLToPath } from "node:url";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const out = join(here, "dist");
-const bundle = createRequire(import.meta.url).resolve("@safetype/dom/global");
+const require = createRequire(import.meta.url);
+const bundle = require.resolve("@safetype/dom/global");
+const editorBundle = require.resolve("@safetype/editor/global");
 
 rmSync(out, { recursive: true, force: true });
 mkdirSync(out, { recursive: true });
 copyFileSync(join(here, "index.html"), join(out, "index.html"));
 copyFileSync(bundle, join(out, "safetype.global.js"));
+copyFileSync(editorBundle, join(out, "safetype-editor.global.js"));
 writeFileSync(join(out, ".nojekyll"), "");
 console.log(`Playground built in ${out}`);

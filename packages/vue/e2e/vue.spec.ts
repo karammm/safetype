@@ -56,3 +56,13 @@ test("block mode stops @submit until the text is fixed", async ({ page }) => {
   await page.getByText("Send").click();
   expect(await page.evaluate(() => (window as unknown as { submitted: number }).submitted)).toBe(1);
 });
+
+test("<SafeTypeEditor>: real typing, bold formatting and v-model", async ({ page }) => {
+  await open(page);
+  const editor = page.getByRole("textbox", { name: "rich" });
+  await editor.click();
+  await page.keyboard.type("This is ");
+  await page.getByRole("button", { name: "Bold" }).click();
+  await page.keyboard.type("shit ok");
+  await expect(page.getByTestId("html-state")).toHaveText("<p>This is <strong>sh*t ok</strong></p>");
+});

@@ -69,6 +69,17 @@ const engine = useSafeTypeEngine();
 `useSafeType` doesn't render messages itself. Use the returned `message`. Call `validate()` before
 sending from a chat box that has no `<form>`.
 
+## Rich-text editor
+
+```jsx
+import { SafeTypeEditor } from "@safetype/react/editor"; // npm install @safetype/editor
+
+<SafeTypeEditor mode="mask" value={html} onChange={setHtml} placeholder="Write something..." ref={editorRef} />
+```
+
+Controlled (`value` + `onChange(html)`) or uncontrolled (`defaultValue`). `mode`, `policy` and `editable` update live.
+The ref exposes the editor API (`validate()`, `applySuggestions()`, …). See [`@safetype/editor`](../editor/README.md).
+
 ## Notes
 
 - Results and callbacks are delivered right after the browser event finishes. That keeps controlled

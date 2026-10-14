@@ -65,6 +65,18 @@ Masked text flows through `onChange`, so your state always matches the field. Se
 
 See the [`@safetype/angular` docs](packages/angular/README.md).
 
+### Built-in rich-text editor
+
+```js
+import { createSafeTypeEditor } from "@safetype/editor";
+
+createSafeTypeEditor({ element, mode: "mask", placeholder: "Write something...", maxLength: 2000 });
+```
+
+Formatting, links, lists, undo/redo, inline highlights and one-click suggestions. Masking keeps formatting.
+It's also available as `<SafeTypeEditor>` for React and Vue and `<safe-type-editor>` for Angular. See the
+[`@safetype/editor` docs](packages/editor/README.md).
+
 ## Packages
 
 | Package                  | Status | Description                                                   |
@@ -76,7 +88,8 @@ See the [`@safetype/angular` docs](packages/angular/README.md).
 | `@safetype/react`        | ✅     | Components and hooks                                          |
 | `@safetype/vue`          | ✅     | Directive, components and composables                         |
 | `@safetype/angular`      | ✅     | Directive, validator, pipe and service                        |
-| `@safetype/editor` / `adapters`       | v1.5–1.6 | Tiptap-based editor, third-party editor adapters |
+| `@safetype/editor`       | ✅     | Built-in rich-text editor (Tiptap) + framework wrappers       |
+| `@safetype/adapters`     | v1.6   | Third-party editor adapters                                   |
 | `@safetype/ai`           | v1.7    | Contextual classifier providers                            |
 
 ## Design principles
@@ -192,7 +205,7 @@ pnpm bench
 | **1.2.0** | `@safetype/react` ✅ |
 | **1.3.0** | `@safetype/vue` ✅ |
 | **1.4.0** | `@safetype/angular` ✅ |
-| 1.5.0 | `@safetype/editor`: built-in Tiptap rich-text editor |
+| **1.5.0** | `@safetype/editor`: built-in Tiptap rich-text editor ✅ |
 | 1.6.0 | `@safetype/adapters`: Quill, Lexical, CodeMirror, Monaco, ProseMirror |
 | 1.7.0 | `@safetype/ai`: contextual providers and server middleware |
 | 1.8.0 | Language packs: es, hi, fr, de, pt |

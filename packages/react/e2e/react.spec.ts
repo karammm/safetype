@@ -63,3 +63,13 @@ test("no render loop: renders stay proportional to keystrokes", async ({ page })
   // StrictMode renders twice per update; allow headroom for masking-triggered updates.
   expect(renders).toBeLessThan(10 * 2 * 3);
 });
+
+test("<SafeTypeEditor>: real typing, bold formatting and controlled state", async ({ page }) => {
+  await open(page);
+  const editor = page.getByRole("textbox", { name: "rich" });
+  await editor.click();
+  await page.keyboard.type("This is ");
+  await page.getByRole("button", { name: "Bold" }).click();
+  await page.keyboard.type("shit ok");
+  await expect(page.getByTestId("html-state")).toHaveText("<p>This is <strong>sh*t ok</strong></p>");
+});

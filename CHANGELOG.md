@@ -2,6 +2,27 @@
 
 All `@safetype/*` packages share one version number.
 
+## 1.5.0
+
+### New: `@safetype/editor`
+
+- `createSafeTypeEditor()`: a Tiptap 3 / ProseMirror rich-text editor with bold, italic, underline, headings,
+  lists, links, undo/redo, placeholder and character count
+- Moderation through editor transactions: only changed characters are replaced, so formatting survives masking.
+  Word-under-cursor deferral, IME-safe, and undo-friendly (masking is grouped with the typing)
+- Inline highlights, an accessible status region, one-click replacement suggestions, and `applySuggestions()`
+- Accessible toolbar (roving tabindex), light/dark/auto themes, hidden input for form posts, form blocking
+- Link safety: bare domains get `https://`, and script-capable schemes are refused
+- `SafeTypeModeration` Tiptap extension for custom Tiptap setups
+- Browser bundle (`window.SafeTypeEditor`), and the editor is added to the playground
+
+### Wrappers
+
+- `@safetype/react/editor`: `<SafeTypeEditor>` (controlled or uncontrolled, ref API)
+- `@safetype/vue/editor`: `<SafeTypeEditor v-model>`
+- `@safetype/angular/editor`: `<safe-type-editor>` form control (ngModel / formControl / disabled).
+  Calls `markForCheck()` so bindings update in zoneless apps
+
 ## 1.4.0
 
 ### New: `@safetype/angular`

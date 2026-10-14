@@ -6,12 +6,12 @@ const ascii: Options["esbuildOptions"] = (options) => {
 };
 
 export default defineConfig({
-  entry: ["src/index.ts"],
+  entry: ["src/index.ts", "src/editor.tsx"],
   format: ["esm", "cjs"],
   dts: true,
   clean: true,
   esbuildOptions: ascii,
-  external: ["react"],
+  external: ["react", "@safetype/editor"],
   // Hooks and DOM access make every export a client component (Next.js App Router).
   banner: { js: '"use client";' },
 });
