@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "safetype"
+version = "1.5.0"
+description = "Rule-based content moderation (profanity, hate, harassment) for Python servers. Same engine as SafeType.js."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+authors = [{ name = "SafeType.js contributors" }]
+keywords = ["moderation", "profanity", "filter", "content-safety", "hate-speech", "harassment"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Text Processing :: Filters",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/karammm/safetype"
+Documentation = "https://github.com/karammm/safetype/tree/main/python#readme"
+Issues = "https://github.com/karammm/safetype/issues"
+Changelog = "https://github.com/karammm/safetype/blob/main/CHANGELOG.md"
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/safetype"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/safetype", "tests", "README.md", "LICENSE"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

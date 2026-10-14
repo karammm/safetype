@@ -31,3 +31,17 @@ pnpm build && pnpm test
 - Detection (`matcher`), decisions (`policy-engine`), and editing (`transformer`) stay separate.
 - `@safetype/core` must stay DOM-free, dependency-free at runtime, and side-effect free.
 - No network calls without explicit configuration.
+
+## Releasing (maintainers)
+
+All `@safetype/*` packages and the Python package share one version number.
+
+1. Bump the version in every `packages/*/package.json`, `python/pyproject.toml` and `python/src/safetype/__init__.py`,
+   and add a `CHANGELOG.md` entry.
+2. If dictionaries or engine behaviour changed, run `pnpm build && pnpm sync:python` and commit `python/` changes.
+3. Push a tag: `git tag v1.6.0 && git push origin v1.6.0`.
+   - `Release (npm)` publishes every package with provenance (npm trusted publishing).
+   - `Release (PyPI)` publishes `safetype` (PyPI trusted publishing).
+
+Manual npm publish (first release, or if CI is unavailable): `pnpm release:npm -- --otp=<2FA code>`
+(`--dry-run` shows what would be published). Versions already on npm are skipped.

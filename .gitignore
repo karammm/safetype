@@ -9,3 +9,8 @@ playwright-report/
 packages/*/e2e/dist/
 packages/vue/e2e/dist/
 .angular/
+
+.venv/
+python/dist/
+__pycache__/
+.pytest_cache/

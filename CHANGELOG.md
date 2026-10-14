@@ -16,6 +16,17 @@ All `@safetype/*` packages share one version number.
 - `SafeTypeModeration` Tiptap extension for custom Tiptap setups
 - Browser bundle (`window.SafeTypeEditor`), and the editor is added to the playground
 
+### New: `safetype` on PyPI
+
+- Python port of the engine (Python 3.9+, no dependencies) for server-side validation in Django, FastAPI or Flask
+- Uses the dictionary JSON exported from the JavaScript build, and replays 684 cases recorded from the JS
+  engine in its tests, so results are identical. CI fails if the data drifts
+
+### Release tooling
+
+- `scripts/publish-npm.mjs` publishes all packages in order, idempotently. GitHub Actions publish npm and PyPI on
+  `v*` tags with trusted publishing (no stored tokens, npm provenance)
+
 ### Wrappers
 
 - `@safetype/react/editor`: `<SafeTypeEditor>` (controlled or uncontrolled, ref API)

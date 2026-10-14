@@ -1,0 +1,77 @@
+// Runs the JavaScript engine over shared cases and records the results. The Python port's tests
+// replay the same cases and must produce identical output. Offsets are converted from UTF-16 code
+// units (JS) to code points (Python). CI fails if the committed fixture is out of date.
+import { writeFileSync } from "node:fs";
+import { createModerationEngine } from "../packages/core/dist/index.js";
+
+const texts = [
+  "What the fuck are you doing?", "FUCK", "Fuck off", "fucking fucker motherfucker", "bullshit",
+  "shit, this bitch is an asshole", "Have a lovely day!", "Scunthorpe", "the class assassin",
+  "as a matter of fact", "pass the bass", "cocktail hour", "shiitake mushrooms", "Dickens wrote novels",
+  "assess the situation", "damn it", "you bastard", "FUUUUCK", "sh1t", "$hit", "f u c k", "f.u.c.k",
+  "fück", "ｆｕｃｋ", "fuсk", "fu​ck", "*fuck*", "fuck!",
+  "I owe you $5 and 1000 points", "I am a b c d", "😀 ﬁne ｆｕｃｋ",
+  "f*ck", "you are such an idiot", "that was a stupid bug in my code",
+  "The ticket read: \"you are an idiot\" was posted at 3pm", "He said \"you are an idiot\" to me",
+  "Is the word faggot ever acceptable?", "shut up faggot", "all immigrants should die",
+  "you fucking idiot", "go kill yourself", "kys", "I'll kill you", "I am going to hurt you",
+  "you piece of shit", "you're a piece of shit", "nobody likes you", "u r a loser",
+  "What the FUCK is this?", "slut", "this is shit", "line one shit\nline two", "“you are an idiot”",
+  "the word shit", "Voldemort is he who must not be named", "frak this, fracking toasters", "",
+];
+
+const configs = [
+  { name: "default", config: {} },
+  { name: "suggest", config: { mode: "suggest" } },
+  { name: "warn", config: { mode: "warn" } },
+  { name: "block", config: { mode: "block" } },
+  { name: "allow", config: { mode: "allow" } },
+  { name: "strict-low", config: { policy: { profanity: { minSeverity: "low" } } } },
+  { name: "harassment-block", config: { mode: "mask", policy: { harassment: { action: "block", minConfidence: 0.3 } } } },
+  { name: "partial", config: { maskStyle: "partial" } },
+  { name: "full-hash", config: { maskStyle: "full", maskChar: "#" } },
+  { name: "custom", config: { customWords: ["Voldemort", "he who must not be named"], allowList: ["bastard"], rules: [{ id: "app.frak", pattern: "(frak|frack*)", category: "custom", replacement: "darn" }] } },
+  { name: "categories", config: { categories: ["harassment", "hate"] } },
+  { name: "no-spaced", config: { detectSpacedLetters: false } },
+];
+
+const cp = (text, offset) => Array.from(text.slice(0, offset)).length;
+
+const cases = [];
+for (const { name, config } of configs) {
+  const engine = createModerationEngine(config);
+  for (const text of texts) {
+    const r = engine.moderate(text);
+    cases.push({
+      config: name,
+      input: text,
+      expected: {
+        text: r.text,
+        suggestedText: r.suggestedText,
+        action: r.action,
+        allowed: r.allowed,
+        requiresReview: r.requiresReview,
+        masked: engine.mask(text),
+        matches: r.matches.map((m) => ({
+          start: cp(text, m.start),
+          end: cp(text, m.end),
+          text: m.text,
+          ruleId: m.ruleId,
+          category: m.category,
+          severity: m.severity,
+          action: m.action,
+          confidence: m.confidence,
+          context: m.context,
+          applied: m.applied,
+          requiresReview: m.requiresReview,
+          suggestedReplacement: m.suggestedReplacement ?? null,
+          label: m.label ?? null,
+        })),
+      },
+    });
+  }
+}
+
+const target = new URL("../python/tests/fixtures/parity.json", import.meta.url);
+writeFileSync(target, JSON.stringify({ configs: Object.fromEntries(configs.map((c) => [c.name, c.config])), cases }, null, 1) + "\n");
+console.log(`wrote ${cases.length} parity cases -> ${target.pathname}`);

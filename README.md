@@ -26,6 +26,16 @@ engine.moderate("What the fuck are you doing?").text;
 
 **[Try it live in the playground →](https://karammm.github.io/safetype/)**
 
+## Install
+
+```bash
+npm install @safetype/core        # engine (browsers, Node, Deno, edge)
+npm install @safetype/dom         # moderate every text field on a page
+npm install @safetype/react       # or @safetype/vue, @safetype/angular
+npm install @safetype/editor      # built-in rich-text editor
+pip install safetype              # Python: same engine for server-side validation
+```
+
 ### Moderate every text field on a page
 
 ```js
@@ -90,6 +100,7 @@ It's also available as `<SafeTypeEditor>` for React and Vue and `<safe-type-edit
 | `@safetype/angular`      | ✅     | Directive, validator, pipe and service                        |
 | `@safetype/editor`       | ✅     | Built-in rich-text editor (Tiptap) + framework wrappers       |
 | `@safetype/adapters`     | v1.6   | Third-party editor adapters                                   |
+| `safetype` (PyPI)        | ✅     | Python port of the engine for server-side validation          |
 | `@safetype/ai`           | v1.7    | Contextual classifier providers                            |
 
 ## Design principles
