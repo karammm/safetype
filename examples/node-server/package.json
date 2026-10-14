@@ -1,0 +1,11 @@
+{
+  "name": "@safetype/example-node-server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "@safetype/core": "workspace:*"
+  }
+}

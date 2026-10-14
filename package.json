@@ -1,0 +1,27 @@
+{
+  "name": "safetype",
+  "private": true,
+  "description": "SafeType.js — open-source, framework-independent content moderation SDK",
+  "license": "MIT",
+  "packageManager": "pnpm@9.15.4",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "bench": "turbo run bench",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "changeset": "changeset",
+    "release": "turbo run build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.11",
+    "@types/node": "^22.10.2",
+    "tsup": "^8.3.5",
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

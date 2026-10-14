@@ -1,0 +1,32 @@
+{
+  "name": "@safetype/core",
+  "version": "0.1.0",
+  "description": "Framework-independent content moderation engine for SafeType.js",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist"],
+  "keywords": ["moderation", "profanity", "filter", "content-safety", "hate-speech"],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "bench": "vitest bench --run",
+    "clean": "rm -rf dist .turbo"
+  },
+  "dependencies": {
+    "@safetype/dictionaries": "workspace:*",
+    "@safetype/shared": "workspace:*"
+  },
+  "publishConfig": { "access": "public" }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "@safetype/dictionaries",
+  "version": "0.1.0",
+  "description": "Language packs for SafeType.js",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./en": {
+      "types": "./dist/en/index.d.ts",
+      "import": "./dist/en/index.js",
+      "require": "./dist/en/index.cjs"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup src/index.ts src/en/index.ts --format esm,cjs --dts --clean",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist .turbo"
+  },
+  "dependencies": {
+    "@safetype/shared": "workspace:*"
+  },
+  "publishConfig": { "access": "public" }
+}
