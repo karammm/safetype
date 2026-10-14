@@ -64,7 +64,7 @@ New package: `@safetype/vue`
 - `v-safe-type` directive, `useSafeType()` composable, `<SafeTypeInput>` component
 - Correct `v-model` behaviour + example app and tests
 
-## v1.4.0: Angular
+## v1.4.0: Angular ✅ built · ⏳ awaiting npm publish
 
 New package: `@safetype/angular`
 

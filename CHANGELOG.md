@@ -2,6 +2,22 @@
 
 All `@safetype/*` packages share one version number.
 
+## 1.4.0
+
+### New: `@safetype/angular`
+
+- Standalone `safeType` directive for inputs, textareas and contenteditable, compatible with `ngModel`, `formControl` and `formControlName`
+- Inputs for mode, policy, messages and behaviour, live updates, outputs, and `exportAs: "safeType"` (`result`, `validate()`)
+- `safeTypeValidator()` for reactive and template-driven forms
+- `safeType` pipe for masking or suggesting when displaying stored content
+- `SafeTypeService` and `provideSafeType()`
+- Built with ng-packagr (partial Ivy). Verified in Angular 19 (zone.js) and Angular 22 (zoneless) apps
+- Angular 22 example app and real-browser tests against the production build
+
+### Tooling
+
+- CI: packages tested on Node 18, 20, 22 and 24. Examples and real-browser tests run on Node 24
+
 ## 1.3.0
 
 ### New: `@safetype/vue`

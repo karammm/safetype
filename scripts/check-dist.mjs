@@ -9,9 +9,10 @@ function walk(dir) {
     const path = join(dir, name);
     if (statSync(path).isDirectory()) walk(path);
     else if (/\.(c|m)?js$/.test(name)) {
-      const bytes = readFileSync(path);
-      const index = bytes.findIndex((b) => b > 0x7f);
-      if (index !== -1) offenders.push(`${path} (byte ${index})`);
+      // Angular's compiled identifiers (e.g. `ɵfac`) use U+0275; those bundles always go through an app bundler.
+      const text = readFileSync(path, "utf8").replaceAll("\u0275", "");
+      const index = [...text].findIndex((c) => c.codePointAt(0) > 0x7f);
+      if (index !== -1) offenders.push(`${path} (character ${index})`);
     }
   }
 }

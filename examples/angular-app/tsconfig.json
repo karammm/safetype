@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "ES2022",
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "lib": [
+      "ES2022",
+      "DOM"
+    ],
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
+    "paths": {
+      "@safetype/angular": [
+        "../../packages/angular/dist"
+      ],
+      "@angular/*": [
+        "./node_modules/@angular/*"
+      ]
+    }
+  },
+  "angularCompilerOptions": {
+    "strictTemplates": true
+  },
+  "files": [
+    "src/main.ts"
+  ]
+}

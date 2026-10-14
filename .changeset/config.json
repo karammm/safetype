@@ -12,6 +12,7 @@
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
   "ignore": [
+    "@safetype/example-angular-app",
     "@safetype/example-node-server",
     "@safetype/example-react-app",
     "@safetype/example-vue-app",
