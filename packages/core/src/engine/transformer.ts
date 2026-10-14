@@ -1,7 +1,7 @@
 import type { MaskStyle, OffsetMapping, TextEdit } from "@safetype/shared";
 import { LEET, normalizeChar } from "./normalizer";
 
-const WORD_CHAR = /[\p{L}\p{N}@$!|€]/u;
+const WORD_CHAR = new RegExp("[\\p{L}\\p{N}@$!|\u20AC]", "u");
 const VOWELS = new Set(["a", "e", "i", "o", "u"]);
 
 function isWordChar(ch: string): boolean {

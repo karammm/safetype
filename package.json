@@ -15,7 +15,8 @@
     "clean": "turbo run clean && rm -rf node_modules",
     "changeset": "changeset",
     "release": "turbo run build && changeset publish",
-    "e2e": "turbo run e2e"
+    "e2e": "turbo run e2e",
+    "check:dist": "node scripts/check-dist.mjs"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.11",

@@ -12,6 +12,21 @@ export const STYLES = `
 :where(.safetype-message[data-level="block"]){color:#b42318}
 `;
 
+/** The message level a result calls for: `block`, `warn`, or null. */
+export function getMessageLevel(result: ModerationResult): MessageLevel | null {
+  if (result.action === "block") return "block";
+  return result.matches.some((m) => m.action === "warn") ? "warn" : null;
+}
+
+export function resolveMessage(
+  level: MessageLevel,
+  texts: Partial<Record<MessageLevel, MessageText>> | undefined,
+  result: ModerationResult,
+): string {
+  const configured = texts?.[level] ?? DEFAULT_MESSAGES[level];
+  return typeof configured === "function" ? configured(result) : configured;
+}
+
 let nextId = 0;
 
 function addToken(el: Element, attr: string, token: string): void {
@@ -38,8 +53,7 @@ export class MessageController {
 
   update(level: MessageLevel | null, result: ModerationResult): void {
     if (!level) return this.clear();
-    const configured = this.texts[level] ?? DEFAULT_MESSAGES[level];
-    const text = typeof configured === "function" ? configured(result) : configured;
+    const text = resolveMessage(level, this.texts, result);
     if (!this.node) {
       const node = this.field.ownerDocument.createElement("div");
       node.id = this.id;

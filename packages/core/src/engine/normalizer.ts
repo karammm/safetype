@@ -5,7 +5,7 @@
  * code point it came from, so matches found in normalized text map back to exact original offsets.
  */
 
-const ZERO_WIDTH = /^[​-‍⁠﻿­᠎]$/;
+const ZERO_WIDTH = new RegExp("^[\u200B-\u200D\u2060\uFEFF\u00AD\u180E]$");
 const COMBINING_MARKS = /\p{M}/gu;
 
 /** Cyrillic and Greek letters that are visually identical to Latin letters (lowercase forms). */

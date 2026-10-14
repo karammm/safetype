@@ -1,6 +1,6 @@
 {
   "name": "@safetype/core",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Framework-independent content moderation engine for SafeType.js",
   "license": "MIT",
   "type": "module",
@@ -28,7 +28,7 @@
     "hate-speech"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "build": "tsup",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "bench": "vitest bench --run",

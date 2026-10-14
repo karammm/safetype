@@ -399,6 +399,17 @@ describe("dynamic elements and lifecycle", () => {
     expect(st.elements.map((e) => e.id)).toEqual(["in"]);
   });
 
+  it("blocks the surrounding form when scoped to a single field", () => {
+    document.body.innerHTML = `<form><input id="only"></form>`;
+    const input = document.getElementById("only") as HTMLInputElement;
+    const st = start({ root: input, mode: "block" });
+    expect(st.elements).toEqual([input]);
+    input.value = "shit";
+    const event = new Event("submit", { bubbles: true, cancelable: true });
+    document.querySelector("form")!.dispatchEvent(event);
+    expect(event.defaultPrevented).toBe(true);
+  });
+
   it("works inside an open shadow root", () => {
     const host = document.createElement("div");
     document.body.append(host);

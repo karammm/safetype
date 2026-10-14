@@ -13,6 +13,7 @@
   "updateInternalDependencies": "patch",
   "ignore": [
     "@safetype/example-node-server",
-    "@safetype/playground"
+    "@safetype/playground",
+    "@safetype/example-react-app"
   ]
 }

@@ -2,6 +2,27 @@
 
 All `@safetype/*` packages share one version number.
 
+## 1.2.0
+
+### New: `@safetype/react`
+
+- `<SafeTypeInput>` and `<SafeTypeTextarea>`: controlled or uncontrolled, with masked text flowing through `onChange`
+- Built-in accessible messages (always-present live region, `aria-describedby`, `aria-invalid` when blocked)
+- `<SafeTypeProvider>` for app-wide configuration; components can override `mode`
+- `useSafeType()` for any element (including contenteditable), `useModeration()` for strings, `useSafeTypeEngine()`
+- Live `mode` / `policy` updates, StrictMode-safe, `"use client"` for Next.js
+- Vite example app and real-browser tests with a controlled React app
+
+### Fixed
+
+- All bundles are now ASCII-only. Raw Unicode in a regular expression made `@safetype/core` crash with
+  "Invalid regular expression" when a page served the script without a UTF-8 charset. CI now checks every bundle.
+
+### `@safetype/dom`
+
+- When `root` is a single element, form submission is still blocked (the listener is on its document)
+- New exports: `getMessageLevel()` and `resolveMessage()`
+
 ## 1.1.0
 
 ### New: `@safetype/dom`

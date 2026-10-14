@@ -1,0 +1,72 @@
+{
+  "name": "@safetype/react",
+  "version": "1.2.0",
+  "description": "React components and hooks for SafeType.js content moderation",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "moderation",
+    "profanity",
+    "filter",
+    "react",
+    "hooks",
+    "input"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "e2e": "node e2e/build-fixture.mjs && playwright test",
+    "clean": "rm -rf dist .turbo test-results e2e/dist"
+  },
+  "dependencies": {
+    "@safetype/core": "workspace:*",
+    "@safetype/dom": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karammm/safetype.git",
+    "directory": "packages/react"
+  },
+  "homepage": "https://github.com/karammm/safetype#readme",
+  "bugs": {
+    "url": "https://github.com/karammm/safetype/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.49.1",
+    "@testing-library/dom": "10.4.0",
+    "@testing-library/react": "16.1.0",
+    "@testing-library/user-event": "14.5.2",
+    "@types/react": "18.3.18",
+    "@types/react-dom": "18.3.5",
+    "esbuild": "0.24.2",
+    "jsdom": "25.0.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}

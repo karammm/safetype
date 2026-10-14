@@ -170,6 +170,11 @@ export function createSafeType(options: SafeTypeOptions = {}): SafeTypeInstance 
     }
   };
 
+  // submit doesn't cross shadow boundaries, so listen on the shadow root there; for an element root
+  // (e.g. a single field) listen on its document so the surrounding form is still covered.
+  const submitTarget = (r: Document | Element | ShadowRoot): Document | ShadowRoot =>
+    r.nodeType === 1 ? (r as Element).ownerDocument : (r as Document | ShadowRoot);
+
   const styleTarget = (r: Document | Element | ShadowRoot): Document | ShadowRoot =>
     r.nodeType === 9 || r.nodeType === 11 ? (r as Document | ShadowRoot) : (r.ownerDocument ?? document);
 
@@ -192,7 +197,7 @@ export function createSafeType(options: SafeTypeOptions = {}): SafeTypeInstance 
       if (injectStyles && showMessages) acquireStyles(styleTarget(root));
       if (root.nodeType === 1) discover(root as Element);
       else root.querySelectorAll(selector).forEach(attach);
-      root.addEventListener("submit", onSubmit, true);
+      submitTarget(root).addEventListener("submit", onSubmit, true);
       if (observeDynamicElements) {
         const view = (root.nodeType === 9 ? (root as Document) : root.ownerDocument)?.defaultView;
         const Observer = view?.MutationObserver ?? globalThis.MutationObserver;
@@ -206,7 +211,7 @@ export function createSafeType(options: SafeTypeOptions = {}): SafeTypeInstance 
       running = false;
       observer?.disconnect();
       observer = null;
-      root.removeEventListener("submit", onSubmit, true);
+      submitTarget(root).removeEventListener("submit", onSubmit, true);
       for (const el of [...controllers.keys()]) detach(el);
       if (injectStyles && showMessages) releaseStyles(styleTarget(root));
       root = null;

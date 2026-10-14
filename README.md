@@ -38,6 +38,17 @@ Inputs, textareas and contenteditable elements are moderated as people type, inc
 later. The caret stays put, undo keeps working, IME input is respected, and password or payment fields
 are never touched. See the [`@safetype/dom` docs](packages/dom/README.md).
 
+### React
+
+```jsx
+import { SafeTypeInput } from "@safetype/react";
+
+<SafeTypeInput mode="mask" value={text} onChange={(e) => setText(e.target.value)} />
+```
+
+Masked text flows through `onChange`, so your state always matches the field. See the
+[`@safetype/react` docs](packages/react/README.md).
+
 ## Packages
 
 | Package                  | Status | Description                                                   |
@@ -46,7 +57,8 @@ are never touched. See the [`@safetype/dom` docs](packages/dom/README.md).
 | `@safetype/dictionaries` | ✅     | Language packs (`en`) and the pack format                     |
 | `@safetype/shared`       | ✅     | Public TypeScript contracts                                   |
 | `@safetype/dom`          | ✅     | Auto-attach to inputs, textareas, contenteditable             |
-| `@safetype/react` / `angular` / `vue` | v1.2–1.4 | Framework bindings                             |
+| `@safetype/react`        | ✅     | Components and hooks                                          |
+| `@safetype/vue` / `angular` | v1.3–1.4 | Framework bindings                                      |
 | `@safetype/editor` / `adapters`       | v1.5–1.6 | Tiptap-based editor, third-party editor adapters |
 | `@safetype/ai`           | v1.7    | Contextual classifier providers                            |
 
@@ -160,7 +172,7 @@ pnpm bench
 | ------- | ----- |
 | **1.0.0** | Core engine, English pack, server validation ✅ |
 | **1.1.0** | `@safetype/dom`: auto-attach to inputs, caret preservation, IME, live playground ✅ |
-| 1.2.0 | `@safetype/react` |
+| **1.2.0** | `@safetype/react` ✅ |
 | 1.3.0 | `@safetype/vue` |
 | 1.4.0 | `@safetype/angular` |
 | 1.5.0 | `@safetype/editor`: built-in Tiptap rich-text editor |

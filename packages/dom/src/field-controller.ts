@@ -1,5 +1,5 @@
 import type { ModerationEngine, ModerationResult, ModerationSession } from "@safetype/core";
-import { MessageController } from "./messages";
+import { getMessageLevel, MessageController } from "./messages";
 import type { Surface } from "./surface";
 import type { MessageLevel, MessageText, SafeTypeEventName } from "./types";
 
@@ -137,9 +137,7 @@ export class FieldController {
 
   private updateMessages(result: ModerationResult): void {
     if (!this.messages) return;
-    const level: MessageLevel | null =
-      result.action === "block" ? "block" : result.matches.some((m) => m.action === "warn") ? "warn" : null;
-    this.messages.update(level, result);
+    this.messages.update(getMessageLevel(result), result);
   }
 
   private emit(result: ModerationResult): void {

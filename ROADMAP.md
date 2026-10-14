@@ -49,7 +49,7 @@ New package: `@safetype/dom`
 - Tests: Vitest (DOM unit) + Playwright on Chromium, Firefox, and WebKit
 - Vanilla JS example + a **live playground on GitHub Pages**
 
-## v1.2.0: React
+## v1.2.0: React ✅ built · ⏳ awaiting npm publish
 
 New package: `@safetype/react`
 
