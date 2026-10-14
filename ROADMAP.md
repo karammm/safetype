@@ -34,7 +34,7 @@ Each release is built, tested, tagged, and published on its own before work on t
 
 **Still to do:** npm org + login, a release workflow (publish from CI on tag with npm provenance), tag `v1.0.0`.
 
-## v1.1.0: Universal DOM integration
+## v1.1.0: Universal DOM integration ✅ built · ⏳ awaiting npm publish
 
 New package: `@safetype/dom`
 

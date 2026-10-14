@@ -12,6 +12,7 @@
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
   "ignore": [
-    "@safetype/example-node-server"
+    "@safetype/example-node-server",
+    "@safetype/playground"
   ]
 }

@@ -1,0 +1,63 @@
+{
+  "name": "@safetype/dom",
+  "version": "1.1.0",
+  "description": "Attach SafeType.js moderation to inputs, textareas and contenteditable elements",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "unpkg": "./dist/safetype.global.js",
+  "jsdelivr": "./dist/safetype.global.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./global": "./dist/safetype.global.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "moderation",
+    "profanity",
+    "filter",
+    "input",
+    "textarea",
+    "contenteditable"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "e2e": "playwright test",
+    "clean": "rm -rf dist .turbo test-results playwright-report"
+  },
+  "dependencies": {
+    "@safetype/core": "workspace:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karammm/safetype.git",
+    "directory": "packages/dom"
+  },
+  "homepage": "https://github.com/karammm/safetype#readme",
+  "bugs": {
+    "url": "https://github.com/karammm/safetype/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.49.1",
+    "jsdom": "25.0.1"
+  }
+}

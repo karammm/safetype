@@ -1,0 +1,12 @@
+{
+  "name": "@safetype/playground",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "preview": "node build.mjs && python3 -m http.server 4180 --directory dist"
+  },
+  "dependencies": {
+    "@safetype/dom": "workspace:*"
+  }
+}

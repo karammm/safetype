@@ -1,7 +1,7 @@
 {
   "name": "safetype",
   "private": true,
-  "description": "SafeType.js — open-source, framework-independent content moderation SDK",
+  "description": "SafeType.js \u2014 open-source, framework-independent content moderation SDK",
   "license": "MIT",
   "packageManager": "pnpm@9.15.4",
   "engines": {
@@ -14,7 +14,8 @@
     "bench": "turbo run bench",
     "clean": "turbo run clean && rm -rf node_modules",
     "changeset": "changeset",
-    "release": "turbo run build && changeset publish"
+    "release": "turbo run build && changeset publish",
+    "e2e": "turbo run e2e"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.11",

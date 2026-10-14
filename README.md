@@ -24,8 +24,19 @@ engine.moderate("What the fuck are you doing?").text;
 // "What the f*ck are you doing?"
 ```
 
-> **Status: Phase 1 (core engine).** The DOM integration, React/Angular/Vue packages, rich-text
-> editor, and AI providers are on the [roadmap](#roadmap) and are not published yet.
+**[Try it live in the playground →](https://karammm.github.io/safetype/)**
+
+### Moderate every text field on a page
+
+```js
+import { createSafeType } from "@safetype/dom";
+
+createSafeType({ mode: "mask" }).start();
+```
+
+Inputs, textareas and contenteditable elements are moderated as people type, including fields added
+later. The caret stays put, undo keeps working, IME input is respected, and password or payment fields
+are never touched. See the [`@safetype/dom` docs](packages/dom/README.md).
 
 ## Packages
 
@@ -34,10 +45,10 @@ engine.moderate("What the fuck are you doing?").text;
 | `@safetype/core`         | ✅     | Moderation engine: normalize → match → classify → policy → transform |
 | `@safetype/dictionaries` | ✅     | Language packs (`en`) and the pack format                     |
 | `@safetype/shared`       | ✅     | Public TypeScript contracts                                   |
-| `@safetype/dom`          | Phase 2 | Auto-attach to inputs, textareas, contenteditable             |
-| `@safetype/react` / `angular` / `vue` | Phase 3 | Framework bindings                               |
-| `@safetype/editor` / `adapters`       | Phase 4 | Tiptap-based editor, third-party editor adapters |
-| `@safetype/ai`           | Phase 5 | Contextual classifier providers                               |
+| `@safetype/dom`          | ✅     | Auto-attach to inputs, textareas, contenteditable             |
+| `@safetype/react` / `angular` / `vue` | v1.2–1.4 | Framework bindings                             |
+| `@safetype/editor` / `adapters`       | v1.5–1.6 | Tiptap-based editor, third-party editor adapters |
+| `@safetype/ai`           | v1.7    | Contextual classifier providers                            |
 
 ## Design principles
 
@@ -139,6 +150,7 @@ pnpm install
 pnpm build
 pnpm typecheck
 pnpm test
+pnpm e2e        # real-browser tests (run `pnpm --filter @safetype/dom exec playwright install` once)
 pnpm bench
 ```
 
@@ -147,7 +159,7 @@ pnpm bench
 | Version | Scope |
 | ------- | ----- |
 | **1.0.0** | Core engine, English pack, server validation ✅ |
-| 1.1.0 | `@safetype/dom`: auto-attach to inputs, caret preservation, IME, live playground |
+| **1.1.0** | `@safetype/dom`: auto-attach to inputs, caret preservation, IME, live playground ✅ |
 | 1.2.0 | `@safetype/react` |
 | 1.3.0 | `@safetype/vue` |
 | 1.4.0 | `@safetype/angular` |

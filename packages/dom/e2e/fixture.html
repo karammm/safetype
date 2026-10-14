@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>SafeType e2e fixture</title></head>
+<body>
+  <form id="form" action="#">
+    <input id="input" aria-label="input">
+    <textarea id="textarea" aria-label="textarea"></textarea>
+    <div id="editor" contenteditable="true" aria-label="editor"><p>Hello <b>world</b></p></div>
+    <input id="password" type="password" aria-label="password">
+    <button id="submit" type="submit">Send</button>
+  </form>
+  <textarea id="scratch" data-safetype="off" aria-label="scratch"></textarea>
+  <button id="add" type="button">Add field</button>
+  <div id="dynamic"></div>
+  <script src="../dist/safetype.global.js"></script>
+  <script>
+    const mode = new URLSearchParams(location.search).get("mode") || "mask";
+    window.events = [];
+    window.submitted = 0;
+    document.getElementById("form").addEventListener("submit", (e) => { e.preventDefault(); window.submitted++; });
+    document.getElementById("add").addEventListener("click", () => {
+      const input = document.createElement("input");
+      input.id = "added";
+      input.setAttribute("aria-label", "added");
+      document.getElementById("dynamic").append(input);
+    });
+    window.st = SafeType.createSafeType({
+      mode,
+      onViolation: (r, el) => window.events.push(["violation", el.id, r.action]),
+      onBlocked: (r, el) => window.events.push(["blocked", el.id]),
+    });
+    window.st.start();
+  </script>
+</body>
+</html>
