@@ -2,6 +2,15 @@
 
 **Write freely. Communicate respectfully.**
 
+<p align="center">
+  <a href="docs/assets/safetype-intro.mp4">
+    <img src="docs/assets/safetype-intro.gif" width="860"
+      alt="SafeType.js in 45 seconds: live masking while typing, catching disguised spellings without flagging innocent words, context-aware handling of harassment, and the five moderation actions">
+  </a>
+  <br>
+  <sub>▶ <a href="docs/assets/safetype-intro.mp4">Watch the 45-second intro in full quality (MP4)</a>. Every result shown is real output from <code>@safetype/core</code>.</sub>
+</p>
+
 SafeType.js is an open-source, framework-independent TypeScript SDK that detects profanity,
 hate speech, and harassment and then masks, warns about, blocks, or suggests replacements
 for them, without asking you to replace your existing editor.
