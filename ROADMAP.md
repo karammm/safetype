@@ -79,14 +79,18 @@ New package: `@safetype/editor` (Tiptap / ProseMirror)
 - Moderation through editor transactions, so formatting is never lost
 - Wrappers: `<SafeTypeEditor>` for React, Vue, and Angular
 
-## v1.6.0: Third-party editor adapters
+## v1.6.0: Hinglish detection ✅ published
+
+- Romanized Hindi profanity and family-directed insults, on by default; `languages` option to opt out
+
+## v1.7.0: Third-party editor adapters
 
 New package: `@safetype/adapters`
 
 - Tiptap / ProseMirror, Quill, Lexical, CodeMirror 6, Monaco
 - A documented adapter contract so the community can add more
 
-## v1.7.0: Contextual AI providers
+## v1.8.0: Contextual AI providers
 
 New package: `@safetype/ai`
 
@@ -95,13 +99,13 @@ New package: `@safetype/ai`
 - Custom callback provider
 - Server middleware for Express and Fastify, plus a generic `fetch` handler
 
-## v1.8.0: Language packs
+## v1.9.0: Language packs
 
-- Spanish, Hindi (Devanagari + romanized Hinglish), French, German, Portuguese
+- Spanish, Hindi (Devanagari script; romanized Hinglish shipped in 1.6.0), French, German, Portuguese
 - Each pack reviewed by native speakers, with false-positive test suites
 - A contribution guide for new languages
 
-## v1.9.0: Docs, hardening, and stability
+## v1.10.0: Docs, hardening, and stability
 
 - Documentation site (VitePress) on GitHub Pages
 - Accessibility audit, memory-leak tests, large-document performance budgets

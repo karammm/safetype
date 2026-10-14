@@ -29,15 +29,26 @@ from .types import (
 PolicyMap = Mapping[str, Mapping[str, Any]]
 
 
+# English plus Hinglish (romanized Hindi), which is common in English-language apps.
+DEFAULT_LANGUAGES = {"en": ("en", "hi-latn")}
+
+
 @lru_cache(maxsize=None)
 def load_pack(language: str) -> dict:
     """Loads a built-in dictionary pack (the same JSON the JavaScript packages are built from)."""
-    base = language.lower().split("-")[0]
-    try:
-        raw = resources.files("safetype").joinpath(f"data/{base}.json").read_text(encoding="utf-8")
-    except FileNotFoundError:
-        raise ValueError(f'No built-in dictionary pack for language "{language}". Pass one via `packs`.') from None
-    return json.loads(raw)
+    key = language.lower()
+    for name in (key, key.split("-")[0]):
+        try:
+            raw = resources.files("safetype").joinpath(f"data/{name}.json").read_text(encoding="utf-8")
+            return json.loads(raw)
+        except FileNotFoundError:
+            continue
+    raise ValueError(f'No built-in dictionary pack for language "{language}". Pass one via `packs`.')
+
+
+def default_packs(language: str, languages: Optional[Sequence[str]] = None) -> list[dict]:
+    names = languages if languages is not None else DEFAULT_LANGUAGES.get(language.lower().split("-")[0], (language,))
+    return [load_pack(name) for name in names]
 
 
 def _round(value: float) -> float:
@@ -53,6 +64,7 @@ class ModerationEngine:
         *,
         mode: str = "mask",
         language: str = "en",
+        languages: Optional[Sequence[str]] = None,
         categories: Optional[Iterable[str]] = None,
         policy: Optional[PolicyMap] = None,
         packs: Optional[Sequence[Mapping[str, Any]]] = None,
@@ -78,7 +90,7 @@ class ModerationEngine:
         self._allow_list: set[str] = set()
         self._index: Optional[RuleIndex] = None
 
-        for pack in packs if packs is not None else [load_pack(language)]:
+        for pack in packs if packs is not None else default_packs(language, languages):
             boundary = pack.get("boundary", "word")
             for rule in pack.get("rules", []):
                 self._put(rule, boundary)

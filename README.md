@@ -104,7 +104,7 @@ It's also available as `<SafeTypeEditor>` for React and Vue and `<safe-type-edit
 | `@safetype/vue`          | ✅     | Directive, components and composables                         |
 | `@safetype/angular`      | ✅     | Directive, validator, pipe and service                        |
 | `@safetype/editor`       | ✅     | Built-in rich-text editor (Tiptap) + framework wrappers       |
-| `@safetype/adapters`     | v1.6   | Third-party editor adapters                                   |
+| `@safetype/adapters`     | v1.7   | Third-party editor adapters                                   |
 | `safetype` (PyPI)        | ✅     | Python port of the engine for server-side validation          |
 | `@safetype/ai`           | v1.7    | Contextual classifier providers                            |
 
@@ -146,6 +146,8 @@ below that is reported with `requiresReview: true` and action `allow`.
 
 ## What the engine handles
 
+- **Languages:** English and Hinglish (romanized Hindi, e.g. "bhenchod", "chutiya", "teri maa ka…") by default.
+  Use `languages: ["en"]` for English only
 - **Unicode:** diacritics (`fück`), full-width forms (`ｆｕｃｋ`), Cyrillic/Greek lookalikes, zero-width characters
 - **Obfuscation:** leet (`sh1t`, `$hit`), repeated letters (`fuuuck`), spaced letters (`f u c k`, `f.u.c.k`)
 - **No Scunthorpe problem:** whole-word matching, and repeated-letter tolerance never shortens a word (`as` ≠ `ass`)
@@ -222,10 +224,11 @@ pnpm bench
 | **1.3.0** | `@safetype/vue` ✅ |
 | **1.4.0** | `@safetype/angular` ✅ |
 | **1.5.0** | `@safetype/editor`: built-in Tiptap rich-text editor ✅ |
-| 1.6.0 | `@safetype/adapters`: Quill, Lexical, CodeMirror, Monaco, ProseMirror |
-| 1.7.0 | `@safetype/ai`: contextual providers and server middleware |
-| 1.8.0 | Language packs: es, hi, fr, de, pt |
-| 1.9.0 | Docs site, accessibility, and security hardening |
+| **1.6.0** | Hinglish (romanized Hindi) detection, on by default ✅ |
+| 1.7.0 | `@safetype/adapters`: Quill, Lexical, CodeMirror, Monaco, ProseMirror |
+| 1.8.0 | `@safetype/ai`: contextual providers and server middleware |
+| 1.9.0 | Language packs: es, hi (Devanagari), fr, de, pt |
+| 1.10.0 | Docs site, accessibility, and security hardening |
 
 Full details and the per-release checklist are in [ROADMAP.md](ROADMAP.md).
 

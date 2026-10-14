@@ -1,4 +1,5 @@
 import { en } from "@safetype/dictionaries/en";
+import { hiLatn } from "@safetype/dictionaries/hi-latn";
 import {
   ALL_CATEGORIES,
   type AsyncModerationResult,
@@ -67,14 +68,21 @@ interface StoredRule {
   compiled: CompiledRule;
 }
 
-const BUILT_IN_PACKS: Readonly<Record<string, DictionaryPack>> = { en };
+const BUILT_IN_PACKS: Readonly<Record<string, DictionaryPack>> = { en, "hi-latn": hiLatn };
 
-function resolveDefaultPack(language: string): DictionaryPack {
-  const pack = BUILT_IN_PACKS[language.toLowerCase().split("-")[0]!];
-  if (!pack) {
-    throw new Error(`No built-in dictionary pack for language "${language}". Pass one via the \`packs\` option.`);
-  }
-  return pack;
+/** English plus Hinglish (romanized Hindi), which is common in English-language apps. */
+const DEFAULT_LANGUAGES: Readonly<Record<string, readonly string[]>> = { en: ["en", "hi-latn"] };
+
+function resolveDefaultPacks(language: string, languages: readonly string[] | undefined): DictionaryPack[] {
+  const names = languages ?? DEFAULT_LANGUAGES[language.toLowerCase().split("-")[0]!] ?? [language];
+  return names.map((name) => {
+    const key = name.toLowerCase();
+    const pack = BUILT_IN_PACKS[key] ?? BUILT_IN_PACKS[key.split("-")[0]!];
+    if (!pack) {
+      throw new Error(`No built-in dictionary pack for language "${name}". Pass one via the \`packs\` option.`);
+    }
+    return pack;
+  });
 }
 
 function abortError(signal?: AbortSignal): unknown {
@@ -125,7 +133,7 @@ export function createModerationEngine(config: EngineConfig = {}): ModerationEng
     index = null;
   };
 
-  for (const pack of config.packs ?? [resolveDefaultPack(language)]) {
+  for (const pack of config.packs ?? resolveDefaultPacks(language, config.languages)) {
     for (const rule of pack.rules) putRule(rule, pack.boundary ?? "word");
     for (const word of pack.allowList ?? []) allowList.add(normalizeTerm(word));
   }

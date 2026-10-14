@@ -2,7 +2,7 @@ import type { EngineConfig } from "@safetype/shared";
 
 /** Engine options that framework bindings accept as props. */
 export const ENGINE_CONFIG_KEYS = [
-  "mode", "language", "categories", "policy", "packs", "customWords", "allowList", "rules",
+  "mode", "language", "languages", "categories", "policy", "packs", "customWords", "allowList", "rules",
   "maskChar", "maskStyle", "detectSpacedLetters", "classifiers", "classifierTimeoutMs",
 ] as const;
 

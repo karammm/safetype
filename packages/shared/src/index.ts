@@ -182,6 +182,11 @@ export interface EngineConfig {
   /** Default action applied to every enabled category (see policy defaults). Default "mask". */
   mode?: ModerationAction;
   language?: string;
+  /**
+   * Built-in packs to load, e.g. `["en"]` to turn off Hinglish. Default for English: `["en", "hi-Latn"]`.
+   * Ignored when `packs` is given.
+   */
+  languages?: string[];
   categories?: ModerationCategory[];
   /** Per-category overrides. */
   policy?: PolicyMap;

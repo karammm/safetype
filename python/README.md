@@ -63,13 +63,15 @@ def clean_body(self):
   quoted or reported speech becomes `requires_review` instead of being acted on
 - Unicode (accents, full-width, Cyrillic/Greek lookalikes, zero-width), leet (`sh1t`), repeated letters, spaced letters
 - No Scunthorpe problem, and masking is idempotent
+- English and Hinglish (romanized Hindi: "bhenchod", "chutiya", "teri maa ka...") out of the box;
+  `languages=["en"]` turns Hinglish off
 - Custom words, custom rules, allow lists, mask styles (`vowels`, `partial`, `full`, or a function)
 
 ## API
 
 ```python
 engine = create_moderation_engine(
-    mode="mask", language="en", categories=None, policy=None, packs=None,
+    mode="mask", language="en", languages=None, categories=None, policy=None, packs=None,
     custom_words=None, allow_list=None, rules=None,
     mask_char="*", mask_style="vowels", detect_spaced_letters=True,
 )

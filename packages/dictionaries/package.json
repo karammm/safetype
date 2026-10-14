@@ -1,6 +1,6 @@
 {
   "name": "@safetype/dictionaries",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "description": "Language packs for SafeType.js",
   "license": "MIT",
   "type": "module",
@@ -19,7 +19,12 @@
       "import": "./dist/en/index.js",
       "require": "./dist/en/index.cjs"
     },
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./hi-latn": {
+      "types": "./dist/hi-latn/index.d.ts",
+      "import": "./dist/hi-latn/index.js",
+      "require": "./dist/hi-latn/index.cjs"
+    }
   },
   "files": [
     "dist",

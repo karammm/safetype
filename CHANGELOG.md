@@ -2,6 +2,20 @@
 
 All `@safetype/*` packages share one version number.
 
+## 1.6.0
+
+### Hinglish (romanized Hindi) detection, on by default
+
+- New `hi-Latn` pack: behenchod, madarchod, betichod, chut, lund/loda/lauda, lodu/loduchand, bhosda/bhosdike/bhosidke,
+  bsdk/bkl/mkc, chutiya, gandu/gaand, harami, bhadwa, jhaatu, kutiya, randiya/randibaaz, with common spelling variants.
+  Repeated letters, leet (`bh3nch0d`) and spaced letters are handled like English
+- Insults aimed at someone's family ("teri maa ka bhosada", "maa chod") are flagged as **harassment** (warn by default),
+  while the swear word inside is still masked
+- Left out on purpose to avoid false positives: `bc`, `mc`, `bkc`, `kutti`, bare `randi`, `gand`, and "chod" on its own
+  ("mujhe chod do"). Checked against 235,976 English words: the only collisions are "chut" (French) and the place name "Lund"
+- New `languages` option (JS and Python): the default for English is `["en", "hi-Latn"]`. Use `languages: ["en"]` to turn Hinglish off
+- `@safetype/dictionaries/hi-latn` export. The Python package ships the same pack, and parity now covers 966 cases
+
 ## 1.5.1
 
 - First release published from GitHub Actions through npm and PyPI trusted publishing. npm packages now

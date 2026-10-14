@@ -18,6 +18,9 @@ const texts = [
   "you piece of shit", "you're a piece of shit", "nobody likes you", "u r a loser",
   "What the FUCK is this?", "slut", "this is shit", "line one shit\nline two", "“you are an idiot”",
   "the word shit", "Voldemort is he who must not be named", "frak this, fracking toasters", "",
+  "Behenchod, madharchod, betichod", "maa ki chut", "behen ka loda", "teri maa ka bhosada",
+  "lodu, lund, bhosidke, bsdk, loduchand", "chutiya gandu harami bhadwa kutiya", "BHENCHODDD bh3nch0d",
+  "c h u t i y a", "maa chod di", "mujhe chod do", "Asha Bhosle and chutney", "kutti randi BC MC BKC",
 ];
 
 const configs = [
@@ -33,6 +36,8 @@ const configs = [
   { name: "custom", config: { customWords: ["Voldemort", "he who must not be named"], allowList: ["bastard"], rules: [{ id: "app.frak", pattern: "(frak|frack*)", category: "custom", replacement: "darn" }] } },
   { name: "categories", config: { categories: ["harassment", "hate"] } },
   { name: "no-spaced", config: { detectSpacedLetters: false } },
+  { name: "english-only", config: { languages: ["en"] } },
+  { name: "hinglish-only", config: { languages: ["hi-Latn"], mode: "block" } },
 ];
 
 const cp = (text, offset) => Array.from(text.slice(0, offset)).length;
