@@ -59,12 +59,6 @@
       "severity": "high"
     },
     {
-      "id": "fr.profanity.batard",
-      "pattern": "batard*",
-      "category": "profanity",
-      "severity": "high"
-    },
-    {
       "id": "fr.profanity.branleur",
       "pattern": "(branleur*|branleuse*|branlette*)",
       "category": "profanity",
@@ -81,6 +75,18 @@
       "pattern": "trou (du|de) cul",
       "category": "profanity",
       "severity": "high"
+    },
+    {
+      "id": "fr.profanity.sms",
+      "pattern": "(ntm|ftg|fdp|tepu)",
+      "category": "profanity",
+      "severity": "high"
+    },
+    {
+      "id": "fr.profanity.quebec",
+      "pattern": "(tabarnak*|tabarnac*|tabarnaque*|tabernak*|calisse*|caliss|colisse*|ostie|osti|estie)",
+      "category": "profanity",
+      "severity": "medium"
     },
     {
       "id": "fr.profanity.bordel",
@@ -144,7 +150,7 @@
     },
     {
       "id": "fr.harassment.insult",
-      "pattern": "(tu|t|vous) (es|etes) (vraiment|trop|qu)? (un|une)? (sale|gros|grosse|pauvre|petit|petite|vrai|vraie)? (idiot*|imbecile*|debile*|abruti*|cretin*|con|conne|connard*|connasse*|nul|nulle|minable*|pathetique*|attarde*|mongol|mongole|batard*|salope|ordure*|merde|dechet*|rate|ratee|loser*|bouffon*|clown*|stupide*|chienne|grosse|moche|pute)",
+      "pattern": "(tu|t|vous) (es|etes) (vraiment|trop|qu)? (un|une)? (sale|gros|grosse|pauvre|petit|petite|vrai|vraie)? (idiot*|imbecile*|debile*|abruti*|cretin*|con|conne|connard*|connasse*|nul|nulle|minable*|pathetique*|attarde*|mongol|mongole|batard*|pede|pedes|tafiole*|teube|salope|ordure*|merde|dechet*|rate|ratee|loser*|bouffon*|clown*|stupide*|chienne|grosse|moche|pute)",
       "category": "harassment",
       "severity": "medium",
       "confidence": 0.8,
@@ -152,7 +158,7 @@
     },
     {
       "id": "fr.harassment.sale",
-      "pattern": "(espece|sale) (de)? (con|conne|connard*|connasse*|pute|chienne|batard*|merde|ordure*|race|arabe|noir|juif)",
+      "pattern": "(espece|sale) (de)? (con|conne|connard*|connasse*|pute|chienne|batard*|merde|ordure*|race|arabe|noir|juif|pede|pedes)",
       "category": "harassment",
       "severity": "high",
       "confidence": 0.8,

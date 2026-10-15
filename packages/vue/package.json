@@ -1,6 +1,6 @@
 {
   "name": "@safetype/vue",
-  "version": "1.12.0",
+  "version": "1.13.0",
   "description": "Vue 3 directive, components and composables for SafeType.js content moderation",
   "license": "MIT",
   "type": "module",

@@ -145,7 +145,7 @@ const harassment: ModerationRule[] = [
     label: "insult",
   },
   {
-    // Only "औलाद" (offspring): "कुत्ते का बच्चा" is also a puppy.
+    // Only "aulad" (offspring): "kutte ka baccha" is also a puppy.
     id: "hi.harassment.animal-offspring",
     pattern: "(कुत्ते|कुत्ता|सूअर|सुअर|गधे|हरामखोर) (की|का|के) (औलाद|औलादें)",
     category: "harassment",

@@ -54,7 +54,7 @@
     },
     {
       "id": "es.profanity.chingar",
-      "pattern": "(chingar*|chingad*|chingue*|chinguen|chingon*|chinga)",
+      "pattern": "(chingar*|chingad*|chingue*|chinguen|chinga)",
       "category": "profanity",
       "severity": "high"
     },
@@ -66,9 +66,15 @@
     },
     {
       "id": "es.profanity.culo",
-      "pattern": "(culo|culos|culero*|culera*)",
+      "pattern": "(culo|culos)",
       "category": "profanity",
-      "severity": "medium"
+      "severity": "low"
+    },
+    {
+      "id": "es.profanity.culero",
+      "pattern": "(culero*|culera*)",
+      "category": "profanity",
+      "severity": "high"
     },
     {
       "id": "es.profanity.cagar",
@@ -85,6 +91,24 @@
     {
       "id": "es.profanity.concha",
       "pattern": "(conchetumare|conchatumadre|conchesumadre|conchasumadre)",
+      "category": "profanity",
+      "severity": "high"
+    },
+    {
+      "id": "es.profanity.pelotudo",
+      "pattern": "(pelotud*|conchud*)",
+      "category": "profanity",
+      "severity": "medium"
+    },
+    {
+      "id": "es.profanity.mamaguevo",
+      "pattern": "(mamaguevo*|mamaguebo*|mamahuevo*|mamagueva*)",
+      "category": "profanity",
+      "severity": "high"
+    },
+    {
+      "id": "es.profanity.malnacido",
+      "pattern": "malnacid*",
       "category": "profanity",
       "severity": "high"
     },
@@ -137,7 +161,15 @@
     },
     {
       "id": "es.harassment.insult",
-      "pattern": "(eres|sos) (un|una)? (puto|puta|pinche|maldito|maldita|completo|completa|gran|tremendo|tremenda)? (idiota*|imbecil*|estupido*|estupida*|tonto|tonta|inutil|basura|escoria|retrasado*|retrasada*|mongolo*|mongolic*|subnormal*|patetico*|patetica*|asqueroso*|asquerosa*|payaso*|perdedor*|fracasado*|fracasada*|pendejo*|pendeja*|cabron*|gilipollas|perra|zorra|puta)",
+      "pattern": "(eres|sos) (un|una)? (puto|puta|pinche|maldito|maldita|completo|completa|gran|tremendo|tremenda)? (idiota*|imbecil*|estupido*|estupida*|tonto|tonta|inutil|basura|escoria|retrasado*|retrasada*|mongolo*|mongolic*|subnormal*|boludo*|boluda*|pelotudo*|pelotuda*|huevon*|huevona*|weon*|weona*|gueon*|wn|malnacido*|patetico*|patetica*|asqueroso*|asquerosa*|payaso*|perdedor*|fracasado*|fracasada*|pendejo*|pendeja*|cabron*|gilipollas|perra|zorra|puta)",
+      "category": "harassment",
+      "severity": "medium",
+      "confidence": 0.8,
+      "label": "insult"
+    },
+    {
+      "id": "es.harassment.insult-subject",
+      "pattern": "(usted|tu|vos) (es|eres|sos) (un|una)? (puto|puta|pinche|maldito|maldita|completo|completa|gran|tremendo|tremenda)? (idiota*|imbecil*|estupido*|estupida*|tonto|tonta|inutil|basura|escoria|retrasado*|retrasada*|mongolo*|mongolic*|subnormal*|boludo*|boluda*|pelotudo*|pelotuda*|huevon*|huevona*|weon*|weona*|gueon*|wn|malnacido*|patetico*|patetica*|asqueroso*|asquerosa*|payaso*|perdedor*|fracasado*|fracasada*|pendejo*|pendeja*|cabron*|gilipollas|perra|zorra|puta)",
       "category": "harassment",
       "severity": "medium",
       "confidence": 0.8,
@@ -177,7 +209,15 @@
     },
     {
       "id": "es.harassment.threat",
-      "pattern": "te (voy|vamos) a (matar|apunalar|disparar|reventar|partir)",
+      "pattern": "te (voy|vamos) a (matar|apunalar|disparar|reventar|partir|romper|quebrar|cagar)",
+      "category": "harassment",
+      "severity": "high",
+      "confidence": 0.7,
+      "label": "threat"
+    },
+    {
+      "id": "es.harassment.threat-object",
+      "pattern": "(lo|la|los|las) (voy|vamos) a (matar|apunalar|disparar)",
       "category": "harassment",
       "severity": "high",
       "confidence": 0.7,

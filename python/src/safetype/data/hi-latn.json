@@ -93,10 +93,24 @@
       "severity": "medium"
     },
     {
+      "id": "hi-latn.profanity.chhinal",
+      "pattern": "(chhinal|chinal|chhinaal|chinaal|chhinar|chinar)",
+      "category": "profanity",
+      "severity": "high"
+    },
+    {
       "id": "hi-latn.profanity.kutiya",
       "pattern": "(kutiya|kuttiya|kutiyaa)",
       "category": "profanity",
       "severity": "high"
+    },
+    {
+      "id": "hi-latn.harassment.animal-offspring",
+      "pattern": "(kutte|kutta|kuttey|suar|suwar|gadhe|haramkhor) (ki|ka|ke) (aulad|aulaad|olad|olaad)",
+      "category": "harassment",
+      "severity": "high",
+      "confidence": 0.8,
+      "label": "insult"
     },
     {
       "id": "hi-latn.harassment.family-insult",

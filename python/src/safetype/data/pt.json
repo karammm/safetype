@@ -16,7 +16,7 @@
     },
     {
       "id": "pt.profanity.foder",
-      "pattern": "(foda|fodas|fodase|fodasse|foder|fodido*|fodida*|fodendo|fode|fodeu|fodam)",
+      "pattern": "(foda|fodas|fodase|fodasse|foder|fodido*|fodida*|fodendo|fode|fodeu|fodam|fuder|fudido*|fudida*|fudeu|fudendo)",
       "category": "profanity",
       "severity": "high"
     },
@@ -27,16 +27,28 @@
       "severity": "high"
     },
     {
-      "id": "pt.profanity.puto",
-      "pattern": "(puto|putos)",
-      "category": "profanity",
-      "severity": "medium"
-    },
-    {
       "id": "pt.profanity.abbreviations",
-      "pattern": "(fdp|vtnc|vsf|vsfd|pqp|tnc)",
+      "pattern": "(fdp|vtnc|vtmnc|tmnc|vsf|vsfd|pqp|tnc|pnc)",
       "category": "profanity",
       "severity": "high"
+    },
+    {
+      "id": "pt.profanity.cona",
+      "pattern": "(cona|conas)",
+      "category": "profanity",
+      "severity": "high"
+    },
+    {
+      "id": "pt.profanity.cabrao",
+      "pattern": "(cabrao|cabroes|cabrona|cabronas)",
+      "category": "profanity",
+      "severity": "high"
+    },
+    {
+      "id": "pt.profanity.badalhoco",
+      "pattern": "(badalhoc*)",
+      "category": "profanity",
+      "severity": "medium"
     },
     {
       "id": "pt.profanity.merda",
@@ -123,6 +135,14 @@
       "label": "slur"
     },
     {
+      "id": "pt.hate.slur.paneleiro",
+      "pattern": "(paneleiro|paneleiros|paneleira|paneleiras|paneleirice)",
+      "category": "hate",
+      "severity": "critical",
+      "confidence": 0.9,
+      "label": "slur"
+    },
+    {
       "id": "pt.hate.group-violence",
       "pattern": "(judeus|muculmanos|cristaos|negros|pretos|brancos|gays|viados|lesbicas|trans|mulheres|imigrantes|nordestinos|indios|refugiados|ciganos|baianos|africanos|arabes) (deveriam|devem|merecem|tem|teem) (que|de)? (ser)? (morrer|queimar|exterminados|exterminadas|mortos|mortas|queimados|queimadas|eliminados|eliminadas|enforcados|fuzilados)",
       "category": "hate",
@@ -132,7 +152,7 @@
     },
     {
       "id": "pt.harassment.insult",
-      "pattern": "(voce|vc|tu) (e|eh|es)? (um|uma)? (grande|completo|completa|puta|baita|bela|belo|maior)? (idiota*|imbecil*|burro|burra|estupido*|estupida*|otario*|otaria*|babaca*|lixo|inutil|retardado*|retardada*|mongoloide*|debil|corno*|vagabundo*|vagabunda*|nojento*|nojenta*|patetico*|patetica*|fracassado*|fracassada*|palhaco*|escroto*|escrota*|merda|arrombado*|arrombada*|desgracado*|desgracada*|vadia|puta|piranha|cachorra)",
+      "pattern": "(voce|vc|tu) (e|eh|es)? (um|uma)? (grande|completo|completa|puta|baita|bela|belo|maior)? (idiota*|imbecil*|burro|burra|estupido*|estupida*|otario*|otaria*|babaca*|lixo|inutil|retardado*|retardada*|mongoloide*|debil|corno*|vagabundo*|vagabunda*|nojento*|nojenta*|patetico*|patetica*|fracassado*|fracassada*|palhaco*|escroto*|escrota*|merda|cabrao|paneleiro|puto|arrombado*|arrombada*|desgracado*|desgracada*|vadia|puta|piranha|cachorra)",
       "category": "harassment",
       "severity": "medium",
       "confidence": 0.8,

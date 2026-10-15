@@ -3239,6 +3239,298 @@
    }
   },
   {
+   "config": "default",
+   "input": "sos un boludo",
+   "expected": {
+    "text": "sos un boludo",
+    "suggestedText": "sos un boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sos un boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "default",
+   "input": "che boludo",
+   "expected": {
+    "text": "che boludo",
+    "suggestedText": "che boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "che boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "default",
+   "input": "¡Qué chingón!",
+   "expected": {
+    "text": "¡Qué chingón!",
+    "suggestedText": "¡Qué chingón!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "¡Qué chingón!",
+    "matches": []
+   }
+  },
+  {
+   "config": "default",
+   "input": "usted es un idiota",
+   "expected": {
+    "text": "usted es un idiota",
+    "suggestedText": "usted es un idiota",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "usted es un idiota",
+    "matches": []
+   }
+  },
+  {
+   "config": "default",
+   "input": "Tabarnak!",
+   "expected": {
+    "text": "Tabarnak!",
+    "suggestedText": "Tabarnak!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Tabarnak!",
+    "matches": []
+   }
+  },
+  {
+   "config": "default",
+   "input": "Un bâtard et deux croissants",
+   "expected": {
+    "text": "Un bâtard et deux croissants",
+    "suggestedText": "Un bâtard et deux croissants",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Un bâtard et deux croissants",
+    "matches": []
+   }
+  },
+  {
+   "config": "default",
+   "input": "sale pédé",
+   "expected": {
+    "text": "sale pédé",
+    "suggestedText": "sale pédé",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sale pédé",
+    "matches": []
+   }
+  },
+  {
+   "config": "default",
+   "input": "du blöde Kuh",
+   "expected": {
+    "text": "du blöde Kuh",
+    "suggestedText": "du blöde Kuh",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "du blöde Kuh",
+    "matches": []
+   }
+  },
+  {
+   "config": "default",
+   "input": "Das isch huere guet",
+   "expected": {
+    "text": "Das isch huere guet",
+    "suggestedText": "Das isch huere guet",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Das isch huere guet",
+    "matches": []
+   }
+  },
+  {
+   "config": "default",
+   "input": "Oaschloch",
+   "expected": {
+    "text": "Oaschloch",
+    "suggestedText": "Oaschloch",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Oaschloch",
+    "matches": []
+   }
+  },
+  {
+   "config": "default",
+   "input": "vai se fuder",
+   "expected": {
+    "text": "vai se fuder",
+    "suggestedText": "vai se fuder",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "vai se fuder",
+    "matches": []
+   }
+  },
+  {
+   "config": "default",
+   "input": "Os putos estão na escola",
+   "expected": {
+    "text": "Os putos estão na escola",
+    "suggestedText": "Os putos estão na escola",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Os putos estão na escola",
+    "matches": []
+   }
+  },
+  {
+   "config": "default",
+   "input": "cona",
+   "expected": {
+    "text": "cona",
+    "suggestedText": "cona",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "cona",
+    "matches": []
+   }
+  },
+  {
+   "config": "default",
+   "input": "कुत्ते की औलाद",
+   "expected": {
+    "text": "कुत्ते की औलाद",
+    "suggestedText": "कुत्ते की औलाद",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "कुत्ते की औलाद",
+    "matches": []
+   }
+  },
+  {
+   "config": "default",
+   "input": "तू हिजड़ा है",
+   "expected": {
+    "text": "तू हिजड़ा है",
+    "suggestedText": "तू हिजड़ा है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "तू हिजड़ा है",
+    "matches": []
+   }
+  },
+  {
+   "config": "default",
+   "input": "हिजड़ा समुदाय",
+   "expected": {
+    "text": "हिजड़ा समुदाय",
+    "suggestedText": "हिजड़ा समुदाय",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "हिजड़ा समुदाय",
+    "matches": []
+   }
+  },
+  {
+   "config": "default",
+   "input": "छिनाल",
+   "expected": {
+    "text": "छिनाल",
+    "suggestedText": "छिनाल",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "छिनाल",
+    "matches": []
+   }
+  },
+  {
+   "config": "default",
+   "input": "kutte ki aulad",
+   "expected": {
+    "text": "kutte ki aulad",
+    "suggestedText": "kutte ki aulad",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ki aulad",
+    "matches": [
+     {
+      "start": 0,
+      "end": 14,
+      "text": "kutte ki aulad",
+      "ruleId": "hi-latn.harassment.animal-offspring",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "default",
+   "input": "kutte ka baccha",
+   "expected": {
+    "text": "kutte ka baccha",
+    "suggestedText": "kutte ka baccha",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ka baccha",
+    "matches": []
+   }
+  },
+  {
+   "config": "default",
+   "input": "chhinal",
+   "expected": {
+    "text": "chh*n*l",
+    "suggestedText": "chh*n*l",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "chh*n*l",
+    "matches": [
+     {
+      "start": 0,
+      "end": 7,
+      "text": "chhinal",
+      "ruleId": "hi-latn.profanity.chhinal",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
+   }
+  },
+  {
    "config": "suggest",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -6347,6 +6639,298 @@
    }
   },
   {
+   "config": "suggest",
+   "input": "sos un boludo",
+   "expected": {
+    "text": "sos un boludo",
+    "suggestedText": "sos un boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sos un boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "che boludo",
+   "expected": {
+    "text": "che boludo",
+    "suggestedText": "che boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "che boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "¡Qué chingón!",
+   "expected": {
+    "text": "¡Qué chingón!",
+    "suggestedText": "¡Qué chingón!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "¡Qué chingón!",
+    "matches": []
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "usted es un idiota",
+   "expected": {
+    "text": "usted es un idiota",
+    "suggestedText": "usted es un idiota",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "usted es un idiota",
+    "matches": []
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "Tabarnak!",
+   "expected": {
+    "text": "Tabarnak!",
+    "suggestedText": "Tabarnak!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Tabarnak!",
+    "matches": []
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "Un bâtard et deux croissants",
+   "expected": {
+    "text": "Un bâtard et deux croissants",
+    "suggestedText": "Un bâtard et deux croissants",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Un bâtard et deux croissants",
+    "matches": []
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "sale pédé",
+   "expected": {
+    "text": "sale pédé",
+    "suggestedText": "sale pédé",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sale pédé",
+    "matches": []
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "du blöde Kuh",
+   "expected": {
+    "text": "du blöde Kuh",
+    "suggestedText": "du blöde Kuh",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "du blöde Kuh",
+    "matches": []
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "Das isch huere guet",
+   "expected": {
+    "text": "Das isch huere guet",
+    "suggestedText": "Das isch huere guet",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Das isch huere guet",
+    "matches": []
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "Oaschloch",
+   "expected": {
+    "text": "Oaschloch",
+    "suggestedText": "Oaschloch",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Oaschloch",
+    "matches": []
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "vai se fuder",
+   "expected": {
+    "text": "vai se fuder",
+    "suggestedText": "vai se fuder",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "vai se fuder",
+    "matches": []
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "Os putos estão na escola",
+   "expected": {
+    "text": "Os putos estão na escola",
+    "suggestedText": "Os putos estão na escola",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Os putos estão na escola",
+    "matches": []
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "cona",
+   "expected": {
+    "text": "cona",
+    "suggestedText": "cona",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "cona",
+    "matches": []
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "कुत्ते की औलाद",
+   "expected": {
+    "text": "कुत्ते की औलाद",
+    "suggestedText": "कुत्ते की औलाद",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "कुत्ते की औलाद",
+    "matches": []
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "तू हिजड़ा है",
+   "expected": {
+    "text": "तू हिजड़ा है",
+    "suggestedText": "तू हिजड़ा है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "तू हिजड़ा है",
+    "matches": []
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "हिजड़ा समुदाय",
+   "expected": {
+    "text": "हिजड़ा समुदाय",
+    "suggestedText": "हिजड़ा समुदाय",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "हिजड़ा समुदाय",
+    "matches": []
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "छिनाल",
+   "expected": {
+    "text": "छिनाल",
+    "suggestedText": "छिनाल",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "छिनाल",
+    "matches": []
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "kutte ki aulad",
+   "expected": {
+    "text": "kutte ki aulad",
+    "suggestedText": "k*tt* k* **l*d",
+    "action": "suggest",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ki aulad",
+    "matches": [
+     {
+      "start": 0,
+      "end": 14,
+      "text": "kutte ki aulad",
+      "ruleId": "hi-latn.harassment.animal-offspring",
+      "category": "harassment",
+      "severity": "high",
+      "action": "suggest",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": "k*tt* k* **l*d",
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "kutte ka baccha",
+   "expected": {
+    "text": "kutte ka baccha",
+    "suggestedText": "kutte ka baccha",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ka baccha",
+    "matches": []
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "chhinal",
+   "expected": {
+    "text": "chhinal",
+    "suggestedText": "chh*n*l",
+    "action": "suggest",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "chh*n*l",
+    "matches": [
+     {
+      "start": 0,
+      "end": 7,
+      "text": "chhinal",
+      "ruleId": "hi-latn.profanity.chhinal",
+      "category": "profanity",
+      "severity": "high",
+      "action": "suggest",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": "chh*n*l",
+      "label": null
+     }
+    ]
+   }
+  },
+  {
    "config": "warn",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -9455,6 +10039,298 @@
    }
   },
   {
+   "config": "warn",
+   "input": "sos un boludo",
+   "expected": {
+    "text": "sos un boludo",
+    "suggestedText": "sos un boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sos un boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "warn",
+   "input": "che boludo",
+   "expected": {
+    "text": "che boludo",
+    "suggestedText": "che boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "che boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "warn",
+   "input": "¡Qué chingón!",
+   "expected": {
+    "text": "¡Qué chingón!",
+    "suggestedText": "¡Qué chingón!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "¡Qué chingón!",
+    "matches": []
+   }
+  },
+  {
+   "config": "warn",
+   "input": "usted es un idiota",
+   "expected": {
+    "text": "usted es un idiota",
+    "suggestedText": "usted es un idiota",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "usted es un idiota",
+    "matches": []
+   }
+  },
+  {
+   "config": "warn",
+   "input": "Tabarnak!",
+   "expected": {
+    "text": "Tabarnak!",
+    "suggestedText": "Tabarnak!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Tabarnak!",
+    "matches": []
+   }
+  },
+  {
+   "config": "warn",
+   "input": "Un bâtard et deux croissants",
+   "expected": {
+    "text": "Un bâtard et deux croissants",
+    "suggestedText": "Un bâtard et deux croissants",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Un bâtard et deux croissants",
+    "matches": []
+   }
+  },
+  {
+   "config": "warn",
+   "input": "sale pédé",
+   "expected": {
+    "text": "sale pédé",
+    "suggestedText": "sale pédé",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sale pédé",
+    "matches": []
+   }
+  },
+  {
+   "config": "warn",
+   "input": "du blöde Kuh",
+   "expected": {
+    "text": "du blöde Kuh",
+    "suggestedText": "du blöde Kuh",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "du blöde Kuh",
+    "matches": []
+   }
+  },
+  {
+   "config": "warn",
+   "input": "Das isch huere guet",
+   "expected": {
+    "text": "Das isch huere guet",
+    "suggestedText": "Das isch huere guet",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Das isch huere guet",
+    "matches": []
+   }
+  },
+  {
+   "config": "warn",
+   "input": "Oaschloch",
+   "expected": {
+    "text": "Oaschloch",
+    "suggestedText": "Oaschloch",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Oaschloch",
+    "matches": []
+   }
+  },
+  {
+   "config": "warn",
+   "input": "vai se fuder",
+   "expected": {
+    "text": "vai se fuder",
+    "suggestedText": "vai se fuder",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "vai se fuder",
+    "matches": []
+   }
+  },
+  {
+   "config": "warn",
+   "input": "Os putos estão na escola",
+   "expected": {
+    "text": "Os putos estão na escola",
+    "suggestedText": "Os putos estão na escola",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Os putos estão na escola",
+    "matches": []
+   }
+  },
+  {
+   "config": "warn",
+   "input": "cona",
+   "expected": {
+    "text": "cona",
+    "suggestedText": "cona",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "cona",
+    "matches": []
+   }
+  },
+  {
+   "config": "warn",
+   "input": "कुत्ते की औलाद",
+   "expected": {
+    "text": "कुत्ते की औलाद",
+    "suggestedText": "कुत्ते की औलाद",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "कुत्ते की औलाद",
+    "matches": []
+   }
+  },
+  {
+   "config": "warn",
+   "input": "तू हिजड़ा है",
+   "expected": {
+    "text": "तू हिजड़ा है",
+    "suggestedText": "तू हिजड़ा है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "तू हिजड़ा है",
+    "matches": []
+   }
+  },
+  {
+   "config": "warn",
+   "input": "हिजड़ा समुदाय",
+   "expected": {
+    "text": "हिजड़ा समुदाय",
+    "suggestedText": "हिजड़ा समुदाय",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "हिजड़ा समुदाय",
+    "matches": []
+   }
+  },
+  {
+   "config": "warn",
+   "input": "छिनाल",
+   "expected": {
+    "text": "छिनाल",
+    "suggestedText": "छिनाल",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "छिनाल",
+    "matches": []
+   }
+  },
+  {
+   "config": "warn",
+   "input": "kutte ki aulad",
+   "expected": {
+    "text": "kutte ki aulad",
+    "suggestedText": "kutte ki aulad",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ki aulad",
+    "matches": [
+     {
+      "start": 0,
+      "end": 14,
+      "text": "kutte ki aulad",
+      "ruleId": "hi-latn.harassment.animal-offspring",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "warn",
+   "input": "kutte ka baccha",
+   "expected": {
+    "text": "kutte ka baccha",
+    "suggestedText": "kutte ka baccha",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ka baccha",
+    "matches": []
+   }
+  },
+  {
+   "config": "warn",
+   "input": "chhinal",
+   "expected": {
+    "text": "chhinal",
+    "suggestedText": "chhinal",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "chh*n*l",
+    "matches": [
+     {
+      "start": 0,
+      "end": 7,
+      "text": "chhinal",
+      "ruleId": "hi-latn.profanity.chhinal",
+      "category": "profanity",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 1,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
+   }
+  },
+  {
    "config": "block",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -12560,6 +13436,298 @@
     "requiresReview": false,
     "masked": "मेरे साले की शादी है",
     "matches": []
+   }
+  },
+  {
+   "config": "block",
+   "input": "sos un boludo",
+   "expected": {
+    "text": "sos un boludo",
+    "suggestedText": "sos un boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sos un boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "block",
+   "input": "che boludo",
+   "expected": {
+    "text": "che boludo",
+    "suggestedText": "che boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "che boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "block",
+   "input": "¡Qué chingón!",
+   "expected": {
+    "text": "¡Qué chingón!",
+    "suggestedText": "¡Qué chingón!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "¡Qué chingón!",
+    "matches": []
+   }
+  },
+  {
+   "config": "block",
+   "input": "usted es un idiota",
+   "expected": {
+    "text": "usted es un idiota",
+    "suggestedText": "usted es un idiota",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "usted es un idiota",
+    "matches": []
+   }
+  },
+  {
+   "config": "block",
+   "input": "Tabarnak!",
+   "expected": {
+    "text": "Tabarnak!",
+    "suggestedText": "Tabarnak!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Tabarnak!",
+    "matches": []
+   }
+  },
+  {
+   "config": "block",
+   "input": "Un bâtard et deux croissants",
+   "expected": {
+    "text": "Un bâtard et deux croissants",
+    "suggestedText": "Un bâtard et deux croissants",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Un bâtard et deux croissants",
+    "matches": []
+   }
+  },
+  {
+   "config": "block",
+   "input": "sale pédé",
+   "expected": {
+    "text": "sale pédé",
+    "suggestedText": "sale pédé",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sale pédé",
+    "matches": []
+   }
+  },
+  {
+   "config": "block",
+   "input": "du blöde Kuh",
+   "expected": {
+    "text": "du blöde Kuh",
+    "suggestedText": "du blöde Kuh",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "du blöde Kuh",
+    "matches": []
+   }
+  },
+  {
+   "config": "block",
+   "input": "Das isch huere guet",
+   "expected": {
+    "text": "Das isch huere guet",
+    "suggestedText": "Das isch huere guet",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Das isch huere guet",
+    "matches": []
+   }
+  },
+  {
+   "config": "block",
+   "input": "Oaschloch",
+   "expected": {
+    "text": "Oaschloch",
+    "suggestedText": "Oaschloch",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Oaschloch",
+    "matches": []
+   }
+  },
+  {
+   "config": "block",
+   "input": "vai se fuder",
+   "expected": {
+    "text": "vai se fuder",
+    "suggestedText": "vai se fuder",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "vai se fuder",
+    "matches": []
+   }
+  },
+  {
+   "config": "block",
+   "input": "Os putos estão na escola",
+   "expected": {
+    "text": "Os putos estão na escola",
+    "suggestedText": "Os putos estão na escola",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Os putos estão na escola",
+    "matches": []
+   }
+  },
+  {
+   "config": "block",
+   "input": "cona",
+   "expected": {
+    "text": "cona",
+    "suggestedText": "cona",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "cona",
+    "matches": []
+   }
+  },
+  {
+   "config": "block",
+   "input": "कुत्ते की औलाद",
+   "expected": {
+    "text": "कुत्ते की औलाद",
+    "suggestedText": "कुत्ते की औलाद",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "कुत्ते की औलाद",
+    "matches": []
+   }
+  },
+  {
+   "config": "block",
+   "input": "तू हिजड़ा है",
+   "expected": {
+    "text": "तू हिजड़ा है",
+    "suggestedText": "तू हिजड़ा है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "तू हिजड़ा है",
+    "matches": []
+   }
+  },
+  {
+   "config": "block",
+   "input": "हिजड़ा समुदाय",
+   "expected": {
+    "text": "हिजड़ा समुदाय",
+    "suggestedText": "हिजड़ा समुदाय",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "हिजड़ा समुदाय",
+    "matches": []
+   }
+  },
+  {
+   "config": "block",
+   "input": "छिनाल",
+   "expected": {
+    "text": "छिनाल",
+    "suggestedText": "छिनाल",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "छिनाल",
+    "matches": []
+   }
+  },
+  {
+   "config": "block",
+   "input": "kutte ki aulad",
+   "expected": {
+    "text": "kutte ki aulad",
+    "suggestedText": "kutte ki aulad",
+    "action": "block",
+    "allowed": false,
+    "requiresReview": false,
+    "masked": "kutte ki aulad",
+    "matches": [
+     {
+      "start": 0,
+      "end": 14,
+      "text": "kutte ki aulad",
+      "ruleId": "hi-latn.harassment.animal-offspring",
+      "category": "harassment",
+      "severity": "high",
+      "action": "block",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "block",
+   "input": "kutte ka baccha",
+   "expected": {
+    "text": "kutte ka baccha",
+    "suggestedText": "kutte ka baccha",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ka baccha",
+    "matches": []
+   }
+  },
+  {
+   "config": "block",
+   "input": "chhinal",
+   "expected": {
+    "text": "chhinal",
+    "suggestedText": "chhinal",
+    "action": "block",
+    "allowed": false,
+    "requiresReview": false,
+    "masked": "chh*n*l",
+    "matches": [
+     {
+      "start": 0,
+      "end": 7,
+      "text": "chhinal",
+      "ruleId": "hi-latn.profanity.chhinal",
+      "category": "profanity",
+      "severity": "high",
+      "action": "block",
+      "confidence": 1,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
    }
   },
   {
@@ -15668,6 +16836,298 @@
     "requiresReview": false,
     "masked": "मेरे साले की शादी है",
     "matches": []
+   }
+  },
+  {
+   "config": "allow",
+   "input": "sos un boludo",
+   "expected": {
+    "text": "sos un boludo",
+    "suggestedText": "sos un boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sos un boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "allow",
+   "input": "che boludo",
+   "expected": {
+    "text": "che boludo",
+    "suggestedText": "che boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "che boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "allow",
+   "input": "¡Qué chingón!",
+   "expected": {
+    "text": "¡Qué chingón!",
+    "suggestedText": "¡Qué chingón!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "¡Qué chingón!",
+    "matches": []
+   }
+  },
+  {
+   "config": "allow",
+   "input": "usted es un idiota",
+   "expected": {
+    "text": "usted es un idiota",
+    "suggestedText": "usted es un idiota",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "usted es un idiota",
+    "matches": []
+   }
+  },
+  {
+   "config": "allow",
+   "input": "Tabarnak!",
+   "expected": {
+    "text": "Tabarnak!",
+    "suggestedText": "Tabarnak!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Tabarnak!",
+    "matches": []
+   }
+  },
+  {
+   "config": "allow",
+   "input": "Un bâtard et deux croissants",
+   "expected": {
+    "text": "Un bâtard et deux croissants",
+    "suggestedText": "Un bâtard et deux croissants",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Un bâtard et deux croissants",
+    "matches": []
+   }
+  },
+  {
+   "config": "allow",
+   "input": "sale pédé",
+   "expected": {
+    "text": "sale pédé",
+    "suggestedText": "sale pédé",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sale pédé",
+    "matches": []
+   }
+  },
+  {
+   "config": "allow",
+   "input": "du blöde Kuh",
+   "expected": {
+    "text": "du blöde Kuh",
+    "suggestedText": "du blöde Kuh",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "du blöde Kuh",
+    "matches": []
+   }
+  },
+  {
+   "config": "allow",
+   "input": "Das isch huere guet",
+   "expected": {
+    "text": "Das isch huere guet",
+    "suggestedText": "Das isch huere guet",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Das isch huere guet",
+    "matches": []
+   }
+  },
+  {
+   "config": "allow",
+   "input": "Oaschloch",
+   "expected": {
+    "text": "Oaschloch",
+    "suggestedText": "Oaschloch",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Oaschloch",
+    "matches": []
+   }
+  },
+  {
+   "config": "allow",
+   "input": "vai se fuder",
+   "expected": {
+    "text": "vai se fuder",
+    "suggestedText": "vai se fuder",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "vai se fuder",
+    "matches": []
+   }
+  },
+  {
+   "config": "allow",
+   "input": "Os putos estão na escola",
+   "expected": {
+    "text": "Os putos estão na escola",
+    "suggestedText": "Os putos estão na escola",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Os putos estão na escola",
+    "matches": []
+   }
+  },
+  {
+   "config": "allow",
+   "input": "cona",
+   "expected": {
+    "text": "cona",
+    "suggestedText": "cona",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "cona",
+    "matches": []
+   }
+  },
+  {
+   "config": "allow",
+   "input": "कुत्ते की औलाद",
+   "expected": {
+    "text": "कुत्ते की औलाद",
+    "suggestedText": "कुत्ते की औलाद",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "कुत्ते की औलाद",
+    "matches": []
+   }
+  },
+  {
+   "config": "allow",
+   "input": "तू हिजड़ा है",
+   "expected": {
+    "text": "तू हिजड़ा है",
+    "suggestedText": "तू हिजड़ा है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "तू हिजड़ा है",
+    "matches": []
+   }
+  },
+  {
+   "config": "allow",
+   "input": "हिजड़ा समुदाय",
+   "expected": {
+    "text": "हिजड़ा समुदाय",
+    "suggestedText": "हिजड़ा समुदाय",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "हिजड़ा समुदाय",
+    "matches": []
+   }
+  },
+  {
+   "config": "allow",
+   "input": "छिनाल",
+   "expected": {
+    "text": "छिनाल",
+    "suggestedText": "छिनाल",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "छिनाल",
+    "matches": []
+   }
+  },
+  {
+   "config": "allow",
+   "input": "kutte ki aulad",
+   "expected": {
+    "text": "kutte ki aulad",
+    "suggestedText": "kutte ki aulad",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ki aulad",
+    "matches": [
+     {
+      "start": 0,
+      "end": 14,
+      "text": "kutte ki aulad",
+      "ruleId": "hi-latn.harassment.animal-offspring",
+      "category": "harassment",
+      "severity": "high",
+      "action": "allow",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "allow",
+   "input": "kutte ka baccha",
+   "expected": {
+    "text": "kutte ka baccha",
+    "suggestedText": "kutte ka baccha",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ka baccha",
+    "matches": []
+   }
+  },
+  {
+   "config": "allow",
+   "input": "chhinal",
+   "expected": {
+    "text": "chhinal",
+    "suggestedText": "chhinal",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "chhinal",
+    "matches": [
+     {
+      "start": 0,
+      "end": 7,
+      "text": "chhinal",
+      "ruleId": "hi-latn.profanity.chhinal",
+      "category": "profanity",
+      "severity": "high",
+      "action": "allow",
+      "confidence": 1,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
    }
   },
   {
@@ -18795,6 +20255,298 @@
    }
   },
   {
+   "config": "strict-low",
+   "input": "sos un boludo",
+   "expected": {
+    "text": "sos un boludo",
+    "suggestedText": "sos un boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sos un boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "che boludo",
+   "expected": {
+    "text": "che boludo",
+    "suggestedText": "che boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "che boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "¡Qué chingón!",
+   "expected": {
+    "text": "¡Qué chingón!",
+    "suggestedText": "¡Qué chingón!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "¡Qué chingón!",
+    "matches": []
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "usted es un idiota",
+   "expected": {
+    "text": "usted es un idiota",
+    "suggestedText": "usted es un idiota",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "usted es un idiota",
+    "matches": []
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "Tabarnak!",
+   "expected": {
+    "text": "Tabarnak!",
+    "suggestedText": "Tabarnak!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Tabarnak!",
+    "matches": []
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "Un bâtard et deux croissants",
+   "expected": {
+    "text": "Un bâtard et deux croissants",
+    "suggestedText": "Un bâtard et deux croissants",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Un bâtard et deux croissants",
+    "matches": []
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "sale pédé",
+   "expected": {
+    "text": "sale pédé",
+    "suggestedText": "sale pédé",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sale pédé",
+    "matches": []
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "du blöde Kuh",
+   "expected": {
+    "text": "du blöde Kuh",
+    "suggestedText": "du blöde Kuh",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "du blöde Kuh",
+    "matches": []
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "Das isch huere guet",
+   "expected": {
+    "text": "Das isch huere guet",
+    "suggestedText": "Das isch huere guet",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Das isch huere guet",
+    "matches": []
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "Oaschloch",
+   "expected": {
+    "text": "Oaschloch",
+    "suggestedText": "Oaschloch",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Oaschloch",
+    "matches": []
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "vai se fuder",
+   "expected": {
+    "text": "vai se fuder",
+    "suggestedText": "vai se fuder",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "vai se fuder",
+    "matches": []
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "Os putos estão na escola",
+   "expected": {
+    "text": "Os putos estão na escola",
+    "suggestedText": "Os putos estão na escola",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Os putos estão na escola",
+    "matches": []
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "cona",
+   "expected": {
+    "text": "cona",
+    "suggestedText": "cona",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "cona",
+    "matches": []
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "कुत्ते की औलाद",
+   "expected": {
+    "text": "कुत्ते की औलाद",
+    "suggestedText": "कुत्ते की औलाद",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "कुत्ते की औलाद",
+    "matches": []
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "तू हिजड़ा है",
+   "expected": {
+    "text": "तू हिजड़ा है",
+    "suggestedText": "तू हिजड़ा है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "तू हिजड़ा है",
+    "matches": []
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "हिजड़ा समुदाय",
+   "expected": {
+    "text": "हिजड़ा समुदाय",
+    "suggestedText": "हिजड़ा समुदाय",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "हिजड़ा समुदाय",
+    "matches": []
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "छिनाल",
+   "expected": {
+    "text": "छिनाल",
+    "suggestedText": "छिनाल",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "छिनाल",
+    "matches": []
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "kutte ki aulad",
+   "expected": {
+    "text": "kutte ki aulad",
+    "suggestedText": "kutte ki aulad",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ki aulad",
+    "matches": [
+     {
+      "start": 0,
+      "end": 14,
+      "text": "kutte ki aulad",
+      "ruleId": "hi-latn.harassment.animal-offspring",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "kutte ka baccha",
+   "expected": {
+    "text": "kutte ka baccha",
+    "suggestedText": "kutte ka baccha",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ka baccha",
+    "matches": []
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "chhinal",
+   "expected": {
+    "text": "chh*n*l",
+    "suggestedText": "chh*n*l",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "chh*n*l",
+    "matches": [
+     {
+      "start": 0,
+      "end": 7,
+      "text": "chhinal",
+      "ruleId": "hi-latn.profanity.chhinal",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
+   }
+  },
+  {
    "config": "harassment-block",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -21900,6 +23652,298 @@
     "requiresReview": false,
     "masked": "मेरे साले की शादी है",
     "matches": []
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "sos un boludo",
+   "expected": {
+    "text": "sos un boludo",
+    "suggestedText": "sos un boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sos un boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "che boludo",
+   "expected": {
+    "text": "che boludo",
+    "suggestedText": "che boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "che boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "¡Qué chingón!",
+   "expected": {
+    "text": "¡Qué chingón!",
+    "suggestedText": "¡Qué chingón!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "¡Qué chingón!",
+    "matches": []
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "usted es un idiota",
+   "expected": {
+    "text": "usted es un idiota",
+    "suggestedText": "usted es un idiota",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "usted es un idiota",
+    "matches": []
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "Tabarnak!",
+   "expected": {
+    "text": "Tabarnak!",
+    "suggestedText": "Tabarnak!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Tabarnak!",
+    "matches": []
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "Un bâtard et deux croissants",
+   "expected": {
+    "text": "Un bâtard et deux croissants",
+    "suggestedText": "Un bâtard et deux croissants",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Un bâtard et deux croissants",
+    "matches": []
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "sale pédé",
+   "expected": {
+    "text": "sale pédé",
+    "suggestedText": "sale pédé",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sale pédé",
+    "matches": []
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "du blöde Kuh",
+   "expected": {
+    "text": "du blöde Kuh",
+    "suggestedText": "du blöde Kuh",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "du blöde Kuh",
+    "matches": []
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "Das isch huere guet",
+   "expected": {
+    "text": "Das isch huere guet",
+    "suggestedText": "Das isch huere guet",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Das isch huere guet",
+    "matches": []
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "Oaschloch",
+   "expected": {
+    "text": "Oaschloch",
+    "suggestedText": "Oaschloch",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Oaschloch",
+    "matches": []
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "vai se fuder",
+   "expected": {
+    "text": "vai se fuder",
+    "suggestedText": "vai se fuder",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "vai se fuder",
+    "matches": []
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "Os putos estão na escola",
+   "expected": {
+    "text": "Os putos estão na escola",
+    "suggestedText": "Os putos estão na escola",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Os putos estão na escola",
+    "matches": []
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "cona",
+   "expected": {
+    "text": "cona",
+    "suggestedText": "cona",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "cona",
+    "matches": []
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "कुत्ते की औलाद",
+   "expected": {
+    "text": "कुत्ते की औलाद",
+    "suggestedText": "कुत्ते की औलाद",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "कुत्ते की औलाद",
+    "matches": []
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "तू हिजड़ा है",
+   "expected": {
+    "text": "तू हिजड़ा है",
+    "suggestedText": "तू हिजड़ा है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "तू हिजड़ा है",
+    "matches": []
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "हिजड़ा समुदाय",
+   "expected": {
+    "text": "हिजड़ा समुदाय",
+    "suggestedText": "हिजड़ा समुदाय",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "हिजड़ा समुदाय",
+    "matches": []
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "छिनाल",
+   "expected": {
+    "text": "छिनाल",
+    "suggestedText": "छिनाल",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "छिनाल",
+    "matches": []
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "kutte ki aulad",
+   "expected": {
+    "text": "kutte ki aulad",
+    "suggestedText": "kutte ki aulad",
+    "action": "block",
+    "allowed": false,
+    "requiresReview": false,
+    "masked": "kutte ki aulad",
+    "matches": [
+     {
+      "start": 0,
+      "end": 14,
+      "text": "kutte ki aulad",
+      "ruleId": "hi-latn.harassment.animal-offspring",
+      "category": "harassment",
+      "severity": "high",
+      "action": "block",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "kutte ka baccha",
+   "expected": {
+    "text": "kutte ka baccha",
+    "suggestedText": "kutte ka baccha",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ka baccha",
+    "matches": []
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "chhinal",
+   "expected": {
+    "text": "chh*n*l",
+    "suggestedText": "chh*n*l",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "chh*n*l",
+    "matches": [
+     {
+      "start": 0,
+      "end": 7,
+      "text": "chhinal",
+      "ruleId": "hi-latn.profanity.chhinal",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
    }
   },
   {
@@ -25011,6 +27055,298 @@
    }
   },
   {
+   "config": "partial",
+   "input": "sos un boludo",
+   "expected": {
+    "text": "sos un boludo",
+    "suggestedText": "sos un boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sos un boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "partial",
+   "input": "che boludo",
+   "expected": {
+    "text": "che boludo",
+    "suggestedText": "che boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "che boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "partial",
+   "input": "¡Qué chingón!",
+   "expected": {
+    "text": "¡Qué chingón!",
+    "suggestedText": "¡Qué chingón!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "¡Qué chingón!",
+    "matches": []
+   }
+  },
+  {
+   "config": "partial",
+   "input": "usted es un idiota",
+   "expected": {
+    "text": "usted es un idiota",
+    "suggestedText": "usted es un idiota",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "usted es un idiota",
+    "matches": []
+   }
+  },
+  {
+   "config": "partial",
+   "input": "Tabarnak!",
+   "expected": {
+    "text": "Tabarnak!",
+    "suggestedText": "Tabarnak!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Tabarnak!",
+    "matches": []
+   }
+  },
+  {
+   "config": "partial",
+   "input": "Un bâtard et deux croissants",
+   "expected": {
+    "text": "Un bâtard et deux croissants",
+    "suggestedText": "Un bâtard et deux croissants",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Un bâtard et deux croissants",
+    "matches": []
+   }
+  },
+  {
+   "config": "partial",
+   "input": "sale pédé",
+   "expected": {
+    "text": "sale pédé",
+    "suggestedText": "sale pédé",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sale pédé",
+    "matches": []
+   }
+  },
+  {
+   "config": "partial",
+   "input": "du blöde Kuh",
+   "expected": {
+    "text": "du blöde Kuh",
+    "suggestedText": "du blöde Kuh",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "du blöde Kuh",
+    "matches": []
+   }
+  },
+  {
+   "config": "partial",
+   "input": "Das isch huere guet",
+   "expected": {
+    "text": "Das isch huere guet",
+    "suggestedText": "Das isch huere guet",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Das isch huere guet",
+    "matches": []
+   }
+  },
+  {
+   "config": "partial",
+   "input": "Oaschloch",
+   "expected": {
+    "text": "Oaschloch",
+    "suggestedText": "Oaschloch",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Oaschloch",
+    "matches": []
+   }
+  },
+  {
+   "config": "partial",
+   "input": "vai se fuder",
+   "expected": {
+    "text": "vai se fuder",
+    "suggestedText": "vai se fuder",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "vai se fuder",
+    "matches": []
+   }
+  },
+  {
+   "config": "partial",
+   "input": "Os putos estão na escola",
+   "expected": {
+    "text": "Os putos estão na escola",
+    "suggestedText": "Os putos estão na escola",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Os putos estão na escola",
+    "matches": []
+   }
+  },
+  {
+   "config": "partial",
+   "input": "cona",
+   "expected": {
+    "text": "cona",
+    "suggestedText": "cona",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "cona",
+    "matches": []
+   }
+  },
+  {
+   "config": "partial",
+   "input": "कुत्ते की औलाद",
+   "expected": {
+    "text": "कुत्ते की औलाद",
+    "suggestedText": "कुत्ते की औलाद",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "कुत्ते की औलाद",
+    "matches": []
+   }
+  },
+  {
+   "config": "partial",
+   "input": "तू हिजड़ा है",
+   "expected": {
+    "text": "तू हिजड़ा है",
+    "suggestedText": "तू हिजड़ा है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "तू हिजड़ा है",
+    "matches": []
+   }
+  },
+  {
+   "config": "partial",
+   "input": "हिजड़ा समुदाय",
+   "expected": {
+    "text": "हिजड़ा समुदाय",
+    "suggestedText": "हिजड़ा समुदाय",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "हिजड़ा समुदाय",
+    "matches": []
+   }
+  },
+  {
+   "config": "partial",
+   "input": "छिनाल",
+   "expected": {
+    "text": "छिनाल",
+    "suggestedText": "छिनाल",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "छिनाल",
+    "matches": []
+   }
+  },
+  {
+   "config": "partial",
+   "input": "kutte ki aulad",
+   "expected": {
+    "text": "kutte ki aulad",
+    "suggestedText": "kutte ki aulad",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ki aulad",
+    "matches": [
+     {
+      "start": 0,
+      "end": 14,
+      "text": "kutte ki aulad",
+      "ruleId": "hi-latn.harassment.animal-offspring",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "partial",
+   "input": "kutte ka baccha",
+   "expected": {
+    "text": "kutte ka baccha",
+    "suggestedText": "kutte ka baccha",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ka baccha",
+    "matches": []
+   }
+  },
+  {
+   "config": "partial",
+   "input": "chhinal",
+   "expected": {
+    "text": "c*****l",
+    "suggestedText": "c*****l",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "c*****l",
+    "matches": [
+     {
+      "start": 0,
+      "end": 7,
+      "text": "chhinal",
+      "ruleId": "hi-latn.profanity.chhinal",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
+   }
+  },
+  {
    "config": "full-hash",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -28116,6 +30452,298 @@
     "requiresReview": false,
     "masked": "मेरे साले की शादी है",
     "matches": []
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "sos un boludo",
+   "expected": {
+    "text": "sos un boludo",
+    "suggestedText": "sos un boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sos un boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "che boludo",
+   "expected": {
+    "text": "che boludo",
+    "suggestedText": "che boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "che boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "¡Qué chingón!",
+   "expected": {
+    "text": "¡Qué chingón!",
+    "suggestedText": "¡Qué chingón!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "¡Qué chingón!",
+    "matches": []
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "usted es un idiota",
+   "expected": {
+    "text": "usted es un idiota",
+    "suggestedText": "usted es un idiota",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "usted es un idiota",
+    "matches": []
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "Tabarnak!",
+   "expected": {
+    "text": "Tabarnak!",
+    "suggestedText": "Tabarnak!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Tabarnak!",
+    "matches": []
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "Un bâtard et deux croissants",
+   "expected": {
+    "text": "Un bâtard et deux croissants",
+    "suggestedText": "Un bâtard et deux croissants",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Un bâtard et deux croissants",
+    "matches": []
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "sale pédé",
+   "expected": {
+    "text": "sale pédé",
+    "suggestedText": "sale pédé",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sale pédé",
+    "matches": []
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "du blöde Kuh",
+   "expected": {
+    "text": "du blöde Kuh",
+    "suggestedText": "du blöde Kuh",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "du blöde Kuh",
+    "matches": []
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "Das isch huere guet",
+   "expected": {
+    "text": "Das isch huere guet",
+    "suggestedText": "Das isch huere guet",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Das isch huere guet",
+    "matches": []
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "Oaschloch",
+   "expected": {
+    "text": "Oaschloch",
+    "suggestedText": "Oaschloch",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Oaschloch",
+    "matches": []
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "vai se fuder",
+   "expected": {
+    "text": "vai se fuder",
+    "suggestedText": "vai se fuder",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "vai se fuder",
+    "matches": []
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "Os putos estão na escola",
+   "expected": {
+    "text": "Os putos estão na escola",
+    "suggestedText": "Os putos estão na escola",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Os putos estão na escola",
+    "matches": []
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "cona",
+   "expected": {
+    "text": "cona",
+    "suggestedText": "cona",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "cona",
+    "matches": []
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "कुत्ते की औलाद",
+   "expected": {
+    "text": "कुत्ते की औलाद",
+    "suggestedText": "कुत्ते की औलाद",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "कुत्ते की औलाद",
+    "matches": []
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "तू हिजड़ा है",
+   "expected": {
+    "text": "तू हिजड़ा है",
+    "suggestedText": "तू हिजड़ा है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "तू हिजड़ा है",
+    "matches": []
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "हिजड़ा समुदाय",
+   "expected": {
+    "text": "हिजड़ा समुदाय",
+    "suggestedText": "हिजड़ा समुदाय",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "हिजड़ा समुदाय",
+    "matches": []
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "छिनाल",
+   "expected": {
+    "text": "छिनाल",
+    "suggestedText": "छिनाल",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "छिनाल",
+    "matches": []
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "kutte ki aulad",
+   "expected": {
+    "text": "kutte ki aulad",
+    "suggestedText": "kutte ki aulad",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ki aulad",
+    "matches": [
+     {
+      "start": 0,
+      "end": 14,
+      "text": "kutte ki aulad",
+      "ruleId": "hi-latn.harassment.animal-offspring",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "kutte ka baccha",
+   "expected": {
+    "text": "kutte ka baccha",
+    "suggestedText": "kutte ka baccha",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ka baccha",
+    "matches": []
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "chhinal",
+   "expected": {
+    "text": "#######",
+    "suggestedText": "#######",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "#######",
+    "matches": [
+     {
+      "start": 0,
+      "end": 7,
+      "text": "chhinal",
+      "ruleId": "hi-latn.profanity.chhinal",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
    }
   },
   {
@@ -31273,6 +33901,298 @@
    }
   },
   {
+   "config": "custom",
+   "input": "sos un boludo",
+   "expected": {
+    "text": "sos un boludo",
+    "suggestedText": "sos un boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sos un boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "custom",
+   "input": "che boludo",
+   "expected": {
+    "text": "che boludo",
+    "suggestedText": "che boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "che boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "custom",
+   "input": "¡Qué chingón!",
+   "expected": {
+    "text": "¡Qué chingón!",
+    "suggestedText": "¡Qué chingón!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "¡Qué chingón!",
+    "matches": []
+   }
+  },
+  {
+   "config": "custom",
+   "input": "usted es un idiota",
+   "expected": {
+    "text": "usted es un idiota",
+    "suggestedText": "usted es un idiota",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "usted es un idiota",
+    "matches": []
+   }
+  },
+  {
+   "config": "custom",
+   "input": "Tabarnak!",
+   "expected": {
+    "text": "Tabarnak!",
+    "suggestedText": "Tabarnak!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Tabarnak!",
+    "matches": []
+   }
+  },
+  {
+   "config": "custom",
+   "input": "Un bâtard et deux croissants",
+   "expected": {
+    "text": "Un bâtard et deux croissants",
+    "suggestedText": "Un bâtard et deux croissants",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Un bâtard et deux croissants",
+    "matches": []
+   }
+  },
+  {
+   "config": "custom",
+   "input": "sale pédé",
+   "expected": {
+    "text": "sale pédé",
+    "suggestedText": "sale pédé",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sale pédé",
+    "matches": []
+   }
+  },
+  {
+   "config": "custom",
+   "input": "du blöde Kuh",
+   "expected": {
+    "text": "du blöde Kuh",
+    "suggestedText": "du blöde Kuh",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "du blöde Kuh",
+    "matches": []
+   }
+  },
+  {
+   "config": "custom",
+   "input": "Das isch huere guet",
+   "expected": {
+    "text": "Das isch huere guet",
+    "suggestedText": "Das isch huere guet",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Das isch huere guet",
+    "matches": []
+   }
+  },
+  {
+   "config": "custom",
+   "input": "Oaschloch",
+   "expected": {
+    "text": "Oaschloch",
+    "suggestedText": "Oaschloch",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Oaschloch",
+    "matches": []
+   }
+  },
+  {
+   "config": "custom",
+   "input": "vai se fuder",
+   "expected": {
+    "text": "vai se fuder",
+    "suggestedText": "vai se fuder",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "vai se fuder",
+    "matches": []
+   }
+  },
+  {
+   "config": "custom",
+   "input": "Os putos estão na escola",
+   "expected": {
+    "text": "Os putos estão na escola",
+    "suggestedText": "Os putos estão na escola",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Os putos estão na escola",
+    "matches": []
+   }
+  },
+  {
+   "config": "custom",
+   "input": "cona",
+   "expected": {
+    "text": "cona",
+    "suggestedText": "cona",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "cona",
+    "matches": []
+   }
+  },
+  {
+   "config": "custom",
+   "input": "कुत्ते की औलाद",
+   "expected": {
+    "text": "कुत्ते की औलाद",
+    "suggestedText": "कुत्ते की औलाद",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "कुत्ते की औलाद",
+    "matches": []
+   }
+  },
+  {
+   "config": "custom",
+   "input": "तू हिजड़ा है",
+   "expected": {
+    "text": "तू हिजड़ा है",
+    "suggestedText": "तू हिजड़ा है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "तू हिजड़ा है",
+    "matches": []
+   }
+  },
+  {
+   "config": "custom",
+   "input": "हिजड़ा समुदाय",
+   "expected": {
+    "text": "हिजड़ा समुदाय",
+    "suggestedText": "हिजड़ा समुदाय",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "हिजड़ा समुदाय",
+    "matches": []
+   }
+  },
+  {
+   "config": "custom",
+   "input": "छिनाल",
+   "expected": {
+    "text": "छिनाल",
+    "suggestedText": "छिनाल",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "छिनाल",
+    "matches": []
+   }
+  },
+  {
+   "config": "custom",
+   "input": "kutte ki aulad",
+   "expected": {
+    "text": "kutte ki aulad",
+    "suggestedText": "kutte ki aulad",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ki aulad",
+    "matches": [
+     {
+      "start": 0,
+      "end": 14,
+      "text": "kutte ki aulad",
+      "ruleId": "hi-latn.harassment.animal-offspring",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "custom",
+   "input": "kutte ka baccha",
+   "expected": {
+    "text": "kutte ka baccha",
+    "suggestedText": "kutte ka baccha",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ka baccha",
+    "matches": []
+   }
+  },
+  {
+   "config": "custom",
+   "input": "chhinal",
+   "expected": {
+    "text": "chh*n*l",
+    "suggestedText": "chh*n*l",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "chh*n*l",
+    "matches": [
+     {
+      "start": 0,
+      "end": 7,
+      "text": "chhinal",
+      "ruleId": "hi-latn.profanity.chhinal",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
+   }
+  },
+  {
    "config": "categories",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -33331,6 +36251,282 @@
     "allowed": true,
     "requiresReview": false,
     "masked": "मेरे साले की शादी है",
+    "matches": []
+   }
+  },
+  {
+   "config": "categories",
+   "input": "sos un boludo",
+   "expected": {
+    "text": "sos un boludo",
+    "suggestedText": "sos un boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sos un boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "categories",
+   "input": "che boludo",
+   "expected": {
+    "text": "che boludo",
+    "suggestedText": "che boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "che boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "categories",
+   "input": "¡Qué chingón!",
+   "expected": {
+    "text": "¡Qué chingón!",
+    "suggestedText": "¡Qué chingón!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "¡Qué chingón!",
+    "matches": []
+   }
+  },
+  {
+   "config": "categories",
+   "input": "usted es un idiota",
+   "expected": {
+    "text": "usted es un idiota",
+    "suggestedText": "usted es un idiota",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "usted es un idiota",
+    "matches": []
+   }
+  },
+  {
+   "config": "categories",
+   "input": "Tabarnak!",
+   "expected": {
+    "text": "Tabarnak!",
+    "suggestedText": "Tabarnak!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Tabarnak!",
+    "matches": []
+   }
+  },
+  {
+   "config": "categories",
+   "input": "Un bâtard et deux croissants",
+   "expected": {
+    "text": "Un bâtard et deux croissants",
+    "suggestedText": "Un bâtard et deux croissants",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Un bâtard et deux croissants",
+    "matches": []
+   }
+  },
+  {
+   "config": "categories",
+   "input": "sale pédé",
+   "expected": {
+    "text": "sale pédé",
+    "suggestedText": "sale pédé",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sale pédé",
+    "matches": []
+   }
+  },
+  {
+   "config": "categories",
+   "input": "du blöde Kuh",
+   "expected": {
+    "text": "du blöde Kuh",
+    "suggestedText": "du blöde Kuh",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "du blöde Kuh",
+    "matches": []
+   }
+  },
+  {
+   "config": "categories",
+   "input": "Das isch huere guet",
+   "expected": {
+    "text": "Das isch huere guet",
+    "suggestedText": "Das isch huere guet",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Das isch huere guet",
+    "matches": []
+   }
+  },
+  {
+   "config": "categories",
+   "input": "Oaschloch",
+   "expected": {
+    "text": "Oaschloch",
+    "suggestedText": "Oaschloch",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Oaschloch",
+    "matches": []
+   }
+  },
+  {
+   "config": "categories",
+   "input": "vai se fuder",
+   "expected": {
+    "text": "vai se fuder",
+    "suggestedText": "vai se fuder",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "vai se fuder",
+    "matches": []
+   }
+  },
+  {
+   "config": "categories",
+   "input": "Os putos estão na escola",
+   "expected": {
+    "text": "Os putos estão na escola",
+    "suggestedText": "Os putos estão na escola",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Os putos estão na escola",
+    "matches": []
+   }
+  },
+  {
+   "config": "categories",
+   "input": "cona",
+   "expected": {
+    "text": "cona",
+    "suggestedText": "cona",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "cona",
+    "matches": []
+   }
+  },
+  {
+   "config": "categories",
+   "input": "कुत्ते की औलाद",
+   "expected": {
+    "text": "कुत्ते की औलाद",
+    "suggestedText": "कुत्ते की औलाद",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "कुत्ते की औलाद",
+    "matches": []
+   }
+  },
+  {
+   "config": "categories",
+   "input": "तू हिजड़ा है",
+   "expected": {
+    "text": "तू हिजड़ा है",
+    "suggestedText": "तू हिजड़ा है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "तू हिजड़ा है",
+    "matches": []
+   }
+  },
+  {
+   "config": "categories",
+   "input": "हिजड़ा समुदाय",
+   "expected": {
+    "text": "हिजड़ा समुदाय",
+    "suggestedText": "हिजड़ा समुदाय",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "हिजड़ा समुदाय",
+    "matches": []
+   }
+  },
+  {
+   "config": "categories",
+   "input": "छिनाल",
+   "expected": {
+    "text": "छिनाल",
+    "suggestedText": "छिनाल",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "छिनाल",
+    "matches": []
+   }
+  },
+  {
+   "config": "categories",
+   "input": "kutte ki aulad",
+   "expected": {
+    "text": "kutte ki aulad",
+    "suggestedText": "kutte ki aulad",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ki aulad",
+    "matches": [
+     {
+      "start": 0,
+      "end": 14,
+      "text": "kutte ki aulad",
+      "ruleId": "hi-latn.harassment.animal-offspring",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "categories",
+   "input": "kutte ka baccha",
+   "expected": {
+    "text": "kutte ka baccha",
+    "suggestedText": "kutte ka baccha",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ka baccha",
+    "matches": []
+   }
+  },
+  {
+   "config": "categories",
+   "input": "chhinal",
+   "expected": {
+    "text": "chhinal",
+    "suggestedText": "chhinal",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "chhinal",
     "matches": []
    }
   },
@@ -36379,6 +39575,298 @@
    }
   },
   {
+   "config": "no-spaced",
+   "input": "sos un boludo",
+   "expected": {
+    "text": "sos un boludo",
+    "suggestedText": "sos un boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sos un boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "che boludo",
+   "expected": {
+    "text": "che boludo",
+    "suggestedText": "che boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "che boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "¡Qué chingón!",
+   "expected": {
+    "text": "¡Qué chingón!",
+    "suggestedText": "¡Qué chingón!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "¡Qué chingón!",
+    "matches": []
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "usted es un idiota",
+   "expected": {
+    "text": "usted es un idiota",
+    "suggestedText": "usted es un idiota",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "usted es un idiota",
+    "matches": []
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "Tabarnak!",
+   "expected": {
+    "text": "Tabarnak!",
+    "suggestedText": "Tabarnak!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Tabarnak!",
+    "matches": []
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "Un bâtard et deux croissants",
+   "expected": {
+    "text": "Un bâtard et deux croissants",
+    "suggestedText": "Un bâtard et deux croissants",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Un bâtard et deux croissants",
+    "matches": []
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "sale pédé",
+   "expected": {
+    "text": "sale pédé",
+    "suggestedText": "sale pédé",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sale pédé",
+    "matches": []
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "du blöde Kuh",
+   "expected": {
+    "text": "du blöde Kuh",
+    "suggestedText": "du blöde Kuh",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "du blöde Kuh",
+    "matches": []
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "Das isch huere guet",
+   "expected": {
+    "text": "Das isch huere guet",
+    "suggestedText": "Das isch huere guet",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Das isch huere guet",
+    "matches": []
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "Oaschloch",
+   "expected": {
+    "text": "Oaschloch",
+    "suggestedText": "Oaschloch",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Oaschloch",
+    "matches": []
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "vai se fuder",
+   "expected": {
+    "text": "vai se fuder",
+    "suggestedText": "vai se fuder",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "vai se fuder",
+    "matches": []
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "Os putos estão na escola",
+   "expected": {
+    "text": "Os putos estão na escola",
+    "suggestedText": "Os putos estão na escola",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Os putos estão na escola",
+    "matches": []
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "cona",
+   "expected": {
+    "text": "cona",
+    "suggestedText": "cona",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "cona",
+    "matches": []
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "कुत्ते की औलाद",
+   "expected": {
+    "text": "कुत्ते की औलाद",
+    "suggestedText": "कुत्ते की औलाद",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "कुत्ते की औलाद",
+    "matches": []
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "तू हिजड़ा है",
+   "expected": {
+    "text": "तू हिजड़ा है",
+    "suggestedText": "तू हिजड़ा है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "तू हिजड़ा है",
+    "matches": []
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "हिजड़ा समुदाय",
+   "expected": {
+    "text": "हिजड़ा समुदाय",
+    "suggestedText": "हिजड़ा समुदाय",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "हिजड़ा समुदाय",
+    "matches": []
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "छिनाल",
+   "expected": {
+    "text": "छिनाल",
+    "suggestedText": "छिनाल",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "छिनाल",
+    "matches": []
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "kutte ki aulad",
+   "expected": {
+    "text": "kutte ki aulad",
+    "suggestedText": "kutte ki aulad",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ki aulad",
+    "matches": [
+     {
+      "start": 0,
+      "end": 14,
+      "text": "kutte ki aulad",
+      "ruleId": "hi-latn.harassment.animal-offspring",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "kutte ka baccha",
+   "expected": {
+    "text": "kutte ka baccha",
+    "suggestedText": "kutte ka baccha",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ka baccha",
+    "matches": []
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "chhinal",
+   "expected": {
+    "text": "chh*n*l",
+    "suggestedText": "chh*n*l",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "chh*n*l",
+    "matches": [
+     {
+      "start": 0,
+      "end": 7,
+      "text": "chhinal",
+      "ruleId": "hi-latn.profanity.chhinal",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
+   }
+  },
+  {
    "config": "english-only",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -38884,6 +42372,266 @@
    }
   },
   {
+   "config": "english-only",
+   "input": "sos un boludo",
+   "expected": {
+    "text": "sos un boludo",
+    "suggestedText": "sos un boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sos un boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "che boludo",
+   "expected": {
+    "text": "che boludo",
+    "suggestedText": "che boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "che boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "¡Qué chingón!",
+   "expected": {
+    "text": "¡Qué chingón!",
+    "suggestedText": "¡Qué chingón!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "¡Qué chingón!",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "usted es un idiota",
+   "expected": {
+    "text": "usted es un idiota",
+    "suggestedText": "usted es un idiota",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "usted es un idiota",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "Tabarnak!",
+   "expected": {
+    "text": "Tabarnak!",
+    "suggestedText": "Tabarnak!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Tabarnak!",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "Un bâtard et deux croissants",
+   "expected": {
+    "text": "Un bâtard et deux croissants",
+    "suggestedText": "Un bâtard et deux croissants",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Un bâtard et deux croissants",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "sale pédé",
+   "expected": {
+    "text": "sale pédé",
+    "suggestedText": "sale pédé",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sale pédé",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "du blöde Kuh",
+   "expected": {
+    "text": "du blöde Kuh",
+    "suggestedText": "du blöde Kuh",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "du blöde Kuh",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "Das isch huere guet",
+   "expected": {
+    "text": "Das isch huere guet",
+    "suggestedText": "Das isch huere guet",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Das isch huere guet",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "Oaschloch",
+   "expected": {
+    "text": "Oaschloch",
+    "suggestedText": "Oaschloch",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Oaschloch",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "vai se fuder",
+   "expected": {
+    "text": "vai se fuder",
+    "suggestedText": "vai se fuder",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "vai se fuder",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "Os putos estão na escola",
+   "expected": {
+    "text": "Os putos estão na escola",
+    "suggestedText": "Os putos estão na escola",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Os putos estão na escola",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "cona",
+   "expected": {
+    "text": "cona",
+    "suggestedText": "cona",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "cona",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "कुत्ते की औलाद",
+   "expected": {
+    "text": "कुत्ते की औलाद",
+    "suggestedText": "कुत्ते की औलाद",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "कुत्ते की औलाद",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "तू हिजड़ा है",
+   "expected": {
+    "text": "तू हिजड़ा है",
+    "suggestedText": "तू हिजड़ा है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "तू हिजड़ा है",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "हिजड़ा समुदाय",
+   "expected": {
+    "text": "हिजड़ा समुदाय",
+    "suggestedText": "हिजड़ा समुदाय",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "हिजड़ा समुदाय",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "छिनाल",
+   "expected": {
+    "text": "छिनाल",
+    "suggestedText": "छिनाल",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "छिनाल",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "kutte ki aulad",
+   "expected": {
+    "text": "kutte ki aulad",
+    "suggestedText": "kutte ki aulad",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ki aulad",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "kutte ka baccha",
+   "expected": {
+    "text": "kutte ka baccha",
+    "suggestedText": "kutte ka baccha",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ka baccha",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "chhinal",
+   "expected": {
+    "text": "chhinal",
+    "suggestedText": "chhinal",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "chhinal",
+    "matches": []
+   }
+  },
+  {
    "config": "hinglish-only",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -41073,6 +44821,298 @@
    }
   },
   {
+   "config": "hinglish-only",
+   "input": "sos un boludo",
+   "expected": {
+    "text": "sos un boludo",
+    "suggestedText": "sos un boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sos un boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "che boludo",
+   "expected": {
+    "text": "che boludo",
+    "suggestedText": "che boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "che boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "¡Qué chingón!",
+   "expected": {
+    "text": "¡Qué chingón!",
+    "suggestedText": "¡Qué chingón!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "¡Qué chingón!",
+    "matches": []
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "usted es un idiota",
+   "expected": {
+    "text": "usted es un idiota",
+    "suggestedText": "usted es un idiota",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "usted es un idiota",
+    "matches": []
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "Tabarnak!",
+   "expected": {
+    "text": "Tabarnak!",
+    "suggestedText": "Tabarnak!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Tabarnak!",
+    "matches": []
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "Un bâtard et deux croissants",
+   "expected": {
+    "text": "Un bâtard et deux croissants",
+    "suggestedText": "Un bâtard et deux croissants",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Un bâtard et deux croissants",
+    "matches": []
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "sale pédé",
+   "expected": {
+    "text": "sale pédé",
+    "suggestedText": "sale pédé",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sale pédé",
+    "matches": []
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "du blöde Kuh",
+   "expected": {
+    "text": "du blöde Kuh",
+    "suggestedText": "du blöde Kuh",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "du blöde Kuh",
+    "matches": []
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "Das isch huere guet",
+   "expected": {
+    "text": "Das isch huere guet",
+    "suggestedText": "Das isch huere guet",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Das isch huere guet",
+    "matches": []
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "Oaschloch",
+   "expected": {
+    "text": "Oaschloch",
+    "suggestedText": "Oaschloch",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Oaschloch",
+    "matches": []
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "vai se fuder",
+   "expected": {
+    "text": "vai se fuder",
+    "suggestedText": "vai se fuder",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "vai se fuder",
+    "matches": []
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "Os putos estão na escola",
+   "expected": {
+    "text": "Os putos estão na escola",
+    "suggestedText": "Os putos estão na escola",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Os putos estão na escola",
+    "matches": []
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "cona",
+   "expected": {
+    "text": "cona",
+    "suggestedText": "cona",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "cona",
+    "matches": []
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "कुत्ते की औलाद",
+   "expected": {
+    "text": "कुत्ते की औलाद",
+    "suggestedText": "कुत्ते की औलाद",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "कुत्ते की औलाद",
+    "matches": []
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "तू हिजड़ा है",
+   "expected": {
+    "text": "तू हिजड़ा है",
+    "suggestedText": "तू हिजड़ा है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "तू हिजड़ा है",
+    "matches": []
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "हिजड़ा समुदाय",
+   "expected": {
+    "text": "हिजड़ा समुदाय",
+    "suggestedText": "हिजड़ा समुदाय",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "हिजड़ा समुदाय",
+    "matches": []
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "छिनाल",
+   "expected": {
+    "text": "छिनाल",
+    "suggestedText": "छिनाल",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "छिनाल",
+    "matches": []
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "kutte ki aulad",
+   "expected": {
+    "text": "kutte ki aulad",
+    "suggestedText": "kutte ki aulad",
+    "action": "block",
+    "allowed": false,
+    "requiresReview": false,
+    "masked": "kutte ki aulad",
+    "matches": [
+     {
+      "start": 0,
+      "end": 14,
+      "text": "kutte ki aulad",
+      "ruleId": "hi-latn.harassment.animal-offspring",
+      "category": "harassment",
+      "severity": "high",
+      "action": "block",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "kutte ka baccha",
+   "expected": {
+    "text": "kutte ka baccha",
+    "suggestedText": "kutte ka baccha",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ka baccha",
+    "matches": []
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "chhinal",
+   "expected": {
+    "text": "chhinal",
+    "suggestedText": "chhinal",
+    "action": "block",
+    "allowed": false,
+    "requiresReview": false,
+    "masked": "chh*n*l",
+    "matches": [
+     {
+      "start": 0,
+      "end": 7,
+      "text": "chhinal",
+      "ruleId": "hi-latn.profanity.chhinal",
+      "category": "profanity",
+      "severity": "high",
+      "action": "block",
+      "confidence": 1,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
+   }
+  },
+  {
    "config": "spanish",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -42734,6 +46774,314 @@
     "allowed": true,
     "requiresReview": false,
     "masked": "मेरे साले की शादी है",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "sos un boludo",
+   "expected": {
+    "text": "sos un boludo",
+    "suggestedText": "sos un boludo",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sos un boludo",
+    "matches": [
+     {
+      "start": 0,
+      "end": 13,
+      "text": "sos un boludo",
+      "ruleId": "es.harassment.insult",
+      "category": "harassment",
+      "severity": "medium",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "che boludo",
+   "expected": {
+    "text": "che boludo",
+    "suggestedText": "che boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "che boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "¡Qué chingón!",
+   "expected": {
+    "text": "¡Qué chingón!",
+    "suggestedText": "¡Qué chingón!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "¡Qué chingón!",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "usted es un idiota",
+   "expected": {
+    "text": "usted es un idiota",
+    "suggestedText": "usted es un idiota",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "usted es un idiota",
+    "matches": [
+     {
+      "start": 0,
+      "end": 18,
+      "text": "usted es un idiota",
+      "ruleId": "es.harassment.insult-subject",
+      "category": "harassment",
+      "severity": "medium",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "Tabarnak!",
+   "expected": {
+    "text": "Tabarnak!",
+    "suggestedText": "Tabarnak!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Tabarnak!",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "Un bâtard et deux croissants",
+   "expected": {
+    "text": "Un bâtard et deux croissants",
+    "suggestedText": "Un bâtard et deux croissants",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Un bâtard et deux croissants",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "sale pédé",
+   "expected": {
+    "text": "sale pédé",
+    "suggestedText": "sale pédé",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sale pédé",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "du blöde Kuh",
+   "expected": {
+    "text": "du blöde Kuh",
+    "suggestedText": "du blöde Kuh",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "du blöde Kuh",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "Das isch huere guet",
+   "expected": {
+    "text": "Das isch huere guet",
+    "suggestedText": "Das isch huere guet",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Das isch huere guet",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "Oaschloch",
+   "expected": {
+    "text": "Oaschloch",
+    "suggestedText": "Oaschloch",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Oaschloch",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "vai se fuder",
+   "expected": {
+    "text": "vai se fuder",
+    "suggestedText": "vai se fuder",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "vai se fuder",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "Os putos estão na escola",
+   "expected": {
+    "text": "Os p*t*s estão na escola",
+    "suggestedText": "Os p*t*s estão na escola",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Os p*t*s estão na escola",
+    "matches": [
+     {
+      "start": 3,
+      "end": 8,
+      "text": "putos",
+      "ruleId": "es.profanity.puto",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "cona",
+   "expected": {
+    "text": "cona",
+    "suggestedText": "cona",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "cona",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "कुत्ते की औलाद",
+   "expected": {
+    "text": "कुत्ते की औलाद",
+    "suggestedText": "कुत्ते की औलाद",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "कुत्ते की औलाद",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "तू हिजड़ा है",
+   "expected": {
+    "text": "तू हिजड़ा है",
+    "suggestedText": "तू हिजड़ा है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "तू हिजड़ा है",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "हिजड़ा समुदाय",
+   "expected": {
+    "text": "हिजड़ा समुदाय",
+    "suggestedText": "हिजड़ा समुदाय",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "हिजड़ा समुदाय",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "छिनाल",
+   "expected": {
+    "text": "छिनाल",
+    "suggestedText": "छिनाल",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "छिनाल",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "kutte ki aulad",
+   "expected": {
+    "text": "kutte ki aulad",
+    "suggestedText": "kutte ki aulad",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ki aulad",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "kutte ka baccha",
+   "expected": {
+    "text": "kutte ka baccha",
+    "suggestedText": "kutte ka baccha",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ka baccha",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "chhinal",
+   "expected": {
+    "text": "chhinal",
+    "suggestedText": "chhinal",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "chhinal",
     "matches": []
    }
   },
@@ -44402,6 +48750,298 @@
    }
   },
   {
+   "config": "french",
+   "input": "sos un boludo",
+   "expected": {
+    "text": "sos un boludo",
+    "suggestedText": "sos un boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sos un boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "french",
+   "input": "che boludo",
+   "expected": {
+    "text": "che boludo",
+    "suggestedText": "che boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "che boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "french",
+   "input": "¡Qué chingón!",
+   "expected": {
+    "text": "¡Qué chingón!",
+    "suggestedText": "¡Qué chingón!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "¡Qué chingón!",
+    "matches": []
+   }
+  },
+  {
+   "config": "french",
+   "input": "usted es un idiota",
+   "expected": {
+    "text": "usted es un idiota",
+    "suggestedText": "usted es un idiota",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "usted es un idiota",
+    "matches": []
+   }
+  },
+  {
+   "config": "french",
+   "input": "Tabarnak!",
+   "expected": {
+    "text": "Tabarnak!",
+    "suggestedText": "T*b*rn*k!",
+    "action": "suggest",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "T*b*rn*k!",
+    "matches": [
+     {
+      "start": 0,
+      "end": 8,
+      "text": "Tabarnak",
+      "ruleId": "fr.profanity.quebec",
+      "category": "profanity",
+      "severity": "medium",
+      "action": "suggest",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": "T*b*rn*k",
+      "label": null
+     }
+    ]
+   }
+  },
+  {
+   "config": "french",
+   "input": "Un bâtard et deux croissants",
+   "expected": {
+    "text": "Un bâtard et deux croissants",
+    "suggestedText": "Un bâtard et deux croissants",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Un bâtard et deux croissants",
+    "matches": []
+   }
+  },
+  {
+   "config": "french",
+   "input": "sale pédé",
+   "expected": {
+    "text": "sale pédé",
+    "suggestedText": "s*l* p*d*",
+    "action": "suggest",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sale pédé",
+    "matches": [
+     {
+      "start": 0,
+      "end": 9,
+      "text": "sale pédé",
+      "ruleId": "fr.harassment.sale",
+      "category": "harassment",
+      "severity": "high",
+      "action": "suggest",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": "s*l* p*d*",
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "french",
+   "input": "du blöde Kuh",
+   "expected": {
+    "text": "du blöde Kuh",
+    "suggestedText": "du blöde Kuh",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "du blöde Kuh",
+    "matches": []
+   }
+  },
+  {
+   "config": "french",
+   "input": "Das isch huere guet",
+   "expected": {
+    "text": "Das isch huere guet",
+    "suggestedText": "Das isch huere guet",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Das isch huere guet",
+    "matches": []
+   }
+  },
+  {
+   "config": "french",
+   "input": "Oaschloch",
+   "expected": {
+    "text": "Oaschloch",
+    "suggestedText": "Oaschloch",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Oaschloch",
+    "matches": []
+   }
+  },
+  {
+   "config": "french",
+   "input": "vai se fuder",
+   "expected": {
+    "text": "vai se fuder",
+    "suggestedText": "vai se fuder",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "vai se fuder",
+    "matches": []
+   }
+  },
+  {
+   "config": "french",
+   "input": "Os putos estão na escola",
+   "expected": {
+    "text": "Os putos estão na escola",
+    "suggestedText": "Os putos estão na escola",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Os putos estão na escola",
+    "matches": []
+   }
+  },
+  {
+   "config": "french",
+   "input": "cona",
+   "expected": {
+    "text": "cona",
+    "suggestedText": "cona",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "cona",
+    "matches": []
+   }
+  },
+  {
+   "config": "french",
+   "input": "कुत्ते की औलाद",
+   "expected": {
+    "text": "कुत्ते की औलाद",
+    "suggestedText": "कुत्ते की औलाद",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "कुत्ते की औलाद",
+    "matches": []
+   }
+  },
+  {
+   "config": "french",
+   "input": "तू हिजड़ा है",
+   "expected": {
+    "text": "तू हिजड़ा है",
+    "suggestedText": "तू हिजड़ा है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "तू हिजड़ा है",
+    "matches": []
+   }
+  },
+  {
+   "config": "french",
+   "input": "हिजड़ा समुदाय",
+   "expected": {
+    "text": "हिजड़ा समुदाय",
+    "suggestedText": "हिजड़ा समुदाय",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "हिजड़ा समुदाय",
+    "matches": []
+   }
+  },
+  {
+   "config": "french",
+   "input": "छिनाल",
+   "expected": {
+    "text": "छिनाल",
+    "suggestedText": "छिनाल",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "छिनाल",
+    "matches": []
+   }
+  },
+  {
+   "config": "french",
+   "input": "kutte ki aulad",
+   "expected": {
+    "text": "kutte ki aulad",
+    "suggestedText": "kutte ki aulad",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ki aulad",
+    "matches": []
+   }
+  },
+  {
+   "config": "french",
+   "input": "kutte ka baccha",
+   "expected": {
+    "text": "kutte ka baccha",
+    "suggestedText": "kutte ka baccha",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ka baccha",
+    "matches": []
+   }
+  },
+  {
+   "config": "french",
+   "input": "chhinal",
+   "expected": {
+    "text": "chhinal",
+    "suggestedText": "chhinal",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "chhinal",
+    "matches": []
+   }
+  },
+  {
    "config": "german",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -46066,6 +50706,298 @@
    }
   },
   {
+   "config": "german",
+   "input": "sos un boludo",
+   "expected": {
+    "text": "sos un boludo",
+    "suggestedText": "sos un boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sos un boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "german",
+   "input": "che boludo",
+   "expected": {
+    "text": "che boludo",
+    "suggestedText": "che boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "che boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "german",
+   "input": "¡Qué chingón!",
+   "expected": {
+    "text": "¡Qué chingón!",
+    "suggestedText": "¡Qué chingón!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "¡Qué chingón!",
+    "matches": []
+   }
+  },
+  {
+   "config": "german",
+   "input": "usted es un idiota",
+   "expected": {
+    "text": "usted es un idiota",
+    "suggestedText": "usted es un idiota",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "usted es un idiota",
+    "matches": []
+   }
+  },
+  {
+   "config": "german",
+   "input": "Tabarnak!",
+   "expected": {
+    "text": "Tabarnak!",
+    "suggestedText": "Tabarnak!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Tabarnak!",
+    "matches": []
+   }
+  },
+  {
+   "config": "german",
+   "input": "Un bâtard et deux croissants",
+   "expected": {
+    "text": "Un bâtard et deux croissants",
+    "suggestedText": "Un bâtard et deux croissants",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Un bâtard et deux croissants",
+    "matches": []
+   }
+  },
+  {
+   "config": "german",
+   "input": "sale pédé",
+   "expected": {
+    "text": "sale pédé",
+    "suggestedText": "sale pédé",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sale pédé",
+    "matches": []
+   }
+  },
+  {
+   "config": "german",
+   "input": "du blöde Kuh",
+   "expected": {
+    "text": "du blöde Kuh",
+    "suggestedText": "du blöde Kuh",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "du blöde Kuh",
+    "matches": [
+     {
+      "start": 0,
+      "end": 12,
+      "text": "du blöde Kuh",
+      "ruleId": "de.harassment.insult",
+      "category": "harassment",
+      "severity": "medium",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "german",
+   "input": "Das isch huere guet",
+   "expected": {
+    "text": "Das isch huere guet",
+    "suggestedText": "Das isch huere guet",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Das isch huere guet",
+    "matches": []
+   }
+  },
+  {
+   "config": "german",
+   "input": "Oaschloch",
+   "expected": {
+    "text": "O*******h",
+    "suggestedText": "O*******h",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "O*******h",
+    "matches": [
+     {
+      "start": 0,
+      "end": 9,
+      "text": "Oaschloch",
+      "ruleId": "de.profanity.oasch",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
+   }
+  },
+  {
+   "config": "german",
+   "input": "vai se fuder",
+   "expected": {
+    "text": "vai se fuder",
+    "suggestedText": "vai se fuder",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "vai se fuder",
+    "matches": []
+   }
+  },
+  {
+   "config": "german",
+   "input": "Os putos estão na escola",
+   "expected": {
+    "text": "Os putos estão na escola",
+    "suggestedText": "Os putos estão na escola",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Os putos estão na escola",
+    "matches": []
+   }
+  },
+  {
+   "config": "german",
+   "input": "cona",
+   "expected": {
+    "text": "cona",
+    "suggestedText": "cona",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "cona",
+    "matches": []
+   }
+  },
+  {
+   "config": "german",
+   "input": "कुत्ते की औलाद",
+   "expected": {
+    "text": "कुत्ते की औलाद",
+    "suggestedText": "कुत्ते की औलाद",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "कुत्ते की औलाद",
+    "matches": []
+   }
+  },
+  {
+   "config": "german",
+   "input": "तू हिजड़ा है",
+   "expected": {
+    "text": "तू हिजड़ा है",
+    "suggestedText": "तू हिजड़ा है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "तू हिजड़ा है",
+    "matches": []
+   }
+  },
+  {
+   "config": "german",
+   "input": "हिजड़ा समुदाय",
+   "expected": {
+    "text": "हिजड़ा समुदाय",
+    "suggestedText": "हिजड़ा समुदाय",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "हिजड़ा समुदाय",
+    "matches": []
+   }
+  },
+  {
+   "config": "german",
+   "input": "छिनाल",
+   "expected": {
+    "text": "छिनाल",
+    "suggestedText": "छिनाल",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "छिनाल",
+    "matches": []
+   }
+  },
+  {
+   "config": "german",
+   "input": "kutte ki aulad",
+   "expected": {
+    "text": "kutte ki aulad",
+    "suggestedText": "kutte ki aulad",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ki aulad",
+    "matches": []
+   }
+  },
+  {
+   "config": "german",
+   "input": "kutte ka baccha",
+   "expected": {
+    "text": "kutte ka baccha",
+    "suggestedText": "kutte ka baccha",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ka baccha",
+    "matches": []
+   }
+  },
+  {
+   "config": "german",
+   "input": "chhinal",
+   "expected": {
+    "text": "chhinal",
+    "suggestedText": "chhinal",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "chhinal",
+    "matches": []
+   }
+  },
+  {
    "config": "portuguese",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -47695,6 +52627,298 @@
     "allowed": true,
     "requiresReview": false,
     "masked": "मेरे साले की शादी है",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "sos un boludo",
+   "expected": {
+    "text": "sos un boludo",
+    "suggestedText": "sos un boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sos un boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "che boludo",
+   "expected": {
+    "text": "che boludo",
+    "suggestedText": "che boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "che boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "¡Qué chingón!",
+   "expected": {
+    "text": "¡Qué chingón!",
+    "suggestedText": "¡Qué chingón!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "¡Qué chingón!",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "usted es un idiota",
+   "expected": {
+    "text": "usted es un idiota",
+    "suggestedText": "usted es un idiota",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "usted es un idiota",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "Tabarnak!",
+   "expected": {
+    "text": "Tabarnak!",
+    "suggestedText": "Tabarnak!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Tabarnak!",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "Un bâtard et deux croissants",
+   "expected": {
+    "text": "Un bâtard et deux croissants",
+    "suggestedText": "Un bâtard et deux croissants",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Un bâtard et deux croissants",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "sale pédé",
+   "expected": {
+    "text": "sale pédé",
+    "suggestedText": "sale pédé",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sale pédé",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "du blöde Kuh",
+   "expected": {
+    "text": "du blöde Kuh",
+    "suggestedText": "du blöde Kuh",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "du blöde Kuh",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "Das isch huere guet",
+   "expected": {
+    "text": "Das isch huere guet",
+    "suggestedText": "Das isch huere guet",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Das isch huere guet",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "Oaschloch",
+   "expected": {
+    "text": "Oaschloch",
+    "suggestedText": "Oaschloch",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Oaschloch",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "vai se fuder",
+   "expected": {
+    "text": "vai se f*d*r",
+    "suggestedText": "vai se f*d*r",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "vai se f*d*r",
+    "matches": [
+     {
+      "start": 7,
+      "end": 12,
+      "text": "fuder",
+      "ruleId": "pt.profanity.foder",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "Os putos estão na escola",
+   "expected": {
+    "text": "Os putos estão na escola",
+    "suggestedText": "Os putos estão na escola",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Os putos estão na escola",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "cona",
+   "expected": {
+    "text": "c*n*",
+    "suggestedText": "c*n*",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "c*n*",
+    "matches": [
+     {
+      "start": 0,
+      "end": 4,
+      "text": "cona",
+      "ruleId": "pt.profanity.cona",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "कुत्ते की औलाद",
+   "expected": {
+    "text": "कुत्ते की औलाद",
+    "suggestedText": "कुत्ते की औलाद",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "कुत्ते की औलाद",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "तू हिजड़ा है",
+   "expected": {
+    "text": "तू हिजड़ा है",
+    "suggestedText": "तू हिजड़ा है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "तू हिजड़ा है",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "हिजड़ा समुदाय",
+   "expected": {
+    "text": "हिजड़ा समुदाय",
+    "suggestedText": "हिजड़ा समुदाय",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "हिजड़ा समुदाय",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "छिनाल",
+   "expected": {
+    "text": "छिनाल",
+    "suggestedText": "छिनाल",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "छिनाल",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "kutte ki aulad",
+   "expected": {
+    "text": "kutte ki aulad",
+    "suggestedText": "kutte ki aulad",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ki aulad",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "kutte ka baccha",
+   "expected": {
+    "text": "kutte ka baccha",
+    "suggestedText": "kutte ka baccha",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ka baccha",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "chhinal",
+   "expected": {
+    "text": "chhinal",
+    "suggestedText": "chhinal",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "chhinal",
     "matches": []
    }
   },
@@ -50138,6 +55362,346 @@
    }
   },
   {
+   "config": "hindi",
+   "input": "sos un boludo",
+   "expected": {
+    "text": "sos un boludo",
+    "suggestedText": "sos un boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sos un boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "che boludo",
+   "expected": {
+    "text": "che boludo",
+    "suggestedText": "che boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "che boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "¡Qué chingón!",
+   "expected": {
+    "text": "¡Qué chingón!",
+    "suggestedText": "¡Qué chingón!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "¡Qué chingón!",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "usted es un idiota",
+   "expected": {
+    "text": "usted es un idiota",
+    "suggestedText": "usted es un idiota",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "usted es un idiota",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "Tabarnak!",
+   "expected": {
+    "text": "Tabarnak!",
+    "suggestedText": "Tabarnak!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Tabarnak!",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "Un bâtard et deux croissants",
+   "expected": {
+    "text": "Un bâtard et deux croissants",
+    "suggestedText": "Un bâtard et deux croissants",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Un bâtard et deux croissants",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "sale pédé",
+   "expected": {
+    "text": "sale pédé",
+    "suggestedText": "sale pédé",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sale pédé",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "du blöde Kuh",
+   "expected": {
+    "text": "du blöde Kuh",
+    "suggestedText": "du blöde Kuh",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "du blöde Kuh",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "Das isch huere guet",
+   "expected": {
+    "text": "Das isch huere guet",
+    "suggestedText": "Das isch huere guet",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Das isch huere guet",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "Oaschloch",
+   "expected": {
+    "text": "Oaschloch",
+    "suggestedText": "Oaschloch",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Oaschloch",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "vai se fuder",
+   "expected": {
+    "text": "vai se fuder",
+    "suggestedText": "vai se fuder",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "vai se fuder",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "Os putos estão na escola",
+   "expected": {
+    "text": "Os putos estão na escola",
+    "suggestedText": "Os putos estão na escola",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Os putos estão na escola",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "cona",
+   "expected": {
+    "text": "cona",
+    "suggestedText": "cona",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "cona",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "कुत्ते की औलाद",
+   "expected": {
+    "text": "कुत्ते की औलाद",
+    "suggestedText": "कुत्ते की औलाद",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "कुत्ते की औलाद",
+    "matches": [
+     {
+      "start": 0,
+      "end": 14,
+      "text": "कुत्ते की औलाद",
+      "ruleId": "hi.harassment.animal-offspring",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "तू हिजड़ा है",
+   "expected": {
+    "text": "तू हिजड़ा है",
+    "suggestedText": "तू हिजड़ा है",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "तू हिजड़ा है",
+    "matches": [
+     {
+      "start": 0,
+      "end": 12,
+      "text": "तू हिजड़ा है",
+      "ruleId": "hi.harassment.insult-animal",
+      "category": "harassment",
+      "severity": "medium",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "हिजड़ा समुदाय",
+   "expected": {
+    "text": "हिजड़ा समुदाय",
+    "suggestedText": "हिजड़ा समुदाय",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "हिजड़ा समुदाय",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "छिनाल",
+   "expected": {
+    "text": "छि*ल",
+    "suggestedText": "छि*ल",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "छि*ल",
+    "matches": [
+     {
+      "start": 0,
+      "end": 5,
+      "text": "छिनाल",
+      "ruleId": "hi.profanity.chhinal",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "kutte ki aulad",
+   "expected": {
+    "text": "kutte ki aulad",
+    "suggestedText": "kutte ki aulad",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ki aulad",
+    "matches": [
+     {
+      "start": 0,
+      "end": 14,
+      "text": "kutte ki aulad",
+      "ruleId": "hi-latn.harassment.animal-offspring",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "kutte ka baccha",
+   "expected": {
+    "text": "kutte ka baccha",
+    "suggestedText": "kutte ka baccha",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ka baccha",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "chhinal",
+   "expected": {
+    "text": "chh*n*l",
+    "suggestedText": "chh*n*l",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "chh*n*l",
+    "matches": [
+     {
+      "start": 0,
+      "end": 7,
+      "text": "chhinal",
+      "ruleId": "hi-latn.profanity.chhinal",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
+   }
+  },
+  {
    "config": "hindi-full",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -51972,6 +57536,314 @@
     "allowed": true,
     "requiresReview": false,
     "masked": "मेरे साले की शादी है",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "sos un boludo",
+   "expected": {
+    "text": "sos un boludo",
+    "suggestedText": "sos un boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sos un boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "che boludo",
+   "expected": {
+    "text": "che boludo",
+    "suggestedText": "che boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "che boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "¡Qué chingón!",
+   "expected": {
+    "text": "¡Qué chingón!",
+    "suggestedText": "¡Qué chingón!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "¡Qué chingón!",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "usted es un idiota",
+   "expected": {
+    "text": "usted es un idiota",
+    "suggestedText": "usted es un idiota",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "usted es un idiota",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "Tabarnak!",
+   "expected": {
+    "text": "Tabarnak!",
+    "suggestedText": "Tabarnak!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Tabarnak!",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "Un bâtard et deux croissants",
+   "expected": {
+    "text": "Un bâtard et deux croissants",
+    "suggestedText": "Un bâtard et deux croissants",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Un bâtard et deux croissants",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "sale pédé",
+   "expected": {
+    "text": "sale pédé",
+    "suggestedText": "sale pédé",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sale pédé",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "du blöde Kuh",
+   "expected": {
+    "text": "du blöde Kuh",
+    "suggestedText": "du blöde Kuh",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "du blöde Kuh",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "Das isch huere guet",
+   "expected": {
+    "text": "Das isch huere guet",
+    "suggestedText": "Das isch huere guet",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Das isch huere guet",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "Oaschloch",
+   "expected": {
+    "text": "Oaschloch",
+    "suggestedText": "Oaschloch",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Oaschloch",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "vai se fuder",
+   "expected": {
+    "text": "vai se fuder",
+    "suggestedText": "vai se fuder",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "vai se fuder",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "Os putos estão na escola",
+   "expected": {
+    "text": "Os putos estão na escola",
+    "suggestedText": "Os putos estão na escola",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Os putos estão na escola",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "cona",
+   "expected": {
+    "text": "cona",
+    "suggestedText": "cona",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "cona",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "कुत्ते की औलाद",
+   "expected": {
+    "text": "कुत्ते की औलाद",
+    "suggestedText": "कुत्ते की औलाद",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "कुत्ते की औलाद",
+    "matches": [
+     {
+      "start": 0,
+      "end": 14,
+      "text": "कुत्ते की औलाद",
+      "ruleId": "hi.harassment.animal-offspring",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "तू हिजड़ा है",
+   "expected": {
+    "text": "तू हिजड़ा है",
+    "suggestedText": "तू हिजड़ा है",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "तू हिजड़ा है",
+    "matches": [
+     {
+      "start": 0,
+      "end": 12,
+      "text": "तू हिजड़ा है",
+      "ruleId": "hi.harassment.insult-animal",
+      "category": "harassment",
+      "severity": "medium",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "हिजड़ा समुदाय",
+   "expected": {
+    "text": "हिजड़ा समुदाय",
+    "suggestedText": "हिजड़ा समुदाय",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "हिजड़ा समुदाय",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "छिनाल",
+   "expected": {
+    "text": "***",
+    "suggestedText": "***",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "***",
+    "matches": [
+     {
+      "start": 0,
+      "end": 5,
+      "text": "छिनाल",
+      "ruleId": "hi.profanity.chhinal",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "kutte ki aulad",
+   "expected": {
+    "text": "kutte ki aulad",
+    "suggestedText": "kutte ki aulad",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ki aulad",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "kutte ka baccha",
+   "expected": {
+    "text": "kutte ka baccha",
+    "suggestedText": "kutte ka baccha",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ka baccha",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "chhinal",
+   "expected": {
+    "text": "chhinal",
+    "suggestedText": "chhinal",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "chhinal",
     "matches": []
    }
   },
@@ -55081,6 +60953,298 @@
     "requiresReview": false,
     "masked": "मेरे साले की शादी है",
     "matches": []
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "sos un boludo",
+   "expected": {
+    "text": "sos un boludo",
+    "suggestedText": "sos un boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sos un boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "che boludo",
+   "expected": {
+    "text": "che boludo",
+    "suggestedText": "che boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "che boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "¡Qué chingón!",
+   "expected": {
+    "text": "¡Qué chingón!",
+    "suggestedText": "¡Qué chingón!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "¡Qué chingón!",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "usted es un idiota",
+   "expected": {
+    "text": "usted es un idiota",
+    "suggestedText": "usted es un idiota",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "usted es un idiota",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "Tabarnak!",
+   "expected": {
+    "text": "Tabarnak!",
+    "suggestedText": "Tabarnak!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Tabarnak!",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "Un bâtard et deux croissants",
+   "expected": {
+    "text": "Un bâtard et deux croissants",
+    "suggestedText": "Un bâtard et deux croissants",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Un bâtard et deux croissants",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "sale pédé",
+   "expected": {
+    "text": "sale pédé",
+    "suggestedText": "sale pédé",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sale pédé",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "du blöde Kuh",
+   "expected": {
+    "text": "du blöde Kuh",
+    "suggestedText": "du blöde Kuh",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "du blöde Kuh",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "Das isch huere guet",
+   "expected": {
+    "text": "Das isch huere guet",
+    "suggestedText": "Das isch huere guet",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Das isch huere guet",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "Oaschloch",
+   "expected": {
+    "text": "Oaschloch",
+    "suggestedText": "Oaschloch",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Oaschloch",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "vai se fuder",
+   "expected": {
+    "text": "vai se fuder",
+    "suggestedText": "vai se fuder",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "vai se fuder",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "Os putos estão na escola",
+   "expected": {
+    "text": "Os putos estão na escola",
+    "suggestedText": "Os putos estão na escola",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Os putos estão na escola",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "cona",
+   "expected": {
+    "text": "cona",
+    "suggestedText": "cona",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "cona",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "कुत्ते की औलाद",
+   "expected": {
+    "text": "कुत्ते की औलाद",
+    "suggestedText": "कुत्ते की औलाद",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "कुत्ते की औलाद",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "तू हिजड़ा है",
+   "expected": {
+    "text": "तू हिजड़ा है",
+    "suggestedText": "तू हिजड़ा है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "तू हिजड़ा है",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "हिजड़ा समुदाय",
+   "expected": {
+    "text": "हिजड़ा समुदाय",
+    "suggestedText": "हिजड़ा समुदाय",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "हिजड़ा समुदाय",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "छिनाल",
+   "expected": {
+    "text": "छिनाल",
+    "suggestedText": "छिनाल",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "छिनाल",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "kutte ki aulad",
+   "expected": {
+    "text": "kutte ki aulad",
+    "suggestedText": "kutte ki aulad",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ki aulad",
+    "matches": [
+     {
+      "start": 0,
+      "end": 14,
+      "text": "kutte ki aulad",
+      "ruleId": "hi-latn.harassment.animal-offspring",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "kutte ka baccha",
+   "expected": {
+    "text": "kutte ka baccha",
+    "suggestedText": "kutte ka baccha",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ka baccha",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "chhinal",
+   "expected": {
+    "text": "chh*n*l",
+    "suggestedText": "chh*n*l",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "chh*n*l",
+    "matches": [
+     {
+      "start": 0,
+      "end": 7,
+      "text": "chhinal",
+      "ruleId": "hi-latn.profanity.chhinal",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
    }
   },
   {
@@ -58189,6 +64353,298 @@
     "requiresReview": false,
     "masked": "मेरे साले की शादी है",
     "matches": []
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "sos un boludo",
+   "expected": {
+    "text": "sos un boludo",
+    "suggestedText": "sos un boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sos un boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "che boludo",
+   "expected": {
+    "text": "che boludo",
+    "suggestedText": "che boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "che boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "¡Qué chingón!",
+   "expected": {
+    "text": "¡Qué chingón!",
+    "suggestedText": "¡Qué chingón!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "¡Qué chingón!",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "usted es un idiota",
+   "expected": {
+    "text": "usted es un idiota",
+    "suggestedText": "usted es un idiota",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "usted es un idiota",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "Tabarnak!",
+   "expected": {
+    "text": "Tabarnak!",
+    "suggestedText": "Tabarnak!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Tabarnak!",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "Un bâtard et deux croissants",
+   "expected": {
+    "text": "Un bâtard et deux croissants",
+    "suggestedText": "Un bâtard et deux croissants",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Un bâtard et deux croissants",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "sale pédé",
+   "expected": {
+    "text": "sale pédé",
+    "suggestedText": "sale pédé",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sale pédé",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "du blöde Kuh",
+   "expected": {
+    "text": "du blöde Kuh",
+    "suggestedText": "du blöde Kuh",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "du blöde Kuh",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "Das isch huere guet",
+   "expected": {
+    "text": "Das isch huere guet",
+    "suggestedText": "Das isch huere guet",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Das isch huere guet",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "Oaschloch",
+   "expected": {
+    "text": "Oaschloch",
+    "suggestedText": "Oaschloch",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Oaschloch",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "vai se fuder",
+   "expected": {
+    "text": "vai se fuder",
+    "suggestedText": "vai se fuder",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "vai se fuder",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "Os putos estão na escola",
+   "expected": {
+    "text": "Os putos estão na escola",
+    "suggestedText": "Os putos estão na escola",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Os putos estão na escola",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "cona",
+   "expected": {
+    "text": "cona",
+    "suggestedText": "cona",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "cona",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "कुत्ते की औलाद",
+   "expected": {
+    "text": "कुत्ते की औलाद",
+    "suggestedText": "कुत्ते की औलाद",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "कुत्ते की औलाद",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "तू हिजड़ा है",
+   "expected": {
+    "text": "तू हिजड़ा है",
+    "suggestedText": "तू हिजड़ा है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "तू हिजड़ा है",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "हिजड़ा समुदाय",
+   "expected": {
+    "text": "हिजड़ा समुदाय",
+    "suggestedText": "हिजड़ा समुदाय",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "हिजड़ा समुदाय",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "छिनाल",
+   "expected": {
+    "text": "छिनाल",
+    "suggestedText": "छिनाल",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "छिनाल",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "kutte ki aulad",
+   "expected": {
+    "text": "kutte ki aulad",
+    "suggestedText": "kutte ki aulad",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ki aulad",
+    "matches": [
+     {
+      "start": 0,
+      "end": 14,
+      "text": "kutte ki aulad",
+      "ruleId": "hi-latn.harassment.animal-offspring",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "kutte ka baccha",
+   "expected": {
+    "text": "kutte ka baccha",
+    "suggestedText": "kutte ka baccha",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ka baccha",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "chhinal",
+   "expected": {
+    "text": "chh*n*l",
+    "suggestedText": "chh*n*l",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "chh*n*l",
+    "matches": [
+     {
+      "start": 0,
+      "end": 7,
+      "text": "chhinal",
+      "ruleId": "hi-latn.profanity.chhinal",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
    }
   },
   {
@@ -61829,6 +68285,490 @@
     "requiresReview": false,
     "masked": "मेरे साले की शादी है",
     "matches": []
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "sos un boludo",
+   "expected": {
+    "text": "sos un boludo",
+    "suggestedText": "sos un boludo",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sos un boludo",
+    "matches": [
+     {
+      "start": 0,
+      "end": 13,
+      "text": "sos un boludo",
+      "ruleId": "es.harassment.insult",
+      "category": "harassment",
+      "severity": "medium",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "che boludo",
+   "expected": {
+    "text": "che boludo",
+    "suggestedText": "che boludo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "che boludo",
+    "matches": []
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "¡Qué chingón!",
+   "expected": {
+    "text": "¡Qué chingón!",
+    "suggestedText": "¡Qué chingón!",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "¡Qué chingón!",
+    "matches": []
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "usted es un idiota",
+   "expected": {
+    "text": "usted es un idiota",
+    "suggestedText": "usted es un idiota",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "usted es un idiota",
+    "matches": [
+     {
+      "start": 0,
+      "end": 18,
+      "text": "usted es un idiota",
+      "ruleId": "es.harassment.insult-subject",
+      "category": "harassment",
+      "severity": "medium",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "Tabarnak!",
+   "expected": {
+    "text": "T*b*rn*k!",
+    "suggestedText": "T*b*rn*k!",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "T*b*rn*k!",
+    "matches": [
+     {
+      "start": 0,
+      "end": 8,
+      "text": "Tabarnak",
+      "ruleId": "fr.profanity.quebec",
+      "category": "profanity",
+      "severity": "medium",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "Un bâtard et deux croissants",
+   "expected": {
+    "text": "Un bâtard et deux croissants",
+    "suggestedText": "Un bâtard et deux croissants",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Un bâtard et deux croissants",
+    "matches": []
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "sale pédé",
+   "expected": {
+    "text": "sale pédé",
+    "suggestedText": "sale pédé",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "sale pédé",
+    "matches": [
+     {
+      "start": 0,
+      "end": 9,
+      "text": "sale pédé",
+      "ruleId": "fr.harassment.sale",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "du blöde Kuh",
+   "expected": {
+    "text": "du blöde Kuh",
+    "suggestedText": "du blöde Kuh",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "du blöde Kuh",
+    "matches": [
+     {
+      "start": 0,
+      "end": 12,
+      "text": "du blöde Kuh",
+      "ruleId": "de.harassment.insult",
+      "category": "harassment",
+      "severity": "medium",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "Das isch huere guet",
+   "expected": {
+    "text": "Das isch huere guet",
+    "suggestedText": "Das isch huere guet",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Das isch huere guet",
+    "matches": []
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "Oaschloch",
+   "expected": {
+    "text": "O*schl*ch",
+    "suggestedText": "O*schl*ch",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "O*schl*ch",
+    "matches": [
+     {
+      "start": 0,
+      "end": 9,
+      "text": "Oaschloch",
+      "ruleId": "de.profanity.oasch",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "vai se fuder",
+   "expected": {
+    "text": "vai se f*d*r",
+    "suggestedText": "vai se f*d*r",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "vai se f*d*r",
+    "matches": [
+     {
+      "start": 7,
+      "end": 12,
+      "text": "fuder",
+      "ruleId": "pt.profanity.foder",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "Os putos estão na escola",
+   "expected": {
+    "text": "Os p*t*s estão na escola",
+    "suggestedText": "Os p*t*s estão na escola",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "Os p*t*s estão na escola",
+    "matches": [
+     {
+      "start": 3,
+      "end": 8,
+      "text": "putos",
+      "ruleId": "es.profanity.puto",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "cona",
+   "expected": {
+    "text": "c*n*",
+    "suggestedText": "c*n*",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "c*n*",
+    "matches": [
+     {
+      "start": 0,
+      "end": 4,
+      "text": "cona",
+      "ruleId": "pt.profanity.cona",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "कुत्ते की औलाद",
+   "expected": {
+    "text": "कुत्ते की औलाद",
+    "suggestedText": "कुत्ते की औलाद",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "कुत्ते की औलाद",
+    "matches": [
+     {
+      "start": 0,
+      "end": 14,
+      "text": "कुत्ते की औलाद",
+      "ruleId": "hi.harassment.animal-offspring",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "तू हिजड़ा है",
+   "expected": {
+    "text": "तू हिजड़ा है",
+    "suggestedText": "तू हिजड़ा है",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "तू हिजड़ा है",
+    "matches": [
+     {
+      "start": 0,
+      "end": 12,
+      "text": "तू हिजड़ा है",
+      "ruleId": "hi.harassment.insult-animal",
+      "category": "harassment",
+      "severity": "medium",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "हिजड़ा समुदाय",
+   "expected": {
+    "text": "हिजड़ा समुदाय",
+    "suggestedText": "हिजड़ा समुदाय",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "हिजड़ा समुदाय",
+    "matches": []
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "छिनाल",
+   "expected": {
+    "text": "छि*ल",
+    "suggestedText": "छि*ल",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "छि*ल",
+    "matches": [
+     {
+      "start": 0,
+      "end": 5,
+      "text": "छिनाल",
+      "ruleId": "hi.profanity.chhinal",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "kutte ki aulad",
+   "expected": {
+    "text": "kutte ki aulad",
+    "suggestedText": "kutte ki aulad",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ki aulad",
+    "matches": [
+     {
+      "start": 0,
+      "end": 14,
+      "text": "kutte ki aulad",
+      "ruleId": "hi-latn.harassment.animal-offspring",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "kutte ka baccha",
+   "expected": {
+    "text": "kutte ka baccha",
+    "suggestedText": "kutte ka baccha",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kutte ka baccha",
+    "matches": []
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "chhinal",
+   "expected": {
+    "text": "chh*n*l",
+    "suggestedText": "chh*n*l",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "chh*n*l",
+    "matches": [
+     {
+      "start": 0,
+      "end": 7,
+      "text": "chhinal",
+      "ruleId": "hi-latn.profanity.chhinal",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
    }
   }
  ]

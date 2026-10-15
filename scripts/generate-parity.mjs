@@ -32,6 +32,9 @@ const texts = [
   "पोर्न", "नंगी फोटो भेज", "हरामी", "dick pics", "seggs",
   "ghar me ghus ke chodunga saale", "tujhe jaan se maar daalunga", "tujhe nahi chhodunga", "abe saale",
   "kal main ghar chodunga", "mere saale ki shaadi hai", "घर में घुस के मारूंगा", "मेरे साले की शादी है",
+  "sos un boludo", "che boludo", "¡Qué chingón!", "usted es un idiota", "Tabarnak!", "Un bâtard et deux croissants",
+  "sale pédé", "du blöde Kuh", "Das isch huere guet", "Oaschloch", "vai se fuder", "Os putos estão na escola",
+  "cona", "कुत्ते की औलाद", "तू हिजड़ा है", "हिजड़ा समुदाय", "छिनाल", "kutte ki aulad", "kutte ka baccha", "chhinal",
 ];
 
 const configs = [

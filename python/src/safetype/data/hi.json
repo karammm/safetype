@@ -81,6 +81,18 @@
       "severity": "medium"
     },
     {
+      "id": "hi.profanity.chhinal",
+      "pattern": "(छिनाल|छिनार|छिनाली)",
+      "category": "profanity",
+      "severity": "high"
+    },
+    {
+      "id": "hi.profanity.dalla",
+      "pattern": "(दल्ला|दल्ले|दल्ली)",
+      "category": "profanity",
+      "severity": "medium"
+    },
+    {
       "id": "hi.profanity.kutiya",
       "pattern": "(कुतिया|कुत्तिया)",
       "category": "profanity",
@@ -136,10 +148,18 @@
     },
     {
       "id": "hi.harassment.insult-animal",
-      "pattern": "(तू|तुम|आप) (एक)? (बहुत|पूरा|पूरी|निरा|सबसे|एकदम)? (बड़ा|बड़ी|बडा|बडी)? (कुत्ता|कुत्ते|कुत्ती|गधा|गधे|उल्लू|सूअर|सुअर) (है|हो|हैं)",
+      "pattern": "(तू|तुम|आप) (एक)? (बहुत|पूरा|पूरी|निरा|सबसे|एकदम)? (बड़ा|बड़ी|बडा|बडी)? (कुत्ता|कुत्ते|कुत्ती|गधा|गधे|उल्लू|सूअर|सुअर|हिजड़ा|हिजड़े|हिजडा|हिजडे) (है|हो|हैं)",
       "category": "harassment",
       "severity": "medium",
       "confidence": 0.75,
+      "label": "insult"
+    },
+    {
+      "id": "hi.harassment.animal-offspring",
+      "pattern": "(कुत्ते|कुत्ता|सूअर|सुअर|गधे|हरामखोर) (की|का|के) (औलाद|औलादें)",
+      "category": "harassment",
+      "severity": "high",
+      "confidence": 0.8,
       "label": "insult"
     },
     {

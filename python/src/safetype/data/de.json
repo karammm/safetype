@@ -82,6 +82,30 @@
       "severity": "medium"
     },
     {
+      "id": "de.profanity.oasch",
+      "pattern": "(oasch|oaschloch*|oaschgeige*|oaschkriecher*)",
+      "category": "profanity",
+      "severity": "high"
+    },
+    {
+      "id": "de.profanity.gschissen",
+      "pattern": "(gschissen*|gschissana|gschissane)",
+      "category": "profanity",
+      "severity": "medium"
+    },
+    {
+      "id": "de.profanity.beidl",
+      "pattern": "(beidl|beidln|beidlwappler*)",
+      "category": "profanity",
+      "severity": "medium"
+    },
+    {
+      "id": "de.profanity.huere",
+      "pattern": "(huerebueb*|huerechaib*|hueresiech*|huereseich|huerefotze*)",
+      "category": "profanity",
+      "severity": "high"
+    },
+    {
       "id": "de.profanity.pisser",
       "pattern": "(pisser|pissnelke*)",
       "category": "profanity",
@@ -149,7 +173,7 @@
     },
     {
       "id": "de.harassment.insult",
-      "pattern": "du (bist)? (so|echt|total|voll|wirklich|einfach)? (ein|eine|einer|n)? (verdammter|verdammte|verdammtes|dummer|dumme|dummes|kleiner|kleine|kleines|elender|elendes|scheiss)? (idiot*|vollidiot*|depp*|trottel*|arschloch*|wichser*|dumm|dummkopf*|blod|bloed|behindert*|spast*|mongo|missgeburt*|versager*|loser*|penner*|hurensohn*|witzfigur*|lappen|opfer|abschaum|mull|muell|nichtsnutz*|hackfresse*|schwachkopf*|schwachmat*|pisser|bastard*|hund|schwein|sau|schlampe|fotze|hure|spasti)",
+      "pattern": "du (bist)? (so|echt|total|voll|wirklich|einfach)? (ein|eine|einer|n)? (verdammter|verdammte|verdammtes|dummer|dumme|dummes|blode|bloede|bloder|bloeder|blodes|bloedes|alte|alter|altes|kleiner|kleine|kleines|elender|elendes|scheiss)? (idiot*|vollidiot*|depp*|trottel*|arschloch*|wichser*|dumm|dummkopf*|blod|bloed|behindert*|spast*|mongo|missgeburt*|versager*|loser*|penner*|hurensohn*|witzfigur*|lappen|opfer|abschaum|mull|muell|nichtsnutz*|hackfresse*|schwachkopf*|schwachmat*|pisser|bastard*|hund|schwein|sau|kuh|ziege|affe|esel|ratte|made|wappler|oaschloch*|gschissener|spacko|spacken|schlampe|fotze|hure|spasti)",
       "category": "harassment",
       "severity": "medium",
       "confidence": 0.8,
@@ -157,7 +181,7 @@
     },
     {
       "id": "de.harassment.insult-formal",
-      "pattern": "(sie|ihr) (sind|seid) (so|echt|total|voll|wirklich|einfach)? (ein|eine|einer|n)? (verdammter|verdammte|verdammtes|dummer|dumme|dummes|kleiner|kleine|kleines|elender|elendes|scheiss)? (idiot*|vollidiot*|depp*|trottel*|arschloch*|wichser*|dumm|dummkopf*|blod|bloed|behindert*|spast*|mongo|missgeburt*|versager*|loser*|penner*|hurensohn*|witzfigur*|lappen|opfer|abschaum|mull|muell|nichtsnutz*|hackfresse*|schwachkopf*|schwachmat*|pisser|bastard*|hund|schwein|sau|schlampe|fotze|hure|spasti)",
+      "pattern": "(sie|ihr) (sind|seid) (so|echt|total|voll|wirklich|einfach)? (ein|eine|einer|n)? (verdammter|verdammte|verdammtes|dummer|dumme|dummes|blode|bloede|bloder|bloeder|blodes|bloedes|alte|alter|altes|kleiner|kleine|kleines|elender|elendes|scheiss)? (idiot*|vollidiot*|depp*|trottel*|arschloch*|wichser*|dumm|dummkopf*|blod|bloed|behindert*|spast*|mongo|missgeburt*|versager*|loser*|penner*|hurensohn*|witzfigur*|lappen|opfer|abschaum|mull|muell|nichtsnutz*|hackfresse*|schwachkopf*|schwachmat*|pisser|bastard*|hund|schwein|sau|kuh|ziege|affe|esel|ratte|made|wappler|oaschloch*|gschissener|spacko|spacken|schlampe|fotze|hure|spasti)",
       "category": "harassment",
       "severity": "medium",
       "confidence": 0.8,

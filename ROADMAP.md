@@ -124,6 +124,11 @@ New package: `@safetype/ai`
 - Home-invasion and direct threats ("ghar me ghus ke …", "tujhe maar dunga", "tujhe nahi chhodunga") and abusive
   address ("abe saale"), with tests for the innocent look-alikes
 
+## v1.13.0: language pack review ✅
+
+- Answers to the review questions in issues #1-#5: regional words, fewer false positives, Portugal and Québec
+- Native speakers can still comment on those issues; their feedback goes into the next releases
+
 ---
 
 Have an idea or a use case that isn't covered? [Open an issue](https://github.com/karammm/safetype/issues).

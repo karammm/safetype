@@ -2,6 +2,23 @@
 
 All `@safetype/*` packages share one version number.
 
+## 1.13.0
+
+### Language pack review ([#1](https://github.com/karammm/safetype/issues/1) to [#5](https://github.com/karammm/safetype/issues/5))
+
+- **Spanish:** Argentina, Chile and Peru (*boludo*, *pelotudo*, *huevón*, *weón*), only when aimed at someone, so
+  "che boludo" between friends stays clean; *conchudo*, *mamagüevo*, *malnacido*; *usted*/*tú*/*vos* subjects; more
+  threat verbs. *chingón* (awesome in Mexico) is no longer flagged; *culo* is now `low`, *culero* `high`
+- **French:** Québec sacres (*tabarnak*, *câlisse*, *ostie*); SMS forms *ntm*, *ftg*, *fdp*. *bâtard* (also a bread)
+  and *pédé* are flagged only when aimed at someone ("sale pédé", "t'es un bâtard")
+- **German:** Austria and Switzerland (*Oaschloch*, *Gschissener*, *Beidl*, *Huerebueb*; a bare Swiss *huere* is an
+  intensifier and stays clean); *Kuh*, *Affe*, *Esel*, *Ratte*, *Wappler* only in direct address ("du blöde Kuh")
+- **Portuguese:** Portugal (*cona*, *cabrão*, *badalhoco*, the slur *paneleiro*); *fuder* spellings; *tmnc*, *vtmnc*.
+  A bare *puto* (kid in Portugal) is no longer flagged; *fds* (also "weekend") is left out
+- **Hindi and Hinglish:** *छिनाल* / *chhinal*, *दल्ला*; "कुत्ते की औलाद" / "kutte ki aulad" (but not "kutte ka baccha", a
+  puppy); *हिजड़ा* only as "तू हिजड़ा है", never in "हिजड़ा समुदाय"
+- Every change has tests for the innocent look-alikes, and the Python parity fixtures cover the new sentences
+
 ## 1.12.0
 
 ### Hinglish and Hindi threats

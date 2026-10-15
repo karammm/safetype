@@ -1,6 +1,6 @@
 {
   "name": "@safetype/ai",
-  "version": "1.12.0",
+  "version": "1.13.0",
   "description": "Contextual AI moderation for SafeType.js: LLM, remote and in-browser classifiers, plus Express/Fastify/fetch server handlers",
   "license": "MIT",
   "type": "module",
