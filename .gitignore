@@ -14,3 +14,4 @@ packages/vue/e2e/dist/
 python/dist/
 __pycache__/
 .pytest_cache/
+*.tgz
