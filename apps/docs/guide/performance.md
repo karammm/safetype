@@ -14,7 +14,8 @@ Moderation runs on every keystroke, so it has to be fast. These numbers come fro
 ## Budgets in CI
 
 Every push runs [performance tests](https://github.com/karammm/safetype/blob/main/packages/core/test/hardening.test.ts)
-with budgets about ten times the numbers above, so a real regression fails the build:
+with budgets about ten times the numbers above (three times more on shared CI runners), so a real regression
+fails the build:
 
 - 100 KB in under 250 ms
 - 1,000 messages in under 150 ms

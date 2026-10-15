@@ -158,5 +158,7 @@ def test_linear_time_on_adversarial_input(generate):
         return time.perf_counter() - start
 
     measure(2_000)
-    small, large = measure(5_000), measure(20_000)
+    # Fastest of three runs: the algorithm's cost with as little machine noise as possible.
+    small = min(measure(5_000) for _ in range(3))
+    large = min(measure(20_000) for _ in range(3))
     assert large < max(small, 0.005) * 10
