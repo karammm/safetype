@@ -27,6 +27,11 @@ quill.root.setAttribute("aria-label", "quill");
 safeTypeQuill(quill as never);
 texts.quill = () => quill.getText().replace(/\n$/, "");
 
+// Control: the same Quill setup without SafeType, to tell editor/browser quirks from adapter bugs.
+const quillPlain = new Quill($("quill-plain"), { modules: { toolbar: false } });
+quillPlain.root.setAttribute("aria-label", "quill-plain");
+texts["quill-plain"] = () => quillPlain.getText().replace(/\n$/, "");
+
 // Lexical
 const lexical = createEditor({ namespace: "e2e", onError: (e) => console.error(e) });
 lexical.setRootElement($("lexical"));

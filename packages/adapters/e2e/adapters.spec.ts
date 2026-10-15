@@ -1,7 +1,7 @@
 import { expect, test, type Page } from "@playwright/test";
 
 const EDITORS = ["quill", "lexical", "codemirror", "monaco", "prosemirror"] as const;
-type Name = (typeof EDITORS)[number];
+type Name = (typeof EDITORS)[number] | "quill-plain";
 
 // Browsers type a trailing space in editable content as a non-breaking space; compare as plain spaces.
 const textOf = (page: Page, name: Name) =>
@@ -22,8 +22,26 @@ test.afterEach(async ({ page }) => {
   expect((page as unknown as { errors: string[] }).errors).toEqual([]);
 });
 
+test("control: plain Quill (no SafeType) keeps typed spaces", async ({ page, browserName }) => {
+  await focus(page, "quill-plain");
+  await page.keyboard.type("a b c");
+  const text = await textOf(page, "quill-plain");
+  test.info().annotations.push({ type: "quill-baseline", description: `${browserName}: ${JSON.stringify(text)}` });
+  expect(text).toBe("a b c");
+});
+
 for (const name of EDITORS) {
   test.describe(name, () => {
+    if (name === "quill") {
+      // If Quill itself loses spaces under this browser + driver, the adapter cannot be judged here.
+      test.beforeEach(async ({ page, browserName }) => {
+        await focus(page, "quill-plain");
+        await page.keyboard.type("a b");
+        const baseline = await textOf(page, "quill-plain");
+        test.skip(baseline !== "a b", `Plain Quill drops typed spaces in ${browserName} under Playwright (got ${JSON.stringify(baseline)})`);
+      });
+    }
+
     test("masks while typing and keeps typing at the cursor", async ({ page }) => {
       await focus(page, name);
       await page.keyboard.type("What the fuck are you doing?");
