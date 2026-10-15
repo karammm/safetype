@@ -5,9 +5,13 @@ import type { DictionaryPack, ModerationRule } from "@safetype/shared";
  *
  * Accents are optional when matching ("enculé" = "encule"). Left out because they are ordinary
  * words, in French or in English text next to it: "con" (pros and cons), "bite" (to bite),
- * "chienne" (female dog), "niké" (the brand), "pédé" (normalizes to "pede", Portuguese for "asks").
- * "con", "conne" and "chienne" are still caught in direct-address phrases ("t'es con", "sale con").
- * Known collision: "bâtard" is also a type of bread.
+ * "chienne" (female dog), "niké" (the brand), a bare "pédé" (normalizes to "pede", Portuguese for
+ * "asks"), and "bâtard" (a type of bread: "un bâtard, s'il vous plaît"). These are still caught when
+ * aimed at someone ("t'es con", "sale pédé", "espèce de bâtard").
+ *
+ * Québec: "tabarnak", "câlisse" and "ostie" are profanity. Left out: "calice" (chalice), "hostie"
+ * (communion wafer), "ciboire" (ciborium), "sacrement" and "crisse" ("les pneus crissent").
+ * SMS: "ntm", "ftg", "fdp" are included; "tg" is not (also "TG" in English).
  */
 
 const profanity: ModerationRule[] = [
@@ -20,10 +24,16 @@ const profanity: ModerationRule[] = [
   { id: "fr.profanity.niquer", pattern: "(nique|niquer|niquez|niques|niquee)", category: "profanity", severity: "high" },
   { id: "fr.profanity.couille", pattern: "(couille*|couillon*)", category: "profanity", severity: "medium" },
   { id: "fr.profanity.enfoire", pattern: "enfoire*", category: "profanity", severity: "high" },
-  { id: "fr.profanity.batard", pattern: "batard*", category: "profanity", severity: "high" },
   { id: "fr.profanity.branleur", pattern: "(branleur*|branleuse*|branlette*)", category: "profanity", severity: "medium" },
   { id: "fr.profanity.pouffiasse", pattern: "(pouffiasse*|poufiasse*|petasse*)", category: "profanity", severity: "high" },
   { id: "fr.profanity.trou-du-cul", pattern: "trou (du|de) cul", category: "profanity", severity: "high" },
+  { id: "fr.profanity.sms", pattern: "(ntm|ftg|fdp|tepu)", category: "profanity", severity: "high" },
+  {
+    id: "fr.profanity.quebec",
+    pattern: "(tabarnak*|tabarnac*|tabarnaque*|tabernak*|calisse*|caliss|colisse*|ostie|osti|estie)",
+    category: "profanity",
+    severity: "medium",
+  },
   { id: "fr.profanity.bordel", pattern: "bordel", category: "profanity", severity: "low" },
   { id: "fr.profanity.chier", pattern: "(chier|chiant|chiante|chiants|chiantes|chiasse)", category: "profanity", severity: "low" },
 ];
@@ -52,7 +62,7 @@ const hate: ModerationRule[] = [
 ];
 
 const insults =
-  "(idiot*|imbecile*|debile*|abruti*|cretin*|con|conne|connard*|connasse*|nul|nulle|minable*|pathetique*|attarde*|mongol|mongole|batard*|salope|ordure*|merde|dechet*|rate|ratee|loser*|bouffon*|clown*|stupide*|chienne|grosse|moche|pute)";
+  "(idiot*|imbecile*|debile*|abruti*|cretin*|con|conne|connard*|connasse*|nul|nulle|minable*|pathetique*|attarde*|mongol|mongole|batard*|pede|pedes|tafiole*|teube|salope|ordure*|merde|dechet*|rate|ratee|loser*|bouffon*|clown*|stupide*|chienne|grosse|moche|pute)";
 
 const harassment: ModerationRule[] = [
   {
@@ -65,7 +75,7 @@ const harassment: ModerationRule[] = [
   },
   {
     id: "fr.harassment.sale",
-    pattern: "(espece|sale) (de)? (con|conne|connard*|connasse*|pute|chienne|batard*|merde|ordure*|race|arabe|noir|juif)",
+    pattern: "(espece|sale) (de)? (con|conne|connard*|connasse*|pute|chienne|batard*|merde|ordure*|race|arabe|noir|juif|pede|pedes)",
     category: "harassment",
     severity: "high",
     confidence: 0.8,

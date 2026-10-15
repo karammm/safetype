@@ -25,10 +25,12 @@ const CASES: Record<(typeof LANGUAGES)[number], { flagged: string[]; clean: stri
     flagged: [
       "Putain, c'est de la merde", "t'es un connard", "va te faire foutre", "nique ta mère", "sale con",
       "je vais te tuer", "tu es vraiment une idiote", "enculé", "les juifs doivent mourir", "personne ne t'aime",
+      "Tabarnak!", "Câlisse que c'est long", "ostie de niaiseux", "ntm", "ftg", "sale pédé", "espèce de bâtard", "t'es un bâtard",
     ],
     clean: [
       "Les pros et les cons", "Une baguette et un bâton", "Je vais te voir demain", "C'est unique",
       "La chienne du voisin a eu des chiots", "Il faut tuer le temps",
+      "Un bâtard et deux croissants", "Le calice et l'hostie", "Les pneus crissent", "le saint sacrement",
     ],
   },
   de: {
