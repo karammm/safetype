@@ -26,6 +26,7 @@ describe("Hinglish (romanized Hindi) - on by default", () => {
     ["harami", "h*r*m*"],
     ["bhadwa", "bh*dw*"],
     ["kutiya", "k*t*y*"],
+    ["chhinal", "chh*n*l"],
   ])("masks %s", (input, expected) => {
     expect(masked(input)).toBe(expected);
   });
@@ -33,6 +34,11 @@ describe("Hinglish (romanized Hindi) - on by default", () => {
   it("masks only the abusive word inside common phrases", () => {
     expect(masked("maa ki chut")).toBe("maa ki ch*t");
     expect(masked("behen ka loda")).toBe("behen ka l*d*");
+  });
+
+  it("flags 'kutte ki aulad' but not a puppy", () => {
+    expect(engine.moderate("kutte ki aulad").matches.map((m) => m.ruleId)).toContain("hi-latn.harassment.animal-offspring");
+    expect(engine.moderate("kutte ka baccha kitna cute hai").matches).toEqual([]);
   });
 
   it("flags insults aimed at someone's family as harassment", () => {

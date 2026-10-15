@@ -9,7 +9,7 @@ import type { DictionaryPack, ModerationRule } from "@safetype/shared";
  * ordinary words or names: "bc" / "mc" (BC, master of ceremonies), "bkc" (Bandra Kurla Complex),
  * "kutti" (child in Tamil/Malayalam), bare "randi" (a given name), "gand" (Ghent).
  * Known remaining collisions: "Lund" (Swedish city / surname), "Lauda" (surname), "chut" (French "hush").
- * Devanagari script is planned for the full Hindi pack.
+ * Devanagari script is in the `hi` pack.
  */
 
 const profanity: ModerationRule[] = [
@@ -53,6 +53,7 @@ const profanity: ModerationRule[] = [
   },
   { id: "hi-latn.profanity.bhadwa", pattern: "(bhadwa|bhadwe|bhadva|bhadve|bhadwi|bhadwaa)", category: "profanity", severity: "high" },
   { id: "hi-latn.profanity.jhaatu", pattern: "(jhaat*|jhant*|jhaant*)", category: "profanity", severity: "medium" },
+  { id: "hi-latn.profanity.chhinal", pattern: "(chhinal|chinal|chhinaal|chinaal|chhinar|chinar)", category: "profanity", severity: "high" },
   { id: "hi-latn.profanity.kutiya", pattern: "(kutiya|kuttiya|kutiyaa)", category: "profanity", severity: "high" },
 ];
 
@@ -61,6 +62,15 @@ const family = "(teri|tere|tera|tumhari|tumhara|tumhare|uski|uske|iski|apni)";
 const relative = "(maa|ma|mai|behen|bahen|behan|bahan|bhen|beti)";
 
 const harassment: ModerationRule[] = [
+  {
+    // Only "aulad" (offspring): "kutte ka baccha" is also a puppy.
+    id: "hi-latn.harassment.animal-offspring",
+    pattern: "(kutte|kutta|kuttey|suar|suwar|gadhe|haramkhor) (ki|ka|ke) (aulad|aulaad|olad|olaad)",
+    category: "harassment",
+    severity: "high",
+    confidence: 0.8,
+    label: "insult",
+  },
   {
     id: "hi-latn.harassment.family-insult",
     pattern: `${family} ${relative} (ka|ki|ke|ko) (bhosd*|bhosad*|chut|choot|lund|loda|lauda|lavda|lawda)`,

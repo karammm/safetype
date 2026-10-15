@@ -9,7 +9,8 @@ import type { DictionaryPack, ModerationRule } from "@safetype/shared";
  * ("माँ" = "मां"), and a prefix without nukta also covers the nukta spelling ("भोसड*" covers "भोसड़ी").
  * Left out because they are ordinary words: "साला" (brother-in-law), "हराम" (forbidden), "लोड" (load),
  * "लौंडा" (boy), "गांडीव" (Arjuna's bow), "कटवा" (got it cut), and caste names, which are also used
- * for self-identification.
+ * for self-identification. "साला" is still caught in abuse ("अबे साले", "साले कुत्ते"), and "हिजड़ा"
+ * (also an identity) only as a statement about someone ("तू हिजड़ा है"), like the animal words.
  */
 
 const profanity: ModerationRule[] = [
@@ -66,6 +67,8 @@ const profanity: ModerationRule[] = [
     severity: "high",
   },
   { id: "hi.profanity.jhaat", pattern: "(झाट|झांट|झाटू|झांटू)", category: "profanity", severity: "medium" },
+  { id: "hi.profanity.chhinal", pattern: "(छिनाल|छिनार|छिनाली)", category: "profanity", severity: "high" },
+  { id: "hi.profanity.dalla", pattern: "(दल्ला|दल्ले|दल्ली)", category: "profanity", severity: "medium" },
   { id: "hi.profanity.kutiya", pattern: "(कुतिया|कुत्तिया)", category: "profanity", severity: "high" },
 ];
 
@@ -103,7 +106,7 @@ const hate: ModerationRule[] = [
 const you = "(तू|तुम|आप)";
 const degree = "(एक)? (बहुत|पूरा|पूरी|निरा|सबसे|एकदम)? (बड़ा|बड़ी|बडा|बडी)?";
 // Animal words are only insults as a statement about someone ("तू गधा है"), not in "तुम कुत्ते को खाना दो".
-const animals = "(कुत्ता|कुत्ते|कुत्ती|गधा|गधे|उल्लू|सूअर|सुअर)";
+const animals = "(कुत्ता|कुत्ते|कुत्ती|गधा|गधे|उल्लू|सूअर|सुअर|हिजड़ा|हिजड़े|हिजडा|हिजडे)";
 const insults =
   "(बेवकूफ़|बेवकूफ|मूर्ख|मूरख|कमीना|कमीने|कमीनी|घटिया|नालायक|निकम्मा|निकम्मे|निकम्मी|हरामी|जाहिल|गंवार|चूतिया|चुतिया|नीच|हरामखोर|कुतिया)";
 
@@ -139,6 +142,15 @@ const harassment: ModerationRule[] = [
     category: "harassment",
     severity: "medium",
     confidence: 0.75,
+    label: "insult",
+  },
+  {
+    // Only "औलाद" (offspring): "कुत्ते का बच्चा" is also a puppy.
+    id: "hi.harassment.animal-offspring",
+    pattern: "(कुत्ते|कुत्ता|सूअर|सुअर|गधे|हरामखोर) (की|का|के) (औलाद|औलादें)",
+    category: "harassment",
+    severity: "high",
+    confidence: 0.8,
     label: "insult",
   },
   {
