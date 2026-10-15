@@ -10,7 +10,7 @@ from ._pattern import Alternative, Element, PatternError, Run, parse_pattern, ru
 from ._tokenize import Token
 from .types import ALL_CATEGORIES, SEVERITY_RANK, RuleDict
 
-DEFAULT_PRIORITY = {"custom": 40, "hate": 30, "harassment": 20, "profanity": 10}
+DEFAULT_PRIORITY = {"custom": 40, "hate": 30, "harassment": 20, "sexual": 15, "profanity": 10}
 
 
 @dataclass

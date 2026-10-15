@@ -40,6 +40,8 @@ export function defaultPolicies(mode: ModerationAction, categories: readonly Mod
     custom: make("custom", { action: mode, minConfidence: 0, minSeverity: "low" }),
     hate: make("hate", { action: mode, minConfidence: 0.6, minSeverity: "low" }),
     harassment: make("harassment", { action: mode === "mask" ? "warn" : mode, minConfidence: 0.6, minSeverity: "low" }),
+    // Sexual content is flagged with a warning rather than masked: masking "sex" or "send nudes" hides nothing useful.
+    sexual: make("sexual", { action: mode === "mask" ? "warn" : mode, minConfidence: 0.6, minSeverity: "low" }),
   };
 }
 

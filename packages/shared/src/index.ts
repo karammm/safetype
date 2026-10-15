@@ -6,7 +6,7 @@
 /** What to do with a piece of content. Ordered from least to most restrictive in {@link ACTION_SEVERITY}. */
 export type ModerationAction = "allow" | "mask" | "suggest" | "warn" | "block";
 
-export type ModerationCategory = "profanity" | "hate" | "harassment" | "custom";
+export type ModerationCategory = "profanity" | "hate" | "harassment" | "sexual" | "custom";
 
 export type Severity = "low" | "medium" | "high" | "critical";
 
@@ -25,7 +25,7 @@ export const SEVERITY_RANK: Readonly<Record<Severity, number>> = {
   critical: 3,
 };
 
-export const ALL_CATEGORIES: readonly ModerationCategory[] = ["profanity", "hate", "harassment", "custom"];
+export const ALL_CATEGORIES: readonly ModerationCategory[] = ["profanity", "hate", "harassment", "sexual", "custom"];
 
 /**
  * A detection rule.

@@ -7,6 +7,7 @@ export const DEFAULT_PRIORITY: Readonly<Record<ModerationCategory, number>> = {
   custom: 40,
   hate: 30,
   harassment: 20,
+  sexual: 15,
   profanity: 10,
 };
 
@@ -32,7 +33,7 @@ export interface RawMatch {
   source?: string;
 }
 
-const CATEGORIES = new Set<ModerationCategory>(["profanity", "hate", "harassment", "custom"]);
+const CATEGORIES = new Set<ModerationCategory>(["profanity", "hate", "harassment", "sexual", "custom"]);
 const SEVERITIES = new Set<Severity>(["low", "medium", "high", "critical"]);
 
 export function compileRule(rule: ModerationRule, boundary: "word" | "substring" = "word"): CompiledRule {

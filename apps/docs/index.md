@@ -4,7 +4,7 @@ layout: home
 hero:
   name: SafeType.js
   text: Write freely. Communicate respectfully.
-  tagline: Open-source moderation for profanity, hate speech and harassment, in any text field or editor, as people type. Runs locally, with no telemetry.
+  tagline: Open-source moderation for profanity, hate speech, harassment and sexual content, in any text field or editor, as people type. Runs locally, with no telemetry.
   actions:
     - theme: brand
       text: Get started

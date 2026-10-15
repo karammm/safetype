@@ -1,6 +1,6 @@
 {
   "name": "@safetype/adapters",
-  "version": "1.10.0",
+  "version": "1.11.0",
   "description": "SafeType.js moderation for third-party editors: Quill, Lexical, CodeMirror 6, Monaco, ProseMirror and Tiptap",
   "license": "MIT",
   "type": "module",

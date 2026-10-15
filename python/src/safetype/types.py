@@ -6,14 +6,14 @@ from dataclasses import dataclass, field
 from typing import Callable, Literal, Optional, TypedDict, Union
 
 ModerationAction = Literal["allow", "mask", "suggest", "warn", "block"]
-ModerationCategory = Literal["profanity", "hate", "harassment", "custom"]
+ModerationCategory = Literal["profanity", "hate", "harassment", "sexual", "custom"]
 Severity = Literal["low", "medium", "high", "critical"]
 MatchContext = Literal["direct", "quoted", "mention"]
 MaskStyle = Union[Literal["vowels", "partial", "full"], Callable[[str], str]]
 
 ACTION_SEVERITY = {"allow": 0, "mask": 1, "suggest": 2, "warn": 3, "block": 4}
 SEVERITY_RANK = {"low": 0, "medium": 1, "high": 2, "critical": 3}
-ALL_CATEGORIES: tuple[ModerationCategory, ...] = ("profanity", "hate", "harassment", "custom")
+ALL_CATEGORIES: tuple[ModerationCategory, ...] = ("profanity", "hate", "harassment", "sexual", "custom")
 
 
 class RuleDict(TypedDict, total=False):

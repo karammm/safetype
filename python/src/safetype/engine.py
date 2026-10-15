@@ -191,7 +191,7 @@ class ModerationEngine:
                 continue
             if force_action and action != "allow":
                 action = force_action
-            if action == "mask" and len(rule.elements) > 1 and rule.category in ("hate", "harassment"):
+            if action == "mask" and len(rule.elements) > 1 and rule.category in ("hate", "harassment", "sexual"):
                 action = "warn"
             matched = text[s.start : s.end]
             match = ModerationMatch(

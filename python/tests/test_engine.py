@@ -88,7 +88,7 @@ def test_idempotent():
 
 
 def test_version_matches_package():
-    assert safetype.__version__ == "1.10.0"
+    assert safetype.__version__ == "1.11.0"
 
 
 def test_new_language_packs_are_opt_in():

@@ -27,6 +27,9 @@ const texts = [
   "Porra, você é um idiota", "vai tomar no cu", "Ele pede desculpas", "O cantor morre aos 80 anos",
   "चूतिया है तू", "भोसड़ी के", "तेरी माँ की चूत", "हम लड़ रहे हैं", "चौदह साल", "तुझे जान से मार दूंगा",
   "मादरचोद bhenchod", "c h u t i y a चूतिया", "चूतिया0", "चूतिया0@ चूतियाo",
+  "porn", "watching porn tonight", "send nudes", "send me your nudes pls", "show me nude pics", "the sex of the patient",
+  "Essex and unisex", "a nude painting", "the word \"porn\"", "bhosada", "abe lodu harami", "nangi photo bhej",
+  "पोर्न", "नंगी फोटो भेज", "हरामी", "dick pics", "seggs",
 ];
 
 const configs = [
@@ -50,6 +53,8 @@ const configs = [
   { name: "portuguese", config: { language: "pt-BR" } },
   { name: "hindi", config: { language: "hi" } },
   { name: "hindi-full", config: { languages: ["hi"], maskStyle: "full" } },
+  { name: "sexual-off", config: { policy: { sexual: { action: "allow" } } } },
+  { name: "sexual-block", config: { policy: { sexual: { action: "block", minConfidence: 0.5 } } } },
   { name: "multilingual", config: { languages: ["en", "es", "fr", "de", "pt", "hi", "hi-Latn"] } },
 ];
 

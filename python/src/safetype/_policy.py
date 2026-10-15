@@ -28,6 +28,7 @@ def default_policies(mode: str, categories: Iterable[str]) -> dict[str, Resolved
         "custom": ResolvedPolicy("custom" in enabled, mode, 0, "low"),
         "hate": ResolvedPolicy("hate" in enabled, mode, 0.6, "low"),
         "harassment": ResolvedPolicy("harassment" in enabled, "warn" if mode == "mask" else mode, 0.6, "low"),
+        "sexual": ResolvedPolicy("sexual" in enabled, "warn" if mode == "mask" else mode, 0.6, "low"),
     }
 
 

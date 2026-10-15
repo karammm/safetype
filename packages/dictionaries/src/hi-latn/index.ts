@@ -80,10 +80,35 @@ const harassment: ModerationRule[] = [
   },
 ];
 
+// Gaali aimed at a person ("lodu", "harami", "bhosdike") is masked as profanity AND warned about as an insult.
+const insults: ModerationRule[] = [
+  {
+    id: "hi-latn.harassment.gaali",
+    pattern:
+      "(bhosd*|bhosad*|bhosid*|bhosri*|lodu|lodoo|loduchand|lodus|harami|haraami|haramkhor*|haraamkhor*|haramzad*|haraamzad*|haramjad*)",
+    category: "harassment",
+    severity: "high",
+    confidence: 0.75,
+    label: "insult",
+  },
+];
+
+const sexual: ModerationRule[] = [
+  {
+    // "nangi photo bhej" (send a nude photo)
+    id: "hi-latn.sexual.nudes-request",
+    pattern: "(nangi|nanga|nangii|nude|nudes) (photo|photos|pic|pics|video|videos|selfie|tasveer) (bhej*|dikha*|send|de|do)",
+    category: "sexual",
+    severity: "high",
+    confidence: 0.85,
+    label: "solicitation",
+  },
+];
+
 export const hiLatn: DictionaryPack = {
   language: "hi-Latn",
   boundary: "word",
-  rules: [...profanity, ...harassment],
+  rules: [...profanity, ...harassment, ...insults, ...sexual],
   allowList: [],
 };
 

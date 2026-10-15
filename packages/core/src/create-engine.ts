@@ -203,7 +203,7 @@ export function createModerationEngine(config: EngineConfig = {}): ModerationEng
       // Masking a hateful or harassing *phrase* hides intent without fixing it; flag it instead. This covers
       // multi-token rules and multi-word findings from contextual classifiers (which have no pattern).
       const phrase = rule.elements.length > 1 || (rule.elements.length === 0 && /\s/.test(text.slice(s.start, s.end).trim()));
-      if (action === "mask" && phrase && (rule.category === "hate" || rule.category === "harassment")) {
+      if (action === "mask" && phrase && (rule.category === "hate" || rule.category === "harassment" || rule.category === "sexual")) {
         action = "warn";
       }
       const matchedText = text.slice(s.start, s.end);

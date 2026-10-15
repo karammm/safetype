@@ -33,7 +33,8 @@ The overall `result.action` is the most restrictive action across all matches.
 | --- | --- | --- |
 | `profanity` | 1.0 | Swear words. Masked deterministically. `low` severity ("damn", "crap") is ignored by default |
 | `hate` | 0.8–0.9 | A small list of unambiguous slurs and group-violence statements |
-| `harassment` | 0.7–0.9 | Insults aimed at someone, threats, self-harm incitement |
+| `harassment` | 0.7–0.9 | Insults aimed at someone (including Hindi gaali such as "lodu", "harami"), threats, self-harm incitement |
+| `sexual` | 0.7–0.85 | Sexual content ("porn", "sex", "sexting") and solicitation ("send nudes"). Warns instead of masking |
 | `custom` | 1.0 | Your own words and rules |
 
 ::: warning Rules are signals, not verdicts
@@ -43,10 +44,19 @@ usage. Hate and harassment matches below `minConfidence` (default **0.6**) are r
 [contextual classifier](/packages/ai).
 :::
 
-### Why harassment warns instead of masking
+### Why harassment and sexual content warn instead of masking
 
-Masking a whole phrase ("y** *r* *n *d**t") would be unreadable, so in `mask` mode multi-word hate and harassment
-matches become `warn`. Single slurs are still masked.
+Masking a whole phrase ("y** *r* *n *d**t") would be unreadable, so in `mask` mode harassment and sexual content
+become `warn`. Single slurs are still masked. Some words are both: Hindi gaali like "lodu" or "harami" are masked as
+profanity and also warned about as insults, so the person sees why.
+
+The `sexual` category is on by default. To turn it off, or to make it stricter:
+
+```ts
+createModerationEngine({ policy: { sexual: { action: "allow" } } }); // off (still reported)
+createModerationEngine({ policy: { sexual: { action: "block" } } }); // stop submission
+engine.removeRule("en.sexual.sex"); // keep the rest, but allow the bare word "sex" (e.g. a medical app)
+```
 
 ## Policies
 

@@ -242,6 +242,27 @@ describe("messages and accessibility", () => {
     expect(input.getAttribute("aria-describedby")).toBe("hint");
   });
 
+  it("uses a fitting default message for sexual content, and the usual one otherwise", () => {
+    const input = field(`<input>`);
+    start();
+    type(input, "send nudes ");
+    expect(document.querySelector(".safetype-message")!.textContent).toBe(
+      "This may not be appropriate here. Please consider rephrasing.",
+    );
+    type(input, "send nudes you idiot lodu ");
+    expect(document.querySelector(".safetype-message")!.textContent).toBe(
+      "This may come across as hurtful. Please consider rephrasing.",
+    );
+  });
+
+  it("masks Hinglish gaali and shows a warning", () => {
+    const input = field(`<input>`);
+    start();
+    type(input, "abe lodu ");
+    expect(input.value).toBe("abe l*d* ");
+    expect(document.querySelector(".safetype-message")!.getAttribute("data-level")).toBe("warn");
+  });
+
   it("supports custom message text", () => {
     const input = field(`<input>`);
     start({ mode: "block", messages: { block: (r) => `Blocked ${r.matches.length} issue(s)` } });

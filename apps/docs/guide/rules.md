@@ -61,7 +61,7 @@ already handled.
 | --- | --- | --- |
 | `id` | required | Unique. Built-in ids look like `en.profanity.fuck` |
 | `pattern` | required | See above |
-| `category` | required | `profanity`, `hate`, `harassment` or `custom` |
+| `category` | required | `profanity`, `hate`, `harassment`, `sexual` or `custom` |
 | `severity` | `medium` | `low`, `medium`, `high`, `critical` |
 | `confidence` | `1` | Before context. Below the policy's `minConfidence` a match needs review |
 | `priority` | by category | Higher wins when masks overlap |

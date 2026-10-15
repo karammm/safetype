@@ -69,7 +69,7 @@ interface ModerationMatch {
   start: number; // offsets in the original text (UTF-16)
   end: number;
   text: string;
-  category: "profanity" | "hate" | "harassment" | "custom";
+  category: "profanity" | "hate" | "harassment" | "sexual" | "custom";
   ruleId: string; // e.g. "en.profanity.fuck"
   severity: "low" | "medium" | "high" | "critical";
   confidence: number; // 0..1 after context

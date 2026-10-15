@@ -113,6 +113,12 @@ New package: `@safetype/ai`
 - Fuzzing and adversarial-input tests (JS and Python), dependency licence and vulnerability checks in CI
 - Issue templates, PR template, and a public support policy
 
+## v1.11.0: Sexual content and gaali warnings ✅
+
+- New `sexual` category (on by default, warns in `mask` mode): porn, sex, sexting, nude requests ("send nudes",
+  "nangi photo bhej"), in English, Hinglish and Hindi
+- Hindi gaali such as "bhosada", "lodu", "harami" are masked and also warned about
+
 ---
 
 Have an idea or a use case that isn't covered? [Open an issue](https://github.com/karammm/safetype/issues).

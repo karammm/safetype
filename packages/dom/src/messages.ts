@@ -6,6 +6,9 @@ export const DEFAULT_MESSAGES: Record<MessageLevel, string> = {
   block: "This can't be sent because it contains language that breaks the community guidelines.",
 };
 
+/** Default warning when everything flagged is sexual content, where "hurtful" would be the wrong word. */
+export const SEXUAL_CONTENT_WARNING = "This may not be appropriate here. Please consider rephrasing.";
+
 export const STYLES = `
 :where(.safetype-message){display:block;margin-top:4px;font-size:.875em;line-height:1.4}
 :where(.safetype-message[data-level="warn"]){color:#8a5300}
@@ -23,7 +26,12 @@ export function resolveMessage(
   texts: Partial<Record<MessageLevel, MessageText>> | undefined,
   result: ModerationResult,
 ): string {
-  const configured = texts?.[level] ?? DEFAULT_MESSAGES[level];
+  const warned = result.matches.filter((m) => m.action === "warn");
+  const fallback =
+    level === "warn" && warned.length > 0 && warned.every((m) => m.category === "sexual")
+      ? SEXUAL_CONTENT_WARNING
+      : DEFAULT_MESSAGES[level];
+  const configured = texts?.[level] ?? fallback;
   return typeof configured === "function" ? configured(result) : configured;
 }
 

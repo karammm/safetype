@@ -131,10 +131,68 @@ const harassment: ModerationRule[] = [
   },
 ];
 
+/*
+ * Sexual content warns instead of masking (see the `sexual` policy). Left out because they are common in harmless
+ * text: "sexy" (a sexy car), "nude" (nude painting), "xxx" (kisses, Roman numerals). A bare "sex" also appears in
+ * "sex education" or "the sex of the patient"; apps where that is common can remove `en.sexual.sex`.
+ */
+const sexual: ModerationRule[] = [
+  {
+    id: "en.sexual.porn",
+    pattern: "(porn*|xvideos|xhamster|xnxx|redtube|youporn)",
+    category: "sexual",
+    severity: "medium",
+    confidence: 0.85,
+    label: "sexual-content",
+  },
+  {
+    id: "en.sexual.sex",
+    pattern: "(sex|sexting|sext|sexts|seggs|secks)",
+    category: "sexual",
+    severity: "low",
+    confidence: 0.7,
+    label: "sexual-content",
+  },
+  { id: "en.sexual.horny", pattern: "horny", category: "sexual", severity: "low", confidence: 0.7, label: "sexual-content" },
+  {
+    id: "en.sexual.nudes",
+    pattern: "(nudes|noods|nudez|nudies)",
+    category: "sexual",
+    severity: "medium",
+    confidence: 0.8,
+    label: "sexual-content",
+  },
+  {
+    id: "en.sexual.nudes-request",
+    pattern:
+      "(send|sending|show|give|share|post|drop) (me|us)? (ur|your|some|more|the|ya|a)? (nudes|noods|nudez|nudies|nude|naked) (pics|pic|photos|photo|selfies|selfie|pictures)?",
+    category: "sexual",
+    severity: "high",
+    confidence: 0.85,
+    label: "solicitation",
+  },
+  {
+    id: "en.sexual.dick-pic",
+    pattern: "(dickpic*|cockpic*)",
+    category: "sexual",
+    severity: "high",
+    confidence: 0.85,
+    label: "sexual-content",
+  },
+  {
+    id: "en.sexual.dick-pic-phrase",
+    pattern: "(dick|cock) (pic|pics|picture|pictures|photo|photos)",
+    category: "sexual",
+    severity: "high",
+    confidence: 0.85,
+    label: "sexual-content",
+  },
+];
+
 export const en: DictionaryPack = {
   language: "en",
   boundary: "word",
-  rules: [...profanity, ...hate, ...harassment],
+  rules: [...profanity, ...hate, ...harassment, ...sexual],
   allowList: ["shiitake", "shitake"],
 };
 

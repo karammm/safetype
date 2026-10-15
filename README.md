@@ -9,7 +9,7 @@
 
 <p align="center">
   <strong>Write freely. Communicate respectfully.</strong><br>
-  Open-source moderation for profanity, hate speech and harassment, in any text field or editor, as people type.
+  Open-source moderation for profanity, hate speech, harassment and sexual content, in any text field or editor, as people type.
 </p>
 
 <p align="center">
@@ -71,8 +71,9 @@ engine.moderate("Scunthorpe has a class assassin").matches; // [] (no false posi
   category.
 - **Hard to fool, kind to innocent words.** It catches `sh1t`, `fuuuck`, `f u c k`, lookalike letters and zero-width
   tricks, and whole-word matching means no Scunthorpe problem.
-- **Honest about hate speech.** Profanity is masked deterministically. Hate and harassment are confidence-scored
-  signals that quotes and reported speech can weaken, and borderline cases go to review instead of being punished.
+- **Honest about hate speech.** Profanity is masked deterministically. Hate, harassment and sexual content are
+  confidence-scored signals that quotes and reported speech can weaken, and borderline cases go to review instead
+  of being punished.
 - **A good typing experience.** The word being typed is left alone, the caret never jumps, undo keeps working, IME
   input is respected, and password and payment fields are never touched.
 - **Private by default.** It runs locally, with no telemetry. Text only leaves the device if you add a classifier

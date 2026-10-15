@@ -184,10 +184,34 @@ const harassment: ModerationRule[] = [
   },
 ];
 
+// Gaali aimed at a person is masked as profanity AND warned about as an insult, as in the Hinglish pack.
+const gaali: ModerationRule[] = [
+  {
+    id: "hi.harassment.gaali",
+    pattern: "(भोसड*|भोसरी*|हरामी|हरामज़ाद*|हरामजाद*|हरामखोर*|हरामख़ोर*|लोडू|लौड़ू|लोड़ू)",
+    category: "harassment",
+    severity: "high",
+    confidence: 0.75,
+    label: "insult",
+  },
+];
+
+const sexual: ModerationRule[] = [
+  { id: "hi.sexual.porn", pattern: "(पोर्न|पॉर्न)", category: "sexual", severity: "medium", confidence: 0.85, label: "sexual-content" },
+  {
+    id: "hi.sexual.nudes-request",
+    pattern: "(नंगी|नंगा) (फोटो|फ़ोटो|तस्वीर|वीडियो|पिक) (भेज*|दिखा*)",
+    category: "sexual",
+    severity: "high",
+    confidence: 0.85,
+    label: "solicitation",
+  },
+];
+
 export const hi: DictionaryPack = {
   language: "hi",
   boundary: "word",
-  rules: [...profanity, ...hate, ...harassment],
+  rules: [...profanity, ...hate, ...harassment, ...gaali, ...sexual],
   allowList: [],
 };
 

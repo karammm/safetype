@@ -2,6 +2,29 @@
 
 All `@safetype/*` packages share one version number.
 
+## 1.11.0
+
+### New: `sexual` category
+
+- Sexual content and solicitation are detected and **warned about** (not masked) in `mask` mode: "porn", "pornhub",
+  "sex", "sexting", "seggs", "horny", "nudes", "send nudes", "send me your nudes", "show me nude pics", "dick pics",
+  and in Hinglish and Hindi "nangi photo bhej", "पोर्न", "नंगी फोटो भेज"
+- On by default. It follows the mode (`block` blocks it) and can be turned off with
+  `policy: { sexual: { action: "allow" } }` or `categories`
+- Deliberately not flagged: "sexy", "nude" (as in art), "xxx", and words containing "sex" (Essex, unisex)
+- The default warning reads "This may not be appropriate here" when only sexual content is flagged
+- `ModerationCategory` gains `"sexual"`. If you `switch` over categories exhaustively, add a case
+- `@safetype/ai`: the LLM classifier can report `sexual` findings
+
+### Hinglish and Hindi gaali warn as well as mask
+
+- "bhosada", "bhosdike", "lodu", "harami", "haramkhor" and their Devanagari spellings are still masked, and now also
+  show a warning as insults (`hi-latn.harassment.gaali`, `hi.harassment.gaali`)
+
+### Python
+
+- Same changes in the `safetype` package, checked against 2,622 parity cases
+
 ## 1.10.0
 
 ### Documentation site

@@ -181,6 +181,30 @@
       "severity": "high",
       "confidence": 0.7,
       "label": "threat"
+    },
+    {
+      "id": "hi.harassment.gaali",
+      "pattern": "(भोसड*|भोसरी*|हरामी|हरामज़ाद*|हरामजाद*|हरामखोर*|हरामख़ोर*|लोडू|लौड़ू|लोड़ू)",
+      "category": "harassment",
+      "severity": "high",
+      "confidence": 0.75,
+      "label": "insult"
+    },
+    {
+      "id": "hi.sexual.porn",
+      "pattern": "(पोर्न|पॉर्न)",
+      "category": "sexual",
+      "severity": "medium",
+      "confidence": 0.85,
+      "label": "sexual-content"
+    },
+    {
+      "id": "hi.sexual.nudes-request",
+      "pattern": "(नंगी|नंगा) (फोटो|फ़ोटो|तस्वीर|वीडियो|पिक) (भेज*|दिखा*)",
+      "category": "sexual",
+      "severity": "high",
+      "confidence": 0.85,
+      "label": "solicitation"
     }
   ],
   "allowList": []

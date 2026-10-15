@@ -122,8 +122,9 @@ describe("Devanagari", () => {
   it("matches precomposed and decomposed nukta letters alike", () => {
     const precomposed = "भोसड़ी"; // ड + nukta
     const composed = "भोसड़ी"; // ड़ as one code point
-    expect(engine.moderate(precomposed).matches).toHaveLength(1);
-    expect(engine.moderate(composed).matches).toHaveLength(1);
+    const rules = (text: string) => engine.moderate(text).matches.map((m) => m.ruleId);
+    expect(rules(precomposed)).toContain("hi.profanity.bhosda");
+    expect(rules(composed)).toEqual(rules(precomposed));
   });
 
   it("masks whole characters, never leaving a stray vowel sign", () => {
