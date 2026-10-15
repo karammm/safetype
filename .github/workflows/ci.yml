@@ -25,6 +25,8 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm turbo run build typecheck test --filter="./packages/*"
+      # Timing tests (linear time, performance budgets) run alone, so nothing else competes for the CPU.
+      - run: pnpm --filter @safetype/core test:perf
       - run: pnpm check:dist
 
   supply-chain:

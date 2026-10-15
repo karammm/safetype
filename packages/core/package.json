@@ -32,7 +32,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "bench": "vitest bench --run",
-    "clean": "rm -rf dist .turbo"
+    "clean": "rm -rf dist .turbo",
+    "test:perf": "vitest run --config vitest.perf.config.ts"
   },
   "dependencies": {
     "@safetype/dictionaries": "workspace:*",
