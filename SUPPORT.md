@@ -1,7 +1,9 @@
 # Support
 
 - **Documentation:** https://karammm.github.io/safetype/docs/
-- **Questions, bugs, missed words, false positives:** [open an issue](https://github.com/karammm/safetype/issues/new/choose)
+- **Questions and ideas:** [GitHub Discussions](https://github.com/karammm/safetype/discussions)
+- **Bugs, missed words, false positives:** [open an issue](https://github.com/karammm/safetype/issues/new/choose)
+- **Native speakers:** help [review a language pack](https://github.com/karammm/safetype/issues?q=is%3Aissue+is%3Aopen+label%3A%22native+speaker+review%22)
 - **Security issues:** report privately. See [SECURITY.md](SECURITY.md)
 
 ## Supported versions

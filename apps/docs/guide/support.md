@@ -27,7 +27,7 @@ security fixes for the last 1.x release.
 
 ## Getting help
 
-- **Questions and ideas:** [open an issue](https://github.com/karammm/safetype/issues/new/choose).
+- **Questions and ideas:** [GitHub Discussions](https://github.com/karammm/safetype/discussions).
 - **Bugs, missed words, false positives:** [open an issue](https://github.com/karammm/safetype/issues/new/choose)
   using a template.
 - **Security issues:** [report privately](https://github.com/karammm/safetype/security/advisories/new). Do not open

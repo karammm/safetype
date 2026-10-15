@@ -9,10 +9,14 @@ export default defineConfig({
   base: "/safetype/docs/",
   cleanUrls: true,
   lastUpdated: true,
-  head: [["meta", { name: "theme-color", content: "#0a7a6b" }]],
+  head: [
+    ["meta", { name: "theme-color", content: "#0a7a6b" }],
+    ["link", { rel: "icon", type: "image/svg+xml", href: "/safetype/docs/mark.svg" }],
+  ],
   // The default GitHub themes have comment and keyword colors below WCAG AA contrast.
   markdown: { theme: { light: "github-light-high-contrast", dark: "github-dark-high-contrast" } },
   themeConfig: {
+    logo: { src: "/mark.svg", alt: "" },
     nav: [
       { text: "Guide", link: "/guide/getting-started", activeMatch: "/guide/" },
       { text: "Packages", link: "/packages/core", activeMatch: "/packages/" },

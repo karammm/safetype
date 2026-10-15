@@ -1,294 +1,297 @@
-# SafeType.js
+<p align="center">
+  <a href="https://karammm.github.io/safetype/docs/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="docs/assets/logo-dark.svg">
+      <img src="docs/assets/logo-light.svg" alt="SafeType.js" width="300">
+    </picture>
+  </a>
+</p>
 
-**Write freely. Communicate respectfully.**
+<p align="center">
+  <strong>Write freely. Communicate respectfully.</strong><br>
+  Open-source moderation for profanity, hate speech and harassment, in any text field or editor, as people type.
+</p>
 
-[![npm](https://img.shields.io/npm/v/@safetype/core?label=npm%20%40safetype%2Fcore)](https://www.npmjs.com/package/@safetype/core)
-[![PyPI](https://img.shields.io/pypi/v/safetype?label=pypi%20safetype)](https://pypi.org/project/safetype/)
-[![CI](https://github.com/karammm/safetype/actions/workflows/ci.yml/badge.svg)](https://github.com/karammm/safetype/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+<p align="center">
+  <a href="https://www.npmjs.com/package/@safetype/core"><img src="https://img.shields.io/npm/v/@safetype/core?label=npm&color=0a7a6b" alt="npm version"></a>
+  <a href="https://pypi.org/project/safetype/"><img src="https://img.shields.io/pypi/v/safetype?label=pypi&color=0a7a6b" alt="PyPI version"></a>
+  <a href="https://github.com/karammm/safetype/actions/workflows/ci.yml"><img src="https://github.com/karammm/safetype/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://karammm.github.io/safetype/docs/guide/security#supply-chain"><img src="https://img.shields.io/badge/npm-provenance-0a7a6b" alt="npm provenance"></a>
+  <a href="https://karammm.github.io/safetype/docs/guide/accessibility"><img src="https://img.shields.io/badge/WCAG_2.2-AA_audited-0a7a6b" alt="WCAG 2.2 AA audited"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT license"></a>
+</p>
+
+<p align="center">
+  <a href="https://karammm.github.io/safetype/docs/"><b>Documentation</b></a> ·
+  <a href="https://karammm.github.io/safetype/"><b>Playground</b></a> ·
+  <a href="https://github.com/karammm/safetype/discussions"><b>Discussions</b></a> ·
+  <a href="CHANGELOG.md"><b>Changelog</b></a> ·
+  <a href="ROADMAP.md"><b>Roadmap</b></a>
+</p>
 
 <p align="center">
   <a href="docs/assets/safetype-intro.mp4">
-    <img src="docs/assets/safetype-intro.gif" width="860"
+    <img src="docs/assets/safetype-intro.gif" width="820"
       alt="SafeType.js in 45 seconds: live masking while typing, catching disguised spellings without flagging innocent words, context-aware handling of harassment, and the five moderation actions">
   </a>
   <br>
-  <sub>▶ <a href="docs/assets/safetype-intro.mp4">Watch the 45-second intro in full quality (MP4)</a>. Every result shown is real output from <code>@safetype/core</code>.</sub>
+  <sub>▶ <a href="docs/assets/safetype-intro.mp4">Watch the 45-second intro in full quality</a>. Every result shown is real output.</sub>
 </p>
 
-SafeType.js is an open-source, framework-independent TypeScript SDK that detects profanity,
-hate speech, and harassment and then masks, warns about, blocks, or suggests replacements
-for them, without asking you to replace your existing editor.
+---
 
-```ts
-import { createModerationEngine } from "@safetype/core";
-
-const engine = createModerationEngine({ mode: "mask", language: "en" });
-
-engine.moderate("What the fuck are you doing?").text;
-// "What the f*ck are you doing?"
-```
-
-**[Try it live in the playground →](https://karammm.github.io/safetype/)** · **[Read the docs →](https://karammm.github.io/safetype/docs/)**
-
-## Install
+## Quick start
 
 ```bash
-npm install @safetype/core        # engine (browsers, Node, Deno, edge)
-npm install @safetype/dom         # moderate every text field on a page
-npm install @safetype/react       # or @safetype/vue, @safetype/angular
-npm install @safetype/editor      # built-in rich-text editor
-npm install @safetype/adapters    # Quill, Lexical, CodeMirror, Monaco, ProseMirror, Tiptap
-npm install @safetype/ai          # contextual AI moderation (Claude or any model), server handlers
-pip install safetype              # Python: same engine for server-side validation
+npm install @safetype/dom
 ```
-
-### Moderate every text field on a page
 
 ```js
 import { createSafeType } from "@safetype/dom";
 
-createSafeType({ mode: "mask" }).start();
+createSafeType({ mode: "mask" }).start(); // every input, textarea and contenteditable on the page
 ```
 
-Inputs, textareas and contenteditable elements are moderated as people type, including fields added
-later. The caret stays put, undo keeps working, IME input is respected, and password or payment fields
-are never touched. See the [`@safetype/dom` docs](packages/dom/README.md).
+Or use the engine directly, in the browser, Node, Deno, Bun, workers or the edge:
 
-### React
+```ts
+import { createModerationEngine } from "@safetype/core";
+
+const engine = createModerationEngine({ mode: "mask" });
+
+engine.moderate("What the fuck are you doing?").text; // "What the f*ck are you doing?"
+engine.moderate("Scunthorpe has a class assassin").matches; // [] (no false positives)
+```
+
+## Why SafeType
+
+- **Works with what you already have.** Plain inputs, React, Vue, Angular, or your existing editor (Quill, Lexical,
+  CodeMirror, Monaco, ProseMirror, Tiptap). Nothing to replace.
+- **Five actions, not just a filter.** Mask, suggest a friendlier word, warn, block, or only report, with policies per
+  category.
+- **Hard to fool, kind to innocent words.** It catches `sh1t`, `fuuuck`, `f u c k`, lookalike letters and zero-width
+  tricks, and whole-word matching means no Scunthorpe problem.
+- **Honest about hate speech.** Profanity is masked deterministically. Hate and harassment are confidence-scored
+  signals that quotes and reported speech can weaken, and borderline cases go to review instead of being punished.
+- **A good typing experience.** The word being typed is left alone, the caret never jumps, undo keeps working, IME
+  input is respected, and password and payment fields are never touched.
+- **Private by default.** It runs locally, with no telemetry. Text only leaves the device if you add a classifier
+  that calls your own server.
+- **The same rules on your server.** Re-check submissions in Node or Python. Both are tested against the same
+  2,000+ recorded results.
+- **Optional AI.** Add Claude or any model for sarcasm, coded insults and threats without swear words. API keys stay
+  on your server.
+
+## Install
+
+| You want to… | Install |
+| --- | --- |
+| Moderate every text field on a page | `npm i @safetype/dom` |
+| Use components and hooks | `npm i @safetype/react` · `@safetype/vue` · `@safetype/angular` |
+| Add a rich-text editor with moderation built in | `npm i @safetype/editor` |
+| Moderate the editor you already use | `npm i @safetype/adapters` |
+| Check text yourself (any JavaScript runtime) | `npm i @safetype/core` |
+| Check text in Python | `pip install safetype` |
+| Add contextual AI moderation | `npm i @safetype/ai` |
+
+Each framework package includes the engine, so you only install one package.
+
+## Usage
+
+<details open>
+<summary><b>React</b></summary>
 
 ```jsx
-import { SafeTypeInput } from "@safetype/react";
+import { SafeTypeTextarea } from "@safetype/react";
 
-<SafeTypeInput mode="mask" value={text} onChange={(e) => setText(e.target.value)} />
+<SafeTypeTextarea mode="mask" value={text} onChange={(e) => setText(e.target.value)} />;
 ```
 
-Masked text flows through `onChange`, so your state always matches the field. See the
-[`@safetype/react` docs](packages/react/README.md).
+Masked text flows through `onChange`, so your state always matches the field. Hooks: `useSafeType`, `useModeration`.
+[React docs →](https://karammm.github.io/safetype/docs/packages/react)
 
-### Vue
+</details>
+
+<details>
+<summary><b>Vue</b></summary>
 
 ```vue
-<textarea v-safe-type v-model="text" />   <!-- or <SafeTypeTextarea v-model="text" /> -->
+<textarea v-safe-type v-model="text" />
+<!-- or <SafeTypeTextarea v-model="text" /> -->
 ```
 
-`v-model` receives the masked text. See the [`@safetype/vue` docs](packages/vue/README.md).
+[Vue docs →](https://karammm.github.io/safetype/docs/packages/vue)
 
-### Angular
+</details>
+
+<details>
+<summary><b>Angular</b></summary>
 
 ```html
-<textarea safeType [(ngModel)]="text"></textarea>   <!-- also formControl, plus a validator and a pipe -->
+<textarea safeType [(ngModel)]="text"></textarea>
+<!-- also reactive forms, a validator, a pipe and SafeTypeService -->
 ```
 
-See the [`@safetype/angular` docs](packages/angular/README.md).
+[Angular docs →](https://karammm.github.io/safetype/docs/packages/angular)
 
-### Built-in rich-text editor
+</details>
+
+<details>
+<summary><b>Built-in rich-text editor</b></summary>
 
 ```js
 import { createSafeTypeEditor } from "@safetype/editor";
 
-createSafeTypeEditor({ element, mode: "mask", placeholder: "Write something...", maxLength: 2000 });
+createSafeTypeEditor({ element, mode: "mask", placeholder: "Write something…", maxLength: 2000 });
 ```
 
-Formatting, links, lists, undo/redo, inline highlights and one-click suggestions. Masking keeps formatting.
-It's also available as `<SafeTypeEditor>` for React and Vue and `<safe-type-editor>` for Angular. See the
-[`@safetype/editor` docs](packages/editor/README.md).
+Formatting, links, lists, undo, inline highlights and one-click suggestions, and masking keeps formatting. It's also
+available as `<SafeTypeEditor>` for React and Vue and `<safe-type-editor>` for Angular.
+[Editor docs →](https://karammm.github.io/safetype/docs/packages/editor)
 
-### Already using an editor?
+</details>
+
+<details>
+<summary><b>Quill, Lexical, CodeMirror, Monaco, ProseMirror, Tiptap</b></summary>
 
 ```js
-import { safeTypeQuill } from "@safetype/adapters/quill"; // also lexical, codemirror, monaco, prosemirror, tiptap
+import { safeTypeQuill } from "@safetype/adapters/quill";
+
 safeTypeQuill(quill, { mode: "mask" });
 ```
 
-See the [`@safetype/adapters` docs](packages/adapters/README.md).
+Each adapter edits through the editor's own API, so formatting and undo keep working.
+[Adapter docs →](https://karammm.github.io/safetype/docs/packages/adapters)
 
-### Smarter detection with AI (opt-in)
+</details>
+
+<details>
+<summary><b>Server-side enforcement (Node and Python)</b></summary>
+
+Client-side moderation can always be bypassed, so re-check before you store:
+
+```ts
+const engine = createModerationEngine({ policy: { hate: { action: "block" }, harassment: { action: "block" } } });
+
+const { valid, result } = engine.validate(req.body.text);
+if (!valid) return res.status(422).json({ error: "Please rephrase." });
+save(result.text); // profanity masked
+```
+
+```python
+from safetype import create_moderation_engine
+
+engine = create_moderation_engine(policy={"hate": {"action": "block"}, "harassment": {"action": "block"}})
+check = engine.validate(text)
+```
+
+[Server guide →](https://karammm.github.io/safetype/docs/guide/server)
+
+</details>
+
+<details>
+<summary><b>Contextual AI (Claude or any model)</b></summary>
 
 ```ts
 // server: keys stay here
 const service = createModerationService({ classifiers: [anthropicClassifier({ client: new Anthropic() })] });
 app.post("/api/safetype/classify", express.json(), expressClassifier(service));
+
 // browser
 createSafeType({ classifiers: [remoteClassifier({ endpoint: "/api/safetype/classify" })] }).start();
 ```
 
-See the [`@safetype/ai` docs](packages/ai/README.md).
+If the model is slow or fails, results fall back to the rules. [AI docs →](https://karammm.github.io/safetype/docs/packages/ai)
+
+</details>
+
+## How it works
+
+```
+normalize → tokenize → match rules → score context → apply policy → transform
+```
+
+| Mode | Result | Typical use |
+| --- | --- | --- |
+| `mask` | `What the f*ck` | Chat, comments |
+| `suggest` | Offers "heck" | Writing assistants |
+| `warn` | Accessible message, text unchanged | Community guidelines |
+| `block` | `allowed: false`, submit stopped | Strict spaces, server enforcement |
+| `allow` | Report only | Analytics, review queues |
+
+Policies can differ per category. For example, you can mask profanity while blocking harassment:
+
+```ts
+createModerationEngine({ mode: "mask", policy: { harassment: { action: "block", minConfidence: 0.7 } } });
+```
+
+[How moderation works →](https://karammm.github.io/safetype/docs/guide/concepts) ·
+[Engine API →](https://karammm.github.io/safetype/docs/guide/api) ·
+[Custom words and rules →](https://karammm.github.io/safetype/docs/guide/rules)
+
+## Languages
+
+| English | Hinglish | हिन्दी | Español | Français | Deutsch | Português |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| default | default | opt-in | opt-in | opt-in | opt-in | opt-in |
+
+```ts
+createModerationEngine({ languages: ["en", "es", "fr"] });
+```
+
+Every pack is tested against everyday sentences that must stay clean ("Ihr Hund ist süß", "Compré un cono de helado",
+"हम लड़ रहे हैं"). **Native speakers:** please help
+[review a language](https://github.com/karammm/safetype/issues?q=is%3Aissue+is%3Aopen+label%3A%22native+speaker+review%22).
+No code needed. [Languages guide →](https://karammm.github.io/safetype/docs/guide/languages)
 
 ## Packages
 
-| Package                  | Status | Description                                                   |
-| ------------------------ | ------ | ------------------------------------------------------------- |
-| `@safetype/core`         | ✅     | Moderation engine: normalize → match → classify → policy → transform |
-| `@safetype/dictionaries` | ✅     | Language packs (en, hi-Latn, hi, es, fr, de, pt) and the pack format |
-| `@safetype/shared`       | ✅     | Public TypeScript contracts                                   |
-| `@safetype/dom`          | ✅     | Auto-attach to inputs, textareas, contenteditable             |
-| `@safetype/react`        | ✅     | Components and hooks                                          |
-| `@safetype/vue`          | ✅     | Directive, components and composables                         |
-| `@safetype/angular`      | ✅     | Directive, validator, pipe and service                        |
-| `@safetype/editor`       | ✅     | Built-in rich-text editor (Tiptap) + framework wrappers       |
-| `@safetype/adapters`     | ✅     | Quill, Lexical, CodeMirror 6, Monaco, ProseMirror, Tiptap     |
-| `safetype` (PyPI)        | ✅     | Python port of the engine for server-side validation          |
-| `@safetype/ai`           | ✅     | Contextual AI (Claude, any LLM, in-browser) + Express/Fastify/fetch |
+| Package | Version | Description |
+| --- | --- | --- |
+| [`@safetype/core`](https://karammm.github.io/safetype/docs/packages/core) | [![npm](https://img.shields.io/npm/v/@safetype/core?label=&color=0a7a6b)](https://www.npmjs.com/package/@safetype/core) | The engine: browsers, Node, Deno, Bun, edge |
+| [`@safetype/dom`](https://karammm.github.io/safetype/docs/packages/dom) | [![npm](https://img.shields.io/npm/v/@safetype/dom?label=&color=0a7a6b)](https://www.npmjs.com/package/@safetype/dom) | Inputs, textareas and contenteditable, auto-attached |
+| [`@safetype/react`](https://karammm.github.io/safetype/docs/packages/react) | [![npm](https://img.shields.io/npm/v/@safetype/react?label=&color=0a7a6b)](https://www.npmjs.com/package/@safetype/react) | Components and hooks |
+| [`@safetype/vue`](https://karammm.github.io/safetype/docs/packages/vue) | [![npm](https://img.shields.io/npm/v/@safetype/vue?label=&color=0a7a6b)](https://www.npmjs.com/package/@safetype/vue) | Directive, components and composables |
+| [`@safetype/angular`](https://karammm.github.io/safetype/docs/packages/angular) | [![npm](https://img.shields.io/npm/v/@safetype/angular?label=&color=0a7a6b)](https://www.npmjs.com/package/@safetype/angular) | Directive, validator, pipe and service |
+| [`@safetype/editor`](https://karammm.github.io/safetype/docs/packages/editor) | [![npm](https://img.shields.io/npm/v/@safetype/editor?label=&color=0a7a6b)](https://www.npmjs.com/package/@safetype/editor) | Built-in rich-text editor (Tiptap) |
+| [`@safetype/adapters`](https://karammm.github.io/safetype/docs/packages/adapters) | [![npm](https://img.shields.io/npm/v/@safetype/adapters?label=&color=0a7a6b)](https://www.npmjs.com/package/@safetype/adapters) | Quill, Lexical, CodeMirror, Monaco, ProseMirror, Tiptap |
+| [`@safetype/ai`](https://karammm.github.io/safetype/docs/packages/ai) | [![npm](https://img.shields.io/npm/v/@safetype/ai?label=&color=0a7a6b)](https://www.npmjs.com/package/@safetype/ai) | Contextual AI providers and server handlers |
+| [`@safetype/dictionaries`](https://karammm.github.io/safetype/docs/packages/dictionaries) | [![npm](https://img.shields.io/npm/v/@safetype/dictionaries?label=&color=0a7a6b)](https://www.npmjs.com/package/@safetype/dictionaries) | Language packs and the pack format |
+| [`@safetype/shared`](packages/shared) | [![npm](https://img.shields.io/npm/v/@safetype/shared?label=&color=0a7a6b)](https://www.npmjs.com/package/@safetype/shared) | Shared TypeScript types |
+| [`safetype`](https://karammm.github.io/safetype/docs/packages/python) (Python) | [![PyPI](https://img.shields.io/pypi/v/safetype?label=&color=0a7a6b)](https://pypi.org/project/safetype/) | The engine for Python 3.9+ |
 
-## Design principles
-
-1. **Detection, policy, and transformation are separate.** The engine finds matches, the policy decides
-   what to do with each one, and the transformer edits text. Each can change without touching the others.
-2. **Profanity ≠ hate speech.** Profanity is masked deterministically. Hate and harassment rules are
-   lower-confidence *signals* that context can weaken. Dictionary rules alone cannot reliably detect
-   hate speech, so borderline matches surface as `requiresReview` instead of being acted on automatically.
-3. **Private by default.** No telemetry, and nothing leaves the device unless you configure a contextual classifier.
-4. **The client is not a security boundary.** Re-run moderation on the server
-   ([example](examples/node-server)).
-
-## Modes
-
-| Mode      | `result.text` | `allowed` | Notes                                                      |
-| --------- | ------------- | --------- | ---------------------------------------------------------- |
-| `allow`   | unchanged     | `true`    | Report only                                                |
-| `mask`    | masked        | `true`    | Hate/harassment *phrases* fall back to `warn`              |
-| `suggest` | unchanged     | `true`    | `result.suggestedText` + `match.suggestedReplacement`      |
-| `warn`    | unchanged     | `true`    | Emits `warning`                                            |
-| `block`   | unchanged     | `false`   | Emits `blocked`                                            |
-
-Per-category policies override the global mode:
-
-```ts
-const engine = createModerationEngine({
-  mode: "mask",
-  policy: {
-    harassment: { action: "block", minConfidence: 0.7 },
-    profanity: { minSeverity: "low" }, // also mask "damn", "crap"
-  },
-});
-```
-
-Defaults: profanity ignores `low` severity; hate and harassment need confidence ≥ 0.6, and anything
-below that is reported with `requiresReview: true` and action `allow`.
-
-## What the engine handles
-
-- **Languages:** English and Hinglish (romanized Hindi, e.g. "bhenchod", "chutiya", "teri maa ka…") by default.
-  Spanish, French, German, Portuguese and Hindi (Devanagari) are opt-in:
-
-  ```ts
-  createModerationEngine({ languages: ["en", "es"] }); // English + Spanish
-  createModerationEngine({ language: "pt-BR" });        // Portuguese
-  createModerationEngine({ language: "hi" });           // Hindi in both scripts (Devanagari + Hinglish)
-  createModerationEngine({ languages: ["en"] });        // English only
-  ```
-
-  Every framework package accepts the same `languages` option. Each pack ships with false-positive tests
-  (e.g. "Ihr Hund", "cono de helado", "हम लड़ रहे हैं"). See [adding a language](CONTRIBUTING.md#adding-a-language)
-- **Unicode:** diacritics (`fück`, `cabrón` = `cabron`), `ß` = `ss`, Devanagari vowel signs and nukta kept
-  (so "लंड" ≠ "लड़"), full-width forms (`ｆｕｃｋ`), Cyrillic/Greek lookalikes, zero-width characters
-- **Obfuscation:** leet (`sh1t`, `$hit`), repeated letters (`fuuuck`), spaced letters (`f u c k`, `f.u.c.k`)
-- **No Scunthorpe problem:** whole-word matching, and repeated-letter tolerance never shortens a word (`as` ≠ `ass`)
-- **Context heuristics:** quoted text and mentions ("the word …", "he called me …") lower confidence
-- **Idempotent masking:** `mask(mask(x)) === mask(x)`
-- **Offset mapping:** `result.mapping.toTransformed()` / `toOriginal()` for caret restoration
-- **Deterministic overlaps:** priority → span length → position → rule id
-- **Languages without spaces:** `boundary: "substring"` packs
-
-## API
-
-```ts
-const engine = createModerationEngine(config);
-
-engine.moderate(text);                    // ModerationResult (sync, local only)
-await engine.moderateAsync(text, { signal, timeoutMs }); // + contextual classifiers
-engine.mask(text);                        // string
-engine.validate(text);                    // { valid, result, violations }
-engine.addRule({ id, pattern, category, severity, confidence, priority, replacement });
-engine.removeRule(id);
-engine.setPolicy({ hate: { action: "block" } });
-engine.setMode("warn");
-engine.on("violation", (result) => {});   // moderated | violation | blocked | warning | error
-
-const session = engine.createSession({ debounceMs: 150 });
-await session.moderate(text);             // undefined if superseded by a newer call
-```
-
-### Rule patterns
-
-```
-fuck*                                  prefix wildcard (fucking, fucker)
-(ass|arse)                             alternatives
-(you|u) (are|re)? (a|an)? (idiot*)     phrases with optional tokens
-```
-
-### Contextual classifiers
-
-```ts
-const engine = createModerationEngine({
-  classifiers: [{
-    name: "my-server",
-    async classify({ text, matches, signal }) {
-      const res = await fetch("/api/moderate", { method: "POST", body: JSON.stringify({ text }), signal });
-      return res.json(); // { matches?: ProviderMatch[], adjustments?: ConfidenceAdjustment[] }
-    },
-  }],
-});
-```
-
-Providers run in parallel, each with a timeout. A failing provider emits `error` and the result
-falls back to the rule-based output. Never put provider credentials in browser code; proxy through
-your own server.
-
-## Development
-
-```bash
-corepack enable          # provides pnpm 9 from the packageManager field
-pnpm install
-pnpm build
-pnpm typecheck
-pnpm test
-pnpm e2e        # real-browser tests, accessibility audits (run `pnpm --filter @safetype/dom exec playwright install` once)
-pnpm bench
-pnpm --filter @safetype/docs dev   # documentation site on localhost
-pnpm check:licenses
-```
-
-## Roadmap
-
-| Version | Scope |
-| ------- | ----- |
-| **1.0.0** | Core engine, English pack, server validation ✅ |
-| **1.1.0** | `@safetype/dom`: auto-attach to inputs, caret preservation, IME, live playground ✅ |
-| **1.2.0** | `@safetype/react` ✅ |
-| **1.3.0** | `@safetype/vue` ✅ |
-| **1.4.0** | `@safetype/angular` ✅ |
-| **1.5.0** | `@safetype/editor`: built-in Tiptap rich-text editor ✅ |
-| **1.6.0** | Hinglish (romanized Hindi) detection, on by default ✅ |
-| **1.7.0** | `@safetype/adapters`: Quill, Lexical, CodeMirror, Monaco, ProseMirror ✅ |
-| **1.8.0** | `@safetype/ai`: contextual providers and server middleware ✅ |
-| **1.9.0** | Language packs: es, fr, de, pt, hi (Devanagari) ✅ |
-| **1.10.0** | [Docs site](https://karammm.github.io/safetype/docs/), accessibility audits, fuzzing, memory-leak and performance tests ✅ |
-
-Full details and the per-release checklist are in [ROADMAP.md](ROADMAP.md).
+All packages share one version number. The whole browser bundle, with every language, is **19 KB gzipped**.
 
 ## Quality
 
-Every push runs, in CI:
+Every push is checked in CI with:
 
-- unit tests on Node 18–24 and Python 3.9–3.13, with JS↔Python parity on 2,000+ recorded results
-- real-browser tests in Chromium, Firefox and WebKit for every package, example and editor adapter
-- [axe-core accessibility audits](https://karammm.github.io/safetype/docs/guide/accessibility) of the playground
-  and every docs page, in light and dark mode
-- [fuzzing and adversarial-input tests](https://karammm.github.io/safetype/docs/guide/security) (linear time, no
-  ReDoS) and [performance budgets](https://karammm.github.io/safetype/docs/guide/performance)
-- memory-leak tests that check destroyed instances and editors are garbage-collected
-- licence and vulnerability checks on everything users install
+- Unit tests on Node 18–24 and Python 3.9–3.13, with JS↔Python parity on 2,000+ recorded results.
+- Real-browser tests in Chromium, Firefox and WebKit for every package, adapter and example app.
+- [Accessibility audits](https://karammm.github.io/safetype/docs/guide/accessibility) (axe-core, WCAG 2.2 AA) of
+  the playground and every docs page.
+- [Fuzzing, ReDoS and performance tests](https://karammm.github.io/safetype/docs/guide/performance): about 12,000
+  random inputs, a linear-time check, and budgets for large documents and typing.
+- Memory-leak tests confirming destroyed instances and editors are garbage-collected.
+- [Supply chain](https://karammm.github.io/safetype/docs/guide/security#supply-chain) checks: permissive licences
+  only, no known vulnerabilities, no install scripts, and npm provenance on every release.
 
-## Limitations
+> [!IMPORTANT]
+> Rule-based detection misses new spellings, coded language and sarcasm, and can flag reclaimed or quoted words.
+> Treat hate and harassment results as signals for review, not verdicts, and always enforce on the server.
+> [Limitations →](https://karammm.github.io/safetype/docs/guide/faq)
 
-- Rule-based detection misses novel spellings, coded language, and sarcasm, and it can flag reclaimed or
-  quoted usage. Treat hate/harassment results as signals for review, not verdicts.
-- The context heuristics are simple. Use a contextual classifier for higher accuracy.
-- Lookalike mapping is tuned for Latin-script packs.
-- Client-side moderation can be bypassed. Always enforce on the server.
+## Community
+
+- **Questions and ideas:** [GitHub Discussions](https://github.com/karammm/safetype/discussions)
+- **Missed words, false positives, bugs:** [open an issue](https://github.com/karammm/safetype/issues/new/choose)
+- **Contributing:** see [CONTRIBUTING.md](CONTRIBUTING.md) for setup, tests and releases. Native-speaker reviews of the
+  [language packs](https://github.com/karammm/safetype/issues?q=is%3Aissue+is%3Aopen+label%3A%22native+speaker+review%22)
+  are especially welcome.
+- **Security:** please report vulnerabilities [privately](https://github.com/karammm/safetype/security/advisories/new),
+  as described in [SECURITY.md](SECURITY.md)
+- **Support policy:** [SUPPORT.md](SUPPORT.md) · **Code of conduct:** [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE) © SafeType.js contributors

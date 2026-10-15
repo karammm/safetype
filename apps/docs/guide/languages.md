@@ -57,6 +57,12 @@ createModerationEngine({ language: "hi" }).moderate("तू चूतिया �
 
 ## Improve a language
 
-The packs were written and tested carefully, but native speakers know best. Corrections and new languages are
-welcome. See [adding a language](https://github.com/karammm/safetype/blob/main/CONTRIBUTING.md#adding-a-language),
-or [report a missed word or a false positive](https://github.com/karammm/safetype/issues/new/choose).
+The packs were written and tested carefully, but native speakers know best. Each language has an open review
+issue. You don't need to write code: reading the list and leaving a comment helps a lot.
+
+| Español | Français | Deutsch | Português | हिन्दी |
+| --- | --- | --- | --- | --- |
+| [#1](https://github.com/karammm/safetype/issues/1) | [#2](https://github.com/karammm/safetype/issues/2) | [#3](https://github.com/karammm/safetype/issues/3) | [#4](https://github.com/karammm/safetype/issues/4) | [#5](https://github.com/karammm/safetype/issues/5) |
+
+You can also [report a missed word or a false positive](https://github.com/karammm/safetype/issues/new/choose), or
+[add a language](https://github.com/karammm/safetype/blob/main/CONTRIBUTING.md#adding-a-language).

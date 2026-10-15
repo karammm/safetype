@@ -5,9 +5,22 @@ Thanks for helping. Please read the [Code of Conduct](CODE_OF_CONDUCT.md) first.
 ## Setup
 
 ```bash
-corepack enable
+corepack enable                 # provides pnpm 9 from the packageManager field
 pnpm install
 pnpm build && pnpm test
+```
+
+Other useful commands:
+
+```bash
+pnpm typecheck
+pnpm e2e                        # real-browser tests and accessibility audits
+                                # (run `pnpm --filter @safetype/dom exec playwright install` once)
+pnpm --filter @safetype/core test:perf   # linear-time checks and performance budgets
+pnpm --filter @safetype/docs dev         # documentation site on localhost
+pnpm sync:python                # after engine or dictionary changes
+pnpm check:licenses
+cd python && uv run pytest      # Python port
 ```
 
 ## Workflow
@@ -32,9 +45,20 @@ The site lives in `apps/docs` (VitePress). Guide pages are in `apps/docs/guide`,
 generated from each package's `README.md`, so edit the README. Run `pnpm --filter @safetype/docs dev` to preview,
 and keep outputs shown in the docs in sync with `packages/core/test/docs-examples.test.ts`.
 
+### Reviewing a language (no code needed)
+
+Native speakers are the best reviewers, and you don't have to write code:
+
+1. Pick your language's [review issue](https://github.com/karammm/safetype/issues?q=is%3Aissue+is%3Aopen+label%3A%22native+speaker+review%22).
+2. Read the pack's word list (`packages/dictionaries/src/<tag>/index.ts`). `(a|b)` means "a or b", and `word*`
+   means "words starting with word". The comment at the top lists words left out on purpose.
+3. Try sentences in the [playground](https://karammm.github.io/safetype/) with your language ticked.
+4. Comment with missing words (meaning, strength, region), words that shouldn't be flagged (with an everyday
+   example), or wrong categories. A maintainer turns comments into rules and tests.
+
 ### Adding a language
 
-Native speakers are the best reviewers. Corrections to existing packs are as welcome as new ones.
+Corrections to existing packs are as welcome as new ones.
 
 1. Create `packages/dictionaries/src/<tag>/index.ts` exporting a `DictionaryPack` (copy `es` as a template).
    Rule ids start with the tag (`es.profanity.mierda`).
