@@ -49,10 +49,12 @@ const CASES: Record<(typeof LANGUAGES)[number], { flagged: string[]; clean: stri
     flagged: [
       "Porra, que merda", "você é um idiota", "vai tomar no cu", "filho da puta", "caralho", "vai se matar",
       "vou te matar", "viado", "fdp", "morre logo", "ninguém gosta de você",
+      "vai se fuder", "cona", "és um cabrão", "paneleiro", "badalhoca", "tmnc",
     ],
     clean: [
       "Ele pede desculpas", "Vi um veado na floresta", "A bicha do supermercado", "O macaco subiu na árvore",
       "O cantor morre aos 80 anos", "Você é muito gentil", "Vou te ligar amanhã",
+      "Os putos estão na escola", "Tô puto com o trânsito", "Bom fds a todos",
     ],
   },
   hi: {
