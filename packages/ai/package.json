@@ -1,0 +1,81 @@
+{
+  "name": "@safetype/ai",
+  "version": "1.8.0",
+  "description": "Contextual AI moderation for SafeType.js: LLM, remote and in-browser classifiers, plus Express/Fastify/fetch server handlers",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./server": {
+      "types": "./dist/server/index.d.ts",
+      "import": "./dist/server/index.js",
+      "require": "./dist/server/index.cjs"
+    },
+    "./anthropic": {
+      "types": "./dist/anthropic/index.d.ts",
+      "import": "./dist/anthropic/index.js",
+      "require": "./dist/anthropic/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "moderation",
+    "ai",
+    "llm",
+    "claude",
+    "classifier",
+    "express",
+    "fastify",
+    "content-safety"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "clean": "rm -rf dist .turbo"
+  },
+  "dependencies": {
+    "@safetype/core": "workspace:*"
+  },
+  "peerDependencies": {
+    "@anthropic-ai/sdk": ">=0.131.0"
+  },
+  "peerDependenciesMeta": {
+    "@anthropic-ai/sdk": {
+      "optional": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karammm/safetype.git",
+    "directory": "packages/ai"
+  },
+  "homepage": "https://github.com/karammm/safetype#readme",
+  "bugs": {
+    "url": "https://github.com/karammm/safetype/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@anthropic-ai/sdk": "0.131.0",
+    "@types/express": "5.0.6",
+    "express": "^5.2.1",
+    "fastify": "5.12.5"
+  }
+}

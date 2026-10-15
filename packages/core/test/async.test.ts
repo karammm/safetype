@@ -33,8 +33,26 @@ describe("moderateAsync", () => {
     const insult = r.matches.find((m) => m.ruleId === "en.harassment.insult")!;
     expect(insult).toMatchObject({ confidence: 0.1, requiresReview: true, action: "allow" });
     const hate = r.matches.find((m) => m.source === "ctx")!;
-    expect(hate).toMatchObject({ category: "hate", ruleId: "ctx:group-slur", confidence: 0.92, action: "mask" });
+    expect(hate).toMatchObject({ category: "hate", ruleId: "ctx:group-slur", confidence: 0.92, action: "warn" });
     expect(r.providers).toEqual(["ctx"]);
+  });
+
+  it("warns instead of masking multi-word hate/harassment findings from providers", async () => {
+    const provider: ContextualClassifier = {
+      name: "ctx",
+      classify: async ({ text }) => ({
+        matches: [
+          { start: 0, end: text.indexOf(","), category: "hate", confidence: 0.9 },
+          { start: text.indexOf("scum"), end: text.indexOf("scum") + 4, category: "harassment", confidence: 0.9 },
+        ],
+      }),
+    };
+    const r = await createModerationEngine({ classifiers: [provider] }).moderateAsync("you people are vermin, scum");
+    expect(r.matches.map((m) => [m.text, m.action])).toEqual([
+      ["you people are vermin", "warn"],
+      ["scum", "warn"],
+    ]);
+    expect(r.text).toBe("you people are vermin, scum");
   });
 
   it("ignores invalid provider ranges and categories", async () => {

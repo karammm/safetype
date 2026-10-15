@@ -1,0 +1,14 @@
+{
+  "name": "@safetype/example-ai-server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "0.131.0",
+    "@safetype/ai": "workspace:*",
+    "@safetype/core": "workspace:*",
+    "express": "5.2.1"
+  }
+}

@@ -9,7 +9,7 @@ import { mkdtempSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 
-const ORDER = ["shared", "dictionaries", "core", "dom", "editor", "adapters", "react", "vue", "angular"];
+const ORDER = ["shared", "dictionaries", "core", "dom", "editor", "adapters", "ai", "react", "vue", "angular"];
 const args = process.argv.slice(2);
 const dryRun = args.includes("--dry-run");
 const passThrough = args.filter((a) => a.startsWith("--otp=") || a === "--provenance" || a.startsWith("--tag="));
@@ -36,6 +36,7 @@ function exists(name) {
 }
 
 const skippedNew = [];
+const failed = [];
 
 for (const dir of ORDER) {
   const pkgDir = join("packages", dir);
@@ -60,10 +61,19 @@ for (const dir of ORDER) {
   }
   const publishArgs = ["publish", target, "--access", "public", ...passThrough, ...(dryRun ? ["--dry-run"] : [])];
   console.log(`> npm ${publishArgs.join(" ").replace(/--otp=\d+/, "--otp=******")}`);
-  execFileSync("npm", publishArgs, { stdio: "inherit" });
+  try {
+    execFileSync("npm", publishArgs, { stdio: "inherit" });
+  } catch {
+    // Keep going so one package (e.g. a missing trusted publisher) doesn't block the others.
+    failed.push(`${name}@${version}`);
+  }
 }
 if (skippedNew.length) {
   console.log(`::warning::Not published (new packages need a manual first publish): ${skippedNew.join(", ")}`);
+}
+if (failed.length) {
+  console.log(`::error::Failed to publish: ${failed.join(", ")}`);
+  process.exit(1);
 }
 console.log(dryRun ? "Dry run complete." : "All packages published.");
 // Brand-new packages can take a few minutes to appear publicly: npm's CDN may cache the "not found"

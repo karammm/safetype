@@ -1,6 +1,6 @@
 {
   "name": "@safetype/dom",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "Attach SafeType.js moderation to inputs, textareas and contenteditable elements",
   "license": "MIT",
   "type": "module",

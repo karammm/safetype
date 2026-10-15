@@ -2,6 +2,26 @@
 
 All `@safetype/*` packages share one version number.
 
+## 1.8.0
+
+### New: `@safetype/ai`
+
+- **Contextual AI moderation, opt-in and server-side.** It catches coded insults, threats without swear words and
+  dehumanising statements, and lowers false positives for quoted or reported speech
+- `anthropicClassifier` (`@safetype/ai/anthropic`): Claude via the official SDK, using `claude-opus-5-5` at low effort,
+  structured JSON output, a cached system prompt, and server-side fallbacks. A refusal falls back to rule-based results
+- `llmClassifier({ complete })` for any other model. Findings must quote the text. Malformed or ungrounded answers are dropped
+- `remoteClassifier` for browsers: calls your endpoint, so keys never reach the client
+- `localModelClassifier` for in-browser models (e.g. Transformers.js), bring your own
+- `@safetype/ai/server`: `createModerationService` (validation, size limit, `authorize`, caching, timeouts, 502 on failure),
+  `expressClassifier` / `expressGuard`, `fastifySafeType` / `fastifyGuard`, and `createFetchHandler`
+- Prompt-injection hardening: delimited input, grounded findings, and `adjust: "raise-only" | "none"`
+- Example: `examples/ai-server`
+
+### `@safetype/core`
+
+- Multi-word hate/harassment findings from contextual classifiers warn instead of mask, like multi-token rules
+
 ## 1.7.0
 
 ### New: `@safetype/adapters`

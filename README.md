@@ -39,6 +39,7 @@ npm install @safetype/dom         # moderate every text field on a page
 npm install @safetype/react       # or @safetype/vue, @safetype/angular
 npm install @safetype/editor      # built-in rich-text editor
 npm install @safetype/adapters    # Quill, Lexical, CodeMirror, Monaco, ProseMirror, Tiptap
+npm install @safetype/ai          # contextual AI moderation (Claude or any model), server handlers
 pip install safetype              # Python: same engine for server-side validation
 ```
 
@@ -102,6 +103,18 @@ safeTypeQuill(quill, { mode: "mask" });
 
 See the [`@safetype/adapters` docs](packages/adapters/README.md).
 
+### Smarter detection with AI (opt-in)
+
+```ts
+// server: keys stay here
+const service = createModerationService({ classifiers: [anthropicClassifier({ client: new Anthropic() })] });
+app.post("/api/safetype/classify", express.json(), expressClassifier(service));
+// browser
+createSafeType({ classifiers: [remoteClassifier({ endpoint: "/api/safetype/classify" })] }).start();
+```
+
+See the [`@safetype/ai` docs](packages/ai/README.md).
+
 ## Packages
 
 | Package                  | Status | Description                                                   |
@@ -116,7 +129,7 @@ See the [`@safetype/adapters` docs](packages/adapters/README.md).
 | `@safetype/editor`       | ✅     | Built-in rich-text editor (Tiptap) + framework wrappers       |
 | `@safetype/adapters`     | ✅     | Quill, Lexical, CodeMirror 6, Monaco, ProseMirror, Tiptap     |
 | `safetype` (PyPI)        | ✅     | Python port of the engine for server-side validation          |
-| `@safetype/ai`           | v1.7    | Contextual classifier providers                            |
+| `@safetype/ai`           | ✅     | Contextual AI (Claude, any LLM, in-browser) + Express/Fastify/fetch |
 
 ## Design principles
 
@@ -236,7 +249,7 @@ pnpm bench
 | **1.5.0** | `@safetype/editor`: built-in Tiptap rich-text editor ✅ |
 | **1.6.0** | Hinglish (romanized Hindi) detection, on by default ✅ |
 | **1.7.0** | `@safetype/adapters`: Quill, Lexical, CodeMirror, Monaco, ProseMirror ✅ |
-| 1.8.0 | `@safetype/ai`: contextual providers and server middleware |
+| **1.8.0** | `@safetype/ai`: contextual providers and server middleware ✅ |
 | 1.9.0 | Language packs: es, hi (Devanagari), fr, de, pt |
 | 1.10.0 | Docs site, accessibility, and security hardening |
 

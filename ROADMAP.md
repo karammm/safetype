@@ -90,7 +90,7 @@ New package: `@safetype/adapters`
 - Tiptap / ProseMirror, Quill, Lexical, CodeMirror 6, Monaco
 - A documented adapter contract so the community can add more
 
-## v1.8.0: Contextual AI providers
+## v1.8.0: Contextual AI providers ✅
 
 New package: `@safetype/ai`
 
