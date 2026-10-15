@@ -253,37 +253,42 @@ describe("Quill 2", async () => {
     return { quill, st, type, host };
   }
 
-  it("masks through updateContents and keeps formatting", () => {
+  it("masks through updateContents and keeps formatting", async () => {
     const { quill, type } = setup();
     quill.insertText(0, "fuck", { bold: true }, "user");
     type(" ");
+    await flush();
     expect(quill.getText()).toBe("f*ck \n");
     // Bold is kept on the masked word (the typed space inherits it, as Quill does for any typing).
     expect(quill.getContents().ops[0]).toEqual({ insert: "f*ck ", attributes: { bold: true } });
   });
 
-  it("masks pasted text and reports harassment", () => {
+  it("masks pasted text and reports harassment", async () => {
     const onWarning = vi.fn();
     const { quill } = setup({ onWarning });
     quill.insertText(0, "oh shit, you are an idiot", "user");
+    await flush();
     expect(quill.getText()).toBe("oh sh*t, you are an idiot\n");
     expect(onWarning).toHaveBeenCalledTimes(1);
     expect(quill.container.nextElementSibling?.textContent).toMatch(/hurtful/);
   });
 
-  it("does not undo the user's undo", () => {
+  it("does not undo the user's undo", async () => {
     const { quill, type } = setup();
     type("fuck ");
+    await flush();
     expect(quill.getText()).toBe("f*ck \n");
     quill.root.dispatchEvent(new KeyboardEvent("keydown", { key: "z", metaKey: true }));
     (quill as unknown as { history: { undo(): void } }).history.undo();
+    await flush();
     expect(quill.getText()).not.toBe("f*ck \n");
   });
 
-  it("destroy() stops moderating", () => {
+  it("destroy() stops moderating", async () => {
     const { quill, st } = setup();
     st.destroy();
     quill.insertText(0, "fuck ", "user");
+    await flush();
     expect(quill.getText()).toBe("fuck \n");
   });
 });

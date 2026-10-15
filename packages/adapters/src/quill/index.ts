@@ -70,6 +70,22 @@ export function safeTypeQuill(quill: QuillLike, options: AdapterOptions = {}): A
   const moderator = new Moderator(binding, options, quill.container, quill.root);
   let history = false;
 
+  // Moderate after Quill has finished processing the change, never inside its event: reading the
+  // selection there makes Quill re-sync with the DOM mid-update (Firefox then drops typed spaces).
+  const RANK = { observe: 0, typing: 1, final: 2 } as const;
+  let pending: keyof typeof RANK | null = null;
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  const schedule = (kind: keyof typeof RANK) => {
+    pending = pending === null || RANK[kind] > RANK[pending] ? kind : pending;
+    if (timer !== undefined) return;
+    timer = setTimeout(() => {
+      timer = undefined;
+      const next = pending ?? "typing";
+      pending = null;
+      moderator.run(next);
+    }, 0);
+  };
+
   const onKeyDown = (event: KeyboardEvent) => {
     // Quill reports undo/redo as ordinary "user" changes; remember the shortcut so we don't re-mask it.
     if ((event.metaKey || event.ctrlKey) && (event.key === "z" || event.key === "Z" || event.key === "y")) history = true;
@@ -79,12 +95,12 @@ export function safeTypeQuill(quill: QuillLike, options: AdapterOptions = {}): A
     const inserted = delta.ops.reduce((n, op) => n + (typeof op.insert === "string" ? op.insert.length : 0), 0);
     const kind = history ? "observe" : inserted > 1 ? "final" : "typing";
     history = false;
-    moderator.run(kind);
+    schedule(kind);
   };
   const onSelectionChange = (range: unknown) => {
-    if (range === null) moderator.run("final"); // blur
+    if (range === null) schedule("final"); // blur
   };
-  const onCompositionEnd = () => setTimeout(() => moderator.run("typing"), 0);
+  const onCompositionEnd = () => schedule("typing");
 
   quill.root.addEventListener("keydown", onKeyDown, true);
   quill.root.addEventListener("compositionend", onCompositionEnd);
@@ -97,6 +113,7 @@ export function safeTypeQuill(quill: QuillLike, options: AdapterOptions = {}): A
     getResult: () => moderator.result,
     validate: () => moderator.validate(),
     destroy() {
+      if (timer !== undefined) clearTimeout(timer);
       quill.root.removeEventListener("keydown", onKeyDown, true);
       quill.root.removeEventListener("compositionend", onCompositionEnd);
       quill.off("text-change", onTextChange as never);
