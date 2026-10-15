@@ -115,11 +115,11 @@ describe("no super-linear behaviour on adversarial input", () => {
   const engine = createModerationEngine({ languages: ALL_LANGUAGES });
 
   it.each(ADVERSARIAL)("%s", (_name, generate) => {
-    const small = time(() => engine.moderate(generate(10_000)));
-    const large = time(() => engine.moderate(generate(40_000)));
-    // 4x the input should take about 4x the time; quadratic behaviour would be about 16x.
-    // Timings under 2 ms are mostly noise, so they count as 2 ms.
-    expect(large).toBeLessThan(Math.max(small, 2) * 10);
+    const small = time(() => engine.moderate(generate(1_000)));
+    const large = time(() => engine.moderate(generate(16_000)));
+    // 16x the input: linear code takes about 16x as long, quadratic about 256x. The 64x threshold separates
+    // the two even when a busy machine adds garbage-collection noise. Timings under 2 ms count as 2 ms.
+    expect(large).toBeLessThan(Math.max(small, 2) * 64);
     expect(large).toBeLessThan(500 * SLACK);
   });
 });

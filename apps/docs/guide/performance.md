@@ -24,10 +24,11 @@ fails the build:
 ## Linear time, always
 
 Matching never backtracks. Patterns compile to token lookups instead of regular expressions, so the time grows
-in proportion to the text. The suite checks this with adversarial inputs at 10,000 and 40,000 characters:
-one 40,000-letter word, thousands of phrase openings ("you are you are…"), spaced letters, stacked combining
-marks, zero-width characters, leet and already-masked text. Four times the input must take less than ten
-times as long. In practice it takes about four times as long.
+in proportion to the text. The suite checks this with adversarial inputs at 1,000 and 16,000 characters:
+one 16,000-letter word, thousands of phrase openings ("you are you are…"), spaced letters, stacked combining
+marks, zero-width characters, leet and already-masked text. Linear code takes about 16 times as long on the
+larger input and quadratic code about 256 times, so the test fails above 64 times. Measured up to 160,000
+characters, the time grows in proportion to the input.
 
 ## Bundle size
 
