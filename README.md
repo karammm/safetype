@@ -38,6 +38,7 @@ npm install @safetype/core        # engine (browsers, Node, Deno, edge)
 npm install @safetype/dom         # moderate every text field on a page
 npm install @safetype/react       # or @safetype/vue, @safetype/angular
 npm install @safetype/editor      # built-in rich-text editor
+npm install @safetype/adapters    # Quill, Lexical, CodeMirror, Monaco, ProseMirror, Tiptap
 pip install safetype              # Python: same engine for server-side validation
 ```
 
@@ -92,6 +93,15 @@ Formatting, links, lists, undo/redo, inline highlights and one-click suggestions
 It's also available as `<SafeTypeEditor>` for React and Vue and `<safe-type-editor>` for Angular. See the
 [`@safetype/editor` docs](packages/editor/README.md).
 
+### Already using an editor?
+
+```js
+import { safeTypeQuill } from "@safetype/adapters/quill"; // also lexical, codemirror, monaco, prosemirror, tiptap
+safeTypeQuill(quill, { mode: "mask" });
+```
+
+See the [`@safetype/adapters` docs](packages/adapters/README.md).
+
 ## Packages
 
 | Package                  | Status | Description                                                   |
@@ -104,7 +114,7 @@ It's also available as `<SafeTypeEditor>` for React and Vue and `<safe-type-edit
 | `@safetype/vue`          | ✅     | Directive, components and composables                         |
 | `@safetype/angular`      | ✅     | Directive, validator, pipe and service                        |
 | `@safetype/editor`       | ✅     | Built-in rich-text editor (Tiptap) + framework wrappers       |
-| `@safetype/adapters`     | v1.7   | Third-party editor adapters                                   |
+| `@safetype/adapters`     | ✅     | Quill, Lexical, CodeMirror 6, Monaco, ProseMirror, Tiptap     |
 | `safetype` (PyPI)        | ✅     | Python port of the engine for server-side validation          |
 | `@safetype/ai`           | v1.7    | Contextual classifier providers                            |
 
@@ -225,7 +235,7 @@ pnpm bench
 | **1.4.0** | `@safetype/angular` ✅ |
 | **1.5.0** | `@safetype/editor`: built-in Tiptap rich-text editor ✅ |
 | **1.6.0** | Hinglish (romanized Hindi) detection, on by default ✅ |
-| 1.7.0 | `@safetype/adapters`: Quill, Lexical, CodeMirror, Monaco, ProseMirror |
+| **1.7.0** | `@safetype/adapters`: Quill, Lexical, CodeMirror, Monaco, ProseMirror ✅ |
 | 1.8.0 | `@safetype/ai`: contextual providers and server middleware |
 | 1.9.0 | Language packs: es, hi (Devanagari), fr, de, pt |
 | 1.10.0 | Docs site, accessibility, and security hardening |

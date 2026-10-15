@@ -2,6 +2,23 @@
 
 All `@safetype/*` packages share one version number.
 
+## 1.7.0
+
+### New: `@safetype/adapters`
+
+- Moderation for editors apps already use, through each editor's own API:
+  - **Quill 2:** one `updateContents` delta per pass, keeping each character's formatting
+  - **Lexical:** `spliceText` in a `history-merge` update, so undo removes the typing and its mask together
+  - **CodeMirror 6:** a single transaction per pass, plus inline highlight decorations
+  - **Monaco:** `executeEdits` (undoable), plus inline highlights with hover explanations
+  - **ProseMirror:** a plugin with decorations and transaction-based masking
+  - **Tiptap:** re-export of the `@safetype/editor` extension
+- Same behaviour everywhere: words are moderated once finished, paste immediately, a final pass on blur,
+  undo never re-masked, IME-safe, accessible messages, `onViolation`/`onWarning` callbacks
+- Documented `EditorBinding` contract + `Moderator` for adding more editors
+- Editors are optional peer dependencies. Tested in real browsers with Quill 2.0.3, Lexical 0.52, CodeMirror 6.43,
+  Monaco 0.57 and ProseMirror 1.42
+
 ## 1.6.0
 
 ### Hinglish (romanized Hindi) detection, on by default

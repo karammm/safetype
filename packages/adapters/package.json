@@ -1,0 +1,143 @@
+{
+  "name": "@safetype/adapters",
+  "version": "1.7.0",
+  "description": "SafeType.js moderation for third-party editors: Quill, Lexical, CodeMirror 6, Monaco, ProseMirror and Tiptap",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./prosemirror": {
+      "types": "./dist/prosemirror/index.d.ts",
+      "import": "./dist/prosemirror/index.js",
+      "require": "./dist/prosemirror/index.cjs"
+    },
+    "./codemirror": {
+      "types": "./dist/codemirror/index.d.ts",
+      "import": "./dist/codemirror/index.js",
+      "require": "./dist/codemirror/index.cjs"
+    },
+    "./quill": {
+      "types": "./dist/quill/index.d.ts",
+      "import": "./dist/quill/index.js",
+      "require": "./dist/quill/index.cjs"
+    },
+    "./lexical": {
+      "types": "./dist/lexical/index.d.ts",
+      "import": "./dist/lexical/index.js",
+      "require": "./dist/lexical/index.cjs"
+    },
+    "./monaco": {
+      "types": "./dist/monaco/index.d.ts",
+      "import": "./dist/monaco/index.js",
+      "require": "./dist/monaco/index.cjs"
+    },
+    "./tiptap": {
+      "types": "./dist/tiptap/index.d.ts",
+      "import": "./dist/tiptap/index.js",
+      "require": "./dist/tiptap/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "moderation",
+    "profanity",
+    "quill",
+    "lexical",
+    "codemirror",
+    "monaco",
+    "prosemirror",
+    "tiptap",
+    "editor"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "e2e": "node e2e/build-fixture.mjs && playwright test",
+    "clean": "rm -rf dist .turbo test-results e2e/dist"
+  },
+  "dependencies": {
+    "@safetype/core": "workspace:*",
+    "@safetype/dom": "workspace:*"
+  },
+  "peerDependencies": {
+    "@codemirror/state": "^6.0.0",
+    "@codemirror/view": "^6.0.0",
+    "@safetype/editor": "workspace:^",
+    "lexical": ">=0.50.0",
+    "prosemirror-model": "^1.19.0",
+    "prosemirror-state": "^1.4.0",
+    "prosemirror-view": "^1.30.0"
+  },
+  "peerDependenciesMeta": {
+    "prosemirror-state": {
+      "optional": true
+    },
+    "prosemirror-view": {
+      "optional": true
+    },
+    "prosemirror-model": {
+      "optional": true
+    },
+    "@codemirror/state": {
+      "optional": true
+    },
+    "@codemirror/view": {
+      "optional": true
+    },
+    "lexical": {
+      "optional": true
+    },
+    "@safetype/editor": {
+      "optional": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karammm/safetype.git",
+    "directory": "packages/adapters"
+  },
+  "homepage": "https://github.com/karammm/safetype#readme",
+  "bugs": {
+    "url": "https://github.com/karammm/safetype/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@codemirror/commands": "6.11.1",
+    "@codemirror/state": "6.7.6",
+    "@codemirror/view": "6.43.13",
+    "@lexical/history": "0.52.0",
+    "@lexical/plain-text": "0.52.0",
+    "@lexical/rich-text": "0.52.0",
+    "@playwright/test": "1.49.1",
+    "@safetype/editor": "workspace:^",
+    "esbuild": "0.24.2",
+    "jsdom": "25.0.1",
+    "lexical": "0.52.0",
+    "monaco-editor": "0.57.0",
+    "prosemirror-history": "1.5.1",
+    "prosemirror-keymap": "1.2.3",
+    "prosemirror-model": "1.25.12",
+    "prosemirror-schema-basic": "1.2.5",
+    "prosemirror-state": "1.4.4",
+    "prosemirror-view": "1.42.6",
+    "quill": "2.0.3"
+  }
+}

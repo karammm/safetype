@@ -83,7 +83,7 @@ New package: `@safetype/editor` (Tiptap / ProseMirror)
 
 - Romanized Hindi profanity and family-directed insults, on by default; `languages` option to opt out
 
-## v1.7.0: Third-party editor adapters
+## v1.7.0: Third-party editor adapters ✅
 
 New package: `@safetype/adapters`
 

@@ -1,6 +1,6 @@
 {
   "name": "@safetype/angular",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Angular directive, pipe, validator and service for SafeType.js content moderation",
   "license": "MIT",
   "sideEffects": false,
