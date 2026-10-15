@@ -1,0 +1,187 @@
+{
+  "language": "hi",
+  "boundary": "word",
+  "rules": [
+    {
+      "id": "hi.profanity.madarchod",
+      "pattern": "(मादरचोद*|मादरचौद*|मादरचोत|मादरजात|मादरज़ात)",
+      "category": "profanity",
+      "severity": "high"
+    },
+    {
+      "id": "hi.profanity.behenchod",
+      "pattern": "(बहनचोद*|बहेनचोद*|बहिनचोद*|भेनचोद*|भैनचोद*|बहनचौद*|भैंचोद*)",
+      "category": "profanity",
+      "severity": "high"
+    },
+    {
+      "id": "hi.profanity.betichod",
+      "pattern": "(बेटीचोद*|बेटिचोद*)",
+      "category": "profanity",
+      "severity": "high"
+    },
+    {
+      "id": "hi.profanity.chod",
+      "pattern": "(चोद*|चुद*)",
+      "category": "profanity",
+      "severity": "high"
+    },
+    {
+      "id": "hi.profanity.chutiya",
+      "pattern": "(चूतिया*|चुतिया*|चूतिये*|चुतिये*|चुत्या*|चूत्या*)",
+      "category": "profanity",
+      "severity": "high"
+    },
+    {
+      "id": "hi.profanity.chut",
+      "pattern": "(चूत|चुत)",
+      "category": "profanity",
+      "severity": "high"
+    },
+    {
+      "id": "hi.profanity.lund",
+      "pattern": "(लंड|लण्ड|लन्ड|लौड़ा|लौडा|लौड़े|लौडे|लोड़ा|लोड़े|लवड़ा|लवडा|लवड़े|लौड़ू|लोड़ू|लोडू)",
+      "category": "profanity",
+      "severity": "high"
+    },
+    {
+      "id": "hi.profanity.bhosda",
+      "pattern": "(भोसड*|भोसरी*)",
+      "category": "profanity",
+      "severity": "high"
+    },
+    {
+      "id": "hi.profanity.gaandu",
+      "pattern": "(गांड|गांडू|गांडु|गाण्डू|गान्डू|गाण्ड|गान्ड|गांडफट*)",
+      "category": "profanity",
+      "severity": "medium"
+    },
+    {
+      "id": "hi.profanity.harami",
+      "pattern": "(हरामी|हरामज़ाद*|हरामजाद*|हरामखोर*|हरामख़ोर*)",
+      "category": "profanity",
+      "severity": "medium"
+    },
+    {
+      "id": "hi.profanity.randi",
+      "pattern": "(रंडी|रण्डी|रन्डी|रंडियों|रंडिया|रंडीबाज*|रंडवा|रांड)",
+      "category": "profanity",
+      "severity": "high"
+    },
+    {
+      "id": "hi.profanity.bhadwa",
+      "pattern": "(भड़वा|भड़वे|भड़वी|भडवा|भडवे|भडवी|भड़ुआ|भडुआ)",
+      "category": "profanity",
+      "severity": "high"
+    },
+    {
+      "id": "hi.profanity.jhaat",
+      "pattern": "(झाट|झांट|झाटू|झांटू)",
+      "category": "profanity",
+      "severity": "medium"
+    },
+    {
+      "id": "hi.profanity.kutiya",
+      "pattern": "(कुतिया|कुत्तिया)",
+      "category": "profanity",
+      "severity": "high"
+    },
+    {
+      "id": "hi.hate.slur.katua",
+      "pattern": "(कटुआ|कटुए|कटुओं)",
+      "category": "hate",
+      "severity": "critical",
+      "confidence": 0.9,
+      "label": "slur"
+    },
+    {
+      "id": "hi.hate.group-violence",
+      "pattern": "(मुसलमानों|मुसलमान|मुसलमानो|हिंदुओं|हिन्दुओं|हिंदुओ|सिखों|ईसाइयों|दलितों|कटुओं|मुल्लों|बिहारियों|औरतों) (को)? (मार|काट|जला|खत्म|ख़त्म|मिटा|साफ) (कर)? (दो|डालो|देना)",
+      "category": "hate",
+      "severity": "critical",
+      "confidence": 0.8,
+      "label": "dehumanizing"
+    },
+    {
+      "id": "hi.hate.group-violence-imperative",
+      "pattern": "(मुसलमानों|मुसलमान|मुसलमानो|हिंदुओं|हिन्दुओं|हिंदुओ|सिखों|ईसाइयों|दलितों|कटुओं|मुल्लों|बिहारियों|औरतों) (को)? (मारो|काटो|जलाओ|मिटाओ)",
+      "category": "hate",
+      "severity": "critical",
+      "confidence": 0.8,
+      "label": "dehumanizing"
+    },
+    {
+      "id": "hi.harassment.family-insult",
+      "pattern": "(तेरी|तेरे|तेरा|तुम्हारी|तुम्हारे|उसकी|उसके|इसकी) (मां|मा|माई|मैया|बहन|बहिन|बेहन|बेटी) (का|की|के|को) (भोसड़ा|भोसडा|भोसड़ी|भोसडी|चूत|चुत|लंड|लौड़ा|लौडा)",
+      "category": "harassment",
+      "severity": "high",
+      "confidence": 0.85,
+      "label": "insult"
+    },
+    {
+      "id": "hi.harassment.family-abuse",
+      "pattern": "(मां|बहन|बहिन|बेटी) (को|की)? (चोद*|चुद*)",
+      "category": "harassment",
+      "severity": "high",
+      "confidence": 0.85,
+      "label": "insult"
+    },
+    {
+      "id": "hi.harassment.insult",
+      "pattern": "(तू|तुम|आप) (एक)? (बहुत|पूरा|पूरी|निरा|सबसे|एकदम)? (बड़ा|बड़ी|बडा|बडी)? (बेवकूफ़|बेवकूफ|मूर्ख|मूरख|कमीना|कमीने|कमीनी|घटिया|नालायक|निकम्मा|निकम्मे|निकम्मी|हरामी|जाहिल|गंवार|चूतिया|चुतिया|नीच|हरामखोर|कुतिया)",
+      "category": "harassment",
+      "severity": "medium",
+      "confidence": 0.8,
+      "label": "insult"
+    },
+    {
+      "id": "hi.harassment.insult-animal",
+      "pattern": "(तू|तुम|आप) (एक)? (बहुत|पूरा|पूरी|निरा|सबसे|एकदम)? (बड़ा|बड़ी|बडा|बडी)? (कुत्ता|कुत्ते|कुत्ती|गधा|गधे|उल्लू|सूअर|सुअर) (है|हो|हैं)",
+      "category": "harassment",
+      "severity": "medium",
+      "confidence": 0.75,
+      "label": "insult"
+    },
+    {
+      "id": "hi.harassment.self-harm",
+      "pattern": "(खुदकुशी|ख़ुदकुशी|आत्महत्या) (कर|करो) (ले|लो)",
+      "category": "harassment",
+      "severity": "critical",
+      "confidence": 0.85,
+      "label": "self-harm-incitement"
+    },
+    {
+      "id": "hi.harassment.self-harm-joined",
+      "pattern": "(खुदकुशी|ख़ुदकुशी|आत्महत्या) (करले|करलो)",
+      "category": "harassment",
+      "severity": "critical",
+      "confidence": 0.85,
+      "label": "self-harm-incitement"
+    },
+    {
+      "id": "hi.harassment.self-harm-hang",
+      "pattern": "(फांसी|फंदा) (लगा|लगाकर) (ले|लो|मर|मरो)",
+      "category": "harassment",
+      "severity": "critical",
+      "confidence": 0.85,
+      "label": "self-harm-incitement"
+    },
+    {
+      "id": "hi.harassment.go-die",
+      "pattern": "(मर|डूब) (जा|जाओ|मर|मरो)",
+      "category": "harassment",
+      "severity": "high",
+      "confidence": 0.75,
+      "label": "hostility"
+    },
+    {
+      "id": "hi.harassment.threat",
+      "pattern": "(तुझे|तुम्हें|तुम्हे|तुमको|तुझको) (जान)? (से)? (मार|काट|खत्म|ख़त्म|जला) (कर)? (दूंगा|दूंगी|डालूंगा|डालूंगी|देंगे|डालेंगे)",
+      "category": "harassment",
+      "severity": "high",
+      "confidence": 0.7,
+      "label": "threat"
+    }
+  ],
+  "allowList": []
+}

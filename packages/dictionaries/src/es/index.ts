@@ -1,0 +1,137 @@
+import type { DictionaryPack, ModerationRule } from "@safetype/shared";
+
+/*
+ * Spanish (Spain and Latin America). Opt-in: `languages: ["es"]` or `languages: ["en", "es"]`.
+ *
+ * Accents are optional when matching ("cabrón" = "cabron"). Because the normalizer strips them,
+ * "coño" would also match "cono" (cone), so it is NOT included. Also left out because they are
+ * ordinary words in some countries: "coger" (to take), "polla" (lottery in Chile), "zorra" (fox),
+ * "perra" (female dog), "mamón" (a fruit), "tortillera" (tortilla maker). Insults like these are
+ * still caught in direct-address phrases ("eres una perra") by the harassment rules.
+ */
+
+const profanity: ModerationRule[] = [
+  { id: "es.profanity.puta", pattern: "(puta|putas|putita*|putada*|putazo*|putear*|puteo|putero*)", category: "profanity", severity: "high" },
+  { id: "es.profanity.puto", pattern: "(puto|putos)", category: "profanity", severity: "high" },
+  { id: "es.profanity.abbreviations", pattern: "(hdp|hdlgp|ctm|ptm)", category: "profanity", severity: "high" },
+  { id: "es.profanity.mierda", pattern: "mierda*", category: "profanity", severity: "medium", replacement: "rayos" },
+  {
+    id: "es.profanity.joder",
+    pattern: "(joder|jodido|jodida|jodidos|jodidas|jodete|jodanse|jodan|jodiendo|jodio)",
+    category: "profanity",
+    severity: "medium",
+    replacement: "caramba",
+  },
+  { id: "es.profanity.cabron", pattern: "(cabron|cabrona|cabrones|cabronas|cabronazo*)", category: "profanity", severity: "high" },
+  { id: "es.profanity.pendejo", pattern: "(pendejo*|pendeja*)", category: "profanity", severity: "high" },
+  { id: "es.profanity.gilipollas", pattern: "(gilipolla*|gilipollez)", category: "profanity", severity: "high" },
+  { id: "es.profanity.chingar", pattern: "(chingar*|chingad*|chingue*|chinguen|chingon*|chinga)", category: "profanity", severity: "high" },
+  { id: "es.profanity.verga", pattern: "(verga|vergas|vergazo*)", category: "profanity", severity: "high" },
+  { id: "es.profanity.culo", pattern: "(culo|culos|culero*|culera*)", category: "profanity", severity: "medium" },
+  { id: "es.profanity.cagar", pattern: "(cagar|cago|cagada*|cagon|cagona|cagando)", category: "profanity", severity: "medium" },
+  { id: "es.profanity.malparido", pattern: "(malparid*|hijueputa*|hijoputa*|hijaputa*)", category: "profanity", severity: "high" },
+  { id: "es.profanity.concha", pattern: "(conchetumare|conchatumadre|conchesumadre|conchasumadre)", category: "profanity", severity: "high" },
+  { id: "es.profanity.carajo", pattern: "carajo", category: "profanity", severity: "low", replacement: "caramba" },
+];
+
+const hate: ModerationRule[] = [
+  // A deliberately small list of slurs with no common benign meaning.
+  ...["(maricon|maricones|mariconazo|marica|maricas)", "(sudaca|sudacas)", "(negrata|negratas)", "(machorra|machorras)"].map(
+    (pattern): ModerationRule => ({
+      id: `es.hate.slur.${pattern.slice(1).split("|")[0]}`,
+      pattern,
+      category: "hate",
+      severity: "critical",
+      confidence: 0.9,
+      label: "slur",
+    }),
+  ),
+  {
+    id: "es.hate.group-violence",
+    pattern:
+      "(judios|musulmanes|cristianos|negros|blancos|gitanos|inmigrantes|migrantes|refugiados|gays|maricones|lesbianas|trans|mujeres|moros|sudacas|indios|indigenas|arabes|africanos) (deberian|deben|merecen|tienen) (que)? (ser)? (morir|arder|exterminados|exterminadas|quemados|quemadas|eliminados|eliminadas|asesinados|asesinadas|colgados|gaseados|ahorcados)",
+    category: "hate",
+    severity: "critical",
+    confidence: 0.8,
+    label: "dehumanizing",
+  },
+];
+
+const insults =
+  "(idiota*|imbecil*|estupido*|estupida*|tonto|tonta|inutil|basura|escoria|retrasado*|retrasada*|mongolo*|mongolic*|subnormal*|patetico*|patetica*|asqueroso*|asquerosa*|payaso*|perdedor*|fracasado*|fracasada*|pendejo*|pendeja*|cabron*|gilipollas|perra|zorra|puta)";
+
+const harassment: ModerationRule[] = [
+  {
+    id: "es.harassment.insult",
+    pattern: `(eres|sos) (un|una)? (puto|puta|pinche|maldito|maldita|completo|completa|gran|tremendo|tremenda)? ${insults}`,
+    category: "harassment",
+    severity: "medium",
+    confidence: 0.8,
+    label: "insult",
+  },
+  {
+    id: "es.harassment.family",
+    pattern: "(concha|chinga|puta) (de)? (tu|su) (madre|hermana|vieja)",
+    category: "harassment",
+    severity: "high",
+    confidence: 0.85,
+    label: "insult",
+  },
+  {
+    id: "es.harassment.self-harm",
+    pattern: "(matate|suicidate|ahorcate)",
+    category: "harassment",
+    severity: "critical",
+    confidence: 0.9,
+    label: "self-harm-incitement",
+  },
+  {
+    id: "es.harassment.go-die",
+    pattern: "(vete|andate|anda|ve) a (morir|morirte)",
+    category: "harassment",
+    severity: "high",
+    confidence: 0.75,
+    label: "hostility",
+  },
+  {
+    id: "es.harassment.wish-death",
+    pattern: "ojala (que)? te (mueras|murieras|muera)",
+    category: "harassment",
+    severity: "high",
+    confidence: 0.8,
+    label: "hostility",
+  },
+  {
+    id: "es.harassment.threat",
+    pattern: "te (voy|vamos) a (matar|apunalar|disparar|reventar|partir)",
+    category: "harassment",
+    severity: "high",
+    confidence: 0.7,
+    label: "threat",
+  },
+  {
+    id: "es.harassment.threat-short",
+    pattern: "te (mato|matare)",
+    category: "harassment",
+    severity: "high",
+    confidence: 0.7,
+    label: "threat",
+  },
+  {
+    id: "es.harassment.nobody-likes",
+    pattern: "nadie te (quiere|soporta|aguanta|ama)",
+    category: "harassment",
+    severity: "medium",
+    confidence: 0.75,
+    label: "exclusion",
+  },
+];
+
+export const es: DictionaryPack = {
+  language: "es",
+  boundary: "word",
+  rules: [...profanity, ...hate, ...harassment],
+  allowList: [],
+};
+
+export default es;

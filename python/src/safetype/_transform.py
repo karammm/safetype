@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import unicodedata
 
-from ._normalize import LEET, normalize_char
+from ._normalize import LEET, is_mark, normalize_char
 from .types import MaskStyle, OffsetMapping, TextEdit
 
 _WORD_EXTRA = frozenset("@$!|€")
@@ -18,14 +18,25 @@ def _is_word_char(ch: str) -> bool:
     return category.startswith("L") or category.startswith("N")
 
 
+def _clusters(text: str) -> list[str]:
+    """A base character plus its combining marks, so a mask never leaves a stray vowel sign."""
+    out: list[str] = []
+    for c in text:
+        if out and is_mark(c):
+            out[-1] += c
+        else:
+            out.append(c)
+    return out
+
+
 def mask_text(text: str, style: MaskStyle = "vowels", mask_char: str = "*") -> str:
     if callable(style):
         return style(text)
-    chars = list(text)
-    positions = [i for i, c in enumerate(chars) if _is_word_char(c)]
+    units = _clusters(text)
+    positions = [i for i, u in enumerate(units) if _is_word_char(u[0])]
     if not positions:
         return text
-    out = chars[:]
+    out = units[:]
     first, last = positions[0], positions[-1]
     if style == "full":
         for i in positions:
@@ -36,7 +47,7 @@ def mask_text(text: str, style: MaskStyle = "vowels", mask_char: str = "*") -> s
         for i in positions:
             if i == first:
                 continue
-            n = normalize_char(chars[i])
+            n = normalize_char(units[i][0])
             if LEET.get(n, n) in _VOWELS:
                 out[i] = mask_char
                 masked += 1

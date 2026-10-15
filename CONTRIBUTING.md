@@ -26,6 +26,22 @@ pnpm build && pnpm test
 - Prefer prefix wildcards (`word*`) only when no common innocent word shares the prefix,
   or add the innocent words to the pack's `allowList`.
 
+### Adding a language
+
+Native speakers are the best reviewers. Corrections to existing packs are as welcome as new ones.
+
+1. Create `packages/dictionaries/src/<tag>/index.ts` exporting a `DictionaryPack` (copy `es` as a template).
+   Rule ids start with the tag (`es.profanity.mierda`).
+2. Write patterns the way people type. Matching ignores case and Latin accents (`cabrón` = `cabron`), folds `ß` to `ss`,
+   and keeps Indic vowel signs. Every token in a pattern must be a single word: `(a|b)` groups cannot contain spaces.
+3. Leave out words that are ordinary in the language, or in English next to it, and list them in the header
+   comment. Only allow insults like "dog" or "pig" in direct-address phrases ("you are a …").
+4. Register the pack in `packages/dictionaries/src/index.ts`, `tsup.config.ts`, the `exports` map, and
+   `BUILT_IN_PACKS` in `packages/core/src/create-engine.ts`.
+5. Add flagged and **clean** sentences to `packages/core/test/languages.test.ts`. The clean list is the important
+   one: everyday sentences that share words with the rules.
+6. Run `pnpm build && pnpm sync:python`, so the Python port gets the same pack and parity cases, then `pnpm test`.
+
 ## Architecture rules
 
 - Detection (`matcher`), decisions (`policy-engine`), and editing (`transformer`) stay separate.

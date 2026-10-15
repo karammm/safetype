@@ -65,6 +65,8 @@ def clean_body(self):
 - No Scunthorpe problem, and masking is idempotent
 - English and Hinglish (romanized Hindi: "bhenchod", "chutiya", "teri maa ka...") out of the box;
   `languages=["en"]` turns Hinglish off
+- Spanish, French, German, Portuguese and Hindi (Devanagari), opt-in: `languages=["en", "es"]`, `language="pt-BR"`,
+  or `language="hi"` (both Hindi scripts)
 - Custom words, custom rules, allow lists, mask styles (`vowels`, `partial`, `full`, or a function)
 
 ## API

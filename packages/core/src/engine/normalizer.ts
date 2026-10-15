@@ -6,7 +6,20 @@
  */
 
 const ZERO_WIDTH = new RegExp("^[\u200B-\u200D\u2060\uFEFF\u00AD\u180E]$");
-const COMBINING_MARKS = /\p{M}/gu;
+const COMBINING_MARKS = /\p{M}/u;
+
+/**
+ * Combining marks in Indic scripts (Devanagari to Malayalam) are vowel signs, viramas and nuktas:
+ * part of the spelling, not decoration, so they are kept. Stripping them would turn "लंड" into "लड",
+ * the same as "लड़" (fight). Latin diacritics ("fück") are still removed.
+ */
+function isIndicMark(c: string): boolean {
+  const cp = c.codePointAt(0)!;
+  return cp >= 0x0900 && cp <= 0x0dff;
+}
+
+/** Spelling variants folded to one form: German sharp s, Devanagari candrabindu to anusvara ("माँ" = "मां"). */
+const FOLDS: Readonly<Record<string, string>> = { "\u00DF": "ss", "\u0901": "\u0902" };
 
 /** Cyrillic and Greek letters that are visually identical to Latin letters (lowercase forms). */
 const CONFUSABLES: Readonly<Record<string, string>> = {
@@ -35,7 +48,7 @@ export const LEET: Readonly<Record<string, string>> = {
 
 const charCache = new Map<string, string>();
 
-/** Normalizes a single code point: drops zero-width chars, strips diacritics, lowercases, maps lookalikes. */
+/** Normalizes a single code point: drops zero-width chars, strips Latin diacritics, lowercases, maps lookalikes. */
 export function normalizeChar(ch: string): string {
   const cached = charCache.get(ch);
   if (cached !== undefined) return cached;
@@ -43,9 +56,12 @@ export function normalizeChar(ch: string): string {
   if (ZERO_WIDTH.test(ch)) {
     out = "";
   } else {
-    const base = ch.toLowerCase().normalize("NFKD").replace(COMBINING_MARKS, "").toLowerCase();
     out = "";
-    for (const c of base) out += CONFUSABLES[c] ?? c;
+    for (const c of ch.toLowerCase().normalize("NFKD")) {
+      if (COMBINING_MARKS.test(c) && !isIndicMark(c)) continue;
+      const lower = c.toLowerCase();
+      out += FOLDS[lower] ?? CONFUSABLES[lower] ?? lower;
+    }
   }
   if (charCache.size < 10_000) charCache.set(ch, out);
   return out;

@@ -1,7 +1,7 @@
 import { defineConfig } from "tsup";
 
 export default defineConfig({
-  entry: ["src/index.ts", "src/en/index.ts", "src/hi-latn/index.ts"],
+  entry: ["src/index.ts", ...["en", "hi-latn", "hi", "es", "fr", "de", "pt"].map((l) => `src/${l}/index.ts`)],
   format: ["esm", "cjs"],
   dts: true,
   clean: true,

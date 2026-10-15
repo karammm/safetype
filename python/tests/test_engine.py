@@ -88,4 +88,24 @@ def test_idempotent():
 
 
 def test_version_matches_package():
-    assert safetype.__version__ == "1.8.0"
+    assert safetype.__version__ == "1.9.0"
+
+
+def test_new_language_packs_are_opt_in():
+    engine = create_moderation_engine()
+    assert engine.moderate("Scheiße puta मादरचोद").matches == []
+
+
+def test_language_selection():
+    assert create_moderation_engine(language="pt-BR").moderate("porra").text == "p*rr*"
+    assert create_moderation_engine(languages=["en", "es", "de"]).moderate("fuck, mierda, Scheiße").text == "f*ck, m**rd*, Sch**ß*"
+    assert create_moderation_engine(language="hi").moderate("मादरचोद bhenchod").text == "मा***द bh*nch*d"
+    assert create_moderation_engine(language="hi-Latn").moderate("मादरचोद bhenchod").text == "मादरचोद bh*nch*d"
+
+
+def test_devanagari_masks_whole_characters():
+    engine = create_moderation_engine(languages=["hi"])
+    assert engine.moderate("तू चूतिया है").text == "तू चू*या है"
+    assert engine.moderate("हम लड़ रहे हैं").matches == []
+    once = engine.mask("चूतिया लंड")
+    assert engine.mask(once) == once

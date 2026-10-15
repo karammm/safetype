@@ -1,6 +1,6 @@
 {
   "name": "@safetype/dictionaries",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "Language packs for SafeType.js",
   "license": "MIT",
   "type": "module",
@@ -19,12 +19,37 @@
       "import": "./dist/en/index.js",
       "require": "./dist/en/index.cjs"
     },
-    "./package.json": "./package.json",
     "./hi-latn": {
       "types": "./dist/hi-latn/index.d.ts",
       "import": "./dist/hi-latn/index.js",
       "require": "./dist/hi-latn/index.cjs"
-    }
+    },
+    "./hi": {
+      "types": "./dist/hi/index.d.ts",
+      "import": "./dist/hi/index.js",
+      "require": "./dist/hi/index.cjs"
+    },
+    "./es": {
+      "types": "./dist/es/index.d.ts",
+      "import": "./dist/es/index.js",
+      "require": "./dist/es/index.cjs"
+    },
+    "./fr": {
+      "types": "./dist/fr/index.d.ts",
+      "import": "./dist/fr/index.js",
+      "require": "./dist/fr/index.cjs"
+    },
+    "./de": {
+      "types": "./dist/de/index.d.ts",
+      "import": "./dist/de/index.js",
+      "require": "./dist/de/index.cjs"
+    },
+    "./pt": {
+      "types": "./dist/pt/index.d.ts",
+      "import": "./dist/pt/index.js",
+      "require": "./dist/pt/index.cjs"
+    },
+    "./package.json": "./package.json"
   },
   "files": [
     "dist",

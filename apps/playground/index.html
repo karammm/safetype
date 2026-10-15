@@ -43,6 +43,9 @@ input:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px
   font: inherit; font-size: 14px; border: 1px solid var(--line); background: var(--field); color: var(--text);
   padding: 6px 12px; border-radius: 999px; cursor: pointer;
 }
+.langs { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: -8px 0 18px; font-size: 14px; color: var(--muted); }
+.langs label { display: inline-flex; align-items: center; gap: 5px; margin: 0; font-weight: 500; color: var(--text); cursor: pointer; }
+.langs input { width: auto; accent-color: var(--accent); }
 .modes button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
 .samples { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
 .samples button { font-size: 13px; }
@@ -80,6 +83,16 @@ footer { color: var(--muted); font-size: 13px; margin-top: 24px; }
         <button type="button" data-mode="block">Block</button>
         <button type="button" data-mode="allow">Allow</button>
       </div>
+      <fieldset class="langs" style="border:0;padding:0">
+        <legend style="padding:0;margin-bottom:4px">Languages</legend>
+        <label><input type="checkbox" value="en" checked> English</label>
+        <label><input type="checkbox" value="hi-Latn" checked> Hinglish</label>
+        <label><input type="checkbox" value="hi"> हिन्दी</label>
+        <label><input type="checkbox" value="es"> Español</label>
+        <label><input type="checkbox" value="fr"> Français</label>
+        <label><input type="checkbox" value="de"> Deutsch</label>
+        <label><input type="checkbox" value="pt"> Português</label>
+      </fieldset>
 
       <form id="form">
         <label for="input">Input</label>
@@ -97,6 +110,7 @@ footer { color: var(--muted); font-size: 13px; margin-top: 24px; }
           <button type="button" data-sample="The Scunthorpe class assassin ate shiitake">Innocent words</button>
           <button type="button" data-sample="you are such an idiot">Harassment</button>
           <button type="button" data-sample='He said "you are an idiot" to me'>Reported speech</button>
+          <button type="button" data-sample="¡Qué mierda! Scheiße, putain. तू चूतिया है" data-langs="es,de,fr,hi">Other languages</button>
         </div>
         <p class="hint">Samples are pasted into the input. Password, email and payment fields are never moderated.</p>
       </form>
@@ -121,6 +135,7 @@ footer { color: var(--muted); font-size: 13px; margin-top: 24px; }
   const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
   const LABEL = { mask: "Masked", suggest: "Suggestion", warn: "Warning", block: "Blocked", allow: "Needs review" };
   let mode = "mask";
+  const languages = () => Array.from(document.querySelectorAll(".langs input:checked"), (i) => i.value);
   let instance;
 
   function onModerated(result) {
@@ -152,13 +167,14 @@ footer { color: var(--muted); font-size: 13px; margin-top: 24px; }
   let richEditor;
   function startSafeType() {
     instance?.destroy();
-    instance = SafeType.createSafeType({ mode, onModerated });
+    instance = SafeType.createSafeType({ mode, languages: languages(), onModerated });
     instance.start();
     const content = richEditor ? richEditor.getHTML() : "<p>Formatting like <strong>bold</strong> and <em>italic</em> is kept when words are masked.</p>";
     richEditor?.destroy();
     richEditor = SafeTypeEditor.createSafeTypeEditor({
       element: document.getElementById("rich"),
       mode,
+      languages: languages(),
       content,
       label: "Built-in editor",
       placeholder: "Write something...",
@@ -175,8 +191,18 @@ footer { color: var(--muted); font-size: 13px; margin-top: 24px; }
     });
   });
 
+  document.querySelectorAll(".langs input").forEach((box) => box.addEventListener("change", startSafeType));
+
   document.querySelectorAll("[data-sample]").forEach((button) => {
     button.addEventListener("click", () => {
+      if (button.dataset.langs) {
+        let changed = false;
+        for (const lang of button.dataset.langs.split(",")) {
+          const box = document.querySelector(`.langs input[value="${lang}"]`);
+          if (box && !box.checked) { box.checked = true; changed = true; }
+        }
+        if (changed) startSafeType();
+      }
       const input = document.getElementById("input");
       input.focus();
       input.value = button.dataset.sample;

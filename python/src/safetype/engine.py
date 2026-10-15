@@ -29,8 +29,9 @@ from .types import (
 PolicyMap = Mapping[str, Mapping[str, Any]]
 
 
-# English plus Hinglish (romanized Hindi), which is common in English-language apps.
-DEFAULT_LANGUAGES = {"en": ("en", "hi-latn")}
+# Packs enabled by `language` when `languages` is not given. English includes Hinglish (romanized Hindi),
+# which is common in English-language apps; Hindi includes both scripts. Other languages are single packs.
+DEFAULT_LANGUAGES = {"en": ("en", "hi-latn"), "hi": ("hi", "hi-latn")}
 
 
 @lru_cache(maxsize=None)
@@ -46,8 +47,20 @@ def load_pack(language: str) -> dict:
     raise ValueError(f'No built-in dictionary pack for language "{language}". Pass one via `packs`.')
 
 
+def _has_pack(name: str) -> bool:
+    return resources.files("safetype").joinpath(f"data/{name}.json").is_file()
+
+
 def default_packs(language: str, languages: Optional[Sequence[str]] = None) -> list[dict]:
-    names = languages if languages is not None else DEFAULT_LANGUAGES.get(language.lower().split("-")[0], (language,))
+    if languages is not None:
+        names: Sequence[str] = languages
+    else:
+        tag = language.lower()
+        # An exact pack tag ("hi-Latn") wins over the defaults of its base language ("hi").
+        if _has_pack(tag) and tag not in DEFAULT_LANGUAGES:
+            names = (tag,)
+        else:
+            names = DEFAULT_LANGUAGES.get(tag.split("-")[0], (language,))
     return [load_pack(name) for name in names]
 
 

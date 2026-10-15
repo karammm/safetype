@@ -2,24 +2,36 @@ import type { MaskStyle, OffsetMapping, TextEdit } from "@safetype/shared";
 import { LEET, normalizeChar } from "./normalizer";
 
 const WORD_CHAR = new RegExp("[\\p{L}\\p{N}@$!|\u20AC]", "u");
+const MARK = /\p{M}/u;
 const VOWELS = new Set(["a", "e", "i", "o", "u"]);
 
 function isWordChar(ch: string): boolean {
   return WORD_CHAR.test(ch);
 }
 
+/** Splits text into a base character plus its combining marks ("चू", "ति", "या"), so a mask never leaves a stray vowel sign. */
+function clusters(text: string): string[] {
+  const out: string[] = [];
+  for (const c of text) {
+    if (MARK.test(c) && out.length > 0) out[out.length - 1] += c;
+    else out.push(c);
+  }
+  return out;
+}
+
 /**
  * Masks matched text. Only word characters are replaced, so separators in "f u c k" survive.
+ * A character together with its combining marks is masked as one unit ("चूतिया" -> "चू*या").
  *  - vowels:  keep the first character, mask vowels  ("fuck" -> "f*ck"); falls back to `partial`
  *  - partial: keep the first and last character      ("twat" -> "t**t")
  *  - full:    mask every word character              ("fuck" -> "****")
  */
 export function maskText(text: string, style: MaskStyle = "vowels", maskChar = "*"): string {
   if (typeof style === "function") return style(text);
-  const chars = Array.from(text);
-  const wordPositions = chars.map((c, i) => (isWordChar(c) ? i : -1)).filter((i) => i >= 0);
+  const units = clusters(text);
+  const wordPositions = units.map((u, i) => (isWordChar(Array.from(u)[0]!) ? i : -1)).filter((i) => i >= 0);
   if (wordPositions.length === 0) return text;
-  const out = chars.slice();
+  const out = units.slice();
   const first = wordPositions[0]!;
   const last = wordPositions[wordPositions.length - 1]!;
 
@@ -32,7 +44,7 @@ export function maskText(text: string, style: MaskStyle = "vowels", maskChar = "
     let masked = 0;
     for (const i of wordPositions) {
       if (i === first) continue;
-      const n = normalizeChar(chars[i]!);
+      const n = normalizeChar(Array.from(units[i]!)[0]!);
       if (VOWELS.has(LEET[n] ?? n)) {
         out[i] = maskChar;
         masked++;

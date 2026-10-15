@@ -1,5 +1,10 @@
 import { en } from "@safetype/dictionaries/en";
 import { hiLatn } from "@safetype/dictionaries/hi-latn";
+import { de } from "@safetype/dictionaries/de";
+import { es } from "@safetype/dictionaries/es";
+import { fr } from "@safetype/dictionaries/fr";
+import { hi } from "@safetype/dictionaries/hi";
+import { pt } from "@safetype/dictionaries/pt";
 import {
   ALL_CATEGORIES,
   type AsyncModerationResult,
@@ -68,13 +73,19 @@ interface StoredRule {
   compiled: CompiledRule;
 }
 
-const BUILT_IN_PACKS: Readonly<Record<string, DictionaryPack>> = { en, "hi-latn": hiLatn };
+const BUILT_IN_PACKS: Readonly<Record<string, DictionaryPack>> = { en, "hi-latn": hiLatn, hi, es, fr, de, pt };
 
-/** English plus Hinglish (romanized Hindi), which is common in English-language apps. */
-const DEFAULT_LANGUAGES: Readonly<Record<string, readonly string[]>> = { en: ["en", "hi-latn"] };
+/**
+ * Packs enabled by `language` when `languages` is not given. English includes Hinglish (romanized Hindi),
+ * which is common in English-language apps; Hindi includes both scripts. Other languages are single packs.
+ */
+const DEFAULT_LANGUAGES: Readonly<Record<string, readonly string[]>> = { en: ["en", "hi-latn"], hi: ["hi", "hi-latn"] };
 
 function resolveDefaultPacks(language: string, languages: readonly string[] | undefined): DictionaryPack[] {
-  const names = languages ?? DEFAULT_LANGUAGES[language.toLowerCase().split("-")[0]!] ?? [language];
+  const tag = language.toLowerCase();
+  // An exact pack tag ("hi-Latn") wins over the defaults of its base language ("hi").
+  const names =
+    languages ?? (BUILT_IN_PACKS[tag] && !DEFAULT_LANGUAGES[tag] ? [tag] : DEFAULT_LANGUAGES[tag.split("-")[0]!] ?? [language]);
   return names.map((name) => {
     const key = name.toLowerCase();
     const pack = BUILT_IN_PACKS[key] ?? BUILT_IN_PACKS[key.split("-")[0]!];

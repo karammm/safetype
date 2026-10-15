@@ -20,13 +20,30 @@ _CONFUSABLES = {
 LEET = {"@": "a", "4": "a", "$": "s", "5": "s", "0": "o", "1": "i", "!": "i", "|": "i", "3": "e", "€": "e", "7": "t"}
 
 
+# Spelling variants folded to one form: German sharp s, Devanagari candrabindu to anusvara.
+_FOLDS = {"\u00df": "ss", "\u0901": "\u0902"}
+
+
+def is_mark(ch: str) -> bool:
+    return unicodedata.category(ch).startswith("M")
+
+
+def _is_indic_mark(ch: str) -> bool:
+    # Indic vowel signs, viramas and nuktas are part of the spelling, so they are kept.
+    return 0x0900 <= ord(ch) <= 0x0DFF
+
+
 @lru_cache(maxsize=10_000)
 def normalize_char(ch: str) -> str:
     if ch in _ZERO_WIDTH:
         return ""
-    decomposed = unicodedata.normalize("NFKD", ch.lower())
-    base = "".join(c for c in decomposed if not unicodedata.category(c).startswith("M")).lower()
-    return "".join(_CONFUSABLES.get(c, c) for c in base)
+    out: list[str] = []
+    for c in unicodedata.normalize("NFKD", ch.lower()):
+        if is_mark(c) and not _is_indic_mark(c):
+            continue
+        lower = c.lower()
+        out.append(_FOLDS.get(lower) or _CONFUSABLES.get(lower, lower))
+    return "".join(out)
 
 
 @dataclass(frozen=True)

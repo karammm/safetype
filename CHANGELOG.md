@@ -2,6 +2,31 @@
 
 All `@safetype/*` packages share one version number.
 
+## 1.9.0
+
+### Language packs (`@safetype/dictionaries`)
+
+- **Spanish (`es`), French (`fr`), German (`de`), Portuguese (`pt`) and Hindi in Devanagari (`hi`)**: profanity,
+  a small list of unambiguous slurs, group-violence statements, and harassment phrases (insults in direct address,
+  self-harm incitement, threats)
+- **Opt-in:** existing apps see no change. Enable with `languages: ["en", "es"]`, `language: "pt-BR"`, or
+  `language: "hi"` (Devanagari + Hinglish). `language: "hi-Latn"` stays romanized-only
+- Each pack documents the words it deliberately leaves out (e.g. "coño"/"cono", "con", "Ihr Hund", "लड़"),
+  backed by false-positive tests
+- Subpath imports: `@safetype/dictionaries/es`, `/fr`, `/de`, `/pt`, `/hi`
+
+### `@safetype/core` and the Python port
+
+- Indic combining marks (vowel signs, virama, nukta) are kept during normalization, so "लंड" no longer equals "लड़".
+  Candrabindu and anusvara are treated as the same ("माँ" = "मां")
+- Masking works on whole characters (base + combining marks): "चूतिया" → "चू*या", with no stray vowel signs
+- `ß` matches `ss`
+- The Python port mirrors all of the above and passes the same 1,995 parity cases
+
+### Playground
+
+- Language picker and an "Other languages" sample
+
 ## 1.8.0
 
 ### New: `@safetype/ai`

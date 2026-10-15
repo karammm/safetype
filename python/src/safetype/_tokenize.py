@@ -26,8 +26,9 @@ class Token:
 def _is_token_char(ch: str, mask_char: str) -> bool:
     if ch in _EXTRA_TOKEN_CHARS or ch == mask_char:
         return True
+    # Marks: Indic vowel signs and viramas are part of a word (Latin diacritics are already stripped).
     category = unicodedata.category(ch)
-    return category.startswith("L") or category.startswith("N")
+    return category[0] in "LMN"
 
 
 def tokenize(normalized: NormalizedText, mask_char: str = "*") -> list[Token]:

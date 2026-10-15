@@ -99,11 +99,12 @@ New package: `@safetype/ai`
 - Custom callback provider
 - Server middleware for Express and Fastify, plus a generic `fetch` handler
 
-## v1.9.0: Language packs
+## v1.9.0: Language packs ✅
 
-- Spanish, Hindi (Devanagari script; romanized Hinglish shipped in 1.6.0), French, German, Portuguese
-- Each pack reviewed by native speakers, with false-positive test suites
-- A contribution guide for new languages
+- Spanish, French, German, Portuguese and Hindi (Devanagari script; romanized Hinglish shipped in 1.6.0), opt-in
+- Engine: Indic vowel signs kept, cluster-aware masking, `ß` = `ss`
+- False-positive test suites per pack, shared with the Python port
+- A contribution guide for new languages; native-speaker review is invited through issues and PRs
 
 ## v1.10.0: Docs, hardening, and stability
 

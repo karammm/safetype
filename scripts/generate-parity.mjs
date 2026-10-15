@@ -21,6 +21,12 @@ const texts = [
   "Behenchod, madharchod, betichod", "maa ki chut", "behen ka loda", "teri maa ka bhosada",
   "lodu, lund, bhosidke, bsdk, loduchand", "chutiya gandu harami bhadwa kutiya", "BHENCHODDD bh3nch0d",
   "c h u t i y a", "maa chod di", "mujhe chod do", "Asha Bhosle and chutney", "kutti randi BC MC BKC",
+  "¡Qué mierda, cabrón!", "eres un idiota", "concha de tu madre", "Compré un cono de helado", "mátate",
+  "Putain, t'es un connard", "va te faire foutre", "Les pros et les cons", "je vais te tuer",
+  "Scheiße, du Arschloch", "Ihr Hund ist süß", "Häng dich rein!", "Häng dich auf", "SCHEISSE",
+  "Porra, você é um idiota", "vai tomar no cu", "Ele pede desculpas", "O cantor morre aos 80 anos",
+  "चूतिया है तू", "भोसड़ी के", "तेरी माँ की चूत", "हम लड़ रहे हैं", "चौदह साल", "तुझे जान से मार दूंगा",
+  "मादरचोद bhenchod", "c h u t i y a चूतिया",
 ];
 
 const configs = [
@@ -38,6 +44,13 @@ const configs = [
   { name: "no-spaced", config: { detectSpacedLetters: false } },
   { name: "english-only", config: { languages: ["en"] } },
   { name: "hinglish-only", config: { languages: ["hi-Latn"], mode: "block" } },
+  { name: "spanish", config: { languages: ["es"] } },
+  { name: "french", config: { languages: ["fr"], mode: "suggest" } },
+  { name: "german", config: { languages: ["de"], maskStyle: "partial" } },
+  { name: "portuguese", config: { language: "pt-BR" } },
+  { name: "hindi", config: { language: "hi" } },
+  { name: "hindi-full", config: { languages: ["hi"], maskStyle: "full" } },
+  { name: "multilingual", config: { languages: ["en", "es", "fr", "de", "pt", "hi", "hi-Latn"] } },
 ];
 
 const cp = (text, offset) => Array.from(text.slice(0, offset)).length;

@@ -170,8 +170,19 @@ below that is reported with `requiresReview: true` and action `allow`.
 ## What the engine handles
 
 - **Languages:** English and Hinglish (romanized Hindi, e.g. "bhenchod", "chutiya", "teri maa ka…") by default.
-  Use `languages: ["en"]` for English only
-- **Unicode:** diacritics (`fück`), full-width forms (`ｆｕｃｋ`), Cyrillic/Greek lookalikes, zero-width characters
+  Spanish, French, German, Portuguese and Hindi (Devanagari) are opt-in:
+
+  ```ts
+  createModerationEngine({ languages: ["en", "es"] }); // English + Spanish
+  createModerationEngine({ language: "pt-BR" });        // Portuguese
+  createModerationEngine({ language: "hi" });           // Hindi in both scripts (Devanagari + Hinglish)
+  createModerationEngine({ languages: ["en"] });        // English only
+  ```
+
+  Every framework package accepts the same `languages` option. Each pack ships with false-positive tests
+  (e.g. "Ihr Hund", "cono de helado", "हम लड़ रहे हैं"). See [adding a language](CONTRIBUTING.md#adding-a-language)
+- **Unicode:** diacritics (`fück`, `cabrón` = `cabron`), `ß` = `ss`, Devanagari vowel signs and nukta kept
+  (so "लंड" ≠ "लड़"), full-width forms (`ｆｕｃｋ`), Cyrillic/Greek lookalikes, zero-width characters
 - **Obfuscation:** leet (`sh1t`, `$hit`), repeated letters (`fuuuck`), spaced letters (`f u c k`, `f.u.c.k`)
 - **No Scunthorpe problem:** whole-word matching, and repeated-letter tolerance never shortens a word (`as` ≠ `ass`)
 - **Context heuristics:** quoted text and mentions ("the word …", "he called me …") lower confidence
@@ -250,7 +261,7 @@ pnpm bench
 | **1.6.0** | Hinglish (romanized Hindi) detection, on by default ✅ |
 | **1.7.0** | `@safetype/adapters`: Quill, Lexical, CodeMirror, Monaco, ProseMirror ✅ |
 | **1.8.0** | `@safetype/ai`: contextual providers and server middleware ✅ |
-| 1.9.0 | Language packs: es, hi (Devanagari), fr, de, pt |
+| **1.9.0** | Language packs: es, fr, de, pt, hi (Devanagari) ✅ |
 | 1.10.0 | Docs site, accessibility, and security hardening |
 
 Full details and the per-release checklist are in [ROADMAP.md](ROADMAP.md).

@@ -23,7 +23,8 @@ function tokenRegex(maskChar: string): RegExp {
   let re = regexCache.get(maskChar);
   if (!re) {
     const escaped = maskChar.replace(/[\\\]^-]/g, "\\$&");
-    re = new RegExp(`[\\p{L}\\p{N}@$!|*€${escaped}]+`, "gu");
+    // \p{M}: Indic vowel signs and viramas are part of a word (Latin diacritics are already stripped).
+    re = new RegExp(`[\\p{L}\\p{M}\\p{N}@$!|*€${escaped}]+`, "gu");
     regexCache.set(maskChar, re);
   }
   return re;
