@@ -19,6 +19,10 @@ npm install @safetype/adapters
 
 Editors are optional peer dependencies, so your app's own copy is always used.
 
+Every adapter is tested with real keystrokes in Chromium, Firefox and WebKit. The exception is Quill in
+Firefox: Playwright's Firefox driver drops spaces typed into Quill 2 even without SafeType, so that
+combination is covered by a control test instead.
+
 ## Usage
 
 ```js

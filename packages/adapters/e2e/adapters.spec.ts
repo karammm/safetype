@@ -23,6 +23,10 @@ test.afterEach(async ({ page }) => {
 });
 
 test("control: plain Quill (no SafeType) keeps typed spaces", async ({ page, browserName }) => {
+  // Known upstream quirk: Quill 2 drops spaces typed by Playwright's Firefox driver even without
+  // SafeType, so the Quill adapter is verified in Chromium and WebKit. If this starts passing in
+  // Firefox, Playwright reports it and the Quill tests run there automatically again.
+  test.fail(browserName === "firefox", "Quill 2 + Playwright Firefox drops typed spaces (not SafeType)");
   await focus(page, "quill-plain");
   await page.keyboard.type("a b c");
   const text = await textOf(page, "quill-plain");
