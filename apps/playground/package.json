@@ -4,10 +4,15 @@
   "type": "module",
   "scripts": {
     "build": "node build.mjs",
-    "preview": "node build.mjs && python3 -m http.server 4180 --directory dist"
+    "preview": "node build.mjs && python3 -m http.server 4180 --directory dist",
+    "e2e": "node build.mjs && playwright test"
   },
   "dependencies": {
     "@safetype/dom": "workspace:*",
     "@safetype/editor": "workspace:*"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.49.1"
   }
 }

@@ -1,0 +1,38 @@
+name: Bug report
+description: Something in a package does not work as documented.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: package
+    attributes:
+      label: Package
+      multiple: true
+      options: ["@safetype/core", "@safetype/dom", "@safetype/react", "@safetype/vue", "@safetype/angular", "@safetype/editor", "@safetype/adapters", "@safetype/ai", "@safetype/dictionaries", "safetype (Python)", Playground or docs]
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      placeholder: "1.10.0"
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: The smallest code or steps that show the problem. A link to a StackBlitz or repository is ideal.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behaviour
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: "Chrome 141 on macOS, React 18.3, Node 22"

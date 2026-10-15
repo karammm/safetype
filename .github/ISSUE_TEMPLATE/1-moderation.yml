@@ -1,0 +1,45 @@
+name: Missed word or false positive
+description: Something offensive was not caught, or innocent text was flagged.
+title: "[moderation] "
+labels: ["dictionary"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping make the dictionaries better. Please include the exact text: a report can't be fixed without it.
+        If the text is very offensive, you can obscure it as long as it's clear what the real word is.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What happened?
+      options:
+        - Offensive text was NOT detected (missed)
+        - Innocent text WAS flagged (false positive)
+        - Detected, but with the wrong category or action
+    validations:
+      required: true
+  - type: input
+    id: text
+    attributes:
+      label: Text
+      placeholder: 'e.g. "the class assassin" was masked'
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      options: [English, Hinglish (romanized Hindi), Hindi (Devanagari), Spanish, French, German, Portuguese, Other]
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Where is the word used, and what does it mean there? Native speakers' notes on regional usage are very welcome.
+  - type: input
+    id: config
+    attributes:
+      label: Configuration
+      description: Mode, languages, and policy, if not the defaults.
+      placeholder: '{ mode: "mask", languages: ["en", "es"] }'

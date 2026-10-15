@@ -1,6 +1,6 @@
 {
   "name": "@safetype/react",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "description": "React components and hooks for SafeType.js content moderation",
   "license": "MIT",
   "type": "module",

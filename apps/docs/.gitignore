@@ -1,0 +1,4 @@
+# Generated from the package READMEs by scripts/sync-readmes.mjs
+packages/
+.vitepress/cache/
+.vitepress/dist/

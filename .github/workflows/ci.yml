@@ -27,6 +27,21 @@ jobs:
       - run: pnpm turbo run build typecheck test --filter="./packages/*"
       - run: pnpm check:dist
 
+  supply-chain:
+    name: licences + known vulnerabilities
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check:licenses
+      - name: No known high or critical vulnerabilities in what users install
+        run: pnpm audit --prod --audit-level high
+
   python:
     name: python (${{ matrix.python }})
     runs-on: ubuntu-latest

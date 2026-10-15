@@ -26,7 +26,7 @@ const texts = [
   "Scheiße, du Arschloch", "Ihr Hund ist süß", "Häng dich rein!", "Häng dich auf", "SCHEISSE",
   "Porra, você é um idiota", "vai tomar no cu", "Ele pede desculpas", "O cantor morre aos 80 anos",
   "चूतिया है तू", "भोसड़ी के", "तेरी माँ की चूत", "हम लड़ रहे हैं", "चौदह साल", "तुझे जान से मार दूंगा",
-  "मादरचोद bhenchod", "c h u t i y a चूतिया",
+  "मादरचोद bhenchod", "c h u t i y a चूतिया", "चूतिया0", "चूतिया0@ चूतियाo",
 ];
 
 const configs = [

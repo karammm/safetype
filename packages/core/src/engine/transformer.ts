@@ -41,16 +41,19 @@ export function maskText(text: string, style: MaskStyle = "vowels", maskChar = "
   }
 
   if (style === "vowels") {
-    let masked = 0;
+    // Something before the last character must be masked: a lone trailing mask ("चूतिया0" -> "चूतिया*")
+    // reads as emphasis ("word*") on the next pass, so the word would be matched and masked again.
+    let interior = 0;
     for (const i of wordPositions) {
       if (i === first) continue;
       const n = normalizeChar(Array.from(units[i]!)[0]!);
       if (VOWELS.has(LEET[n] ?? n)) {
         out[i] = maskChar;
-        masked++;
+        if (i !== last) interior++;
       }
     }
-    if (masked > 0) return out.join("");
+    if (interior > 0) return out.join("");
+    for (const i of wordPositions) out[i] = units[i]!;
   }
 
   // partial

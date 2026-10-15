@@ -1,6 +1,6 @@
 {
   "name": "@safetype/vue",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "description": "Vue 3 directive, components and composables for SafeType.js content moderation",
   "license": "MIT",
   "type": "module",
@@ -70,7 +70,7 @@
     "@vue/test-utils": "2.4.6",
     "esbuild": "0.24.2",
     "jsdom": "25.0.1",
-    "vue": "3.5.13",
+    "vue": "3.5.43",
     "@safetype/editor": "workspace:*"
   },
   "peerDependenciesMeta": {

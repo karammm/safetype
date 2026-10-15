@@ -88,7 +88,7 @@ def test_idempotent():
 
 
 def test_version_matches_package():
-    assert safetype.__version__ == "1.9.0"
+    assert safetype.__version__ == "1.10.0"
 
 
 def test_new_language_packs_are_opt_in():
@@ -109,3 +109,54 @@ def test_devanagari_masks_whole_characters():
     assert engine.moderate("हम लड़ रहे हैं").matches == []
     once = engine.mask("चूतिया लंड")
     assert engine.mask(once) == once
+
+
+_FRAGMENTS = [
+    "fuck", "fuuuck", "f u c k", "sh1t", "$hit", "ass", "as", "Scunthorpe", "you are an idiot", "kys", '"',
+    "bhenchod", "mierda", "Scheiße", "caralho", "चूतिया", "लड़", "माँ", "़", "́", "​", "ｆｕｃｋ",
+    "fuсk", "😀", "*", "f*ck", " ", "\n", ".", "!", "@", "€", "0", "1", "İ", "ß",
+]
+
+
+def _random_text(rnd) -> str:
+    parts = []
+    for _ in range(rnd.randrange(12)):
+        if rnd.random() < 0.7:
+            parts.append(rnd.choice(_FRAGMENTS))
+        else:
+            parts.append(chr(rnd.randrange(0x20, 0x3000)))
+    return (" " if rnd.random() < 0.5 else "").join(parts)
+
+
+@pytest.mark.parametrize("config", [{}, {"languages": ["en", "hi-Latn", "hi", "es", "fr", "de", "pt"]}, {"mask_style": "partial"}])
+def test_fuzz_invariants(config):
+    import random
+
+    rnd = random.Random(0x5AFE)
+    engine = create_moderation_engine(**config)
+    for i in range(1000):
+        text = _random_text(rnd)
+        result = engine.moderate(text)
+        assert result.allowed == (result.action != "block"), (i, text)
+        for m in result.matches:
+            assert 0 <= m.start < m.end <= len(text), (i, text)
+            assert m.text == text[m.start : m.end], (i, text)
+        masked = engine.mask(text)
+        assert engine.mask(masked) == masked, (i, text)
+        assert engine.moderate(result.text).text == result.text, (i, text)
+
+
+@pytest.mark.parametrize("generate", [lambda n: "f" * n, lambda n: "f u " * n, lambda n: "you are " * n, lambda n: "चू" * n])
+def test_linear_time_on_adversarial_input(generate):
+    import time
+
+    engine = create_moderation_engine(languages=["en", "hi-Latn", "hi", "es", "fr", "de", "pt"])
+
+    def measure(n: int) -> float:
+        start = time.perf_counter()
+        engine.moderate(generate(n))
+        return time.perf_counter() - start
+
+    measure(2_000)
+    small, large = measure(5_000), measure(20_000)
+    assert large < max(small, 0.005) * 10

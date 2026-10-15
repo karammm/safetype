@@ -1,7 +1,7 @@
 # safetype (Python)
 
 Rule-based content moderation for Python servers: profanity, hate speech and harassment.
-It's the **same engine and English dictionary** as the [SafeType.js](https://github.com/karammm/safetype)
+It's the **same engine and dictionaries** as the [SafeType.js](https://github.com/karammm/safetype)
 JavaScript packages, so your backend can re-check exactly what the browser checked.
 It has no dependencies and runs fully offline.
 

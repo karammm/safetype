@@ -1,0 +1,30 @@
+name: New language or language review
+description: Propose a new language pack, or review an existing one as a native speaker.
+title: "[language] "
+labels: ["language"]
+body:
+  - type: input
+    id: language
+    attributes:
+      label: Language and tag
+      placeholder: "Italian (it)"
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Request
+      options: [Add a new language, Review an existing pack]
+    validations:
+      required: true
+  - type: checkboxes
+    id: speaker
+    attributes:
+      label: Native speaker
+      options:
+        - label: I am a native or fluent speaker and can review word lists and false positives.
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Common words that also have innocent meanings, regional differences, how people actually type (scripts, transliteration).

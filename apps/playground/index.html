@@ -8,13 +8,13 @@
 <style>
 :root {
   --bg: #f6f7fb; --panel: #ffffff; --line: #dfe3ec; --text: #141a26; --muted: #5d6880;
-  --accent: #0f9d8a; --accent-soft: rgba(15,157,138,.12); --warn: #8a5300; --block: #b42318; --review: #6d4bd8;
+  --accent: #0a7a6b; --accent-ink: #ffffff; --accent-soft: rgba(10,122,107,.12); --warn: #8a5300; --block: #b42318; --review: #6d4bd8;
   --field: #ffffff;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #0b1220; --panel: #121b2e; --line: #22304d; --text: #e6edf7; --muted: #8a9bb8;
-    --accent: #2dd4bf; --accent-soft: rgba(45,212,191,.14); --warn: #f5b041; --block: #f87171; --review: #a78bfa;
+    --accent: #2dd4bf; --accent-ink: #0b1220; --accent-soft: rgba(45,212,191,.14); --warn: #f5b041; --block: #f87171; --review: #a78bfa;
     --field: #0e1626;
   }
 }
@@ -46,7 +46,7 @@ input:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px
 .langs { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: -8px 0 18px; font-size: 14px; color: var(--muted); }
 .langs label { display: inline-flex; align-items: center; gap: 5px; margin: 0; font-weight: 500; color: var(--text); cursor: pointer; }
 .langs input { width: auto; accent-color: var(--accent); }
-.modes button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.modes button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 .samples { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
 .samples button { font-size: 13px; }
 .hint { color: var(--muted); font-size: 13px; margin: 6px 0 0; }

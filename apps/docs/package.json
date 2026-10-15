@@ -1,0 +1,17 @@
+{
+  "name": "@safetype/docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync": "node scripts/sync-readmes.mjs",
+    "dev": "node scripts/sync-readmes.mjs && vitepress dev",
+    "build": "node scripts/sync-readmes.mjs && vitepress build",
+    "preview": "vitepress preview",
+    "e2e": "pnpm build && playwright test"
+  },
+  "devDependencies": {
+    "vitepress": "1.6.4",
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.49.1"
+  }
+}

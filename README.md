@@ -29,7 +29,7 @@ engine.moderate("What the fuck are you doing?").text;
 // "What the f*ck are you doing?"
 ```
 
-**[Try it live in the playground →](https://karammm.github.io/safetype/)**
+**[Try it live in the playground →](https://karammm.github.io/safetype/)** · **[Read the docs →](https://karammm.github.io/safetype/docs/)**
 
 ## Install
 
@@ -120,7 +120,7 @@ See the [`@safetype/ai` docs](packages/ai/README.md).
 | Package                  | Status | Description                                                   |
 | ------------------------ | ------ | ------------------------------------------------------------- |
 | `@safetype/core`         | ✅     | Moderation engine: normalize → match → classify → policy → transform |
-| `@safetype/dictionaries` | ✅     | Language packs (`en`) and the pack format                     |
+| `@safetype/dictionaries` | ✅     | Language packs (en, hi-Latn, hi, es, fr, de, pt) and the pack format |
 | `@safetype/shared`       | ✅     | Public TypeScript contracts                                   |
 | `@safetype/dom`          | ✅     | Auto-attach to inputs, textareas, contenteditable             |
 | `@safetype/react`        | ✅     | Components and hooks                                          |
@@ -244,8 +244,10 @@ pnpm install
 pnpm build
 pnpm typecheck
 pnpm test
-pnpm e2e        # real-browser tests (run `pnpm --filter @safetype/dom exec playwright install` once)
+pnpm e2e        # real-browser tests, accessibility audits (run `pnpm --filter @safetype/dom exec playwright install` once)
 pnpm bench
+pnpm --filter @safetype/docs dev   # documentation site on localhost
+pnpm check:licenses
 ```
 
 ## Roadmap
@@ -262,9 +264,22 @@ pnpm bench
 | **1.7.0** | `@safetype/adapters`: Quill, Lexical, CodeMirror, Monaco, ProseMirror ✅ |
 | **1.8.0** | `@safetype/ai`: contextual providers and server middleware ✅ |
 | **1.9.0** | Language packs: es, fr, de, pt, hi (Devanagari) ✅ |
-| 1.10.0 | Docs site, accessibility, and security hardening |
+| **1.10.0** | [Docs site](https://karammm.github.io/safetype/docs/), accessibility audits, fuzzing, memory-leak and performance tests ✅ |
 
 Full details and the per-release checklist are in [ROADMAP.md](ROADMAP.md).
+
+## Quality
+
+Every push runs, in CI:
+
+- unit tests on Node 18–24 and Python 3.9–3.13, with JS↔Python parity on 2,000+ recorded results
+- real-browser tests in Chromium, Firefox and WebKit for every package, example and editor adapter
+- [axe-core accessibility audits](https://karammm.github.io/safetype/docs/guide/accessibility) of the playground
+  and every docs page, in light and dark mode
+- [fuzzing and adversarial-input tests](https://karammm.github.io/safetype/docs/guide/security) (linear time, no
+  ReDoS) and [performance budgets](https://karammm.github.io/safetype/docs/guide/performance)
+- memory-leak tests that check destroyed instances and editors are garbage-collected
+- licence and vulnerability checks on everything users install
 
 ## Limitations
 

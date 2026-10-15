@@ -137,6 +137,13 @@ describe("Devanagari", () => {
     expect(engine.mask(once)).toBe(once);
   });
 
+  it("never masks only a trailing leet digit (found by fuzzing)", () => {
+    // "0" reads as the vowel "o"; masking just it gave "चूतिया*", which the next pass treated as emphasis.
+    const once = engine.moderate("चूतिया0").text;
+    expect(once).toBe("चू**0");
+    expect(engine.moderate(once).text).toBe(once);
+  });
+
   it("maps offsets back to the original text", () => {
     const text = "अरे चूतिया!";
     const [match] = engine.moderate(text).matches;

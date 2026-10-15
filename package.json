@@ -17,7 +17,8 @@
     "e2e": "turbo run e2e",
     "check:dist": "node scripts/check-dist.mjs",
     "release:npm": "turbo run build --filter=./packages/* && node scripts/publish-npm.mjs",
-    "sync:python": "node scripts/export-dictionaries.mjs && node scripts/generate-parity.mjs"
+    "sync:python": "node scripts/export-dictionaries.mjs && node scripts/generate-parity.mjs",
+    "check:licenses": "node scripts/check-licenses.mjs"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.11",

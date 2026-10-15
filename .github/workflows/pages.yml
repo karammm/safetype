@@ -1,4 +1,4 @@
-name: Playground
+name: Pages
 
 on:
   push:
@@ -29,9 +29,15 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
+      # One site: the playground at /safetype/ and the documentation at /safetype/docs/.
+      - name: Assemble the site
+        run: |
+          mkdir -p site
+          cp -R apps/playground/dist/. site/
+          cp -R apps/docs/.vitepress/dist site/docs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: apps/playground/dist
+          path: site
       - id: deployment
         uses: actions/deploy-pages@v4

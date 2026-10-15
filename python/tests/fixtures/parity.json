@@ -2452,6 +2452,32 @@
    }
   },
   {
+   "config": "default",
+   "input": "चूतिया0",
+   "expected": {
+    "text": "चूतिया0",
+    "suggestedText": "चूतिया0",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0",
+    "matches": []
+   }
+  },
+  {
+   "config": "default",
+   "input": "चूतिया0@ चूतियाo",
+   "expected": {
+    "text": "चूतिया0@ चूतियाo",
+    "suggestedText": "चूतिया0@ चूतियाo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0@ चूतियाo",
+    "matches": []
+   }
+  },
+  {
    "config": "suggest",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -4788,6 +4814,32 @@
    }
   },
   {
+   "config": "suggest",
+   "input": "चूतिया0",
+   "expected": {
+    "text": "चूतिया0",
+    "suggestedText": "चूतिया0",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0",
+    "matches": []
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "चूतिया0@ चूतियाo",
+   "expected": {
+    "text": "चूतिया0@ चूतियाo",
+    "suggestedText": "चूतिया0@ चूतियाo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0@ चूतियाo",
+    "matches": []
+   }
+  },
+  {
    "config": "warn",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -7124,6 +7176,32 @@
    }
   },
   {
+   "config": "warn",
+   "input": "चूतिया0",
+   "expected": {
+    "text": "चूतिया0",
+    "suggestedText": "चूतिया0",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0",
+    "matches": []
+   }
+  },
+  {
+   "config": "warn",
+   "input": "चूतिया0@ चूतियाo",
+   "expected": {
+    "text": "चूतिया0@ चूतियाo",
+    "suggestedText": "चूतिया0@ चूतियाo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0@ चूतियाo",
+    "matches": []
+   }
+  },
+  {
    "config": "block",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -9457,6 +9535,32 @@
       "label": null
      }
     ]
+   }
+  },
+  {
+   "config": "block",
+   "input": "चूतिया0",
+   "expected": {
+    "text": "चूतिया0",
+    "suggestedText": "चूतिया0",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0",
+    "matches": []
+   }
+  },
+  {
+   "config": "block",
+   "input": "चूतिया0@ चूतियाo",
+   "expected": {
+    "text": "चूतिया0@ चूतियाo",
+    "suggestedText": "चूतिया0@ चूतियाo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0@ चूतियाo",
+    "matches": []
    }
   },
   {
@@ -11793,6 +11897,32 @@
       "label": null
      }
     ]
+   }
+  },
+  {
+   "config": "allow",
+   "input": "चूतिया0",
+   "expected": {
+    "text": "चूतिया0",
+    "suggestedText": "चूतिया0",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0",
+    "matches": []
+   }
+  },
+  {
+   "config": "allow",
+   "input": "चूतिया0@ चूतियाo",
+   "expected": {
+    "text": "चूतिया0@ चूतियाo",
+    "suggestedText": "चूतिया0@ चूतियाo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0@ चूतियाo",
+    "matches": []
    }
   },
   {
@@ -14148,6 +14278,32 @@
    }
   },
   {
+   "config": "strict-low",
+   "input": "चूतिया0",
+   "expected": {
+    "text": "चूतिया0",
+    "suggestedText": "चूतिया0",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0",
+    "matches": []
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "चूतिया0@ चूतियाo",
+   "expected": {
+    "text": "चूतिया0@ चूतियाo",
+    "suggestedText": "चूतिया0@ चूतियाo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0@ चूतियाo",
+    "matches": []
+   }
+  },
+  {
    "config": "harassment-block",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -16481,6 +16637,32 @@
       "label": null
      }
     ]
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "चूतिया0",
+   "expected": {
+    "text": "चूतिया0",
+    "suggestedText": "चूतिया0",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0",
+    "matches": []
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "चूतिया0@ चूतियाo",
+   "expected": {
+    "text": "चूतिया0@ चूतियाo",
+    "suggestedText": "चूतिया0@ चूतियाo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0@ चूतियाo",
+    "matches": []
    }
   },
   {
@@ -18820,6 +19002,32 @@
    }
   },
   {
+   "config": "partial",
+   "input": "चूतिया0",
+   "expected": {
+    "text": "चूतिया0",
+    "suggestedText": "चूतिया0",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0",
+    "matches": []
+   }
+  },
+  {
+   "config": "partial",
+   "input": "चूतिया0@ चूतियाo",
+   "expected": {
+    "text": "चूतिया0@ चूतियाo",
+    "suggestedText": "चूतिया0@ चूतियाo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0@ चूतियाo",
+    "matches": []
+   }
+  },
+  {
    "config": "full-hash",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -21153,6 +21361,32 @@
       "label": null
      }
     ]
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "चूतिया0",
+   "expected": {
+    "text": "चूतिया0",
+    "suggestedText": "चूतिया0",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0",
+    "matches": []
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "चूतिया0@ चूतियाo",
+   "expected": {
+    "text": "चूतिया0@ चूतियाo",
+    "suggestedText": "चूतिया0@ चूतियाo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0@ चूतियाo",
+    "matches": []
    }
   },
   {
@@ -23538,6 +23772,32 @@
    }
   },
   {
+   "config": "custom",
+   "input": "चूतिया0",
+   "expected": {
+    "text": "चूतिया0",
+    "suggestedText": "चूतिया0",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0",
+    "matches": []
+   }
+  },
+  {
+   "config": "custom",
+   "input": "चूतिया0@ चूतियाo",
+   "expected": {
+    "text": "चूतिया0@ चूतियाo",
+    "suggestedText": "चूतिया0@ चूतियाo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0@ चूतियाo",
+    "matches": []
+   }
+  },
+  {
    "config": "categories",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -25057,6 +25317,32 @@
     "allowed": true,
     "requiresReview": false,
     "masked": "c h u t i y a चूतिया",
+    "matches": []
+   }
+  },
+  {
+   "config": "categories",
+   "input": "चूतिया0",
+   "expected": {
+    "text": "चूतिया0",
+    "suggestedText": "चूतिया0",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0",
+    "matches": []
+   }
+  },
+  {
+   "config": "categories",
+   "input": "चूतिया0@ चूतियाo",
+   "expected": {
+    "text": "चूतिया0@ चूतियाo",
+    "suggestedText": "चूतिया0@ चूतियाo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0@ चूतियाo",
     "matches": []
    }
   },
@@ -27333,6 +27619,32 @@
    }
   },
   {
+   "config": "no-spaced",
+   "input": "चूतिया0",
+   "expected": {
+    "text": "चूतिया0",
+    "suggestedText": "चूतिया0",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0",
+    "matches": []
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "चूतिया0@ चूतियाo",
+   "expected": {
+    "text": "चूतिया0@ चूतियाo",
+    "suggestedText": "चूतिया0@ चूतियाo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0@ चूतियाo",
+    "matches": []
+   }
+  },
+  {
    "config": "english-only",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -29313,6 +29625,32 @@
    }
   },
   {
+   "config": "english-only",
+   "input": "चूतिया0",
+   "expected": {
+    "text": "चूतिया0",
+    "suggestedText": "चूतिया0",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "चूतिया0@ चूतियाo",
+   "expected": {
+    "text": "चूतिया0@ चूतियाo",
+    "suggestedText": "चूतिया0@ चूतियाo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0@ चूतियाo",
+    "matches": []
+   }
+  },
+  {
    "config": "hinglish-only",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -30904,6 +31242,32 @@
    }
   },
   {
+   "config": "hinglish-only",
+   "input": "चूतिया0",
+   "expected": {
+    "text": "चूतिया0",
+    "suggestedText": "चूतिया0",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0",
+    "matches": []
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "चूतिया0@ चूतियाo",
+   "expected": {
+    "text": "चूतिया0@ चूतियाo",
+    "suggestedText": "चूतिया0@ चूतियाo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0@ चूतियाo",
+    "matches": []
+   }
+  },
+  {
    "config": "spanish",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -32214,6 +32578,32 @@
     "allowed": true,
     "requiresReview": false,
     "masked": "c h u t i y a चूतिया",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "चूतिया0",
+   "expected": {
+    "text": "चूतिया0",
+    "suggestedText": "चूतिया0",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "चूतिया0@ चूतियाo",
+   "expected": {
+    "text": "चूतिया0@ चूतियाo",
+    "suggestedText": "चूतिया0@ चूतियाo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0@ चूतियाo",
     "matches": []
    }
   },
@@ -33531,6 +33921,32 @@
    }
   },
   {
+   "config": "french",
+   "input": "चूतिया0",
+   "expected": {
+    "text": "चूतिया0",
+    "suggestedText": "चूतिया0",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0",
+    "matches": []
+   }
+  },
+  {
+   "config": "french",
+   "input": "चूतिया0@ चूतियाo",
+   "expected": {
+    "text": "चूतिया0@ चूतियाo",
+    "suggestedText": "चूतिया0@ चूतियाo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0@ चूतियाo",
+    "matches": []
+   }
+  },
+  {
    "config": "german",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -34844,6 +35260,32 @@
    }
   },
   {
+   "config": "german",
+   "input": "चूतिया0",
+   "expected": {
+    "text": "चूतिया0",
+    "suggestedText": "चूतिया0",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0",
+    "matches": []
+   }
+  },
+  {
+   "config": "german",
+   "input": "चूतिया0@ चूतियाo",
+   "expected": {
+    "text": "चूतिया0@ चूतियाo",
+    "suggestedText": "चूतिया0@ चूतियाo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0@ चूतियाo",
+    "matches": []
+   }
+  },
+  {
    "config": "portuguese",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -36122,6 +36564,32 @@
     "allowed": true,
     "requiresReview": false,
     "masked": "c h u t i y a चूतिया",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "चूतिया0",
+   "expected": {
+    "text": "चूतिया0",
+    "suggestedText": "चूतिया0",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "चूतिया0@ चूतियाo",
+   "expected": {
+    "text": "चूतिया0@ चूतियाo",
+    "suggestedText": "चूतिया0@ चूतियाo",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया0@ चूतियाo",
     "matches": []
    }
   },
@@ -37826,6 +38294,79 @@
    }
   },
   {
+   "config": "hindi",
+   "input": "चूतिया0",
+   "expected": {
+    "text": "चू**0",
+    "suggestedText": "चू**0",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चू**0",
+    "matches": [
+     {
+      "start": 0,
+      "end": 7,
+      "text": "चूतिया0",
+      "ruleId": "hi.profanity.chutiya",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "चूतिया0@ चूतियाo",
+   "expected": {
+    "text": "चूतिया** चू**o",
+    "suggestedText": "चूतिया** चू**o",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया** चू**o",
+    "matches": [
+     {
+      "start": 0,
+      "end": 8,
+      "text": "चूतिया0@",
+      "ruleId": "hi.profanity.chutiya",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     },
+     {
+      "start": 9,
+      "end": 16,
+      "text": "चूतियाo",
+      "ruleId": "hi.profanity.chutiya",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
+   }
+  },
+  {
    "config": "hindi-full",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -39157,6 +39698,79 @@
       "start": 14,
       "end": 20,
       "text": "चूतिया",
+      "ruleId": "hi.profanity.chutiya",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "चूतिया0",
+   "expected": {
+    "text": "****",
+    "suggestedText": "****",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "****",
+    "matches": [
+     {
+      "start": 0,
+      "end": 7,
+      "text": "चूतिया0",
+      "ruleId": "hi.profanity.chutiya",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "चूतिया0@ चूतियाo",
+   "expected": {
+    "text": "***** ****",
+    "suggestedText": "***** ****",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "***** ****",
+    "matches": [
+     {
+      "start": 0,
+      "end": 8,
+      "text": "चूतिया0@",
+      "ruleId": "hi.profanity.chutiya",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     },
+     {
+      "start": 9,
+      "end": 16,
+      "text": "चूतियाo",
       "ruleId": "hi.profanity.chutiya",
       "category": "profanity",
       "severity": "high",
@@ -41884,6 +42498,79 @@
       "start": 14,
       "end": 20,
       "text": "चूतिया",
+      "ruleId": "hi.profanity.chutiya",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "चूतिया0",
+   "expected": {
+    "text": "चू**0",
+    "suggestedText": "चू**0",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चू**0",
+    "matches": [
+     {
+      "start": 0,
+      "end": 7,
+      "text": "चूतिया0",
+      "ruleId": "hi.profanity.chutiya",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     }
+    ]
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "चूतिया0@ चूतियाo",
+   "expected": {
+    "text": "चूतिया** चू**o",
+    "suggestedText": "चूतिया** चू**o",
+    "action": "mask",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "चूतिया** चू**o",
+    "matches": [
+     {
+      "start": 0,
+      "end": 8,
+      "text": "चूतिया0@",
+      "ruleId": "hi.profanity.chutiya",
+      "category": "profanity",
+      "severity": "high",
+      "action": "mask",
+      "confidence": 1,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": null
+     },
+     {
+      "start": 9,
+      "end": 16,
+      "text": "चूतियाo",
       "ruleId": "hi.profanity.chutiya",
       "category": "profanity",
       "severity": "high",

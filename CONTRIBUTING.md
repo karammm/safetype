@@ -26,6 +26,12 @@ pnpm build && pnpm test
 - Prefer prefix wildcards (`word*`) only when no common innocent word shares the prefix,
   or add the innocent words to the pack's `allowList`.
 
+### Documentation
+
+The site lives in `apps/docs` (VitePress). Guide pages are in `apps/docs/guide`, and the package pages are
+generated from each package's `README.md`, so edit the README. Run `pnpm --filter @safetype/docs dev` to preview,
+and keep outputs shown in the docs in sync with `packages/core/test/docs-examples.test.ts`.
+
 ### Adding a language
 
 Native speakers are the best reviewers. Corrections to existing packs are as welcome as new ones.

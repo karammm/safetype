@@ -2,6 +2,41 @@
 
 All `@safetype/*` packages share one version number.
 
+## 1.10.0
+
+### Documentation site
+
+- **https://karammm.github.io/safetype/docs/**: getting started, how moderation works, the engine API, languages,
+  custom rules, server-side enforcement, accessibility, performance, security, FAQ and the support policy
+- Package reference pages are generated from the package READMEs, so the site always matches what's published.
+  The examples shown are checked by tests
+
+### Fixes
+
+- **Masking:** a word whose only maskable character was a trailing leet digit (e.g. "चूतिया0") was masked twice
+  across passes. Vowel masking now falls back to partial masking unless it masks something before the last
+  character. Found by the new fuzzing tests. Fixed in JavaScript and Python
+- **Playground:** three colour-contrast failures (links and the selected mode button) now meet WCAG AA
+
+### Quality and hardening (CI)
+
+- Fuzzing: about 9,000 random inputs (JS) and 3,000 (Python) per run, checking the engine never throws, offsets stay
+  valid and masking is idempotent
+- Adversarial inputs at two sizes must scale linearly (no ReDoS), and performance budgets cover 100 KB documents,
+  1,000 messages and per-keystroke re-checks
+- Memory-leak tests (Chromium): destroyed `createSafeType` instances, removed fields and destroyed editors are
+  garbage-collected, and `stop()`/`destroy()` remove every listener
+- axe-core accessibility audits (WCAG 2.2 A/AA) of the playground and every docs page, in light and dark mode, in
+  Chromium, Firefox and WebKit, plus phone-width checks
+- Licence check (permissive only) and `pnpm audit` on production dependencies
+- Example and dev dependency: Vue 3.5.13 → 3.5.43 (fixes GHSA-g2v6-rqmx-r4w6 in `@vue/server-renderer`; not part of
+  any published package)
+
+### Community
+
+- Issue forms (missed word or false positive, bug, language, feature), a PR template, `SUPPORT.md`, and supported
+  versions in `SECURITY.md`
+
 ## 1.9.0
 
 ### Language packs (`@safetype/dictionaries`)

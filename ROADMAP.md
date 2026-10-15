@@ -106,11 +106,11 @@ New package: `@safetype/ai`
 - False-positive test suites per pack, shared with the Python port
 - A contribution guide for new languages; native-speaker review is invited through issues and PRs
 
-## v1.10.0: Docs, hardening, and stability
+## v1.10.0: Docs, hardening, and stability ✅
 
-- Documentation site (VitePress) on GitHub Pages
-- Accessibility audit, memory-leak tests, large-document performance budgets
-- Security review (ReDoS fuzzing, dependency licence audit)
+- Documentation site (VitePress) at https://karammm.github.io/safetype/docs/, with package pages generated from the READMEs
+- axe-core accessibility audits (playground and docs), memory-leak tests, performance budgets
+- Fuzzing and adversarial-input tests (JS and Python), dependency licence and vulnerability checks in CI
 - Issue templates, PR template, and a public support policy
 
 ---

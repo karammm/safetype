@@ -43,16 +43,20 @@ def mask_text(text: str, style: MaskStyle = "vowels", mask_char: str = "*") -> s
             out[i] = mask_char
         return "".join(out)
     if style == "vowels":
-        masked = 0
+        # Something before the last character must be masked: a lone trailing mask reads as emphasis
+        # ("word*") on the next pass, so the word would be matched and masked again.
+        interior = 0
         for i in positions:
             if i == first:
                 continue
             n = normalize_char(units[i][0])
             if LEET.get(n, n) in _VOWELS:
                 out[i] = mask_char
-                masked += 1
-        if masked:
+                if i != last:
+                    interior += 1
+        if interior:
             return "".join(out)
+        out = units[:]
     for i in positions:
         if i == first or (i == last and len(positions) > 2):
             continue
