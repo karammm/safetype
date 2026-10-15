@@ -11,7 +11,20 @@
     "angular",
     "directive",
     "forms",
-    "validator"
+    "validator",
+    "profanity-filter",
+    "bad-words",
+    "swear-words",
+    "censor",
+    "content-moderation",
+    "hate-speech",
+    "harassment",
+    "toxicity",
+    "chat",
+    "hinglish",
+    "hindi",
+    "multilingual",
+    "typescript"
   ],
   "scripts": {
     "build": "ng-packagr -p ng-package.json -c tsconfig.lib.json && node scripts/finalize-dist.mjs",

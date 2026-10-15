@@ -39,5 +39,22 @@
   },
   "engines": {
     "node": ">=18"
-  }
+  },
+  "keywords": [
+    "profanity",
+    "profanity-filter",
+    "bad-words",
+    "swear-words",
+    "censor",
+    "moderation",
+    "content-moderation",
+    "hate-speech",
+    "harassment",
+    "toxicity",
+    "chat",
+    "hinglish",
+    "hindi",
+    "multilingual",
+    "typescript"
+  ]
 }

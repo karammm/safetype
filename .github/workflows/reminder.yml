@@ -1,0 +1,54 @@
+name: Release reminder
+
+# Every 10 days (the 1st, 11th and 21st of each month), open an issue reminding the maintainer to ship a
+# minor update. GitHub notifies the assignee by email and in the app.
+on:
+  schedule:
+    - cron: "0 4 1,11,21 * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Only print the issue, don't open it"
+        type: boolean
+        default: true
+
+permissions:
+  issues: write
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Open the reminder issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          DRY_RUN: ${{ inputs.dry_run || 'false' }}
+        run: |
+          latest=$(gh release view --json tagName --jq .tagName 2>/dev/null || echo "none")
+          since=$(gh release view --json publishedAt --jq '.publishedAt[0:10]' 2>/dev/null || echo "?")
+          open=$(gh issue list --state open --json number --jq length)
+          title="Release reminder: time for a minor update ($(date -u +%Y-%m-%d))"
+          body=$(cat <<EOF
+          It's been about 10 days. Time to plan the next **minor** release.
+
+          - Latest SafeType release: **$latest** (published $since)
+          - Open issues: **$open**: https://github.com/$GH_REPO/issues
+
+          ### Checklist
+          - [ ] Triage new issues, discussions and native-speaker reviews
+          - [ ] Pick the next item from [ROADMAP.md](https://github.com/$GH_REPO/blob/main/ROADMAP.md)
+          - [ ] Update dependencies (\`pnpm outdated\`) and check \`pnpm audit --prod\`
+          - [ ] Bump the version, update CHANGELOG.md, push, wait for CI, then tag \`vX.Y.0\` (npm and PyPI publish automatically)
+          - [ ] Also check [openmoderate](https://github.com/karammm/openmoderate-image-moderation/releases) (its patch routine runs on its own)
+          - [ ] Share the release: X/LinkedIn post, Discussions announcement, dev.to/Reddit if it is a big one
+
+          Close this issue once the release is out.
+          EOF
+          )
+          if [ "$DRY_RUN" = "true" ]; then
+            printf '%s\n\n%s\n' "$title" "$body"
+          else
+            gh issue create --title "$title" --body "$body" --assignee "${{ github.repository_owner }}" --label "release reminder" \
+              || gh issue create --title "$title" --body "$body" --assignee "${{ github.repository_owner }}"
+          fi

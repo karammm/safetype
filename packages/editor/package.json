@@ -30,7 +30,20 @@
     "rich-text",
     "tiptap",
     "prosemirror",
-    "wysiwyg"
+    "wysiwyg",
+    "profanity-filter",
+    "bad-words",
+    "swear-words",
+    "censor",
+    "content-moderation",
+    "hate-speech",
+    "harassment",
+    "toxicity",
+    "chat",
+    "hinglish",
+    "hindi",
+    "multilingual",
+    "typescript"
   ],
   "scripts": {
     "build": "tsup && node ../../scripts/escape-non-ascii.mjs dist/safetype-editor.global.js",
