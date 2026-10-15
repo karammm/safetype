@@ -189,7 +189,8 @@ describe("moderation service", () => {
 async function listen(app: express.Express): Promise<string> {
   const server = app.listen(0);
   await new Promise((resolve) => server.once("listening", resolve));
-  closers.push(() => new Promise<void>((resolve) => server.close(() => resolve())));
+  // Node 18's close() waits for idle keep-alive sockets to time out; close them explicitly.
+  closers.push(() => new Promise<void>((resolve) => { server.close(() => resolve()); server.closeAllConnections(); }));
   return `http://127.0.0.1:${(server.address() as AddressInfo).port}`;
 }
 
@@ -240,7 +241,9 @@ describe("Express", () => {
   });
 });
 
-describe("Fastify", () => {
+// Fastify 5 requires Node 20+ (its test injector fails to load on Node 18). @safetype/ai itself does not
+// depend on Fastify, so the plugin is verified on the Node versions Fastify supports.
+describe.skipIf(Number(process.versions.node.split(".")[0]) < 20)("Fastify", () => {
   it("registers the classify route and guards routes", async () => {
     const service = createModerationService({ policy: { harassment: { action: "block" } } });
     const app = Fastify();

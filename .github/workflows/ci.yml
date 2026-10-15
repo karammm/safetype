@@ -13,6 +13,7 @@ jobs:
     name: packages (node ${{ matrix.node }})
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         node: [18, 20, 22, 24]
     steps:
@@ -30,6 +31,7 @@ jobs:
     name: python (${{ matrix.python }})
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         python: ["3.9", "3.10", "3.11", "3.12", "3.13"]
     defaults:
