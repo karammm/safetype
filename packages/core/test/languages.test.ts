@@ -37,10 +37,12 @@ const CASES: Record<(typeof LANGUAGES)[number], { flagged: string[]; clean: stri
     flagged: [
       "Scheiße!", "Scheisse", "du Arschloch", "Du bist so ein Idiot", "Hurensohn", "Verpiss dich", "bring dich um",
       "Häng dich auf", "Ich bringe dich um", "Arschlöcher", "niemand mag dich", "Ausländer sollten alle vergast werden",
+      "Oaschloch", "du Gschissener", "Huerebueb", "du blöde Kuh", "du Affe", "Sie sind ein Esel", "so a Beidl",
     ],
     clean: [
       "Ihr Hund ist süß", "Häng dich rein, du schaffst das!", "Der Mist am Morgen", "Das ist schlampig gemacht",
       "Sie sind sehr nett", "a fickle friend",
+      "Das isch huere guet", "Die Kuh steht auf der Weide", "Der Affe im Zoo", "Wir nutzen Mongo als Datenbank",
     ],
   },
   pt: {

@@ -6,8 +6,13 @@ import type { DictionaryPack, ModerationRule } from "@safetype/shared";
  * "ß" matches "ss" and umlauts match their plain vowel ("Scheiße" = "Scheisse", "Arschlöcher" =
  * "Arschlocher"); the "ae/oe/ue" spellings are listed explicitly. Left out because they are
  * ordinary words: "Mist" (also English), "schlampig" (sloppy), "Zigeuner" (in historical names),
- * and a bare "fick*" prefix (English "fickle"). "Hund", "Schwein" and "Opfer" are only insults in
- * direct address ("du Opfer"), which the harassment rules cover.
+ * and a bare "fick*" prefix (English "fickle"). Animal words ("Hund", "Schwein", "Kuh", "Affe")
+ * and "Opfer" are only insults in direct address ("du Opfer"), which the harassment rules cover.
+ *
+ * Austria and Switzerland: "Oaschloch", "Gschissener", "Beidl", "Huerebueb" and "Hueresiech" are
+ * included. A bare Swiss "huere" is not: it is also an intensifier ("huere guet", really good).
+ * "Spast" and "Mongo" are harassment when aimed at someone, like "retard" in English; a bare
+ * "Mongo" is also MongoDB.
  */
 
 const profanity: ModerationRule[] = [
@@ -34,6 +39,10 @@ const profanity: ModerationRule[] = [
   { id: "de.profanity.verpiss", pattern: "verpiss*", category: "profanity", severity: "high" },
   { id: "de.profanity.leck-mich", pattern: "leck mich", category: "profanity", severity: "medium" },
   { id: "de.profanity.kacke", pattern: "(kacke|kack|kacken|kackbratze*|kackscheiss*)", category: "profanity", severity: "medium" },
+  { id: "de.profanity.oasch", pattern: "(oasch|oaschloch*|oaschgeige*|oaschkriecher*)", category: "profanity", severity: "high" },
+  { id: "de.profanity.gschissen", pattern: "(gschissen*|gschissana|gschissane)", category: "profanity", severity: "medium" },
+  { id: "de.profanity.beidl", pattern: "(beidl|beidln|beidlwappler*)", category: "profanity", severity: "medium" },
+  { id: "de.profanity.huere", pattern: "(huerebueb*|huerechaib*|hueresiech*|huereseich|huerefotze*)", category: "profanity", severity: "high" },
   { id: "de.profanity.pisser", pattern: "(pisser|pissnelke*)", category: "profanity", severity: "medium" },
   {
     id: "de.profanity.dreck",
@@ -68,10 +77,10 @@ const hate: ModerationRule[] = [
 ];
 
 const insults =
-  "(idiot*|vollidiot*|depp*|trottel*|arschloch*|wichser*|dumm|dummkopf*|blod|bloed|behindert*|spast*|mongo|missgeburt*|versager*|loser*|penner*|hurensohn*|witzfigur*|lappen|opfer|abschaum|mull|muell|nichtsnutz*|hackfresse*|schwachkopf*|schwachmat*|pisser|bastard*|hund|schwein|sau|schlampe|fotze|hure|spasti)";
+  "(idiot*|vollidiot*|depp*|trottel*|arschloch*|wichser*|dumm|dummkopf*|blod|bloed|behindert*|spast*|mongo|missgeburt*|versager*|loser*|penner*|hurensohn*|witzfigur*|lappen|opfer|abschaum|mull|muell|nichtsnutz*|hackfresse*|schwachkopf*|schwachmat*|pisser|bastard*|hund|schwein|sau|kuh|ziege|affe|esel|ratte|made|wappler|oaschloch*|gschissener|spacko|spacken|schlampe|fotze|hure|spasti)";
 
 const degree =
-  "(so|echt|total|voll|wirklich|einfach)? (ein|eine|einer|n)? (verdammter|verdammte|verdammtes|dummer|dumme|dummes|kleiner|kleine|kleines|elender|elendes|scheiss)?";
+  "(so|echt|total|voll|wirklich|einfach)? (ein|eine|einer|n)? (verdammter|verdammte|verdammtes|dummer|dumme|dummes|blode|bloede|bloder|bloeder|blodes|bloedes|alte|alter|altes|kleiner|kleine|kleines|elender|elendes|scheiss)?";
 
 const harassment: ModerationRule[] = [
   {
