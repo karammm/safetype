@@ -115,6 +115,54 @@
       "label": "insult"
     },
     {
+      "id": "hi-latn.harassment.home-invasion",
+      "pattern": "(ghar|gher) (me|mein|main|mai|mei|pe|par|tak)? (ghus|ghuske|ghuskar|ghusk|aake|aakar|aa|aake|aaunga|aunga) (ke|kar|k)? (chod*|maar*|mar*|kaat*|kat*|thok*|peet*|pit*|tod*|jala*|uthwa*|khatam|khatm|phod*)",
+      "category": "harassment",
+      "severity": "high",
+      "confidence": 0.85,
+      "label": "threat"
+    },
+    {
+      "id": "hi-latn.harassment.threat",
+      "pattern": "(tujhe|tereko|tujhko|tumhe|tumko|tuje|tujko|tereko|aapko) (jaan)? (se)? (maar|mar|kaat|thok|peet|tod|jala|khatam|khatm|uthwa|gaad) (kar)? (dunga|daalunga|dalunga|denge|dalenge|daalenge|dungi|doonga|lunga|lenge)",
+      "category": "harassment",
+      "severity": "high",
+      "confidence": 0.8,
+      "label": "threat"
+    },
+    {
+      "id": "hi-latn.harassment.threat-short",
+      "pattern": "(tujhe|tereko|tujhko|tumhe|tumko|tuje|tujko|tereko|aapko) (maarunga|marunga|maarenge|marenge|kaatunga|katunga|thokunga|peetunga|pitunga|todunga|chodunga|chodenge|chodega|jalaunga|phodunga)",
+      "category": "harassment",
+      "severity": "high",
+      "confidence": 0.8,
+      "label": "threat"
+    },
+    {
+      "id": "hi-latn.harassment.wont-spare",
+      "pattern": "(tujhe|tereko|tujhko|tumhe|tumko|tuje|tujko|tereko|aapko) (to|toh)? (nahi|nhi|nai|nahin) (chhodunga|chodunga|chhodenge|chodenge|chhodungi|bakshunga|bakhshunga|bachega|bachegi)",
+      "category": "harassment",
+      "severity": "high",
+      "confidence": 0.75,
+      "label": "threat"
+    },
+    {
+      "id": "hi-latn.harassment.abusive-address",
+      "pattern": "(abe|abey|oye|oi|oyee) (saale|saala|saali|sale|kutte|kamine|kamini|harami)",
+      "category": "harassment",
+      "severity": "medium",
+      "confidence": 0.75,
+      "label": "insult"
+    },
+    {
+      "id": "hi-latn.harassment.saale-insult",
+      "pattern": "(saale|saala|saali|sale) (kutte|kutta|kutti|kamine|kamina|harami|chutiye|chutiya|gandu|bhadwe|lodu|suar|suwar|haramkhor|ullu)",
+      "category": "harassment",
+      "severity": "medium",
+      "confidence": 0.8,
+      "label": "insult"
+    },
+    {
       "id": "hi-latn.harassment.gaali",
       "pattern": "(bhosd*|bhosad*|bhosid*|bhosri*|lodu|lodoo|loduchand|lodus|harami|haraami|haramkhor*|haraamkhor*|haramzad*|haraamzad*|haramjad*)",
       "category": "harassment",

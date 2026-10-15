@@ -30,6 +30,8 @@ const texts = [
   "porn", "watching porn tonight", "send nudes", "send me your nudes pls", "show me nude pics", "the sex of the patient",
   "Essex and unisex", "a nude painting", "the word \"porn\"", "bhosada", "abe lodu harami", "nangi photo bhej",
   "पोर्न", "नंगी फोटो भेज", "हरामी", "dick pics", "seggs",
+  "ghar me ghus ke chodunga saale", "tujhe jaan se maar daalunga", "tujhe nahi chhodunga", "abe saale",
+  "kal main ghar chodunga", "mere saale ki shaadi hai", "घर में घुस के मारूंगा", "मेरे साले की शादी है",
 ];
 
 const configs = [

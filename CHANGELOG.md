@@ -2,6 +2,19 @@
 
 All `@safetype/*` packages share one version number.
 
+## 1.12.0
+
+### Hinglish and Hindi threats
+
+- Threats are now warned about (`harassment`, label `threat`), in romanized Hinglish and Devanagari:
+  - breaking into someone's home: "ghar me ghus ke chodunga", "ghar aake maarunga", "घर में घुस के मारूंगा"
+  - direct threats: "tujhe maar dunga", "tujhe jaan se maar daalunga", "tereko khatam kar dunga", "tujhe chodunga"
+  - "tujhe nahi chhodunga" (I won't spare you), "तुझे नहीं छोड़ूंगा"
+- Abusive address is warned about: "abe saale", "saale kutte", "oye kamine", "अबे साले"
+- No new false positives: "kal main ghar chodunga" (I'll leave home), "mere saale ki shaadi hai" (brother-in-law),
+  "ghar me ghus ke dekha" and "tujhe ghar chhod dunga" stay clean, and are covered by tests
+- Python port updated (parity cases include the new sentences)
+
 ## 1.11.0
 
 ### New: `sexual` category

@@ -184,6 +184,53 @@ const harassment: ModerationRule[] = [
   },
 ];
 
+// Threats and abusive address, as in the Hinglish pack. A bare "साले" (brother-in-law) is fine.
+const threats: ModerationRule[] = [
+  {
+    // "ghar mein ghus ke maarunga" (breaking into your home)
+    id: "hi.harassment.home-invasion",
+    pattern: "घर (में|मे|पे|पर|तक)? (घुस|घुसके|घुसकर|आके|आकर|आ) (के|कर)? (मार*|चोद*|काट*|तोड़*|तोड*|पीट*|जला*|उठवा*|फोड़*)",
+    category: "harassment",
+    severity: "high",
+    confidence: 0.85,
+    label: "threat",
+  },
+  {
+    // "tujhe maarunga", "tujhe chodunga"
+    id: "hi.harassment.threat-short",
+    pattern: "(तुझे|तुम्हें|तुम्हे|तुमको|तुझको|तेरे) (मारूंगा|मारुंगा|काटूंगा|पीटूंगा|तोड़ूंगा|चोदूंगा|चोदुंगा|जलाऊंगा)",
+    category: "harassment",
+    severity: "high",
+    confidence: 0.8,
+    label: "threat",
+  },
+  {
+    // "tujhe nahin chhodunga" (I won't spare you)
+    id: "hi.harassment.wont-spare",
+    pattern: "(तुझे|तुम्हें|तुम्हे|तुमको|तुझको) (तो)? (नहीं|नही) (छोड़ूंगा|छोडूंगा|छोड़ेंगे|छोडेंगे|बख्शूंगा|बचेगा)",
+    category: "harassment",
+    severity: "high",
+    confidence: 0.75,
+    label: "threat",
+  },
+  {
+    id: "hi.harassment.abusive-address",
+    pattern: "(अबे|ओए|ओये) (साले|साला|साली|कुत्ते|कमीने|हरामी)",
+    category: "harassment",
+    severity: "medium",
+    confidence: 0.75,
+    label: "insult",
+  },
+  {
+    id: "hi.harassment.saale-insult",
+    pattern: "(साले|साला|साली) (कुत्ते|कुत्ता|कमीने|कमीना|हरामी|चूतिये|चूतिया|गांडू|भड़वे|सूअर|उल्लू)",
+    category: "harassment",
+    severity: "medium",
+    confidence: 0.8,
+    label: "insult",
+  },
+];
+
 // Gaali aimed at a person is masked as profanity AND warned about as an insult, as in the Hinglish pack.
 const gaali: ModerationRule[] = [
   {
@@ -211,7 +258,7 @@ const sexual: ModerationRule[] = [
 export const hi: DictionaryPack = {
   language: "hi",
   boundary: "word",
-  rules: [...profanity, ...hate, ...harassment, ...gaali, ...sexual],
+  rules: [...profanity, ...hate, ...harassment, ...threats, ...gaali, ...sexual],
   allowList: [],
 };
 

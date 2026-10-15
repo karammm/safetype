@@ -3071,6 +3071,174 @@
    }
   },
   {
+   "config": "default",
+   "input": "ghar me ghus ke chodunga saale",
+   "expected": {
+    "text": "ghar me ghus ke chodunga saale",
+    "suggestedText": "ghar me ghus ke chodunga saale",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "ghar me ghus ke chodunga saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 24,
+      "text": "ghar me ghus ke chodunga",
+      "ruleId": "hi-latn.harassment.home-invasion",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.85,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "default",
+   "input": "tujhe jaan se maar daalunga",
+   "expected": {
+    "text": "tujhe jaan se maar daalunga",
+    "suggestedText": "tujhe jaan se maar daalunga",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe jaan se maar daalunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 27,
+      "text": "tujhe jaan se maar daalunga",
+      "ruleId": "hi-latn.harassment.threat",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "default",
+   "input": "tujhe nahi chhodunga",
+   "expected": {
+    "text": "tujhe nahi chhodunga",
+    "suggestedText": "tujhe nahi chhodunga",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe nahi chhodunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 20,
+      "text": "tujhe nahi chhodunga",
+      "ruleId": "hi-latn.harassment.wont-spare",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "default",
+   "input": "abe saale",
+   "expected": {
+    "text": "abe saale",
+    "suggestedText": "abe saale",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "abe saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 9,
+      "text": "abe saale",
+      "ruleId": "hi-latn.harassment.abusive-address",
+      "category": "harassment",
+      "severity": "medium",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "default",
+   "input": "kal main ghar chodunga",
+   "expected": {
+    "text": "kal main ghar chodunga",
+    "suggestedText": "kal main ghar chodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kal main ghar chodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "default",
+   "input": "mere saale ki shaadi hai",
+   "expected": {
+    "text": "mere saale ki shaadi hai",
+    "suggestedText": "mere saale ki shaadi hai",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "mere saale ki shaadi hai",
+    "matches": []
+   }
+  },
+  {
+   "config": "default",
+   "input": "घर में घुस के मारूंगा",
+   "expected": {
+    "text": "घर में घुस के मारूंगा",
+    "suggestedText": "घर में घुस के मारूंगा",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "घर में घुस के मारूंगा",
+    "matches": []
+   }
+  },
+  {
+   "config": "default",
+   "input": "मेरे साले की शादी है",
+   "expected": {
+    "text": "मेरे साले की शादी है",
+    "suggestedText": "मेरे साले की शादी है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "मेरे साले की शादी है",
+    "matches": []
+   }
+  },
+  {
    "config": "suggest",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -6011,6 +6179,174 @@
    }
   },
   {
+   "config": "suggest",
+   "input": "ghar me ghus ke chodunga saale",
+   "expected": {
+    "text": "ghar me ghus ke chodunga saale",
+    "suggestedText": "gh*r m* gh*s k* ch*d*ng* saale",
+    "action": "suggest",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "ghar me ghus ke chodunga saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 24,
+      "text": "ghar me ghus ke chodunga",
+      "ruleId": "hi-latn.harassment.home-invasion",
+      "category": "harassment",
+      "severity": "high",
+      "action": "suggest",
+      "confidence": 0.85,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": "gh*r m* gh*s k* ch*d*ng*",
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "tujhe jaan se maar daalunga",
+   "expected": {
+    "text": "tujhe jaan se maar daalunga",
+    "suggestedText": "t*jh* j**n s* m**r d**l*ng*",
+    "action": "suggest",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe jaan se maar daalunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 27,
+      "text": "tujhe jaan se maar daalunga",
+      "ruleId": "hi-latn.harassment.threat",
+      "category": "harassment",
+      "severity": "high",
+      "action": "suggest",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": "t*jh* j**n s* m**r d**l*ng*",
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "tujhe nahi chhodunga",
+   "expected": {
+    "text": "tujhe nahi chhodunga",
+    "suggestedText": "t*jh* n*h* chh*d*ng*",
+    "action": "suggest",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe nahi chhodunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 20,
+      "text": "tujhe nahi chhodunga",
+      "ruleId": "hi-latn.harassment.wont-spare",
+      "category": "harassment",
+      "severity": "high",
+      "action": "suggest",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": "t*jh* n*h* chh*d*ng*",
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "abe saale",
+   "expected": {
+    "text": "abe saale",
+    "suggestedText": "ab* s**l*",
+    "action": "suggest",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "abe saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 9,
+      "text": "abe saale",
+      "ruleId": "hi-latn.harassment.abusive-address",
+      "category": "harassment",
+      "severity": "medium",
+      "action": "suggest",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": true,
+      "requiresReview": false,
+      "suggestedReplacement": "ab* s**l*",
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "kal main ghar chodunga",
+   "expected": {
+    "text": "kal main ghar chodunga",
+    "suggestedText": "kal main ghar chodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kal main ghar chodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "mere saale ki shaadi hai",
+   "expected": {
+    "text": "mere saale ki shaadi hai",
+    "suggestedText": "mere saale ki shaadi hai",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "mere saale ki shaadi hai",
+    "matches": []
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "घर में घुस के मारूंगा",
+   "expected": {
+    "text": "घर में घुस के मारूंगा",
+    "suggestedText": "घर में घुस के मारूंगा",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "घर में घुस के मारूंगा",
+    "matches": []
+   }
+  },
+  {
+   "config": "suggest",
+   "input": "मेरे साले की शादी है",
+   "expected": {
+    "text": "मेरे साले की शादी है",
+    "suggestedText": "मेरे साले की शादी है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "मेरे साले की शादी है",
+    "matches": []
+   }
+  },
+  {
    "config": "warn",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -8951,6 +9287,174 @@
    }
   },
   {
+   "config": "warn",
+   "input": "ghar me ghus ke chodunga saale",
+   "expected": {
+    "text": "ghar me ghus ke chodunga saale",
+    "suggestedText": "ghar me ghus ke chodunga saale",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "ghar me ghus ke chodunga saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 24,
+      "text": "ghar me ghus ke chodunga",
+      "ruleId": "hi-latn.harassment.home-invasion",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.85,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "warn",
+   "input": "tujhe jaan se maar daalunga",
+   "expected": {
+    "text": "tujhe jaan se maar daalunga",
+    "suggestedText": "tujhe jaan se maar daalunga",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe jaan se maar daalunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 27,
+      "text": "tujhe jaan se maar daalunga",
+      "ruleId": "hi-latn.harassment.threat",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "warn",
+   "input": "tujhe nahi chhodunga",
+   "expected": {
+    "text": "tujhe nahi chhodunga",
+    "suggestedText": "tujhe nahi chhodunga",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe nahi chhodunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 20,
+      "text": "tujhe nahi chhodunga",
+      "ruleId": "hi-latn.harassment.wont-spare",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "warn",
+   "input": "abe saale",
+   "expected": {
+    "text": "abe saale",
+    "suggestedText": "abe saale",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "abe saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 9,
+      "text": "abe saale",
+      "ruleId": "hi-latn.harassment.abusive-address",
+      "category": "harassment",
+      "severity": "medium",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "warn",
+   "input": "kal main ghar chodunga",
+   "expected": {
+    "text": "kal main ghar chodunga",
+    "suggestedText": "kal main ghar chodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kal main ghar chodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "warn",
+   "input": "mere saale ki shaadi hai",
+   "expected": {
+    "text": "mere saale ki shaadi hai",
+    "suggestedText": "mere saale ki shaadi hai",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "mere saale ki shaadi hai",
+    "matches": []
+   }
+  },
+  {
+   "config": "warn",
+   "input": "घर में घुस के मारूंगा",
+   "expected": {
+    "text": "घर में घुस के मारूंगा",
+    "suggestedText": "घर में घुस के मारूंगा",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "घर में घुस के मारूंगा",
+    "matches": []
+   }
+  },
+  {
+   "config": "warn",
+   "input": "मेरे साले की शादी है",
+   "expected": {
+    "text": "मेरे साले की शादी है",
+    "suggestedText": "मेरे साले की शादी है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "मेरे साले की शादी है",
+    "matches": []
+   }
+  },
+  {
    "config": "block",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -11888,6 +12392,174 @@
       "label": "sexual-content"
      }
     ]
+   }
+  },
+  {
+   "config": "block",
+   "input": "ghar me ghus ke chodunga saale",
+   "expected": {
+    "text": "ghar me ghus ke chodunga saale",
+    "suggestedText": "ghar me ghus ke chodunga saale",
+    "action": "block",
+    "allowed": false,
+    "requiresReview": false,
+    "masked": "ghar me ghus ke chodunga saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 24,
+      "text": "ghar me ghus ke chodunga",
+      "ruleId": "hi-latn.harassment.home-invasion",
+      "category": "harassment",
+      "severity": "high",
+      "action": "block",
+      "confidence": 0.85,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "block",
+   "input": "tujhe jaan se maar daalunga",
+   "expected": {
+    "text": "tujhe jaan se maar daalunga",
+    "suggestedText": "tujhe jaan se maar daalunga",
+    "action": "block",
+    "allowed": false,
+    "requiresReview": false,
+    "masked": "tujhe jaan se maar daalunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 27,
+      "text": "tujhe jaan se maar daalunga",
+      "ruleId": "hi-latn.harassment.threat",
+      "category": "harassment",
+      "severity": "high",
+      "action": "block",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "block",
+   "input": "tujhe nahi chhodunga",
+   "expected": {
+    "text": "tujhe nahi chhodunga",
+    "suggestedText": "tujhe nahi chhodunga",
+    "action": "block",
+    "allowed": false,
+    "requiresReview": false,
+    "masked": "tujhe nahi chhodunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 20,
+      "text": "tujhe nahi chhodunga",
+      "ruleId": "hi-latn.harassment.wont-spare",
+      "category": "harassment",
+      "severity": "high",
+      "action": "block",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "block",
+   "input": "abe saale",
+   "expected": {
+    "text": "abe saale",
+    "suggestedText": "abe saale",
+    "action": "block",
+    "allowed": false,
+    "requiresReview": false,
+    "masked": "abe saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 9,
+      "text": "abe saale",
+      "ruleId": "hi-latn.harassment.abusive-address",
+      "category": "harassment",
+      "severity": "medium",
+      "action": "block",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "block",
+   "input": "kal main ghar chodunga",
+   "expected": {
+    "text": "kal main ghar chodunga",
+    "suggestedText": "kal main ghar chodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kal main ghar chodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "block",
+   "input": "mere saale ki shaadi hai",
+   "expected": {
+    "text": "mere saale ki shaadi hai",
+    "suggestedText": "mere saale ki shaadi hai",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "mere saale ki shaadi hai",
+    "matches": []
+   }
+  },
+  {
+   "config": "block",
+   "input": "घर में घुस के मारूंगा",
+   "expected": {
+    "text": "घर में घुस के मारूंगा",
+    "suggestedText": "घर में घुस के मारूंगा",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "घर में घुस के मारूंगा",
+    "matches": []
+   }
+  },
+  {
+   "config": "block",
+   "input": "मेरे साले की शादी है",
+   "expected": {
+    "text": "मेरे साले की शादी है",
+    "suggestedText": "मेरे साले की शादी है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "मेरे साले की शादी है",
+    "matches": []
    }
   },
   {
@@ -14828,6 +15500,174 @@
       "label": "sexual-content"
      }
     ]
+   }
+  },
+  {
+   "config": "allow",
+   "input": "ghar me ghus ke chodunga saale",
+   "expected": {
+    "text": "ghar me ghus ke chodunga saale",
+    "suggestedText": "ghar me ghus ke chodunga saale",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "ghar me ghus ke chodunga saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 24,
+      "text": "ghar me ghus ke chodunga",
+      "ruleId": "hi-latn.harassment.home-invasion",
+      "category": "harassment",
+      "severity": "high",
+      "action": "allow",
+      "confidence": 0.85,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "allow",
+   "input": "tujhe jaan se maar daalunga",
+   "expected": {
+    "text": "tujhe jaan se maar daalunga",
+    "suggestedText": "tujhe jaan se maar daalunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe jaan se maar daalunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 27,
+      "text": "tujhe jaan se maar daalunga",
+      "ruleId": "hi-latn.harassment.threat",
+      "category": "harassment",
+      "severity": "high",
+      "action": "allow",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "allow",
+   "input": "tujhe nahi chhodunga",
+   "expected": {
+    "text": "tujhe nahi chhodunga",
+    "suggestedText": "tujhe nahi chhodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe nahi chhodunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 20,
+      "text": "tujhe nahi chhodunga",
+      "ruleId": "hi-latn.harassment.wont-spare",
+      "category": "harassment",
+      "severity": "high",
+      "action": "allow",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "allow",
+   "input": "abe saale",
+   "expected": {
+    "text": "abe saale",
+    "suggestedText": "abe saale",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "abe saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 9,
+      "text": "abe saale",
+      "ruleId": "hi-latn.harassment.abusive-address",
+      "category": "harassment",
+      "severity": "medium",
+      "action": "allow",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "allow",
+   "input": "kal main ghar chodunga",
+   "expected": {
+    "text": "kal main ghar chodunga",
+    "suggestedText": "kal main ghar chodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kal main ghar chodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "allow",
+   "input": "mere saale ki shaadi hai",
+   "expected": {
+    "text": "mere saale ki shaadi hai",
+    "suggestedText": "mere saale ki shaadi hai",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "mere saale ki shaadi hai",
+    "matches": []
+   }
+  },
+  {
+   "config": "allow",
+   "input": "घर में घुस के मारूंगा",
+   "expected": {
+    "text": "घर में घुस के मारूंगा",
+    "suggestedText": "घर में घुस के मारूंगा",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "घर में घुस के मारूंगा",
+    "matches": []
+   }
+  },
+  {
+   "config": "allow",
+   "input": "मेरे साले की शादी है",
+   "expected": {
+    "text": "मेरे साले की शादी है",
+    "suggestedText": "मेरे साले की शादी है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "मेरे साले की शादी है",
+    "matches": []
    }
   },
   {
@@ -17787,6 +18627,174 @@
    }
   },
   {
+   "config": "strict-low",
+   "input": "ghar me ghus ke chodunga saale",
+   "expected": {
+    "text": "ghar me ghus ke chodunga saale",
+    "suggestedText": "ghar me ghus ke chodunga saale",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "ghar me ghus ke chodunga saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 24,
+      "text": "ghar me ghus ke chodunga",
+      "ruleId": "hi-latn.harassment.home-invasion",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.85,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "tujhe jaan se maar daalunga",
+   "expected": {
+    "text": "tujhe jaan se maar daalunga",
+    "suggestedText": "tujhe jaan se maar daalunga",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe jaan se maar daalunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 27,
+      "text": "tujhe jaan se maar daalunga",
+      "ruleId": "hi-latn.harassment.threat",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "tujhe nahi chhodunga",
+   "expected": {
+    "text": "tujhe nahi chhodunga",
+    "suggestedText": "tujhe nahi chhodunga",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe nahi chhodunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 20,
+      "text": "tujhe nahi chhodunga",
+      "ruleId": "hi-latn.harassment.wont-spare",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "abe saale",
+   "expected": {
+    "text": "abe saale",
+    "suggestedText": "abe saale",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "abe saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 9,
+      "text": "abe saale",
+      "ruleId": "hi-latn.harassment.abusive-address",
+      "category": "harassment",
+      "severity": "medium",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "kal main ghar chodunga",
+   "expected": {
+    "text": "kal main ghar chodunga",
+    "suggestedText": "kal main ghar chodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kal main ghar chodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "mere saale ki shaadi hai",
+   "expected": {
+    "text": "mere saale ki shaadi hai",
+    "suggestedText": "mere saale ki shaadi hai",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "mere saale ki shaadi hai",
+    "matches": []
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "घर में घुस के मारूंगा",
+   "expected": {
+    "text": "घर में घुस के मारूंगा",
+    "suggestedText": "घर में घुस के मारूंगा",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "घर में घुस के मारूंगा",
+    "matches": []
+   }
+  },
+  {
+   "config": "strict-low",
+   "input": "मेरे साले की शादी है",
+   "expected": {
+    "text": "मेरे साले की शादी है",
+    "suggestedText": "मेरे साले की शादी है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "मेरे साले की शादी है",
+    "matches": []
+   }
+  },
+  {
    "config": "harassment-block",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -20724,6 +21732,174 @@
       "label": "sexual-content"
      }
     ]
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "ghar me ghus ke chodunga saale",
+   "expected": {
+    "text": "ghar me ghus ke chodunga saale",
+    "suggestedText": "ghar me ghus ke chodunga saale",
+    "action": "block",
+    "allowed": false,
+    "requiresReview": false,
+    "masked": "ghar me ghus ke chodunga saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 24,
+      "text": "ghar me ghus ke chodunga",
+      "ruleId": "hi-latn.harassment.home-invasion",
+      "category": "harassment",
+      "severity": "high",
+      "action": "block",
+      "confidence": 0.85,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "tujhe jaan se maar daalunga",
+   "expected": {
+    "text": "tujhe jaan se maar daalunga",
+    "suggestedText": "tujhe jaan se maar daalunga",
+    "action": "block",
+    "allowed": false,
+    "requiresReview": false,
+    "masked": "tujhe jaan se maar daalunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 27,
+      "text": "tujhe jaan se maar daalunga",
+      "ruleId": "hi-latn.harassment.threat",
+      "category": "harassment",
+      "severity": "high",
+      "action": "block",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "tujhe nahi chhodunga",
+   "expected": {
+    "text": "tujhe nahi chhodunga",
+    "suggestedText": "tujhe nahi chhodunga",
+    "action": "block",
+    "allowed": false,
+    "requiresReview": false,
+    "masked": "tujhe nahi chhodunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 20,
+      "text": "tujhe nahi chhodunga",
+      "ruleId": "hi-latn.harassment.wont-spare",
+      "category": "harassment",
+      "severity": "high",
+      "action": "block",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "abe saale",
+   "expected": {
+    "text": "abe saale",
+    "suggestedText": "abe saale",
+    "action": "block",
+    "allowed": false,
+    "requiresReview": false,
+    "masked": "abe saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 9,
+      "text": "abe saale",
+      "ruleId": "hi-latn.harassment.abusive-address",
+      "category": "harassment",
+      "severity": "medium",
+      "action": "block",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "kal main ghar chodunga",
+   "expected": {
+    "text": "kal main ghar chodunga",
+    "suggestedText": "kal main ghar chodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kal main ghar chodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "mere saale ki shaadi hai",
+   "expected": {
+    "text": "mere saale ki shaadi hai",
+    "suggestedText": "mere saale ki shaadi hai",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "mere saale ki shaadi hai",
+    "matches": []
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "घर में घुस के मारूंगा",
+   "expected": {
+    "text": "घर में घुस के मारूंगा",
+    "suggestedText": "घर में घुस के मारूंगा",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "घर में घुस के मारूंगा",
+    "matches": []
+   }
+  },
+  {
+   "config": "harassment-block",
+   "input": "मेरे साले की शादी है",
+   "expected": {
+    "text": "मेरे साले की शादी है",
+    "suggestedText": "मेरे साले की शादी है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "मेरे साले की शादी है",
+    "matches": []
    }
   },
   {
@@ -23667,6 +24843,174 @@
    }
   },
   {
+   "config": "partial",
+   "input": "ghar me ghus ke chodunga saale",
+   "expected": {
+    "text": "ghar me ghus ke chodunga saale",
+    "suggestedText": "ghar me ghus ke chodunga saale",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "ghar me ghus ke chodunga saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 24,
+      "text": "ghar me ghus ke chodunga",
+      "ruleId": "hi-latn.harassment.home-invasion",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.85,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "partial",
+   "input": "tujhe jaan se maar daalunga",
+   "expected": {
+    "text": "tujhe jaan se maar daalunga",
+    "suggestedText": "tujhe jaan se maar daalunga",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe jaan se maar daalunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 27,
+      "text": "tujhe jaan se maar daalunga",
+      "ruleId": "hi-latn.harassment.threat",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "partial",
+   "input": "tujhe nahi chhodunga",
+   "expected": {
+    "text": "tujhe nahi chhodunga",
+    "suggestedText": "tujhe nahi chhodunga",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe nahi chhodunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 20,
+      "text": "tujhe nahi chhodunga",
+      "ruleId": "hi-latn.harassment.wont-spare",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "partial",
+   "input": "abe saale",
+   "expected": {
+    "text": "abe saale",
+    "suggestedText": "abe saale",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "abe saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 9,
+      "text": "abe saale",
+      "ruleId": "hi-latn.harassment.abusive-address",
+      "category": "harassment",
+      "severity": "medium",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "partial",
+   "input": "kal main ghar chodunga",
+   "expected": {
+    "text": "kal main ghar chodunga",
+    "suggestedText": "kal main ghar chodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kal main ghar chodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "partial",
+   "input": "mere saale ki shaadi hai",
+   "expected": {
+    "text": "mere saale ki shaadi hai",
+    "suggestedText": "mere saale ki shaadi hai",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "mere saale ki shaadi hai",
+    "matches": []
+   }
+  },
+  {
+   "config": "partial",
+   "input": "घर में घुस के मारूंगा",
+   "expected": {
+    "text": "घर में घुस के मारूंगा",
+    "suggestedText": "घर में घुस के मारूंगा",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "घर में घुस के मारूंगा",
+    "matches": []
+   }
+  },
+  {
+   "config": "partial",
+   "input": "मेरे साले की शादी है",
+   "expected": {
+    "text": "मेरे साले की शादी है",
+    "suggestedText": "मेरे साले की शादी है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "मेरे साले की शादी है",
+    "matches": []
+   }
+  },
+  {
    "config": "full-hash",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -26604,6 +27948,174 @@
       "label": "sexual-content"
      }
     ]
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "ghar me ghus ke chodunga saale",
+   "expected": {
+    "text": "ghar me ghus ke chodunga saale",
+    "suggestedText": "ghar me ghus ke chodunga saale",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "ghar me ghus ke chodunga saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 24,
+      "text": "ghar me ghus ke chodunga",
+      "ruleId": "hi-latn.harassment.home-invasion",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.85,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "tujhe jaan se maar daalunga",
+   "expected": {
+    "text": "tujhe jaan se maar daalunga",
+    "suggestedText": "tujhe jaan se maar daalunga",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe jaan se maar daalunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 27,
+      "text": "tujhe jaan se maar daalunga",
+      "ruleId": "hi-latn.harassment.threat",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "tujhe nahi chhodunga",
+   "expected": {
+    "text": "tujhe nahi chhodunga",
+    "suggestedText": "tujhe nahi chhodunga",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe nahi chhodunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 20,
+      "text": "tujhe nahi chhodunga",
+      "ruleId": "hi-latn.harassment.wont-spare",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "abe saale",
+   "expected": {
+    "text": "abe saale",
+    "suggestedText": "abe saale",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "abe saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 9,
+      "text": "abe saale",
+      "ruleId": "hi-latn.harassment.abusive-address",
+      "category": "harassment",
+      "severity": "medium",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "kal main ghar chodunga",
+   "expected": {
+    "text": "kal main ghar chodunga",
+    "suggestedText": "kal main ghar chodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kal main ghar chodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "mere saale ki shaadi hai",
+   "expected": {
+    "text": "mere saale ki shaadi hai",
+    "suggestedText": "mere saale ki shaadi hai",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "mere saale ki shaadi hai",
+    "matches": []
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "घर में घुस के मारूंगा",
+   "expected": {
+    "text": "घर में घुस के मारूंगा",
+    "suggestedText": "घर में घुस के मारूंगा",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "घर में घुस के मारूंगा",
+    "matches": []
+   }
+  },
+  {
+   "config": "full-hash",
+   "input": "मेरे साले की शादी है",
+   "expected": {
+    "text": "मेरे साले की शादी है",
+    "suggestedText": "मेरे साले की शादी है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "मेरे साले की शादी है",
+    "matches": []
    }
   },
   {
@@ -29593,6 +31105,174 @@
    }
   },
   {
+   "config": "custom",
+   "input": "ghar me ghus ke chodunga saale",
+   "expected": {
+    "text": "ghar me ghus ke chodunga saale",
+    "suggestedText": "ghar me ghus ke chodunga saale",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "ghar me ghus ke chodunga saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 24,
+      "text": "ghar me ghus ke chodunga",
+      "ruleId": "hi-latn.harassment.home-invasion",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.85,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "custom",
+   "input": "tujhe jaan se maar daalunga",
+   "expected": {
+    "text": "tujhe jaan se maar daalunga",
+    "suggestedText": "tujhe jaan se maar daalunga",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe jaan se maar daalunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 27,
+      "text": "tujhe jaan se maar daalunga",
+      "ruleId": "hi-latn.harassment.threat",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "custom",
+   "input": "tujhe nahi chhodunga",
+   "expected": {
+    "text": "tujhe nahi chhodunga",
+    "suggestedText": "tujhe nahi chhodunga",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe nahi chhodunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 20,
+      "text": "tujhe nahi chhodunga",
+      "ruleId": "hi-latn.harassment.wont-spare",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "custom",
+   "input": "abe saale",
+   "expected": {
+    "text": "abe saale",
+    "suggestedText": "abe saale",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "abe saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 9,
+      "text": "abe saale",
+      "ruleId": "hi-latn.harassment.abusive-address",
+      "category": "harassment",
+      "severity": "medium",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "custom",
+   "input": "kal main ghar chodunga",
+   "expected": {
+    "text": "kal main ghar chodunga",
+    "suggestedText": "kal main ghar chodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kal main ghar chodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "custom",
+   "input": "mere saale ki shaadi hai",
+   "expected": {
+    "text": "mere saale ki shaadi hai",
+    "suggestedText": "mere saale ki shaadi hai",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "mere saale ki shaadi hai",
+    "matches": []
+   }
+  },
+  {
+   "config": "custom",
+   "input": "घर में घुस के मारूंगा",
+   "expected": {
+    "text": "घर में घुस के मारूंगा",
+    "suggestedText": "घर में घुस के मारूंगा",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "घर में घुस के मारूंगा",
+    "matches": []
+   }
+  },
+  {
+   "config": "custom",
+   "input": "मेरे साले की शादी है",
+   "expected": {
+    "text": "मेरे साले की शादी है",
+    "suggestedText": "मेरे साले की शादी है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "मेरे साले की शादी है",
+    "matches": []
+   }
+  },
+  {
    "config": "categories",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -31483,6 +33163,174 @@
     "allowed": true,
     "requiresReview": false,
     "masked": "seggs",
+    "matches": []
+   }
+  },
+  {
+   "config": "categories",
+   "input": "ghar me ghus ke chodunga saale",
+   "expected": {
+    "text": "ghar me ghus ke chodunga saale",
+    "suggestedText": "ghar me ghus ke chodunga saale",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "ghar me ghus ke chodunga saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 24,
+      "text": "ghar me ghus ke chodunga",
+      "ruleId": "hi-latn.harassment.home-invasion",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.85,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "categories",
+   "input": "tujhe jaan se maar daalunga",
+   "expected": {
+    "text": "tujhe jaan se maar daalunga",
+    "suggestedText": "tujhe jaan se maar daalunga",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe jaan se maar daalunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 27,
+      "text": "tujhe jaan se maar daalunga",
+      "ruleId": "hi-latn.harassment.threat",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "categories",
+   "input": "tujhe nahi chhodunga",
+   "expected": {
+    "text": "tujhe nahi chhodunga",
+    "suggestedText": "tujhe nahi chhodunga",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe nahi chhodunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 20,
+      "text": "tujhe nahi chhodunga",
+      "ruleId": "hi-latn.harassment.wont-spare",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "categories",
+   "input": "abe saale",
+   "expected": {
+    "text": "abe saale",
+    "suggestedText": "abe saale",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "abe saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 9,
+      "text": "abe saale",
+      "ruleId": "hi-latn.harassment.abusive-address",
+      "category": "harassment",
+      "severity": "medium",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "categories",
+   "input": "kal main ghar chodunga",
+   "expected": {
+    "text": "kal main ghar chodunga",
+    "suggestedText": "kal main ghar chodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kal main ghar chodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "categories",
+   "input": "mere saale ki shaadi hai",
+   "expected": {
+    "text": "mere saale ki shaadi hai",
+    "suggestedText": "mere saale ki shaadi hai",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "mere saale ki shaadi hai",
+    "matches": []
+   }
+  },
+  {
+   "config": "categories",
+   "input": "घर में घुस के मारूंगा",
+   "expected": {
+    "text": "घर में घुस के मारूंगा",
+    "suggestedText": "घर में घुस के मारूंगा",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "घर में घुस के मारूंगा",
+    "matches": []
+   }
+  },
+  {
+   "config": "categories",
+   "input": "मेरे साले की शादी है",
+   "expected": {
+    "text": "मेरे साले की शादी है",
+    "suggestedText": "मेरे साले की शादी है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "मेरे साले की शादी है",
     "matches": []
    }
   },
@@ -34363,6 +36211,174 @@
    }
   },
   {
+   "config": "no-spaced",
+   "input": "ghar me ghus ke chodunga saale",
+   "expected": {
+    "text": "ghar me ghus ke chodunga saale",
+    "suggestedText": "ghar me ghus ke chodunga saale",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "ghar me ghus ke chodunga saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 24,
+      "text": "ghar me ghus ke chodunga",
+      "ruleId": "hi-latn.harassment.home-invasion",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.85,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "tujhe jaan se maar daalunga",
+   "expected": {
+    "text": "tujhe jaan se maar daalunga",
+    "suggestedText": "tujhe jaan se maar daalunga",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe jaan se maar daalunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 27,
+      "text": "tujhe jaan se maar daalunga",
+      "ruleId": "hi-latn.harassment.threat",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "tujhe nahi chhodunga",
+   "expected": {
+    "text": "tujhe nahi chhodunga",
+    "suggestedText": "tujhe nahi chhodunga",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe nahi chhodunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 20,
+      "text": "tujhe nahi chhodunga",
+      "ruleId": "hi-latn.harassment.wont-spare",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "abe saale",
+   "expected": {
+    "text": "abe saale",
+    "suggestedText": "abe saale",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "abe saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 9,
+      "text": "abe saale",
+      "ruleId": "hi-latn.harassment.abusive-address",
+      "category": "harassment",
+      "severity": "medium",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "kal main ghar chodunga",
+   "expected": {
+    "text": "kal main ghar chodunga",
+    "suggestedText": "kal main ghar chodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kal main ghar chodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "mere saale ki shaadi hai",
+   "expected": {
+    "text": "mere saale ki shaadi hai",
+    "suggestedText": "mere saale ki shaadi hai",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "mere saale ki shaadi hai",
+    "matches": []
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "घर में घुस के मारूंगा",
+   "expected": {
+    "text": "घर में घुस के मारूंगा",
+    "suggestedText": "घर में घुस के मारूंगा",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "घर में घुस के मारूंगा",
+    "matches": []
+   }
+  },
+  {
+   "config": "no-spaced",
+   "input": "मेरे साले की शादी है",
+   "expected": {
+    "text": "मेरे साले की शादी है",
+    "suggestedText": "मेरे साले की शादी है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "मेरे साले की शादी है",
+    "matches": []
+   }
+  },
+  {
    "config": "english-only",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -36764,6 +38780,110 @@
    }
   },
   {
+   "config": "english-only",
+   "input": "ghar me ghus ke chodunga saale",
+   "expected": {
+    "text": "ghar me ghus ke chodunga saale",
+    "suggestedText": "ghar me ghus ke chodunga saale",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "ghar me ghus ke chodunga saale",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "tujhe jaan se maar daalunga",
+   "expected": {
+    "text": "tujhe jaan se maar daalunga",
+    "suggestedText": "tujhe jaan se maar daalunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe jaan se maar daalunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "tujhe nahi chhodunga",
+   "expected": {
+    "text": "tujhe nahi chhodunga",
+    "suggestedText": "tujhe nahi chhodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe nahi chhodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "abe saale",
+   "expected": {
+    "text": "abe saale",
+    "suggestedText": "abe saale",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "abe saale",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "kal main ghar chodunga",
+   "expected": {
+    "text": "kal main ghar chodunga",
+    "suggestedText": "kal main ghar chodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kal main ghar chodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "mere saale ki shaadi hai",
+   "expected": {
+    "text": "mere saale ki shaadi hai",
+    "suggestedText": "mere saale ki shaadi hai",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "mere saale ki shaadi hai",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "घर में घुस के मारूंगा",
+   "expected": {
+    "text": "घर में घुस के मारूंगा",
+    "suggestedText": "घर में घुस के मारूंगा",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "घर में घुस के मारूंगा",
+    "matches": []
+   }
+  },
+  {
+   "config": "english-only",
+   "input": "मेरे साले की शादी है",
+   "expected": {
+    "text": "मेरे साले की शादी है",
+    "suggestedText": "मेरे साले की शादी है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "मेरे साले की शादी है",
+    "matches": []
+   }
+  },
+  {
    "config": "hinglish-only",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -38785,6 +40905,174 @@
    }
   },
   {
+   "config": "hinglish-only",
+   "input": "ghar me ghus ke chodunga saale",
+   "expected": {
+    "text": "ghar me ghus ke chodunga saale",
+    "suggestedText": "ghar me ghus ke chodunga saale",
+    "action": "block",
+    "allowed": false,
+    "requiresReview": false,
+    "masked": "ghar me ghus ke chodunga saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 24,
+      "text": "ghar me ghus ke chodunga",
+      "ruleId": "hi-latn.harassment.home-invasion",
+      "category": "harassment",
+      "severity": "high",
+      "action": "block",
+      "confidence": 0.85,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "tujhe jaan se maar daalunga",
+   "expected": {
+    "text": "tujhe jaan se maar daalunga",
+    "suggestedText": "tujhe jaan se maar daalunga",
+    "action": "block",
+    "allowed": false,
+    "requiresReview": false,
+    "masked": "tujhe jaan se maar daalunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 27,
+      "text": "tujhe jaan se maar daalunga",
+      "ruleId": "hi-latn.harassment.threat",
+      "category": "harassment",
+      "severity": "high",
+      "action": "block",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "tujhe nahi chhodunga",
+   "expected": {
+    "text": "tujhe nahi chhodunga",
+    "suggestedText": "tujhe nahi chhodunga",
+    "action": "block",
+    "allowed": false,
+    "requiresReview": false,
+    "masked": "tujhe nahi chhodunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 20,
+      "text": "tujhe nahi chhodunga",
+      "ruleId": "hi-latn.harassment.wont-spare",
+      "category": "harassment",
+      "severity": "high",
+      "action": "block",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "abe saale",
+   "expected": {
+    "text": "abe saale",
+    "suggestedText": "abe saale",
+    "action": "block",
+    "allowed": false,
+    "requiresReview": false,
+    "masked": "abe saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 9,
+      "text": "abe saale",
+      "ruleId": "hi-latn.harassment.abusive-address",
+      "category": "harassment",
+      "severity": "medium",
+      "action": "block",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "kal main ghar chodunga",
+   "expected": {
+    "text": "kal main ghar chodunga",
+    "suggestedText": "kal main ghar chodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kal main ghar chodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "mere saale ki shaadi hai",
+   "expected": {
+    "text": "mere saale ki shaadi hai",
+    "suggestedText": "mere saale ki shaadi hai",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "mere saale ki shaadi hai",
+    "matches": []
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "घर में घुस के मारूंगा",
+   "expected": {
+    "text": "घर में घुस के मारूंगा",
+    "suggestedText": "घर में घुस के मारूंगा",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "घर में घुस के मारूंगा",
+    "matches": []
+   }
+  },
+  {
+   "config": "hinglish-only",
+   "input": "मेरे साले की शादी है",
+   "expected": {
+    "text": "मेरे साले की शादी है",
+    "suggestedText": "मेरे साले की शादी है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "मेरे साले की शादी है",
+    "matches": []
+   }
+  },
+  {
    "config": "spanish",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -40342,6 +42630,110 @@
     "allowed": true,
     "requiresReview": false,
     "masked": "seggs",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "ghar me ghus ke chodunga saale",
+   "expected": {
+    "text": "ghar me ghus ke chodunga saale",
+    "suggestedText": "ghar me ghus ke chodunga saale",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "ghar me ghus ke chodunga saale",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "tujhe jaan se maar daalunga",
+   "expected": {
+    "text": "tujhe jaan se maar daalunga",
+    "suggestedText": "tujhe jaan se maar daalunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe jaan se maar daalunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "tujhe nahi chhodunga",
+   "expected": {
+    "text": "tujhe nahi chhodunga",
+    "suggestedText": "tujhe nahi chhodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe nahi chhodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "abe saale",
+   "expected": {
+    "text": "abe saale",
+    "suggestedText": "abe saale",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "abe saale",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "kal main ghar chodunga",
+   "expected": {
+    "text": "kal main ghar chodunga",
+    "suggestedText": "kal main ghar chodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kal main ghar chodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "mere saale ki shaadi hai",
+   "expected": {
+    "text": "mere saale ki shaadi hai",
+    "suggestedText": "mere saale ki shaadi hai",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "mere saale ki shaadi hai",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "घर में घुस के मारूंगा",
+   "expected": {
+    "text": "घर में घुस के मारूंगा",
+    "suggestedText": "घर में घुस के मारूंगा",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "घर में घुस के मारूंगा",
+    "matches": []
+   }
+  },
+  {
+   "config": "spanish",
+   "input": "मेरे साले की शादी है",
+   "expected": {
+    "text": "मेरे साले की शादी है",
+    "suggestedText": "मेरे साले की शादी है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "मेरे साले की शादी है",
     "matches": []
    }
   },
@@ -41906,6 +44298,110 @@
    }
   },
   {
+   "config": "french",
+   "input": "ghar me ghus ke chodunga saale",
+   "expected": {
+    "text": "ghar me ghus ke chodunga saale",
+    "suggestedText": "ghar me ghus ke chodunga saale",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "ghar me ghus ke chodunga saale",
+    "matches": []
+   }
+  },
+  {
+   "config": "french",
+   "input": "tujhe jaan se maar daalunga",
+   "expected": {
+    "text": "tujhe jaan se maar daalunga",
+    "suggestedText": "tujhe jaan se maar daalunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe jaan se maar daalunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "french",
+   "input": "tujhe nahi chhodunga",
+   "expected": {
+    "text": "tujhe nahi chhodunga",
+    "suggestedText": "tujhe nahi chhodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe nahi chhodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "french",
+   "input": "abe saale",
+   "expected": {
+    "text": "abe saale",
+    "suggestedText": "abe saale",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "abe saale",
+    "matches": []
+   }
+  },
+  {
+   "config": "french",
+   "input": "kal main ghar chodunga",
+   "expected": {
+    "text": "kal main ghar chodunga",
+    "suggestedText": "kal main ghar chodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kal main ghar chodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "french",
+   "input": "mere saale ki shaadi hai",
+   "expected": {
+    "text": "mere saale ki shaadi hai",
+    "suggestedText": "mere saale ki shaadi hai",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "mere saale ki shaadi hai",
+    "matches": []
+   }
+  },
+  {
+   "config": "french",
+   "input": "घर में घुस के मारूंगा",
+   "expected": {
+    "text": "घर में घुस के मारूंगा",
+    "suggestedText": "घर में घुस के मारूंगा",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "घर में घुस के मारूंगा",
+    "matches": []
+   }
+  },
+  {
+   "config": "french",
+   "input": "मेरे साले की शादी है",
+   "expected": {
+    "text": "मेरे साले की शादी है",
+    "suggestedText": "मेरे साले की शादी है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "मेरे साले की शादी है",
+    "matches": []
+   }
+  },
+  {
    "config": "german",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -43466,6 +45962,110 @@
    }
   },
   {
+   "config": "german",
+   "input": "ghar me ghus ke chodunga saale",
+   "expected": {
+    "text": "ghar me ghus ke chodunga saale",
+    "suggestedText": "ghar me ghus ke chodunga saale",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "ghar me ghus ke chodunga saale",
+    "matches": []
+   }
+  },
+  {
+   "config": "german",
+   "input": "tujhe jaan se maar daalunga",
+   "expected": {
+    "text": "tujhe jaan se maar daalunga",
+    "suggestedText": "tujhe jaan se maar daalunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe jaan se maar daalunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "german",
+   "input": "tujhe nahi chhodunga",
+   "expected": {
+    "text": "tujhe nahi chhodunga",
+    "suggestedText": "tujhe nahi chhodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe nahi chhodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "german",
+   "input": "abe saale",
+   "expected": {
+    "text": "abe saale",
+    "suggestedText": "abe saale",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "abe saale",
+    "matches": []
+   }
+  },
+  {
+   "config": "german",
+   "input": "kal main ghar chodunga",
+   "expected": {
+    "text": "kal main ghar chodunga",
+    "suggestedText": "kal main ghar chodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kal main ghar chodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "german",
+   "input": "mere saale ki shaadi hai",
+   "expected": {
+    "text": "mere saale ki shaadi hai",
+    "suggestedText": "mere saale ki shaadi hai",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "mere saale ki shaadi hai",
+    "matches": []
+   }
+  },
+  {
+   "config": "german",
+   "input": "घर में घुस के मारूंगा",
+   "expected": {
+    "text": "घर में घुस के मारूंगा",
+    "suggestedText": "घर में घुस के मारूंगा",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "घर में घुस के मारूंगा",
+    "matches": []
+   }
+  },
+  {
+   "config": "german",
+   "input": "मेरे साले की शादी है",
+   "expected": {
+    "text": "मेरे साले की शादी है",
+    "suggestedText": "मेरे साले की शादी है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "मेरे साले की शादी है",
+    "matches": []
+   }
+  },
+  {
    "config": "portuguese",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -44991,6 +47591,110 @@
     "allowed": true,
     "requiresReview": false,
     "masked": "seggs",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "ghar me ghus ke chodunga saale",
+   "expected": {
+    "text": "ghar me ghus ke chodunga saale",
+    "suggestedText": "ghar me ghus ke chodunga saale",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "ghar me ghus ke chodunga saale",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "tujhe jaan se maar daalunga",
+   "expected": {
+    "text": "tujhe jaan se maar daalunga",
+    "suggestedText": "tujhe jaan se maar daalunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe jaan se maar daalunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "tujhe nahi chhodunga",
+   "expected": {
+    "text": "tujhe nahi chhodunga",
+    "suggestedText": "tujhe nahi chhodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe nahi chhodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "abe saale",
+   "expected": {
+    "text": "abe saale",
+    "suggestedText": "abe saale",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "abe saale",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "kal main ghar chodunga",
+   "expected": {
+    "text": "kal main ghar chodunga",
+    "suggestedText": "kal main ghar chodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kal main ghar chodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "mere saale ki shaadi hai",
+   "expected": {
+    "text": "mere saale ki shaadi hai",
+    "suggestedText": "mere saale ki shaadi hai",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "mere saale ki shaadi hai",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "घर में घुस के मारूंगा",
+   "expected": {
+    "text": "घर में घुस के मारूंगा",
+    "suggestedText": "घर में घुस के मारूंगा",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "घर में घुस के मारूंगा",
+    "matches": []
+   }
+  },
+  {
+   "config": "portuguese",
+   "input": "मेरे साले की शादी है",
+   "expected": {
+    "text": "मेरे साले की शादी है",
+    "suggestedText": "मेरे साले की शादी है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "मेरे साले की शादी है",
     "matches": []
    }
   },
@@ -47250,6 +49954,190 @@
    }
   },
   {
+   "config": "hindi",
+   "input": "ghar me ghus ke chodunga saale",
+   "expected": {
+    "text": "ghar me ghus ke chodunga saale",
+    "suggestedText": "ghar me ghus ke chodunga saale",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "ghar me ghus ke chodunga saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 24,
+      "text": "ghar me ghus ke chodunga",
+      "ruleId": "hi-latn.harassment.home-invasion",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.85,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "tujhe jaan se maar daalunga",
+   "expected": {
+    "text": "tujhe jaan se maar daalunga",
+    "suggestedText": "tujhe jaan se maar daalunga",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe jaan se maar daalunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 27,
+      "text": "tujhe jaan se maar daalunga",
+      "ruleId": "hi-latn.harassment.threat",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "tujhe nahi chhodunga",
+   "expected": {
+    "text": "tujhe nahi chhodunga",
+    "suggestedText": "tujhe nahi chhodunga",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe nahi chhodunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 20,
+      "text": "tujhe nahi chhodunga",
+      "ruleId": "hi-latn.harassment.wont-spare",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "abe saale",
+   "expected": {
+    "text": "abe saale",
+    "suggestedText": "abe saale",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "abe saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 9,
+      "text": "abe saale",
+      "ruleId": "hi-latn.harassment.abusive-address",
+      "category": "harassment",
+      "severity": "medium",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "kal main ghar chodunga",
+   "expected": {
+    "text": "kal main ghar chodunga",
+    "suggestedText": "kal main ghar chodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kal main ghar chodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "mere saale ki shaadi hai",
+   "expected": {
+    "text": "mere saale ki shaadi hai",
+    "suggestedText": "mere saale ki shaadi hai",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "mere saale ki shaadi hai",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "घर में घुस के मारूंगा",
+   "expected": {
+    "text": "घर में घुस के मारूंगा",
+    "suggestedText": "घर में घुस के मारूंगा",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "घर में घुस के मारूंगा",
+    "matches": [
+     {
+      "start": 0,
+      "end": 21,
+      "text": "घर में घुस के मारूंगा",
+      "ruleId": "hi.harassment.home-invasion",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.85,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "hindi",
+   "input": "मेरे साले की शादी है",
+   "expected": {
+    "text": "मेरे साले की शादी है",
+    "suggestedText": "मेरे साले की शादी है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "मेरे साले की शादी है",
+    "matches": []
+   }
+  },
+  {
    "config": "hindi-full",
    "input": "What the fuck are you doing?",
    "expected": {
@@ -48964,6 +51852,126 @@
     "allowed": true,
     "requiresReview": false,
     "masked": "seggs",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "ghar me ghus ke chodunga saale",
+   "expected": {
+    "text": "ghar me ghus ke chodunga saale",
+    "suggestedText": "ghar me ghus ke chodunga saale",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "ghar me ghus ke chodunga saale",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "tujhe jaan se maar daalunga",
+   "expected": {
+    "text": "tujhe jaan se maar daalunga",
+    "suggestedText": "tujhe jaan se maar daalunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe jaan se maar daalunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "tujhe nahi chhodunga",
+   "expected": {
+    "text": "tujhe nahi chhodunga",
+    "suggestedText": "tujhe nahi chhodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe nahi chhodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "abe saale",
+   "expected": {
+    "text": "abe saale",
+    "suggestedText": "abe saale",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "abe saale",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "kal main ghar chodunga",
+   "expected": {
+    "text": "kal main ghar chodunga",
+    "suggestedText": "kal main ghar chodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kal main ghar chodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "mere saale ki shaadi hai",
+   "expected": {
+    "text": "mere saale ki shaadi hai",
+    "suggestedText": "mere saale ki shaadi hai",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "mere saale ki shaadi hai",
+    "matches": []
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "घर में घुस के मारूंगा",
+   "expected": {
+    "text": "घर में घुस के मारूंगा",
+    "suggestedText": "घर में घुस के मारूंगा",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "घर में घुस के मारूंगा",
+    "matches": [
+     {
+      "start": 0,
+      "end": 21,
+      "text": "घर में घुस के मारूंगा",
+      "ruleId": "hi.harassment.home-invasion",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.85,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "hindi-full",
+   "input": "मेरे साले की शादी है",
+   "expected": {
+    "text": "मेरे साले की शादी है",
+    "suggestedText": "मेरे साले की शादी है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "मेरे साले की शादी है",
     "matches": []
    }
   },
@@ -51905,6 +54913,174 @@
       "label": "sexual-content"
      }
     ]
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "ghar me ghus ke chodunga saale",
+   "expected": {
+    "text": "ghar me ghus ke chodunga saale",
+    "suggestedText": "ghar me ghus ke chodunga saale",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "ghar me ghus ke chodunga saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 24,
+      "text": "ghar me ghus ke chodunga",
+      "ruleId": "hi-latn.harassment.home-invasion",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.85,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "tujhe jaan se maar daalunga",
+   "expected": {
+    "text": "tujhe jaan se maar daalunga",
+    "suggestedText": "tujhe jaan se maar daalunga",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe jaan se maar daalunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 27,
+      "text": "tujhe jaan se maar daalunga",
+      "ruleId": "hi-latn.harassment.threat",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "tujhe nahi chhodunga",
+   "expected": {
+    "text": "tujhe nahi chhodunga",
+    "suggestedText": "tujhe nahi chhodunga",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe nahi chhodunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 20,
+      "text": "tujhe nahi chhodunga",
+      "ruleId": "hi-latn.harassment.wont-spare",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "abe saale",
+   "expected": {
+    "text": "abe saale",
+    "suggestedText": "abe saale",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "abe saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 9,
+      "text": "abe saale",
+      "ruleId": "hi-latn.harassment.abusive-address",
+      "category": "harassment",
+      "severity": "medium",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "kal main ghar chodunga",
+   "expected": {
+    "text": "kal main ghar chodunga",
+    "suggestedText": "kal main ghar chodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kal main ghar chodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "mere saale ki shaadi hai",
+   "expected": {
+    "text": "mere saale ki shaadi hai",
+    "suggestedText": "mere saale ki shaadi hai",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "mere saale ki shaadi hai",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "घर में घुस के मारूंगा",
+   "expected": {
+    "text": "घर में घुस के मारूंगा",
+    "suggestedText": "घर में घुस के मारूंगा",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "घर में घुस के मारूंगा",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-off",
+   "input": "मेरे साले की शादी है",
+   "expected": {
+    "text": "मेरे साले की शादी है",
+    "suggestedText": "मेरे साले की शादी है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "मेरे साले की शादी है",
+    "matches": []
    }
   },
   {
@@ -54845,6 +58021,174 @@
       "label": "sexual-content"
      }
     ]
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "ghar me ghus ke chodunga saale",
+   "expected": {
+    "text": "ghar me ghus ke chodunga saale",
+    "suggestedText": "ghar me ghus ke chodunga saale",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "ghar me ghus ke chodunga saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 24,
+      "text": "ghar me ghus ke chodunga",
+      "ruleId": "hi-latn.harassment.home-invasion",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.85,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "tujhe jaan se maar daalunga",
+   "expected": {
+    "text": "tujhe jaan se maar daalunga",
+    "suggestedText": "tujhe jaan se maar daalunga",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe jaan se maar daalunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 27,
+      "text": "tujhe jaan se maar daalunga",
+      "ruleId": "hi-latn.harassment.threat",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "tujhe nahi chhodunga",
+   "expected": {
+    "text": "tujhe nahi chhodunga",
+    "suggestedText": "tujhe nahi chhodunga",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe nahi chhodunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 20,
+      "text": "tujhe nahi chhodunga",
+      "ruleId": "hi-latn.harassment.wont-spare",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "abe saale",
+   "expected": {
+    "text": "abe saale",
+    "suggestedText": "abe saale",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "abe saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 9,
+      "text": "abe saale",
+      "ruleId": "hi-latn.harassment.abusive-address",
+      "category": "harassment",
+      "severity": "medium",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "kal main ghar chodunga",
+   "expected": {
+    "text": "kal main ghar chodunga",
+    "suggestedText": "kal main ghar chodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kal main ghar chodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "mere saale ki shaadi hai",
+   "expected": {
+    "text": "mere saale ki shaadi hai",
+    "suggestedText": "mere saale ki shaadi hai",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "mere saale ki shaadi hai",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "घर में घुस के मारूंगा",
+   "expected": {
+    "text": "घर में घुस के मारूंगा",
+    "suggestedText": "घर में घुस के मारूंगा",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "घर में घुस के मारूंगा",
+    "matches": []
+   }
+  },
+  {
+   "config": "sexual-block",
+   "input": "मेरे साले की शादी है",
+   "expected": {
+    "text": "मेरे साले की शादी है",
+    "suggestedText": "मेरे साले की शादी है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "मेरे साले की शादी है",
+    "matches": []
    }
   },
   {
@@ -58301,6 +61645,190 @@
       "label": "sexual-content"
      }
     ]
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "ghar me ghus ke chodunga saale",
+   "expected": {
+    "text": "ghar me ghus ke chodunga saale",
+    "suggestedText": "ghar me ghus ke chodunga saale",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "ghar me ghus ke chodunga saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 24,
+      "text": "ghar me ghus ke chodunga",
+      "ruleId": "hi-latn.harassment.home-invasion",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.85,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "tujhe jaan se maar daalunga",
+   "expected": {
+    "text": "tujhe jaan se maar daalunga",
+    "suggestedText": "tujhe jaan se maar daalunga",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe jaan se maar daalunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 27,
+      "text": "tujhe jaan se maar daalunga",
+      "ruleId": "hi-latn.harassment.threat",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.8,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "tujhe nahi chhodunga",
+   "expected": {
+    "text": "tujhe nahi chhodunga",
+    "suggestedText": "tujhe nahi chhodunga",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "tujhe nahi chhodunga",
+    "matches": [
+     {
+      "start": 0,
+      "end": 20,
+      "text": "tujhe nahi chhodunga",
+      "ruleId": "hi-latn.harassment.wont-spare",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "abe saale",
+   "expected": {
+    "text": "abe saale",
+    "suggestedText": "abe saale",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "abe saale",
+    "matches": [
+     {
+      "start": 0,
+      "end": 9,
+      "text": "abe saale",
+      "ruleId": "hi-latn.harassment.abusive-address",
+      "category": "harassment",
+      "severity": "medium",
+      "action": "warn",
+      "confidence": 0.75,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "insult"
+     }
+    ]
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "kal main ghar chodunga",
+   "expected": {
+    "text": "kal main ghar chodunga",
+    "suggestedText": "kal main ghar chodunga",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "kal main ghar chodunga",
+    "matches": []
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "mere saale ki shaadi hai",
+   "expected": {
+    "text": "mere saale ki shaadi hai",
+    "suggestedText": "mere saale ki shaadi hai",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "mere saale ki shaadi hai",
+    "matches": []
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "घर में घुस के मारूंगा",
+   "expected": {
+    "text": "घर में घुस के मारूंगा",
+    "suggestedText": "घर में घुस के मारूंगा",
+    "action": "warn",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "घर में घुस के मारूंगा",
+    "matches": [
+     {
+      "start": 0,
+      "end": 21,
+      "text": "घर में घुस के मारूंगा",
+      "ruleId": "hi.harassment.home-invasion",
+      "category": "harassment",
+      "severity": "high",
+      "action": "warn",
+      "confidence": 0.85,
+      "context": "direct",
+      "applied": false,
+      "requiresReview": false,
+      "suggestedReplacement": null,
+      "label": "threat"
+     }
+    ]
+   }
+  },
+  {
+   "config": "multilingual",
+   "input": "मेरे साले की शादी है",
+   "expected": {
+    "text": "मेरे साले की शादी है",
+    "suggestedText": "मेरे साले की शादी है",
+    "action": "allow",
+    "allowed": true,
+    "requiresReview": false,
+    "masked": "मेरे साले की शादी है",
+    "matches": []
    }
   }
  ]

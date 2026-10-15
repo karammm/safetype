@@ -80,6 +80,70 @@ const harassment: ModerationRule[] = [
   },
 ];
 
+/*
+ * Threats. "chodunga" alone is not flagged (it is also a common spelling of "chhodunga", I'll leave), and neither is
+ * "saale" (brother-in-law), so threats are recognized by their shape: breaking into someone's home, "tujhe … dunga",
+ * "tujhe nahi chhodunga" (I won't spare you), and abusive address ("abe saale").
+ */
+const you = "(tujhe|tereko|tujhko|tumhe|tumko|tuje|tujko|tereko|aapko)";
+const violent = "(chod*|maar*|mar*|kaat*|kat*|thok*|peet*|pit*|tod*|jala*|uthwa*|khatam|khatm|phod*)";
+
+const threats: ModerationRule[] = [
+  {
+    // "ghar me ghus ke chodunga", "ghar aake maarunga"
+    id: "hi-latn.harassment.home-invasion",
+    pattern: `(ghar|gher) (me|mein|main|mai|mei|pe|par|tak)? (ghus|ghuske|ghuskar|ghusk|aake|aakar|aa|aake|aaunga|aunga) (ke|kar|k)? ${violent}`,
+    category: "harassment",
+    severity: "high",
+    confidence: 0.85,
+    label: "threat",
+  },
+  {
+    // "tujhe maar dunga", "tujhe jaan se maar daalunga", "tujhe khatam kar dunga"
+    id: "hi-latn.harassment.threat",
+    pattern: `${you} (jaan)? (se)? (maar|mar|kaat|thok|peet|tod|jala|khatam|khatm|uthwa|gaad) (kar)? (dunga|daalunga|dalunga|denge|dalenge|daalenge|dungi|doonga|lunga|lenge)`,
+    category: "harassment",
+    severity: "high",
+    confidence: 0.8,
+    label: "threat",
+  },
+  {
+    // "tujhe maarunga", "tujhe chodunga"
+    id: "hi-latn.harassment.threat-short",
+    pattern: `${you} (maarunga|marunga|maarenge|marenge|kaatunga|katunga|thokunga|peetunga|pitunga|todunga|chodunga|chodenge|chodega|jalaunga|phodunga)`,
+    category: "harassment",
+    severity: "high",
+    confidence: 0.8,
+    label: "threat",
+  },
+  {
+    // "tujhe nahi chhodunga" (I won't spare you)
+    id: "hi-latn.harassment.wont-spare",
+    pattern: `${you} (to|toh)? (nahi|nhi|nai|nahin) (chhodunga|chodunga|chhodenge|chodenge|chhodungi|bakshunga|bakhshunga|bachega|bachegi)`,
+    category: "harassment",
+    severity: "high",
+    confidence: 0.75,
+    label: "threat",
+  },
+  {
+    // "abe saale", "saale kutte"; a bare "saale" (brother-in-law) is fine
+    id: "hi-latn.harassment.abusive-address",
+    pattern: "(abe|abey|oye|oi|oyee) (saale|saala|saali|sale|kutte|kamine|kamini|harami)",
+    category: "harassment",
+    severity: "medium",
+    confidence: 0.75,
+    label: "insult",
+  },
+  {
+    id: "hi-latn.harassment.saale-insult",
+    pattern: "(saale|saala|saali|sale) (kutte|kutta|kutti|kamine|kamina|harami|chutiye|chutiya|gandu|bhadwe|lodu|suar|suwar|haramkhor|ullu)",
+    category: "harassment",
+    severity: "medium",
+    confidence: 0.8,
+    label: "insult",
+  },
+];
+
 // Gaali aimed at a person ("lodu", "harami", "bhosdike") is masked as profanity AND warned about as an insult.
 const insults: ModerationRule[] = [
   {
@@ -108,7 +172,7 @@ const sexual: ModerationRule[] = [
 export const hiLatn: DictionaryPack = {
   language: "hi-Latn",
   boundary: "word",
-  rules: [...profanity, ...harassment, ...insults, ...sexual],
+  rules: [...profanity, ...harassment, ...threats, ...insults, ...sexual],
   allowList: [],
 };
 

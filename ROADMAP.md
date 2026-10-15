@@ -119,6 +119,11 @@ New package: `@safetype/ai`
   "nangi photo bhej"), in English, Hinglish and Hindi
 - Hindi gaali such as "bhosada", "lodu", "harami" are masked and also warned about
 
+## v1.12.0: Hinglish and Hindi threats ✅
+
+- Home-invasion and direct threats ("ghar me ghus ke …", "tujhe maar dunga", "tujhe nahi chhodunga") and abusive
+  address ("abe saale"), with tests for the innocent look-alikes
+
 ---
 
 Have an idea or a use case that isn't covered? [Open an issue](https://github.com/karammm/safetype/issues).
