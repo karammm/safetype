@@ -157,8 +157,9 @@ def test_linear_time_on_adversarial_input(generate):
         engine.moderate(generate(n))
         return time.perf_counter() - start
 
-    measure(2_000)
-    # Fastest of three runs: the algorithm's cost with as little machine noise as possible.
-    small = min(measure(5_000) for _ in range(3))
-    large = min(measure(20_000) for _ in range(3))
-    assert large < max(small, 0.005) * 10
+    measure(1_000)
+    # Fastest of three runs, 16x apart: linear code takes ~16x as long and quadratic ~256x, so the 64x
+    # threshold separates them even on a noisy CI runner. Timings under 2 ms count as 2 ms.
+    small = min(measure(1_000) for _ in range(3))
+    large = min(measure(16_000) for _ in range(3))
+    assert large < max(small, 0.002) * 64
