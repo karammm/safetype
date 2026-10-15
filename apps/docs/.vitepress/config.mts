@@ -12,6 +12,10 @@ export default defineConfig({
   head: [
     ["meta", { name: "theme-color", content: "#0a7a6b" }],
     ["link", { rel: "icon", type: "image/svg+xml", href: "/safetype/docs/mark.svg" }],
+    ["meta", { property: "og:image", content: "https://karammm.github.io/safetype/docs/social-preview.png" }],
+    ["meta", { property: "og:image:width", content: "1280" }],
+    ["meta", { property: "og:image:height", content: "640" }],
+    ["meta", { name: "twitter:card", content: "summary_large_image" }],
   ],
   // The default GitHub themes have comment and keyword colors below WCAG AA contrast.
   markdown: { theme: { light: "github-light-high-contrast", dark: "github-dark-high-contrast" } },
