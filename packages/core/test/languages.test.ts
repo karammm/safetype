@@ -12,10 +12,13 @@ const CASES: Record<(typeof LANGUAGES)[number], { flagged: string[]; clean: stri
     flagged: [
       "¡Qué mierda!", "eres un idiota", "hijo de puta", "cabrón", "Vete a la mierda", "mátate",
       "te voy a matar", "los inmigrantes deberían morir", "maricón", "PENDEJO", "concha de tu madre", "gilipollas",
+      "sos un boludo", "eres un weón", "usted es un idiota", "pelotudo", "mamagüevo", "malnacido", "culero",
+      "te voy a romper la cara", "lo voy a matar",
     ],
     clean: [
       "Compré un cono de helado", "Voy a coger el autobús", "La polla de la lotería", "El zorro y la zorra",
       "Me gusta la pasta con queso", "Los inmigrantes deberían votar", "Eres muy amable", "computadora putativa",
+      "che boludo, ¿venís?", "¡Qué chingón!", "el pinche de cocina", "la voy a romper en el examen", "un huevo de pascua",
     ],
   },
   fr: {

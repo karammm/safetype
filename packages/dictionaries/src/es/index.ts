@@ -8,6 +8,10 @@ import type { DictionaryPack, ModerationRule } from "@safetype/shared";
  * ordinary words in some countries: "coger" (to take), "polla" (lottery in Chile), "zorra" (fox),
  * "perra" (female dog), "mamón" (a fruit), "tortillera" (tortilla maker). Insults like these are
  * still caught in direct-address phrases ("eres una perra") by the harassment rules.
+ *
+ * Regional words that are friendly among friends ("che boludo", "wn", "huevón") are only flagged as
+ * direct-address insults ("sos un boludo"). "chingón" means "awesome" in Mexico, so it is not
+ * flagged, and "pinche" is a kitchen assistant in Spain, so it only counts inside an insult.
  */
 
 const profanity: ModerationRule[] = [
@@ -25,12 +29,16 @@ const profanity: ModerationRule[] = [
   { id: "es.profanity.cabron", pattern: "(cabron|cabrona|cabrones|cabronas|cabronazo*)", category: "profanity", severity: "high" },
   { id: "es.profanity.pendejo", pattern: "(pendejo*|pendeja*)", category: "profanity", severity: "high" },
   { id: "es.profanity.gilipollas", pattern: "(gilipolla*|gilipollez)", category: "profanity", severity: "high" },
-  { id: "es.profanity.chingar", pattern: "(chingar*|chingad*|chingue*|chinguen|chingon*|chinga)", category: "profanity", severity: "high" },
+  { id: "es.profanity.chingar", pattern: "(chingar*|chingad*|chingue*|chinguen|chinga)", category: "profanity", severity: "high" },
   { id: "es.profanity.verga", pattern: "(verga|vergas|vergazo*)", category: "profanity", severity: "high" },
-  { id: "es.profanity.culo", pattern: "(culo|culos|culero*|culera*)", category: "profanity", severity: "medium" },
+  { id: "es.profanity.culo", pattern: "(culo|culos)", category: "profanity", severity: "low" },
+  { id: "es.profanity.culero", pattern: "(culero*|culera*)", category: "profanity", severity: "high" },
   { id: "es.profanity.cagar", pattern: "(cagar|cago|cagada*|cagon|cagona|cagando)", category: "profanity", severity: "medium" },
   { id: "es.profanity.malparido", pattern: "(malparid*|hijueputa*|hijoputa*|hijaputa*)", category: "profanity", severity: "high" },
   { id: "es.profanity.concha", pattern: "(conchetumare|conchatumadre|conchesumadre|conchasumadre)", category: "profanity", severity: "high" },
+  { id: "es.profanity.pelotudo", pattern: "(pelotud*|conchud*)", category: "profanity", severity: "medium" },
+  { id: "es.profanity.mamaguevo", pattern: "(mamaguevo*|mamaguebo*|mamahuevo*|mamagueva*)", category: "profanity", severity: "high" },
+  { id: "es.profanity.malnacido", pattern: "malnacid*", category: "profanity", severity: "high" },
   { id: "es.profanity.carajo", pattern: "carajo", category: "profanity", severity: "low", replacement: "caramba" },
 ];
 
@@ -58,12 +66,21 @@ const hate: ModerationRule[] = [
 ];
 
 const insults =
-  "(idiota*|imbecil*|estupido*|estupida*|tonto|tonta|inutil|basura|escoria|retrasado*|retrasada*|mongolo*|mongolic*|subnormal*|patetico*|patetica*|asqueroso*|asquerosa*|payaso*|perdedor*|fracasado*|fracasada*|pendejo*|pendeja*|cabron*|gilipollas|perra|zorra|puta)";
+  "(idiota*|imbecil*|estupido*|estupida*|tonto|tonta|inutil|basura|escoria|retrasado*|retrasada*|mongolo*|mongolic*|subnormal*|boludo*|boluda*|pelotudo*|pelotuda*|huevon*|huevona*|weon*|weona*|gueon*|wn|malnacido*|patetico*|patetica*|asqueroso*|asquerosa*|payaso*|perdedor*|fracasado*|fracasada*|pendejo*|pendeja*|cabron*|gilipollas|perra|zorra|puta)";
 
 const harassment: ModerationRule[] = [
   {
     id: "es.harassment.insult",
     pattern: `(eres|sos) (un|una)? (puto|puta|pinche|maldito|maldita|completo|completa|gran|tremendo|tremenda)? ${insults}`,
+    category: "harassment",
+    severity: "medium",
+    confidence: 0.8,
+    label: "insult",
+  },
+  {
+    // Formal "usted" and an explicit "tu"/"vos" before the verb.
+    id: "es.harassment.insult-subject",
+    pattern: `(usted|tu|vos) (es|eres|sos) (un|una)? (puto|puta|pinche|maldito|maldita|completo|completa|gran|tremendo|tremenda)? ${insults}`,
     category: "harassment",
     severity: "medium",
     confidence: 0.8,
@@ -103,7 +120,16 @@ const harassment: ModerationRule[] = [
   },
   {
     id: "es.harassment.threat",
-    pattern: "te (voy|vamos) a (matar|apunalar|disparar|reventar|partir)",
+    pattern: "te (voy|vamos) a (matar|apunalar|disparar|reventar|partir|romper|quebrar|cagar)",
+    category: "harassment",
+    severity: "high",
+    confidence: 0.7,
+    label: "threat",
+  },
+  {
+    // "la voy a romper" (I'll nail it) is praise, so third-person objects only take killing verbs.
+    id: "es.harassment.threat-object",
+    pattern: "(lo|la|los|las) (voy|vamos) a (matar|apunalar|disparar)",
     category: "harassment",
     severity: "high",
     confidence: 0.7,
