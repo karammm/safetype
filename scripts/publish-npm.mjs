@@ -27,6 +27,16 @@ function published(name, version) {
   }
 }
 
+function exists(name) {
+  try {
+    return execFileSync("npm", ["view", name, "name"], { stdio: ["ignore", "pipe", "ignore"], encoding: "utf8" }).trim() === name;
+  } catch {
+    return false;
+  }
+}
+
+const skippedNew = [];
+
 for (const dir of ORDER) {
   const pkgDir = join("packages", dir);
   // Angular is built by ng-packagr and published from dist/ (its manifest is finalized at build time).
@@ -34,6 +44,13 @@ for (const dir of ORDER) {
   const { name, version } = JSON.parse(readFileSync(join(publishDir, "package.json"), "utf8"));
   if (published(name, version)) {
     console.log(`= ${name}@${version} already published, skipping`);
+    continue;
+  }
+  // npm trusted publishing (CI) cannot create a brand-new package: its first version must be published
+  // by a maintainer. Skip it instead of stopping halfway through the release.
+  if (process.env.CI && !exists(name)) {
+    console.log(`! ${name} is not on npm yet - first version must be published manually; skipping`);
+    skippedNew.push(name);
     continue;
   }
   let target = publishDir;
@@ -44,6 +61,9 @@ for (const dir of ORDER) {
   const publishArgs = ["publish", target, "--access", "public", ...passThrough, ...(dryRun ? ["--dry-run"] : [])];
   console.log(`> npm ${publishArgs.join(" ").replace(/--otp=\d+/, "--otp=******")}`);
   execFileSync("npm", publishArgs, { stdio: "inherit" });
+}
+if (skippedNew.length) {
+  console.log(`::warning::Not published (new packages need a manual first publish): ${skippedNew.join(", ")}`);
 }
 console.log(dryRun ? "Dry run complete." : "All packages published.");
 // Brand-new packages can take a few minutes to appear publicly: npm's CDN may cache the "not found"

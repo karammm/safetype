@@ -43,5 +43,9 @@ All `@safetype/*` packages and the Python package share one version number.
    - `Release (npm)` publishes every package with provenance (npm trusted publishing).
    - `Release (PyPI)` publishes `safetype` (PyPI trusted publishing).
 
+A **new** package's first version must be published manually (npm trusted publishing can't create packages):
+`npm publish <tarball> --access public` from an interactive terminal. CI skips it with a warning until then.
+After the first publish, add the trusted publisher on npmjs.com (Settings → Trusted publishing).
+
 Manual npm publish (first release, or if CI is unavailable): `pnpm release:npm -- --otp=<2FA code>`
 (`--dry-run` shows what would be published). Versions already on npm are skipped.
