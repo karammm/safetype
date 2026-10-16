@@ -53,6 +53,7 @@ export default defineConfig({
           { text: "@safetype/react", link: "/packages/react" },
           { text: "@safetype/vue", link: "/packages/vue" },
           { text: "@safetype/angular", link: "/packages/angular" },
+          { text: "@safetype/solid", link: "/packages/solid" },
           { text: "@safetype/editor", link: "/packages/editor" },
           { text: "@safetype/adapters", link: "/packages/adapters" },
           { text: "@safetype/ai", link: "/packages/ai" },

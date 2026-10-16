@@ -18,7 +18,7 @@ hero:
 
 features:
   - title: Works with what you have
-    details: Plain inputs, React, Vue, Angular, or the editor you already use (Quill, Lexical, CodeMirror, Monaco, ProseMirror, Tiptap). Or use the built-in rich-text editor.
+    details: Plain inputs, React, Vue, Angular, Solid, or the editor you already use (Quill, Lexical, CodeMirror, Monaco, ProseMirror, Tiptap). Or use the built-in rich-text editor.
   - title: Mask, suggest, warn or block
     details: Five actions with per-category policies. Profanity is masked deterministically. Hate and harassment are confidence-scored signals that context can weaken.
   - title: Hard to fool, easy on innocent words

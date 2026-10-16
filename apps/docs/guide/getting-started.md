@@ -8,7 +8,7 @@ warns about, or blocks it. It runs in the browser as people type and on your ser
 | You want to… | Install |
 | --- | --- |
 | Moderate every input, textarea and contenteditable on a page | `@safetype/dom` |
-| Use components or hooks in React, Vue or Angular | `@safetype/react`, `@safetype/vue`, `@safetype/angular` |
+| Use components or hooks in React, Vue, Angular or Solid | `@safetype/react`, `@safetype/vue`, `@safetype/angular`, `@safetype/solid` |
 | Add a rich-text editor with moderation built in | `@safetype/editor` |
 | Moderate an editor you already use | `@safetype/adapters` |
 | Check text yourself (Node, Deno, edge, workers) | `@safetype/core` |
@@ -42,7 +42,7 @@ engine.moderate("What the fuck are you doing?").text; // "What the f*ck are you 
 engine.moderate("Scunthorpe has a class assassin").matches; // [] (no false positives)
 ```
 
-## React, Vue and Angular
+## React, Vue, Angular and Solid
 
 ::: code-group
 
@@ -58,6 +58,12 @@ import { SafeTypeTextarea } from "@safetype/react";
 
 ```html [Angular]
 <textarea safeType [(ngModel)]="text"></textarea>
+```
+
+```tsx [Solid]
+import { SafeTypeTextarea } from "@safetype/solid";
+
+<SafeTypeTextarea mode="mask" value={text()} onValueChange={setText} />;
 ```
 
 :::

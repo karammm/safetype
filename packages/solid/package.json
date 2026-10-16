@@ -1,0 +1,93 @@
+{
+  "name": "@safetype/solid",
+  "version": "1.14.0",
+  "description": "SolidJS components, primitives and a directive for SafeType.js content moderation",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./editor": {
+      "types": "./dist/editor.d.ts",
+      "import": "./dist/editor.js",
+      "require": "./dist/editor.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "moderation",
+    "profanity",
+    "filter",
+    "solid",
+    "solidjs",
+    "solid-js",
+    "directive",
+    "input",
+    "profanity-filter",
+    "bad-words",
+    "swear-words",
+    "censor",
+    "content-moderation",
+    "hate-speech",
+    "harassment",
+    "toxicity",
+    "chat",
+    "hinglish",
+    "hindi",
+    "multilingual",
+    "typescript"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "clean": "rm -rf dist .turbo"
+  },
+  "dependencies": {
+    "@safetype/core": "workspace:*",
+    "@safetype/dom": "workspace:*"
+  },
+  "peerDependencies": {
+    "@safetype/editor": "workspace:^",
+    "solid-js": ">=1.8.0"
+  },
+  "peerDependenciesMeta": {
+    "@safetype/editor": {
+      "optional": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karammm/safetype.git",
+    "directory": "packages/solid"
+  },
+  "homepage": "https://github.com/karammm/safetype#readme",
+  "bugs": {
+    "url": "https://github.com/karammm/safetype/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@safetype/editor": "workspace:*",
+    "@testing-library/dom": "10.4.0",
+    "@testing-library/user-event": "14.5.2",
+    "jsdom": "25.0.1",
+    "solid-js": "1.9.15",
+    "vite-plugin-solid": "2.11.14"
+  }
+}

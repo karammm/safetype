@@ -27,7 +27,7 @@ from .types import (
     ValidationResult,
 )
 
-__version__ = "1.13.0"
+__version__ = "1.14.0"
 
 _default: Optional[ModerationEngine] = None
 

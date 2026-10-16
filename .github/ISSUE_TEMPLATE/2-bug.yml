@@ -8,7 +8,7 @@ body:
     attributes:
       label: Package
       multiple: true
-      options: ["@safetype/core", "@safetype/dom", "@safetype/react", "@safetype/vue", "@safetype/angular", "@safetype/editor", "@safetype/adapters", "@safetype/ai", "@safetype/dictionaries", "safetype (Python)", Playground or docs]
+      options: ["@safetype/core", "@safetype/dom", "@safetype/react", "@safetype/vue", "@safetype/angular", "@safetype/solid", "@safetype/editor", "@safetype/adapters", "@safetype/ai", "@safetype/dictionaries", "safetype (Python)", Playground or docs]
     validations:
       required: true
   - type: input

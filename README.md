@@ -65,7 +65,7 @@ engine.moderate("Scunthorpe has a class assassin").matches; // [] (no false posi
 
 ## Why SafeType
 
-- **Works with what you already have.** Plain inputs, React, Vue, Angular, or your existing editor (Quill, Lexical,
+- **Works with what you already have.** Plain inputs, React, Vue, Angular, Solid, or your existing editor (Quill, Lexical,
   CodeMirror, Monaco, ProseMirror, Tiptap). Nothing to replace.
 - **Five actions, not just a filter.** Mask, suggest a friendlier word, warn, block, or only report, with policies per
   category.
@@ -88,7 +88,7 @@ engine.moderate("Scunthorpe has a class assassin").matches; // [] (no false posi
 | You want to… | Install |
 | --- | --- |
 | Moderate every text field on a page | `npm i @safetype/dom` |
-| Use components and hooks | `npm i @safetype/react` · `@safetype/vue` · `@safetype/angular` |
+| Use components and hooks | `npm i @safetype/react` · `@safetype/vue` · `@safetype/angular` · `@safetype/solid` |
 | Add a rich-text editor with moderation built in | `npm i @safetype/editor` |
 | Moderate the editor you already use | `npm i @safetype/adapters` |
 | Check text yourself (any JavaScript runtime) | `npm i @safetype/core` |
@@ -138,6 +138,20 @@ Masked text flows through `onChange`, so your state always matches the field. Ho
 </details>
 
 <details>
+<summary><b>Solid</b></summary>
+
+```tsx
+import { SafeTypeTextarea } from "@safetype/solid";
+
+<SafeTypeTextarea mode="mask" value={text()} onValueChange={setText} />
+// or <textarea use:safeType /> on any field
+```
+
+[Solid docs →](https://karammm.github.io/safetype/docs/packages/solid)
+
+</details>
+
+<details>
 <summary><b>Built-in rich-text editor</b></summary>
 
 ```js
@@ -147,7 +161,7 @@ createSafeTypeEditor({ element, mode: "mask", placeholder: "Write something…",
 ```
 
 Formatting, links, lists, undo, inline highlights and one-click suggestions, and masking keeps formatting. It's also
-available as `<SafeTypeEditor>` for React and Vue and `<safe-type-editor>` for Angular.
+available as `<SafeTypeEditor>` for React, Vue and Solid and `<safe-type-editor>` for Angular.
 [Editor docs →](https://karammm.github.io/safetype/docs/packages/editor)
 
 </details>
@@ -254,6 +268,7 @@ No code needed. [Languages guide →](https://karammm.github.io/safetype/docs/gu
 | [`@safetype/react`](https://karammm.github.io/safetype/docs/packages/react) | [![npm](https://img.shields.io/npm/v/@safetype/react?label=&color=0a7a6b)](https://www.npmjs.com/package/@safetype/react) | Components and hooks |
 | [`@safetype/vue`](https://karammm.github.io/safetype/docs/packages/vue) | [![npm](https://img.shields.io/npm/v/@safetype/vue?label=&color=0a7a6b)](https://www.npmjs.com/package/@safetype/vue) | Directive, components and composables |
 | [`@safetype/angular`](https://karammm.github.io/safetype/docs/packages/angular) | [![npm](https://img.shields.io/npm/v/@safetype/angular?label=&color=0a7a6b)](https://www.npmjs.com/package/@safetype/angular) | Directive, validator, pipe and service |
+| [`@safetype/solid`](https://karammm.github.io/safetype/docs/packages/solid) | [![npm](https://img.shields.io/npm/v/@safetype/solid?label=&color=0a7a6b)](https://www.npmjs.com/package/@safetype/solid) | Components, directive and primitives |
 | [`@safetype/editor`](https://karammm.github.io/safetype/docs/packages/editor) | [![npm](https://img.shields.io/npm/v/@safetype/editor?label=&color=0a7a6b)](https://www.npmjs.com/package/@safetype/editor) | Built-in rich-text editor (Tiptap) |
 | [`@safetype/adapters`](https://karammm.github.io/safetype/docs/packages/adapters) | [![npm](https://img.shields.io/npm/v/@safetype/adapters?label=&color=0a7a6b)](https://www.npmjs.com/package/@safetype/adapters) | Quill, Lexical, CodeMirror, Monaco, ProseMirror, Tiptap |
 | [`@safetype/ai`](https://karammm.github.io/safetype/docs/packages/ai) | [![npm](https://img.shields.io/npm/v/@safetype/ai?label=&color=0a7a6b)](https://www.npmjs.com/package/@safetype/ai) | Contextual AI providers and server handlers |

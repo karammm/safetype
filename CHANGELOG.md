@@ -2,7 +2,20 @@
 
 All `@safetype/*` packages share one version number.
 
-## 1.13.0
+## 1.14.0
+
+### New: `@safetype/solid`
+
+SolidJS support, with the same features as the React, Vue and Angular packages:
+
+- `<SafeTypeInput>` and `<SafeTypeTextarea>`: controlled through `value` / `onValueChange` (masked text flows back),
+  live `mode` and `policy`, an accessible message, `apiRef` for `validate()`
+- `use:safeType` directive for any input, textarea or contenteditable element (typed for TypeScript)
+- `<SafeTypeProvider>` to share one engine; `useSafeType`, `useModeration` and `useSafeTypeEngine` primitives
+- `<SafeTypeEditor>` from `@safetype/solid/editor` (rich text, with `@safetype/editor`)
+- Ships plain JavaScript, so it needs no particular Solid build setup, and renders on the server (SolidStart)
+- Requires `solid-js` 1.8 or later; tests run against 1.9, including real Solid JSX compiled by `vite-plugin-solid`
+
 
 ### Language pack review ([#1](https://github.com/karammm/safetype/issues/1) to [#5](https://github.com/karammm/safetype/issues/5))
 

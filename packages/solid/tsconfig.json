@@ -1,0 +1,5 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": { "noEmit": true, "lib": ["ES2022", "DOM", "DOM.Iterable"], "jsx": "preserve", "jsxImportSource": "solid-js" },
+  "include": ["src", "test", "*.config.ts"]
+}

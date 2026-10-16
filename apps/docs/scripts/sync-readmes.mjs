@@ -16,6 +16,7 @@ const PAGES = {
   react: "packages/react/README.md",
   vue: "packages/vue/README.md",
   angular: "packages/angular/README.md",
+  solid: "packages/solid/README.md",
   editor: "packages/editor/README.md",
   adapters: "packages/adapters/README.md",
   ai: "packages/ai/README.md",

@@ -40,7 +40,7 @@ regression test.
 
 ## Supply chain
 
-- **Few dependencies.** `@safetype/core`, `dom`, `react`, `vue`, `angular`, `adapters` and `ai` have no third-party
+- **Few dependencies.** `@safetype/core`, `dom`, `react`, `vue`, `angular`, `solid`, `adapters` and `ai` have no third-party
   runtime dependencies besides other `@safetype/*` packages (and `tslib` for Angular). `@safetype/editor` depends
   on Tiptap and ProseMirror. Frameworks and editors are peer dependencies you already have.
 - **Permissive licences only.** CI fails if any production dependency is not under a permissive licence (today:

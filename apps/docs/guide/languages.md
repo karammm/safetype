@@ -19,7 +19,7 @@ createModerationEngine({ language: "hi" }); // Hindi in both scripts
 createModerationEngine({ language: "hi-Latn" }); // Hinglish only
 ```
 
-The same options work everywhere: `createSafeType({ languages })`, the React, Vue and Angular bindings,
+The same options work everywhere: `createSafeType({ languages })`, the React, Vue, Angular and Solid bindings,
 the editor, the adapters, and Python (`languages=["en", "es"]`).
 
 ## What each pack covers

@@ -129,6 +129,10 @@ New package: `@safetype/ai`
 - Answers to the review questions in issues #1-#5: regional words, fewer false positives, Portugal and Québec
 - Native speakers can still comment on those issues; their feedback goes into the next releases
 
+## v1.14.0: SolidJS ✅
+
+- `@safetype/solid`: components, the `use:safeType` directive, a provider, primitives and the rich-text editor
+
 ---
 
 Have an idea or a use case that isn't covered? [Open an issue](https://github.com/karammm/safetype/issues).

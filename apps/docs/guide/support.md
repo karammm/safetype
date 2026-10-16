@@ -24,6 +24,7 @@ security fixes for the last 1.x release.
 | React | 17+ (CI tests React 18) |
 | Vue | 3.3+ (CI tests Vue 3.5) |
 | Angular | 19+ (CI tests Angular 19 and 22) |
+| Solid | 1.8+ (CI tests Solid 1.9) |
 
 ## Getting help
 
