@@ -3,6 +3,7 @@
   "version": "1.14.0",
   "description": "Contextual AI moderation for SafeType.js: LLM, remote and in-browser classifiers, plus Express/Fastify/fetch server handlers",
   "license": "MIT",
+  "author": "Karamjit Verma",
   "type": "module",
   "sideEffects": false,
   "main": "./dist/index.cjs",

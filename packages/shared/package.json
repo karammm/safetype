@@ -3,6 +3,7 @@
   "version": "1.14.0",
   "description": "Shared TypeScript contracts for SafeType.js",
   "license": "MIT",
+  "author": "Karamjit Verma",
   "type": "module",
   "sideEffects": false,
   "main": "./dist/index.cjs",

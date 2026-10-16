@@ -75,6 +75,6 @@ export default defineConfig({
     socialLinks: [{ icon: "github", link: "https://github.com/karammm/safetype" }],
     search: { provider: "local" },
     editLink: { pattern: "https://github.com/karammm/safetype/edit/main/apps/docs/:path", text: "Edit this page on GitHub" },
-    footer: { message: "Released under the MIT License.", copyright: "SafeType.js contributors" },
+    footer: { message: "Released under the MIT License.", copyright: "Copyright © 2026 Karamjit Verma" },
   },
 });

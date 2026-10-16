@@ -10,7 +10,7 @@ readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
 requires-python = ">=3.9"
-authors = [{ name = "SafeType.js contributors" }]
+authors = [{ name = "Karamjit Verma" }]
 keywords = ["moderation", "profanity", "profanity-filter", "bad-words", "censor", "filter", "content-safety", "content-moderation", "hate-speech", "harassment", "toxicity", "hinglish", "hindi", "multilingual"]
 classifiers = [
   "Development Status :: 5 - Production/Stable",

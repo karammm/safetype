@@ -3,6 +3,7 @@
   "version": "1.14.0",
   "description": "Angular directive, pipe, validator and service for SafeType.js content moderation",
   "license": "MIT",
+  "author": "Karamjit Verma",
   "sideEffects": false,
   "keywords": [
     "moderation",

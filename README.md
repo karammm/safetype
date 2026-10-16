@@ -310,4 +310,4 @@ Every push is checked in CI with:
 
 ## License
 
-[MIT](LICENSE) © SafeType.js contributors
+[MIT](LICENSE) © Karamjit Verma
