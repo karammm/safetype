@@ -88,6 +88,7 @@
     "@testing-library/user-event": "14.5.2",
     "jsdom": "25.0.1",
     "solid-js": "1.9.15",
+    "vite": "5.4.11",
     "vite-plugin-solid": "2.11.14"
   }
 }
