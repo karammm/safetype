@@ -38,13 +38,13 @@ function setRef<T>(ref: ForwardedRef<T>, value: T | null): void {
 
 function splitProps<P extends ModerationProps>(props: P) {
   const {
-    mode, language, categories, policy, packs, customWords, allowList, rules, maskChar, maskStyle,
+    mode, language, categories, policy, packs, customWords, allowList, rules, severity, maskChar, maskStyle,
     detectSpacedLetters, classifiers, classifierTimeoutMs, engine, messages, blockSubmit, asyncModeration,
     asyncDebounceMs, onModerated, onViolation, onWarning, onBlocked, onModeration, onModerationError,
     showMessage = true, unstyled = false, ...elementProps
   } = props;
   const options: UseSafeTypeOptions = {
-    mode, language, categories, policy, packs, customWords, allowList, rules, maskChar, maskStyle,
+    mode, language, categories, policy, packs, customWords, allowList, rules, severity, maskChar, maskStyle,
     detectSpacedLetters, classifiers, classifierTimeoutMs, engine, messages, blockSubmit, asyncModeration,
     asyncDebounceMs, onViolation, onWarning, onBlocked,
     showMessages: false,

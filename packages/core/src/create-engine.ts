@@ -7,6 +7,7 @@ import { hi } from "@safetype/dictionaries/hi";
 import { pt } from "@safetype/dictionaries/pt";
 import {
   ALL_CATEGORIES,
+  SEVERITY_RANK,
   type AsyncModerationResult,
   type ClassifierInput,
   type ClassifierOutput,
@@ -24,6 +25,8 @@ import {
   type ModerationSession,
   type PolicyMap,
   type SessionOptions,
+  type Severity,
+  type SeverityOverrides,
   type TextEdit,
   type ValidationResult,
 } from "@safetype/shared";
@@ -59,6 +62,12 @@ export interface ModerationEngine {
   setPolicy(policy: PolicyMap): void;
   /** Changes the global mode and recomputes defaults (explicit overrides are kept). */
   setMode(mode: ModerationAction): void;
+  /** Overrides the severity of a rule (by id) or a word. Takes effect on the next moderation call. */
+  setSeverity(target: string, severity: Severity): void;
+  /** Removes a severity override. Returns false when none was set for `target`. */
+  resetSeverity(target: string): boolean;
+  /** Current severity overrides, keyed as they were set (word keys are normalized). */
+  getSeverityOverrides(): SeverityOverrides;
   on<K extends keyof ModerationEvents>(event: K, handler: Handler<ModerationEvents[K]>): () => void;
   /** Latest-only async moderation for live typing, with optional debounce. */
   createSession(options?: SessionOptions): ModerationSession;
@@ -71,6 +80,19 @@ interface ScoredMatch extends RawMatch {
 interface StoredRule {
   source: ModerationRule;
   compiled: CompiledRule;
+  /** Normalized literal words of a single-token pattern, used to resolve word-keyed severity overrides. */
+  words: string[];
+}
+
+/** `"(fuck*|f*ck)"` -> `["fuck", "f*ck"]`. Multi-token patterns are only addressable by rule id. */
+function patternWords(pattern: string): string[] {
+  const tokens = pattern.trim().split(/\s+/);
+  if (tokens.length !== 1) return [];
+  return tokens[0]!
+    .replace(/^\(|\)\??$/g, "")
+    .split("|")
+    .map((alt) => normalizeTerm(alt.replace(/\*$/, "")))
+    .filter(Boolean);
 }
 
 const BUILT_IN_PACKS: Readonly<Record<string, DictionaryPack>> = { en, "hi-latn": hiLatn, hi, es, fr, de, pt };
@@ -111,6 +133,10 @@ function clamp01(n: number): number {
 
 const CATEGORY_SET = new Set<ModerationCategory>(ALL_CATEGORIES);
 
+function assertSeverity(severity: Severity): void {
+  if (!(severity in SEVERITY_RANK)) throw new TypeError(`Unknown severity "${String(severity)}"`);
+}
+
 export function createModerationEngine(config: EngineConfig = {}): ModerationEngine {
   let mode: ModerationAction = config.mode ?? "mask";
   assertAction(mode);
@@ -140,7 +166,7 @@ export function createModerationEngine(config: EngineConfig = {}): ModerationEng
   let index: RuleIndex | null = null;
 
   const putRule = (rule: ModerationRule, boundary: "word" | "substring" = "word") => {
-    rules.set(rule.id, { source: { ...rule }, compiled: compileRule(rule, boundary) });
+    rules.set(rule.id, { source: { ...rule }, compiled: compileRule(rule, boundary), words: patternWords(rule.pattern) });
     index = null;
   };
 
@@ -155,6 +181,31 @@ export function createModerationEngine(config: EngineConfig = {}): ModerationEng
   }
   for (const rule of config.rules ?? []) putRule(rule);
   for (const word of config.allowList ?? []) allowList.add(normalizeTerm(word));
+
+  // Rule ids are kept verbatim; anything else is treated as a word and normalized like dictionary values.
+  const severityOverrides = new Map<string, Severity>();
+  const severityKey = (target: string): string => {
+    if (typeof target !== "string" || target.trim() === "") throw new TypeError("Severity target must be a non-empty string");
+    return rules.has(target) || severityOverrides.has(target) ? target : normalizeTerm(target.trim());
+  };
+  const putSeverity = (target: string, severity: Severity) => {
+    assertSeverity(severity);
+    severityOverrides.set(severityKey(target), severity);
+  };
+  for (const [target, severity] of Object.entries(config.severity ?? {})) putSeverity(target, severity);
+
+  function resolveSeverity(rule: CompiledRule, matchedText: string): Severity {
+    if (severityOverrides.size === 0) return rule.severity;
+    const byId = severityOverrides.get(rule.id);
+    if (byId) return byId;
+    const byText = severityOverrides.get(normalizeTerm(matchedText));
+    if (byText) return byText;
+    for (const word of rules.get(rule.id)?.words ?? []) {
+      const byWord = severityOverrides.get(word);
+      if (byWord) return byWord;
+    }
+    return rule.severity;
+  }
 
   let overrides: PolicyMap = { ...config.policy };
   let policies: ResolvedPolicies = applyPolicyOverrides(defaultPolicies(mode, categories), overrides);
@@ -197,7 +248,9 @@ export function createModerationEngine(config: EngineConfig = {}): ModerationEng
     const matches: ModerationMatch[] = [];
     for (const s of scored) {
       const rule = s.rule;
-      const decision = decide(policies[rule.category], rule.severity, s.confidence);
+      const matchedText = text.slice(s.start, s.end);
+      const severity = resolveSeverity(rule, matchedText);
+      const decision = decide(policies[rule.category], severity, s.confidence);
       if (!decision.keep) continue;
       let action = forceAction && decision.action !== "allow" ? forceAction : decision.action;
       // Masking a hateful or harassing *phrase* hides intent without fixing it; flag it instead. This covers
@@ -206,14 +259,13 @@ export function createModerationEngine(config: EngineConfig = {}): ModerationEng
       if (action === "mask" && phrase && (rule.category === "hate" || rule.category === "harassment" || rule.category === "sexual")) {
         action = "warn";
       }
-      const matchedText = text.slice(s.start, s.end);
       const match: ModerationMatch = {
         start: s.start,
         end: s.end,
         text: matchedText,
         category: rule.category,
         ruleId: rule.id,
-        severity: rule.severity,
+        severity,
         confidence: s.confidence,
         priority: rule.priority,
         context: s.context,
@@ -400,6 +452,18 @@ export function createModerationEngine(config: EngineConfig = {}): ModerationEng
       assertAction(nextMode);
       mode = nextMode;
       policies = applyPolicyOverrides(defaultPolicies(mode, categories), overrides);
+    },
+
+    setSeverity(target, severity) {
+      putSeverity(target, severity);
+    },
+
+    resetSeverity(target) {
+      return severityOverrides.delete(severityKey(target));
+    },
+
+    getSeverityOverrides() {
+      return Object.fromEntries(severityOverrides);
     },
 
     on(event, handler) {

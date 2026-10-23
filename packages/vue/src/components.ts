@@ -1,4 +1,4 @@
-import type { MaskStyle, ModerationAction, ModerationEngine, ModerationResult, ModerationRule, PolicyMap, ModerationCategory, DictionaryPack, ContextualClassifier } from "@safetype/core";
+import type { MaskStyle, ModerationAction, ModerationEngine, ModerationResult, ModerationRule, PolicyMap, ModerationCategory, DictionaryPack, ContextualClassifier, SeverityOverrides } from "@safetype/core";
 import type { MessageLevel, MessageText } from "@safetype/dom";
 import { defineComponent, h, ref, type PropType } from "vue";
 import { useSafeType } from "./use-safe-type";
@@ -20,6 +20,7 @@ const fieldProps = {
   customWords: Array as PropType<string[]>,
   allowList: Array as PropType<string[]>,
   rules: Array as PropType<ModerationRule[]>,
+  severity: Object as PropType<SeverityOverrides>,
   maskChar: String,
   maskStyle: [String, Function] as PropType<MaskStyle>,
   detectSpacedLetters: optionalBoolean,
@@ -62,6 +63,7 @@ function createField(tag: "input" | "textarea", name: string) {
         customWords: props.customWords,
         allowList: props.allowList,
         rules: props.rules,
+        severity: props.severity,
         maskChar: props.maskChar,
         maskStyle: props.maskStyle,
         detectSpacedLetters: props.detectSpacedLetters,
