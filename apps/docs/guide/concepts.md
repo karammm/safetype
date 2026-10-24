@@ -81,6 +81,30 @@ createModerationEngine({
 
 You can change the policy later with `engine.setPolicy()` and the mode with `engine.setMode()`.
 
+## Severity
+
+Every rule has a severity: `low`, `medium`, `high` or `critical`. Together with `minSeverity`, it decides whether a
+match is acted on. You can override the severity of any word or rule:
+
+```ts
+const engine = createModerationEngine({
+  severity: {
+    damn: "medium", // low by default, so ignored; now masked
+    shit: "low", // now ignored
+    "en.profanity.fuck": "critical", // by rule id
+  },
+});
+
+engine.setSeverity("crap", "medium");
+engine.resetSeverity("shit"); // back to the dictionary's severity
+engine.getSeverityOverrides(); // { damn: "medium", "en.profanity.fuck": "critical", crap: "medium" }
+```
+
+A word key covers every form its rule matches: `damn` also covers "damned" and "goddamn". A more specific key like
+`damned` only covers that form. Word keys are case-insensitive and normalized like dictionary words. Rule id keys win
+over word keys, and phrase rules can only be addressed by rule id. Overrides also apply to `customWords`. The severity
+shown on each match is the one that was applied.
+
 ## Context
 
 Reported speech and quotes are treated differently from direct abuse:

@@ -2,6 +2,17 @@
 
 All `@safetype/*` packages share one version number.
 
+## Unreleased
+
+### New: severity overrides
+
+Manage the severity of individual words and rules, so `minSeverity` policies treat them the way your app needs:
+
+- `severity` engine option, keyed by word (`{ damn: "medium" }`) or rule id (`{ "en.profanity.fuck": "critical" }`).
+  A word key covers every form its rule matches; rule id keys win over word keys.
+- `engine.setSeverity()`, `engine.resetSeverity()` and `engine.getSeverityOverrides()` for runtime changes.
+- `severity` prop on the React and Vue components and the Solid bindings.
+
 ## 1.14.0
 
 ### New: `@safetype/solid`

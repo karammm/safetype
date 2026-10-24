@@ -123,6 +123,8 @@ export interface CategoryPolicy {
 
 export type PolicyMap = Partial<Record<ModerationCategory, Partial<CategoryPolicy>>>;
 
+export type SeverityOverrides = Record<string, Severity>;
+
 export type MaskStyle = "vowels" | "partial" | "full" | ((matchedText: string) => string);
 
 export interface DictionaryPack {
@@ -197,6 +199,11 @@ export interface EngineConfig {
   /** Words never treated as violations. */
   allowList?: string[];
   rules?: ModerationRule[];
+  /**
+   * Severity overrides keyed by rule id (`"en.profanity.damn"`) or by word (`"damn"`). A word key applies to
+   * matches whose text, or one of whose rule's pattern words, normalizes to it. Rule id keys win over word keys.
+   */
+  severity?: SeverityOverrides;
   maskChar?: string;
   maskStyle?: MaskStyle;
   /** Detect `f u c k`-style spaced obfuscation. Default true. */
