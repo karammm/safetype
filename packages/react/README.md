@@ -31,7 +31,7 @@ Props: every normal `input`/`textarea` prop, plus:
 | Prop | |
 |---|---|
 | `mode`, `policy` | Update live |
-| `language`, `categories`, `customWords`, `allowList`, `rules`, `maskChar`, `maskStyle`, `classifiers`, … | Engine options, read on mount |
+| `language`, `categories`, `customWords`, `allowList`, `rules`, `severity`, `maskChar`, `maskStyle`, `classifiers`, … | Engine options, read on mount |
 | `engine` | Use a specific engine |
 | `messages` | `{ warn, block }` as a string or `(result) => string` |
 | `showMessage` | Render the built-in message (default `true`) |

@@ -2,7 +2,7 @@
 
 All `@safetype/*` packages share one version number.
 
-## Unreleased
+## 1.15.0
 
 ### New: severity overrides
 
@@ -12,6 +12,9 @@ Manage the severity of individual words and rules, so `minSeverity` policies tre
   A word key covers every form its rule matches; rule id keys win over word keys.
 - `engine.setSeverity()`, `engine.resetSeverity()` and `engine.getSeverityOverrides()` for runtime changes.
 - `severity` prop on the React and Vue components and the Solid bindings.
+- `safeTypeSeverity` input on the Angular directive, which updates live like `safeTypeMode` and `safeTypePolicy`.
+- Python port: `severity=` option and `set_severity()`, `reset_severity()`, `get_severity_overrides()`, with the same
+  matching rules as JavaScript.
 
 ## 1.14.0
 

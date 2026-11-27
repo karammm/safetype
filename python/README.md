@@ -74,7 +74,7 @@ def clean_body(self):
 ```python
 engine = create_moderation_engine(
     mode="mask", language="en", languages=None, categories=None, policy=None, packs=None,
-    custom_words=None, allow_list=None, rules=None,
+    custom_words=None, allow_list=None, rules=None, severity=None,
     mask_char="*", mask_style="vowels", detect_spaced_letters=True,
 )
 engine.moderate(text)   # ModerationResult(text, suggested_text, matches, action, allowed, requires_review, mapping)
@@ -84,6 +84,9 @@ engine.add_rule({"id": "app.x", "pattern": "(foo|bar*)", "category": "custom"})
 engine.remove_rule("app.x")
 engine.set_policy({"harassment": {"action": "block", "min_confidence": 0.7}})
 engine.set_mode("warn")
+engine.set_severity("damn", "medium")             # by word (covers "damned", "goddamn") or by rule id
+engine.reset_severity("damn")                     # back to the dictionary's severity
+engine.get_severity_overrides()                   # {"damn": "medium", ...}
 
 safetype.moderate(text); safetype.mask(text)   # shared default engine
 ```

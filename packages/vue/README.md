@@ -41,7 +41,7 @@ and register it locally.
 ```
 
 Attributes and listeners pass through to the element. Props: `mode` and `policy` (live), the other engine
-options (`customWords`, `language`, …), `engine`, `messages`, `showMessage`, `unstyled`, `blockSubmit`.
+options (`customWords`, `language`, `severity`, …), `engine`, `messages`, `showMessage`, `unstyled`, `blockSubmit`.
 Events: `moderation`, `violation`, `warning`, `blocked`, `moderationError`.
 A template ref exposes `validate()`, `result`, `focus()` and `el`.
 

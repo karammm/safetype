@@ -32,7 +32,7 @@ bootstrapApplication(AppComponent, {
 | Input | |
 |---|---|
 | `safeType` | A mode (`"warn"`), an options object, or empty for the app configuration |
-| `safeTypeMode`, `safeTypePolicy` | Update live |
+| `safeTypeMode`, `safeTypePolicy`, `safeTypeSeverity` | Update live. `safeTypeSeverity` takes severity overrides (`{ damn: "medium" }`) |
 | `safeTypeMessages` | `{ warn, block }` as a string or `(result) => string` |
 | `safeTypeShowMessages` | Default `true` |
 | `safeTypeBlockSubmit` | Default `true` |

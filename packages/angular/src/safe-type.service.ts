@@ -9,7 +9,7 @@ import {
   type ValidationResult,
 } from "@safetype/core";
 
-/** Engine options. Read once, except `mode` and `policy` on directives, which update live. */
+/** Engine options. Read once, except `mode`, `policy` and `severity` on directives, which update live. */
 export type SafeTypeEngineOptions = Pick<EngineConfig, EngineConfigKey> & {
   /** Use this engine instead of creating one. */
   engine?: ModerationEngine;

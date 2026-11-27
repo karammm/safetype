@@ -11,7 +11,7 @@ import {
   type OnDestroy,
   type OnInit,
 } from "@angular/core";
-import type { ModerationAction, ModerationEngine, ModerationResult, PolicyMap } from "@safetype/core";
+import type { ModerationAction, ModerationEngine, ModerationResult, PolicyMap, SeverityOverrides } from "@safetype/core";
 import { createSafeType, type MessageLevel, type MessageText, type SafeTypeInstance } from "@safetype/dom";
 import { SafeTypeService, type SafeTypeEngineOptions } from "./safe-type.service";
 
@@ -44,6 +44,8 @@ export class SafeTypeDirective implements OnInit, OnChanges, OnDestroy {
   @Input() safeType: SafeTypeDirectiveOptions | ModerationAction | "" | null | undefined;
   @Input() safeTypeMode?: ModerationAction;
   @Input() safeTypePolicy?: PolicyMap;
+  /** Severity overrides keyed by word or rule id (`{ damn: "medium" }`). Updates live. */
+  @Input() safeTypeSeverity?: SeverityOverrides;
   @Input() safeTypeMessages?: Partial<Record<MessageLevel, MessageText>>;
   /** Render the accessible message after the element. Default true. */
   @Input({ transform: booleanAttribute }) safeTypeShowMessages = true;
@@ -73,6 +75,7 @@ export class SafeTypeDirective implements OnInit, OnChanges, OnDestroy {
       typeof value === "string" ? (MODES.has(value) ? { mode: value as ModerationAction } : {}) : { ...value };
     if (this.safeTypeMode) options.mode = this.safeTypeMode;
     if (this.safeTypePolicy) options.policy = this.safeTypePolicy;
+    if (this.safeTypeSeverity) options.severity = this.safeTypeSeverity;
     return options;
   }
 
@@ -114,9 +117,16 @@ export class SafeTypeDirective implements OnInit, OnChanges, OnDestroy {
 
   ngOnChanges(): void {
     if (!this.instance || !this.owned) return;
-    const { mode, policy } = this.options();
+    const { mode, policy, severity } = this.options();
     if (mode) this.engine.setMode(mode);
     if (policy) this.engine.setPolicy(policy);
+    if (severity) this.applySeverity(severity);
+  }
+
+  /** Replaces the engine's severity overrides with `severity`. */
+  private applySeverity(severity: SeverityOverrides): void {
+    for (const target of Object.keys(this.engine.getSeverityOverrides())) this.engine.resetSeverity(target);
+    for (const [target, level] of Object.entries(severity)) this.engine.setSeverity(target, level);
   }
 
   ngOnDestroy(): void {

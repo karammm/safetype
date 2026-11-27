@@ -20,8 +20,10 @@ from .types import (
     ALL_CATEGORIES,
     MaskStyle,
     ModerationMatch,
+    SEVERITY_RANK,
     ModerationResult,
     RuleDict,
+    Severity,
     TextEdit,
     ValidationResult,
 )
@@ -64,6 +66,21 @@ def default_packs(language: str, languages: Optional[Sequence[str]] = None) -> l
     return [load_pack(name) for name in names]
 
 
+def _pattern_words(pattern: str) -> list[str]:
+    """``"(fuck*|f*ck)"`` -> ``["fuck", "f*ck"]``. Multi-token patterns are only addressable by rule id."""
+    tokens = pattern.split()
+    if len(tokens) != 1:
+        return []
+    body = re.sub(r"^\(|\)\??$", "", tokens[0])
+    words = (normalize_term(re.sub(r"\*$", "", alt)) for alt in body.split("|"))
+    return [w for w in words if w]
+
+
+def _assert_severity(severity: str) -> None:
+    if severity not in SEVERITY_RANK:
+        raise TypeError(f'Unknown severity "{severity}"')
+
+
 def _round(value: float) -> float:
     # Matches JavaScript's Math.round(n * 10000) / 10000 for non-negative values.
     return math.floor(value * 10_000 + 0.5) / 10_000
@@ -84,6 +101,7 @@ class ModerationEngine:
         custom_words: Optional[Iterable[str]] = None,
         allow_list: Optional[Iterable[str]] = None,
         rules: Optional[Iterable[RuleDict]] = None,
+        severity: Optional[Mapping[str, Severity]] = None,
         mask_char: str = "*",
         mask_style: MaskStyle = "vowels",
         detect_spaced_letters: bool = True,
@@ -100,6 +118,8 @@ class ModerationEngine:
         self._mask_style = mask_style
         self._detect_spaced = detect_spaced_letters
         self._rules: dict[str, tuple[dict, CompiledRule]] = {}
+        self._rule_words: dict[str, list[str]] = {}
+        self._severity: dict[str, str] = {}
         self._allow_list: set[str] = set()
         self._index: Optional[RuleIndex] = None
 
@@ -118,6 +138,8 @@ class ModerationEngine:
             self._put(dict(rule))
         for word in allow_list or []:
             self._allow_list.add(normalize_term(word))
+        for target, level in (severity or {}).items():
+            self.set_severity(target, level)
 
         self._overrides: dict[str, dict[str, Any]] = {k: dict(v) for k, v in (policy or {}).items()}
         self._policies = apply_overrides(default_policies(self._mode, self._categories), self._overrides)
@@ -126,6 +148,7 @@ class ModerationEngine:
     def _put(self, rule: Mapping[str, Any], boundary: str = "word") -> None:
         compiled = compile_rule(dict(rule), boundary)  # type: ignore[arg-type]
         self._rules[compiled.id] = (dict(rule), compiled)
+        self._rule_words[compiled.id] = _pattern_words(str(rule.get("pattern", "")))
         self._index = None
 
     def add_rule(self, rule: RuleDict) -> None:
@@ -134,6 +157,7 @@ class ModerationEngine:
     def remove_rule(self, rule_id: str) -> bool:
         removed = self._rules.pop(rule_id, None) is not None
         if removed:
+            self._rule_words.pop(rule_id, None)
             self._index = None
         return removed
 
@@ -153,6 +177,43 @@ class ModerationEngine:
         assert_action(mode)
         self._mode = mode
         self._policies = apply_overrides(default_policies(self._mode, self._categories), self._overrides)
+
+    # ---- severity ----
+    def _severity_key(self, target: str) -> str:
+        # Rule ids are kept verbatim; anything else is treated as a word and normalized like dictionary values.
+        if not isinstance(target, str) or not target.strip():
+            raise TypeError("Severity target must be a non-empty string")
+        if target in self._rules or target in self._severity:
+            return target
+        return normalize_term(target.strip())
+
+    def set_severity(self, target: str, severity: Severity) -> None:
+        """Overrides the severity of a rule (by id) or a word. Takes effect on the next moderation call."""
+        _assert_severity(severity)
+        self._severity[self._severity_key(target)] = severity
+
+    def reset_severity(self, target: str) -> bool:
+        """Removes a severity override. Returns False when none was set for ``target``."""
+        return self._severity.pop(self._severity_key(target), None) is not None
+
+    def get_severity_overrides(self) -> dict[str, str]:
+        """Current severity overrides, keyed as they were set (word keys are normalized)."""
+        return dict(self._severity)
+
+    def _resolve_severity(self, rule: CompiledRule, matched: str) -> str:
+        if not self._severity:
+            return rule.severity
+        by_id = self._severity.get(rule.id)
+        if by_id:
+            return by_id
+        by_text = self._severity.get(normalize_term(matched))
+        if by_text:
+            return by_text
+        for word in self._rule_words.get(rule.id, ()):
+            by_word = self._severity.get(word)
+            if by_word:
+                return by_word
+        return rule.severity
 
     # ---- pipeline ----
     def _get_index(self) -> RuleIndex:
@@ -186,17 +247,18 @@ class ModerationEngine:
         matches: list[ModerationMatch] = []
         for s in scored:
             rule = s.rule
-            keep, action, review = decide(self._policies[rule.category], rule.severity, s.confidence)
+            matched = text[s.start : s.end]
+            severity = self._resolve_severity(rule, matched)
+            keep, action, review = decide(self._policies[rule.category], severity, s.confidence)
             if not keep:
                 continue
             if force_action and action != "allow":
                 action = force_action
             if action == "mask" and len(rule.elements) > 1 and rule.category in ("hate", "harassment", "sexual"):
                 action = "warn"
-            matched = text[s.start : s.end]
             match = ModerationMatch(
                 start=s.start, end=s.end, text=matched, category=rule.category, rule_id=rule.id,  # type: ignore[arg-type]
-                severity=rule.severity, confidence=s.confidence, priority=rule.priority,  # type: ignore[arg-type]
+                severity=severity, confidence=s.confidence, priority=rule.priority,  # type: ignore[arg-type]
                 context=s.context, action=action, requires_review=review, applied=False,  # type: ignore[arg-type]
             )
             if rule.replacement is not None:

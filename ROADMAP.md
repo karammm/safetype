@@ -133,6 +133,12 @@ New package: `@safetype/ai`
 
 - `@safetype/solid`: components, the `use:safeType` directive, a provider, primitives and the rich-text editor
 
+## v1.15.0: Severity overrides ✅
+
+- `severity` engine option and `setSeverity` / `resetSeverity` / `getSeverityOverrides`, keyed by word or rule id
+- `severity` prop on the React, Vue and Solid components, `safeTypeSeverity` input in Angular
+- Python port: `severity=`, `set_severity`, `reset_severity`, `get_severity_overrides`
+
 ---
 
 Have an idea or a use case that isn't covered? [Open an issue](https://github.com/karammm/safetype/issues).
