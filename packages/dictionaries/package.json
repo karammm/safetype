@@ -1,6 +1,6 @@
 {
   "name": "@safetype/dictionaries",
-  "version": "1.14.0",
+  "version": "1.15.0",
   "description": "Language packs for SafeType.js",
   "license": "MIT",
   "author": "Karamjit Verma",
@@ -93,6 +93,10 @@
     "chat",
     "hinglish",
     "hindi",
+    "spanish",
+    "french",
+    "german",
+    "portuguese",
     "multilingual",
     "typescript"
   ]

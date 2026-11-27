@@ -78,7 +78,9 @@ jobs:
 
   browsers:
     name: examples + real browsers
-    runs-on: ubuntu-latest
+    # ubuntu-latest is now 26.04, where Playwright 1.49 cannot install browser dependencies.
+    # Move back to ubuntu-latest once Playwright is upgraded.
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4

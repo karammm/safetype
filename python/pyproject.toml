@@ -4,14 +4,14 @@ build-backend = "hatchling.build"
 
 [project]
 name = "safetype"
-version = "1.14.0"
+version = "1.15.0"
 description = "Rule-based content moderation (profanity, hate, harassment) for Python servers. Same engine as SafeType.js."
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
 requires-python = ">=3.9"
 authors = [{ name = "Karamjit Verma" }]
-keywords = ["moderation", "profanity", "profanity-filter", "bad-words", "censor", "filter", "content-safety", "content-moderation", "hate-speech", "harassment", "toxicity", "hinglish", "hindi", "multilingual"]
+keywords = ["moderation", "profanity", "profanity-filter", "bad-words", "swear-words", "censor", "filter", "content-safety", "content-moderation", "hate-speech", "harassment", "toxicity", "chat", "hinglish", "hindi", "spanish", "french", "german", "portuguese", "multilingual"]
 classifiers = [
   "Development Status :: 5 - Production/Stable",
   "Intended Audience :: Developers",

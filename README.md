@@ -181,6 +181,22 @@ Each adapter edits through the editor's own API, so formatting and undo keep wor
 </details>
 
 <details>
+<summary><b>Tune the severity of words and rules</b></summary>
+
+```ts
+const engine = createModerationEngine({
+  severity: { damn: "medium", shit: "low", "en.profanity.fuck": "critical" },
+});
+engine.setSeverity("crap", "medium"); // also resetSeverity() and getSeverityOverrides()
+```
+
+A word key covers every form its rule matches ("damn" also covers "damned"). Rule id keys win over word keys. It's a
+`severity` prop on the React, Vue and Solid components, `[safeTypeSeverity]` in Angular, and `severity=` in Python.
+[Severity docs →](https://karammm.github.io/safetype/docs/guide/concepts)
+
+</details>
+
+<details>
 <summary><b>Server-side enforcement (Node and Python)</b></summary>
 
 Client-side moderation can always be bypassed, so re-check before you store:

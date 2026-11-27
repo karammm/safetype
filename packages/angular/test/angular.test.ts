@@ -122,6 +122,25 @@ describe("SafeTypeDirective inputs and outputs", () => {
     expect(field("b").value).toBe("sh*t sh*t ");
   });
 
+  it("accepts severity overrides via safeTypeSeverity, and updates live", async () => {
+    @Component({
+      standalone: true,
+      imports: [SafeTypeDirective],
+      template: `<input aria-label="s" safeType [safeTypeSeverity]="severity()">`,
+    })
+    class Host {
+      severity = signal<Record<string, "low" | "medium">>({ damn: "medium" });
+    }
+    const fixture = await render(Host);
+    await userEvent.type(field("s"), "damn ");
+    expect(field("s").value).toBe("d*mn ");
+    fixture.componentInstance.severity.set({ shit: "low" });
+    await settle(fixture);
+    await userEvent.clear(field("s"));
+    await userEvent.type(field("s"), "damn shit ");
+    expect(field("s").value).toBe("damn shit ");
+  });
+
   it("emits outputs once per change and exposes result/validate via exportAs", async () => {
     @Component({
       standalone: true,

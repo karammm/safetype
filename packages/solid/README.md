@@ -22,7 +22,7 @@ Masked text comes back through `onValueChange`, so your signal always matches th
 word is moderated once it's finished. Other props (`class`, `placeholder`, `onInput`, `ref`, …) pass through to the
 element.
 
-Props: `mode` and `policy` (live), the other engine options (`customWords`, `language`, …), `engine`, `messages`,
+Props: `mode` and `policy` (live), the other engine options (`customWords`, `language`, `severity`, …), `engine`, `messages`,
 `showMessage`, `unstyled`, `blockSubmit`. Callbacks: `onModeration`, `onViolation`, `onWarning`, `onBlocked`,
 `onModerationError`. `apiRef` receives `validate()`, `result()`, `message()`, `focus()` and `element()`.
 
